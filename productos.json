@@ -1,1 +1,650 @@
-[]
+[
+  {
+    "id": 1,
+    "code": "NX-0004",
+    "ml_id": "MLA1481826831",
+    "name": "Buclera de Pelo Gadnic B3000 Rizador 3 Tubos 25 mm 150W 180 210 C",
+    "category": "Belleza y Cuidado Personal",
+    "price": 48900.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_844867-MLA88645832741_072025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_844867-MLA88645832741_072025-O.webp"
+    ],
+    "link": "https://meli.la/1T496Fz",
+    "source": "https://meli.la/1T496Fz",
+    "status": "disponible",
+    "checked": "2026-10-13 13:21",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 2,
+    "code": "NX-0005",
+    "ml_id": "MLA1769480651",
+    "name": "Auriculares Inalámbricos Xiaomi Redmi Headphones Neo Negro",
+    "category": "Celulares y Teléfonos",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_639081-MLA110410361526_052026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_639081-MLA110410361526_052026-O.webp"
+    ],
+    "link": "https://meli.la/1MW5fe8",
+    "source": "https://meli.la/1MW5fe8",
+    "status": "disponible",
+    "checked": "2026-10-13 13:21",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 3,
+    "code": "NX-0006",
+    "ml_id": "MLA1804090647",
+    "name": "Bicicleta Mtb Overtech Q5 Lady R29, 21v Con Shimano, Freno A Disco, Con Suspensión, Color Rosa Mate/blanco Tamaño Del Cuadro XS",
+    "category": "Computación",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_741449-MLA118778490935_102026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_741449-MLA118778490935_102026-O.webp"
+    ],
+    "link": "https://meli.la/1h867pi",
+    "source": "https://meli.la/1h867pi",
+    "status": "disponible",
+    "checked": "2026-10-13 13:21",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 4,
+    "code": "NX-0007",
+    "ml_id": "MLA1428951972",
+    "name": "Perfume Her Golden Secret Banderas Edt mujer 80 Ml",
+    "category": "Belleza y Cuidado Personal",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_702688-MLU73471553168_122023-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_702688-MLU73471553168_122023-O.webp"
+    ],
+    "link": "https://meli.la/1bAH8Qq",
+    "source": "https://meli.la/1bAH8Qq",
+    "status": "disponible",
+    "checked": "2026-10-13 13:21",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 5,
+    "code": "NX-0008",
+    "ml_id": "MLA1396762921",
+    "name": "Zapatillas Mujer Nike Court Vision Low Blanco Dh3158-100",
+    "category": "Ropa y Accesorios",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_895951-MLA73223898750_122023-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_895951-MLA73223898750_122023-O.webp"
+    ],
+    "link": "https://meli.la/2R7rZ5R",
+    "source": "https://meli.la/2R7rZ5R",
+    "status": "disponible",
+    "checked": "2026-10-13 13:21",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 6,
+    "code": "NX-0009",
+    "ml_id": "MLA2654487902",
+    "name": "Chaleco Sastrero Mujer Aitana C5014",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_822288-MLA118452209949_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_822288-MLA118452209949_092026-O.webp"
+    ],
+    "link": "https://meli.la/2BCr8yR",
+    "source": "https://meli.la/2BCr8yR",
+    "status": "disponible",
+    "checked": "2026-10-13 13:21",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 7,
+    "code": "NX-0010",
+    "ml_id": "MLA3911032354",
+    "name": "Calvin Klein Euphoria Eau de Parfum for Women 100ml",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_717449-MLA117324590344_102026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_717449-MLA117324590344_102026-O.webp"
+    ],
+    "link": "https://meli.la/1DcbZC4",
+    "source": "https://meli.la/1DcbZC4",
+    "status": "disponible",
+    "checked": "2026-10-13 13:21",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 8,
+    "code": "NX-0011",
+    "ml_id": "MLA3958592214",
+    "name": "Freidora De Aire Liliana Af957 6 Lt 1750w",
+    "category": "Electrodomésticos y Aires Ac.",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_964462-MLA104781723958_012026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_964462-MLA104781723958_012026-O.webp"
+    ],
+    "link": "https://meli.la/1J4Rrdf",
+    "source": "https://meli.la/1J4Rrdf",
+    "status": "disponible",
+    "checked": "2026-10-13 13:21",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 9,
+    "code": "NX-0012",
+    "ml_id": "MLA2707908976",
+    "name": "Sandwichera Baza 3 en 1 con Placas Removibles para 2 Sándwiches",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_868440-MLA112579786174_062026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_868440-MLA112579786174_062026-O.webp"
+    ],
+    "link": "https://meli.la/2D73fgG",
+    "source": "https://meli.la/2D73fgG",
+    "status": "disponible",
+    "checked": "2026-10-13 13:21",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 10,
+    "code": "NX-0013",
+    "ml_id": "MLA3961901934",
+    "name": "Set Renergie Triple Serum Lancôme 50 Ml Todo Tipo De Piel Día/noche",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_931720-MLA117315843065_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_931720-MLA117315843065_092026-O.webp"
+    ],
+    "link": "https://meli.la/227mrAM",
+    "source": "https://meli.la/227mrAM",
+    "status": "disponible",
+    "checked": "2026-10-13 13:21",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 11,
+    "code": "NX-0014",
+    "ml_id": "MLA2840092218",
+    "name": "Smartphone Moto G17 Evening Blue Memoria interna 128GB - 4GM RAM Motorola",
+    "category": "Celulares y Teléfonos",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_638602-MLA106598723027_022026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_638602-MLA106598723027_022026-O.webp"
+    ],
+    "link": "https://meli.la/1Fqm9eA",
+    "source": "https://meli.la/1Fqm9eA",
+    "status": "disponible",
+    "checked": "2026-10-13 13:22",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 12,
+    "code": "NX-0015",
+    "ml_id": "MLA2812754482",
+    "name": "Batidora planetaria de pie Aiwa Digital 12L 1800W 8 Niveles De Velocidad Color Negro",
+    "category": "Electrodomésticos y Aires Ac.",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_609969-MLA91742406602_092025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_609969-MLA91742406602_092025-O.webp"
+    ],
+    "link": "https://meli.la/2TuAQ7N",
+    "source": "https://meli.la/2TuAQ7N",
+    "status": "disponible",
+    "checked": "2026-10-13 13:22",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 13,
+    "code": "NX-0016",
+    "ml_id": "MLA2013343168",
+    "name": "Cafetera Automatica Cuk By Gadnic Torino I Expreso Espumador Vaporizador Presion 20 Bar Tanque Extraible Acero Inoxidable",
+    "category": "Electrodomésticos y Aires Ac.",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_606368-MLA118249747705_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_606368-MLA118249747705_092026-O.webp"
+    ],
+    "link": "https://meli.la/2ETZ6gF",
+    "source": "https://meli.la/2ETZ6gF",
+    "status": "disponible",
+    "checked": "2026-10-13 13:22",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 14,
+    "code": "NX-0017",
+    "ml_id": "MLA2170192831",
+    "name": "Apple iPhone 17 Pro Max (256 GB) - Naranja cósmico",
+    "category": "Celulares y Teléfonos",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_964942-MLA104127286834_012026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_964942-MLA104127286834_012026-O.webp"
+    ],
+    "link": "https://meli.la/12QbyDP",
+    "source": "https://meli.la/12QbyDP",
+    "status": "disponible",
+    "checked": "2026-10-13 13:22",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 15,
+    "code": "NX-0018",
+    "ml_id": "MLA1967454307",
+    "name": "Perfume Her Secret Pink Absolu Eau De Parfum Antonio Banderas 80ml",
+    "category": "Belleza y Cuidado Personal",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_935230-MLA87957401135_072025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_935230-MLA87957401135_072025-O.webp"
+    ],
+    "link": "https://meli.la/13mz3Td",
+    "source": "https://meli.la/13mz3Td",
+    "status": "disponible",
+    "checked": "2026-10-13 13:48",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 16,
+    "code": "NX-0019",
+    "ml_id": "MLA1442499031",
+    "name": "Depiladora Ipl Philips Lumea Prestige Bri947 - Alternativa Laser - Rostro + cuerpo + bikini + axilas",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_857744-MLA119028575251_102026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_857744-MLA119028575251_102026-O.webp"
+    ],
+    "link": "https://meli.la/2UTGChk",
+    "source": "https://meli.la/2UTGChk",
+    "status": "disponible",
+    "checked": "2026-10-13 13:48",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 17,
+    "code": "NX-0020",
+    "ml_id": "MLA2227378702",
+    "name": "Sérum Rostro Revitalift Ácido Hialurónico L'Oréal Paris 30ml",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_600230-MLU72273908364_102023-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_600230-MLU72273908364_102023-O.webp"
+    ],
+    "link": "https://meli.la/33pKZFQ",
+    "source": "https://meli.la/33pKZFQ",
+    "status": "disponible",
+    "checked": "2026-10-13 13:48",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 18,
+    "code": "NX-0021",
+    "ml_id": "MLA2473998604",
+    "name": "Modelador Multifunción Mantra Air Nova Nude con 5 Accesorios Intercambiables",
+    "category": "Otros",
+    "price": 249433.6,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_892138-MLA97003697308_112025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_892138-MLA97003697308_112025-O.webp"
+    ],
+    "link": "https://meli.la/1vh3uLZ",
+    "source": "https://meli.la/1vh3uLZ",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 19,
+    "code": "NX-0022",
+    "ml_id": "MLA1506834077",
+    "name": "Mochila Nike Elemental Dd0562-492 Azul Liso",
+    "category": "Ropa y Accesorios",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_665369-MLA86357503242_062025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_665369-MLA86357503242_062025-O.webp"
+    ],
+    "link": "https://meli.la/1JobBDi",
+    "source": "https://meli.la/1JobBDi",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 20,
+    "code": "NX-0023",
+    "ml_id": "MLA2654020894",
+    "name": "Zapatillas Nike Charge Canvas Para Mujer Negro Im4398-001 Negro 7.5",
+    "category": "Ropa y Accesorios",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_861597-MLA100587519266_122025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_861597-MLA100587519266_122025-O.webp"
+    ],
+    "link": "https://meli.la/2cEZKWg",
+    "source": "https://meli.la/2cEZKWg",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 21,
+    "code": "NX-0024",
+    "ml_id": "MLA3730804018",
+    "name": "Tablet Samsung Galaxy Tab A11 8.7 4GB RAM 64GB Gris Android",
+    "category": "Celulares y Teléfonos",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_968337-MLA100567674726_122025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_968337-MLA100567674726_122025-O.webp"
+    ],
+    "link": "https://meli.la/2e6U8Kx",
+    "source": "https://meli.la/2e6U8Kx",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 22,
+    "code": "NX-0025",
+    "ml_id": "MLA1501575105",
+    "name": "Perfume Idôle Edp 100 Ml Lancôme",
+    "category": "Belleza y Cuidado Personal",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_808796-MLA85602773537_062025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_808796-MLA85602773537_062025-O.webp"
+    ],
+    "link": "https://meli.la/2K582AP",
+    "source": "https://meli.la/2K582AP",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 23,
+    "code": "NX-0026",
+    "ml_id": "MLA869122127",
+    "name": "Oleo Extraordinario Elvive Tratamiento Loreal Paris X 100 Ml",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_681620-MLA52257243801_112022-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_681620-MLA52257243801_112022-O.webp"
+    ],
+    "link": "https://meli.la/21dc72y",
+    "source": "https://meli.la/21dc72y",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 24,
+    "code": "NX-0027",
+    "ml_id": "MLA3628799010",
+    "name": "Auriculares Inalambricos Bluetooth Xiaomi Redmi Buds 6 Play Negro",
+    "category": "Electrónica, Audio y Video",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_688609-MLA116709309749_082026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_688609-MLA116709309749_082026-O.webp"
+    ],
+    "link": "https://meli.la/1PBfUTo",
+    "source": "https://meli.la/1PBfUTo",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 25,
+    "code": "NX-0028",
+    "ml_id": "MLA1223913805",
+    "name": "Citrato de Magnesio en Polvo Natural Whey x 1kg sin sabor",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_821373-MLA99956023161_112025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_821373-MLA99956023161_112025-O.webp"
+    ],
+    "link": "https://meli.la/2K4kv3V",
+    "source": "https://meli.la/2K4kv3V",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 26,
+    "code": "NX-0029",
+    "ml_id": "MLA1139113028",
+    "name": "Secador De Pelo Remington Silk Ac9096 2400w 6 temperaturas / Velocidades Con Difusor Rojo",
+    "category": "Belleza y Cuidado Personal",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_919060-MLA99972139297_112025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_919060-MLA99972139297_112025-O.webp"
+    ],
+    "link": "https://meli.la/1hDrmiM",
+    "source": "https://meli.la/1hDrmiM",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 27,
+    "code": "NX-0030",
+    "ml_id": "MLA1516448089",
+    "name": "Celular Motorola Moto G15 256gb 8gb Ram + Funda De Regalo Gris",
+    "category": "Celulares y Teléfonos",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_879184-MLA90557082581_082025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_879184-MLA90557082581_082025-O.webp"
+    ],
+    "link": "https://meli.la/145cEah",
+    "source": "https://meli.la/145cEah",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 28,
+    "code": "NX-0031",
+    "ml_id": "MLA3197785166",
+    "name": "Celular Samsung Galaxy A16 128 + 4gb Gray Gris Claro",
+    "category": "Celulares y Teléfonos",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_812893-MLA108324869725_032026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_812893-MLA108324869725_032026-O.webp"
+    ],
+    "link": "https://meli.la/1XMhXsQ",
+    "source": "https://meli.la/1XMhXsQ",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 29,
+    "code": "NX-0032",
+    "ml_id": "MLA3326609482",
+    "name": "Motorola Moto G17 Bordeaux",
+    "category": "Celulares y Teléfonos",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_613556-MLA115773573053_082026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_613556-MLA115773573053_082026-O.webp"
+    ],
+    "link": "https://meli.la/2nqM9Zm",
+    "source": "https://meli.la/2nqM9Zm",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 30,
+    "code": "NX-0033",
+    "ml_id": "MLA1787220579",
+    "name": "Celular Samsung Galaxy A16 128GB 4GB RAM",
+    "category": "Celulares y Teléfonos",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_988202-MLA99854807973_112025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_988202-MLA99854807973_112025-O.webp"
+    ],
+    "link": "https://meli.la/28ZAfsJ",
+    "source": "https://meli.la/28ZAfsJ",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 31,
+    "code": "NX-0034",
+    "ml_id": "MLA1709897981",
+    "name": "Apple iPad 11 con chip A16, WiFi de 256 GB",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_796392-MLA96112483871_102025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_796392-MLA96112483871_102025-O.webp"
+    ],
+    "link": "https://meli.la/1ogpBDj",
+    "source": "https://meli.la/1ogpBDj",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 32,
+    "code": "NX-0035",
+    "ml_id": "MLA3079024330",
+    "name": "Smartphone ZTE Blade A56 Pro (4+8)gb+128gb Color Gris + Cargador + Auriculares + Funda Regalo",
+    "category": "Electrónica, Audio y Video",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_782141-MLA111548455055_052026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_782141-MLA111548455055_052026-O.webp"
+    ],
+    "link": "https://meli.la/1BYwM7J",
+    "source": "https://meli.la/1BYwM7J",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 33,
+    "code": "NX-0036",
+    "ml_id": "MLA3545710992",
+    "name": "Moto G47 Impenetrable",
+    "category": "Accesorios para Vehículos",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_723627-MLA110956892883_042026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_723627-MLA110956892883_042026-O.webp"
+    ],
+    "link": "https://meli.la/24B4wDn",
+    "source": "https://meli.la/24B4wDn",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 34,
+    "code": "NX-0037",
+    "ml_id": "MLA1670731665",
+    "name": "Masajeador Cervical Eléctrico Portatil Inalambrico Batería Recargable Usb Femmto Relajación Cuello Espalda Lumbar",
+    "category": "Otros",
+    "price": 33839.67,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_965769-MLA110594813506_052026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_965769-MLA110594813506_052026-O.webp"
+    ],
+    "link": "https://meli.la/1DxqDwA",
+    "source": "https://meli.la/1DxqDwA",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 35,
+    "code": "NX-0038",
+    "ml_id": "MLA1575271705",
+    "name": "Yogurtera Yelmo Yg-1708v 8 Jarros 1,4 Litros Verde Verde Claro",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_994744-MLA112624706032_062026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_994744-MLA112624706032_062026-O.webp"
+    ],
+    "link": "https://meli.la/1L4EJJ9",
+    "source": "https://meli.la/1L4EJJ9",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  },
+  {
+    "id": 36,
+    "code": "NX-0039",
+    "ml_id": "MLA1485688503",
+    "name": "Maquina De Soda Megapack Sodastream Rendimiento Terra Negro",
+    "category": "Otros",
+    "price": null,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_627861-MLA117805587471_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_627861-MLA117805587471_092026-O.webp"
+    ],
+    "link": "https://meli.la/1FR3JhW",
+    "source": "https://meli.la/1FR3JhW",
+    "status": "disponible",
+    "checked": "2026-10-13 13:49",
+    "added": "2026-10-13"
+  }
+]

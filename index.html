@@ -175,16 +175,18 @@
             display: grid; gap: 20px;
             grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
         }
+        /* Borde azul con resplandor suave (el mismo azul del botón) */
         .card {
-            background: #fff; border: 1px solid var(--card-line); border-radius: 14px;
+            border: 2px solid var(--action); border-radius: 14px;
+            background: #fff;
             overflow: hidden; display: flex; flex-direction: column;
-            box-shadow: 0 1px 2px rgba(17,24,39,.05), 0 4px 14px rgba(17,24,39,.06);
+            box-shadow: 0 0 6px rgba(47,95,227,.40), 0 0 14px rgba(47,95,227,.18);
             transition: box-shadow .15s, transform .15s;
         }
-        .card:hover { box-shadow: 0 2px 4px rgba(17,24,39,.08), 0 10px 24px rgba(17,24,39,.12); transform: translateY(-2px); }
+        .card:hover { box-shadow: 0 0 8px rgba(47,95,227,.65), 0 0 22px rgba(47,95,227,.35); transform: translateY(-2px); }
         @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
-        .card .thumb { background: #fff; aspect-ratio: 1 / 1; display: grid; place-items: center; border-bottom: 1px solid var(--card-line); }
-        .card .thumb img { width: 100%; height: 100%; object-fit: contain; }
+        .card .thumb { background: #fff; aspect-ratio: 1 / 1; display: block; position: relative; overflow: hidden; border-bottom: 1px solid var(--card-line); }
+        .card .thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
         .card .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
         .chip {
             align-self: flex-start; font-size: .75rem; color: #1a56c9; background: #eef3fe;
@@ -216,6 +218,7 @@
         .btn:hover { background: var(--action-hover); }
         .code { font: 600 12px/1 ui-monospace, Consolas, monospace; color: var(--ink-muted); letter-spacing: .04em; }
         .card.caido .thumb img { filter: grayscale(1); opacity: .45; }
+        .card.caido { background: #fff; border-color: var(--card-line); box-shadow: 0 1px 2px rgba(17,24,39,.05); }
         .card.caido h2, .card.caido .price { opacity: .55; }
         .badge-off { position: absolute; top: 10px; left: 10px; z-index: 2; background: #8a1c3d; color: #fff;
                      font: 700 12px/1 system-ui, sans-serif; padding: 6px 10px; border-radius: 999px; }
@@ -226,9 +229,8 @@
         /* ---- Novedades / Bajó de precio ---- */
         #destacados { margin-bottom: 8px; }
         .sec-title { font-size: 1.15rem; font-weight: 700; margin: 8px 0 12px; }
-        .strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(200px, 230px); gap: 16px;
-                 overflow-x: auto; padding: 4px 2px 14px; margin-bottom: 14px; scroll-snap-type: x proximity; }
-        .strip .card { scroll-snap-align: start; }
+        .strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px;
+                 padding: 12px 0 22px; margin: 0 0 6px; }
         /* ---- Etiquetas, precio anterior ---- */
         .badges { position: absolute; top: 10px; left: 10px; z-index: 2; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
         .tag { font: 700 12px/1 system-ui, sans-serif; padding: 6px 10px; border-radius: 999px; color: #fff; }
@@ -258,14 +260,13 @@
         main { padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); }
         .weather .w-sel { font-size: 16px; }   /* iOS no hace zoom al abrir el selector */
 
-        .strip { scroll-padding-left: 2px; }
         .wa-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
         .card { container-type: inline-size; }
         @container (max-width: 275px) { .wa-x { display: none; } }   /* tarjeta angosta: solo "Compartir" */
 
         /* Tablet */
         @media (max-width: 900px) {
-            #productGrid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+            #productGrid, .strip { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
         }
 
         /* Celular */
@@ -310,9 +311,7 @@
             .badge-off { top: 6px; left: 6px; }
 
             .sec-title { font-size: 1.05rem; margin: 4px 0 10px; }
-            .strip { grid-auto-columns: minmax(158px, 172px); gap: 10px; margin: 0 -12px 12px; padding: 4px 12px 12px; scrollbar-width: none; }
-            .strip::-webkit-scrollbar { display: none; }
-            .strip { scroll-padding-left: 12px; }
+            .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0 0 12px; padding: 4px 0 12px; }
             .wa-x { display: none; }   /* en tarjetas angostas: solo "Compartir" */
             .more-btn { width: 100%; padding: 14px 16px; }
             .empty { padding: 32px 0; }
@@ -320,14 +319,14 @@
 
         /* Celulares muy angostos */
         @media (max-width: 340px) {
-            #productGrid { grid-template-columns: 1fr; }
+            #productGrid, .strip { grid-template-columns: 1fr; }
         }
 
         /* PC grande */
         @media (min-width: 1400px) {
             main, .cats { max-width: 1360px; }
             #productGrid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 22px; }
-            .strip { grid-auto-columns: minmax(220px, 250px); }
+            .strip { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 22px; }
         }
         @media (min-width: 1100px) {
             .card .thumb img { padding: 6px; }
@@ -601,14 +600,17 @@
             return card;
         }
 
-        // Franjas de arriba de todo: "Novedades" y "Bajó de precio" (solo sin búsqueda ni filtros).
-        function renderDestacados(mostrar) {
-            const box = document.getElementById('destacados');
-            box.innerHTML = '';
-            if (!mostrar) return;
+        // Franjas de arriba de todo: "Bajó de precio" y "Novedades" (solo sin búsqueda ni filtros).
+        function calcFranjas() {
             const ok = allProducts.filter(p => p.status !== 'no_disponible');
             const nuevos = ok.filter(esNuevo).sort((x, y) => (y.added > x.added ? 1 : y.added < x.added ? -1 : y._n - x._n)).slice(0, 12);
             const bajas = ok.filter(bajoPrecio).sort((x, y) => pctBaja(y) - pctBaja(x)).slice(0, 12);
+            return { nuevos, bajas };
+        }
+        function renderDestacados(f) {
+            const box = document.getElementById('destacados');
+            box.innerHTML = '';
+            if (!f) return;
             const franja = (titulo, lista) => {
                 if (!lista.length) return;
                 const h = document.createElement('h2'); h.className = 'sec-title'; h.textContent = titulo;
@@ -616,10 +618,10 @@
                 lista.forEach(p => st.appendChild(buildCard(p)));
                 box.append(h, st);
             };
-            franja('Bajó de precio', bajas);
-            franja('Novedades', nuevos);
+            franja('Bajó de precio', f.bajas);
+            franja('Novedades', f.nuevos);
             if (box.children.length) {
-                const h = document.createElement('h2'); h.className = 'sec-title'; h.textContent = 'Todos los productos';
+                const h = document.createElement('h2'); h.className = 'sec-title'; h.textContent = 'Más productos';
                 box.appendChild(h);
             }
         }
@@ -657,7 +659,7 @@
         let nuevoMostrado = false;
         function resaltarNuevo() {
             if (NUEVO === null || nuevoMostrado) return;
-            const card = [...document.querySelectorAll('#productGrid .card')]
+            const card = [...document.querySelectorAll('#destacados .card, #productGrid .card')]
                 .find(c => c.dataset.id === NUEVO);
             if (!card) return;
             nuevoMostrado = true;
@@ -672,7 +674,7 @@
             document.getElementById('priceMin').value = ''; document.getElementById('priceMax').value = '';
             destacadoId = id; expandirDestacado = true;
             renderCats(); applyFilter(false);
-            const card = [...document.querySelectorAll('#productGrid .card')].find(c => c.dataset.id === id);
+            const card = [...document.querySelectorAll('#destacados .card, #productGrid .card')].find(c => c.dataset.id === id);
             if (!card) return;
             document.querySelectorAll('.card.nuevo').forEach(c => c.classList.remove('nuevo'));
             card.classList.add('nuevo');
@@ -745,8 +747,17 @@
                 const i = lista.findIndex(p => String(p.id) === String(destacadoId));
                 if (i >= 0) { visibles = Math.max(visibles, i + 1); expandirDestacado = false; }
             }
-            renderDestacados(!terminos.length && !hayPrecio && !activeCat && !soloFavs);
-            displayProducts(lista);
+            // Un producto que ya está en una franja (Novedades / Bajó de precio) no se repite abajo.
+            // Si las franjas se llevarían todos los productos, no se muestran y queda solo la lista.
+            let franjas = null, resto = lista;
+            if (!terminos.length && !hayPrecio && !activeCat && !soloFavs) {
+                const f = calcFranjas();
+                const enFranja = new Set([...f.bajas, ...f.nuevos].map(p => p.id));
+                const sobran = lista.filter(p => !enFranja.has(p.id));
+                if (enFranja.size && sobran.length) { franjas = f; resto = sobran; }
+            }
+            renderDestacados(franjas);
+            displayProducts(resto);
             // búsquedas sin resultado: sirven para saber qué te piden y no tenés
             clearTimeout(aplicarFiltro.t);
             if (!lista.length && terminos.length && allProducts.length)
