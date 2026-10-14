@@ -80,6 +80,8 @@
             border-radius: 18px; background: var(--brand);
             box-shadow: 0 0 6px rgba(13,169,217,.55), 0 0 16px rgba(122,47,214,.35);
         }
+        .logo-frame { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+        .logo-frame:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
         .logo-frame::before {
             content: ""; position: absolute; inset: -3px; z-index: -1; border-radius: 22px;
             background: var(--brand); filter: blur(14px); opacity: .6;
@@ -481,6 +483,20 @@
         updateBarH();
         if (window.ResizeObserver) new ResizeObserver(updateBarH).observe(topEl);
         else addEventListener('resize', updateBarH);
+
+        // Tocar el logo refresca la página (y limpia ?cat=, ?nuevo=, etc. para volver al inicio).
+        (function () {
+            const lf = document.querySelector('.logo-frame');
+            if (!lf) return;
+            lf.setAttribute('role', 'link'); lf.setAttribute('tabindex', '0');
+            lf.setAttribute('aria-label', 'Nexos Market: volver al inicio y actualizar');
+            const ir = () => {
+                if (location.search || location.hash) location.href = location.pathname;
+                else location.reload();
+            };
+            lf.addEventListener('click', ir);
+            lf.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ir(); } });
+        })();
 
         // Encabezado siempre visible: se achica de a poco con el scroll (0 = completo, 1 = compacto).
         const toTopBtn = document.getElementById('toTop');
