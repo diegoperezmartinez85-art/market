@@ -1066,7 +1066,7 @@
     "link": "https://meli.la/17vk2AA",
     "source": "https://meli.la/17vk2AA",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-14 12:15",
     "added": "2026-10-14"
   },
   {
@@ -1084,7 +1084,7 @@
     "link": "https://meli.la/1P2unvU",
     "source": "https://meli.la/1P2unvU",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-14 12:15",
     "added": "2026-10-14"
   },
   {
@@ -1102,7 +1102,7 @@
     "link": "https://meli.la/1h7vSt5",
     "source": "https://meli.la/1h7vSt5",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-14 12:15",
     "added": "2026-10-14"
   },
   {
@@ -1120,7 +1120,7 @@
     "link": "https://meli.la/2cQQVwt",
     "source": "https://meli.la/2cQQVwt",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-14 12:15",
     "added": "2026-10-14"
   },
   {
@@ -1138,7 +1138,7 @@
     "link": "https://meli.la/2MDF27U",
     "source": "https://meli.la/2MDF27U",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-14 12:16",
     "added": "2026-10-14"
   },
   {
@@ -1156,7 +1156,7 @@
     "link": "https://meli.la/25MWjWV",
     "source": "https://meli.la/25MWjWV",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-14 12:16",
     "added": "2026-10-14"
   },
   {
@@ -1174,7 +1174,7 @@
     "link": "https://meli.la/2hqArtt",
     "source": "https://meli.la/2hqArtt",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-14 12:16",
     "added": "2026-10-14"
   },
   {
@@ -1192,7 +1192,7 @@
     "link": "https://meli.la/1GxZgof",
     "source": "https://meli.la/1GxZgof",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-14 12:16",
     "added": "2026-10-14"
   },
   {
@@ -1210,7 +1210,7 @@
     "link": "https://meli.la/324hrDp",
     "source": "https://meli.la/324hrDp",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-14 12:16",
     "added": "2026-10-14"
   },
   {
@@ -1228,7 +1228,223 @@
     "link": "https://meli.la/27aGyTn",
     "source": "https://meli.la/27aGyTn",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-14 12:16",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 69,
+    "code": "NX-0072",
+    "ml_id": "MLA1402796123",
+    "name": "Neumático Aplus 175/70R13 82T A609 - Cubierta Auto Rodado 13 175 70 R13 Mayor Eficiencia Kilométrica",
+    "category": "Accesorios para Vehículos",
+    "price": 74153.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_966927-MLA117747146273_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_966927-MLA117747146273_092026-O.webp"
+    ],
+    "link": "https://meli.la/2etnmAA",
+    "source": "https://meli.la/2etnmAA",
+    "status": "disponible",
+    "checked": "2026-10-14 13:17",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 70,
+    "code": "NX-0073",
+    "ml_id": "MLA2852093050",
+    "name": "Neumático Dunlop Sp Touring R1 175/70r13 82T Tecnología Japonesa",
+    "category": "Accesorios para Vehículos",
+    "price": 114623.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_932098-MLA99394069790_112025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_932098-MLA99394069790_112025-O.webp"
+    ],
+    "link": "https://meli.la/1Ghp2q5",
+    "source": "https://meli.la/1Ghp2q5",
+    "status": "disponible",
+    "checked": "2026-10-14 13:17",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 71,
+    "code": "NX-0074",
+    "ml_id": "MLA1515939085",
+    "name": "Kit X2 Neumaticos 175/70 R13 Mirage Mr-166 82t T",
+    "category": "Accesorios para Vehículos",
+    "price": 179185.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_745871-MLA118073360207_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_745871-MLA118073360207_092026-O.webp"
+    ],
+    "link": "https://meli.la/1ihxNRb",
+    "source": "https://meli.la/1ihxNRb",
+    "status": "disponible",
+    "checked": "2026-10-14 13:17",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 72,
+    "code": "NX-0075",
+    "ml_id": "MLA2478393734",
+    "name": "Kit X2 Neumáticos Zeta Energy Ztr50 175 70 R13 82h H",
+    "category": "Accesorios para Vehículos",
+    "price": 230993.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_763720-MLA118149523325_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_763720-MLA118149523325_092026-O.webp"
+    ],
+    "link": "https://meli.la/1uygBY7",
+    "source": "https://meli.la/1uygBY7",
+    "status": "disponible",
+    "checked": "2026-10-14 13:17",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 73,
+    "code": "NX-0076",
+    "ml_id": "MLA1543934469",
+    "name": "Reloj Inteligente Bleck Viva Slim Elegante Mujer Dorado Gold Rosa Dorado Rosa Dorado Rosa Dorado",
+    "category": "Joyas y Relojes",
+    "price": 136728.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_716120-MLA99504323566_112025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_716120-MLA99504323566_112025-O.webp"
+    ],
+    "link": "https://meli.la/1uJ3CQJ",
+    "source": "https://meli.la/1uJ3CQJ",
+    "status": "disponible",
+    "checked": "2026-10-14 13:18",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 74,
+    "code": "NX-0077",
+    "ml_id": "MLA2452955896",
+    "name": "Zapatillas Hush Puppies Mujer Irem Ultra Livianas Elastizada",
+    "category": "Ropa y Accesorios",
+    "price": 119590.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_960435-MLA95248062331_102025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_960435-MLA95248062331_102025-O.webp"
+    ],
+    "link": "https://meli.la/1pTQD1N",
+    "source": "https://meli.la/1pTQD1N",
+    "status": "disponible",
+    "checked": "2026-10-14 13:18",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 75,
+    "code": "NX-0078",
+    "ml_id": "MLA1628217632",
+    "name": "Smartwatch JD Hawai Rosa Gold Pantalla Amoled 1.43\" Llamadas Bluetooth IP68 Reloj Inteligente",
+    "category": "Electrónica, Audio y Video",
+    "price": 44899.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_878619-MLA116951653174_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_878619-MLA116951653174_092026-O.webp"
+    ],
+    "link": "https://meli.la/2Ctz9tb",
+    "source": "https://meli.la/2Ctz9tb",
+    "status": "disponible",
+    "checked": "2026-10-14 13:18",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 76,
+    "code": "NX-0079",
+    "ml_id": "MLA3897026736",
+    "name": "Pava Electrica 1.8l Vidrio Templado 1800w Luz Led 360 Base Giratoria Aitech Apagado Automatico Calienta Agua Rapido Hervidor Electrico Cocina Termo Mate Te Cafe Seguridad Antiseco Hogar",
+    "category": "Electrodomésticos y Aires Ac.",
+    "price": 26999.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_803510-MLA113897446698_072026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_803510-MLA113897446698_072026-O.webp"
+    ],
+    "link": "https://meli.la/1KvaJ96",
+    "source": "https://meli.la/1KvaJ96",
+    "status": "disponible",
+    "checked": "2026-10-14 13:18",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 77,
+    "code": "NX-0080",
+    "ml_id": "MLA4010408140",
+    "name": "Collar Pandora Timeless Corazón Elevado Plata 925 Plateado",
+    "category": "Joyas y Relojes",
+    "price": 184960.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_947747-MLA118459613069_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_947747-MLA118459613069_092026-O.webp"
+    ],
+    "link": "https://meli.la/26AsS4y",
+    "source": "https://meli.la/26AsS4y",
+    "status": "disponible",
+    "checked": "2026-10-14 13:18",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 78,
+    "code": "NX-0081",
+    "ml_id": "MLA4018408424",
+    "name": "Kit Serum Facial H7+ Crema Gradual +neceser The Perfect Glow",
+    "category": "Belleza y Cuidado Personal",
+    "price": 104640.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_772784-MLA118927027085_102026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_772784-MLA118927027085_102026-O.webp"
+    ],
+    "link": "https://meli.la/1bBtFWK",
+    "source": "https://meli.la/1bBtFWK",
+    "status": "disponible",
+    "checked": "2026-10-14 13:18",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 79,
+    "code": "NX-0082",
+    "ml_id": "MLA3799270702",
+    "name": "Licuadora De Mano Daewoo Lm3125 1000w Batidor- Picador Mixer Plateado",
+    "category": "Electrodomésticos y Aires Ac.",
+    "price": 94999.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_705705-MLA114772625036_082026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_705705-MLA114772625036_082026-O.webp"
+    ],
+    "link": "https://meli.la/26vvRjX",
+    "source": "https://meli.la/26vvRjX",
+    "status": "disponible",
+    "checked": "2026-10-14 13:18",
+    "added": "2026-10-14"
+  },
+  {
+    "id": 80,
+    "code": "NX-0083",
+    "ml_id": "MLA2097557211",
+    "name": "Barra Colágeno Volufiline Anti Ojeras Y Arrugas. Multi Balm Normal Día/noche",
+    "category": "Otros",
+    "price": 64590.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_759492-MLA116167237460_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_759492-MLA116167237460_092026-O.webp"
+    ],
+    "link": "https://meli.la/13yYzMM",
+    "source": "https://meli.la/13yYzMM",
+    "status": "disponible",
+    "checked": "2026-10-14 13:18",
     "added": "2026-10-14"
   }
 ]
