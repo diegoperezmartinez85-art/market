@@ -149,7 +149,7 @@
         .filters-btn {
             display: none; flex: 0 0 auto; position: relative; cursor: pointer; align-items: center; justify-content: center;
             min-width: 44px; padding: 0 12px; background: var(--surface-2); color: var(--text);
-            border: 1px solid var(--line); border-radius: 10px; font: inherit; font-size: 1.1rem; line-height: 1;
+            border: 1px solid var(--line); border-radius: 10px; font: inherit; font-size: 1rem; font-weight: 700; line-height: 1; white-space: nowrap;
         }
         .filters-btn[aria-expanded="true"] { border-color: var(--blue); }
         .filters-btn.has::after { content: ""; position: absolute; top: 6px; right: 6px; width: 8px; height: 8px; border-radius: 50%; background: var(--magenta); }
@@ -406,13 +406,13 @@
                 <option value="desc">Mayor precio</option>
                 <option value="az">Nombre A-Z</option>
             </select>
-            <button type="button" class="filters-btn" id="filtersBtn" aria-expanded="false" aria-controls="filtersBox" aria-label="Filtrar por precio" title="Filtrar por precio">&#9881;</button>
+            <button type="button" class="filters-btn" id="filtersBtn" aria-expanded="false" aria-controls="filtersBox" aria-label="Filtrar por precio" title="Filtrar por precio">$&#8239;&#9662;</button>
         </div>
         <div class="filters" id="filtersBox">
             <span>Precio</span>
-            <input type="number" id="priceMin" min="0" inputmode="numeric" placeholder="Mín $" aria-label="Precio mínimo">
+            <input type="text" id="priceMin" inputmode="numeric" autocomplete="off" placeholder="Mín $" aria-label="Precio mínimo">
             <span aria-hidden="true">&ndash;</span>
-            <input type="number" id="priceMax" min="0" inputmode="numeric" placeholder="Máx $" aria-label="Precio máximo">
+            <input type="text" id="priceMax" inputmode="numeric" autocomplete="off" placeholder="Máx $" aria-label="Precio máximo">
             <button type="button" class="clear" id="priceClear" hidden>Limpiar</button>
         </div>
         <nav class="cats" id="cats" aria-label="Categorías"></nav>
@@ -753,13 +753,13 @@
         // Categorías: se generan solas a partir de los productos cargados.
         const guardado = k => { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } };
         const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
-        let activeCat = new URLSearchParams(location.search).get('nuevo') === null ? guardado('nexos_cat') : '';
+        let activeCat = '';   // la categoría NO se recuerda entre visitas: cada vez se arranca viendo todo
+        try { localStorage.removeItem('nexos_cat'); } catch (e) {}   // limpia lo que guardaba la versión anterior
         function renderCats() {
             const counts = {};
             allProducts.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
             const names = Object.keys(counts).sort((a, b) => a.localeCompare(b, 'es'));
             if (activeCat && !counts[activeCat]) activeCat = '';
-            if (allProducts.length) guardar('nexos_cat', activeCat);
             const nav = document.getElementById('cats');
             nav.innerHTML = '';
             const mk = (label, value, n) => {
@@ -767,7 +767,7 @@
                 b.type = 'button';
                 b.className = (value === activeCat && !soloFavs) ? 'on' : '';
                 b.innerHTML = escapeHTML(label) + '<small>' + n + '</small>';
-                b.addEventListener('click', () => { activeCat = value; soloFavs = false; renderCats(); applyFilter(); });
+                b.addEventListener('click', () => { activeCat = value; soloFavs = false; renderCats(); applyFilter(); volverArriba(); });
                 nav.appendChild(b);
             };
             mk('Todas', '', allProducts.length);
@@ -776,19 +776,27 @@
             bf.type = 'button';
             bf.className = soloFavs ? 'on' : '';
             bf.innerHTML = '&#9829; Favoritos<small>' + nFav + '</small>';
-            bf.addEventListener('click', () => { soloFavs = !soloFavs; activeCat = ''; renderCats(); applyFilter(); });
+            bf.addEventListener('click', () => { soloFavs = !soloFavs; activeCat = ''; renderCats(); applyFilter(); volverArriba(); });
             nav.appendChild(bf);
             names.forEach(n => mk(n, n, counts[n]));
         }
 
         // Si hay que mostrar el producto recién agregado, se amplía la página una sola vez para incluirlo.
         let expandirDestacado = destacadoId !== null;
+        // Precio escrito como lo escribe la gente en Argentina: "50000", "50.000", "$ 50.000" o "1.500,50".
+        // (El punto es separador de miles y la coma es decimal.) Si no hay un número, devuelve NaN.
+        function leerPrecio(id) {
+            const t = document.getElementById(id).value.replace(/[^\d.,]/g, '').replace(/\./g, '').replace(',', '.');
+            return t === '' ? NaN : parseFloat(t);
+        }
+        // Al cambiar un filtro, se vuelve arriba para ver el principio de los resultados nuevos.
+        function volverArriba() { if ((window.scrollY || 0) > 0) scrollTo(0, 0); }
         // reset=false (lo usa el chequeo automático) conserva cuántos productos ya se habían desplegado.
         function applyFilter(reset) {
             if (reset !== false) visibles = PAGE;
             const terminos = norm(document.getElementById('searchInput').value).split(/\s+/).filter(Boolean);
-            const min = parseFloat(document.getElementById('priceMin').value);
-            const max = parseFloat(document.getElementById('priceMax').value);
+            const min = leerPrecio('priceMin');
+            const max = leerPrecio('priceMax');
             const hayPrecio = !isNaN(min) || !isNaN(max);
             document.getElementById('priceClear').hidden = !hayPrecio;
             if (typeof filtersBtn !== 'undefined') filtersBtn.classList.toggle('has', hayPrecio);
@@ -807,7 +815,7 @@
             lista.sort((a, b) => {
                 const na = a.status === 'no_disponible', nb = b.status === 'no_disponible';
                 if (na !== nb) return na ? 1 : -1;
-                if (orden === 'new') return b._n - a._n;
+                if (orden === 'new') return (b.added > a.added ? 1 : b.added < a.added ? -1 : 0) || (b._n - a._n);
                 if (orden === 'az') return a.name.localeCompare(b.name, 'es', { sensitivity: 'base' });
                 if (orden === 'asc' || orden === 'desc') {
                     const sa = a.price == null || isNaN(a.price), sb = b.price == null || isNaN(b.price);
@@ -823,7 +831,7 @@
             // Un producto que ya está en una franja (Novedades / Bajó de precio) no se repite abajo.
             // Si las franjas se llevarían todos los productos, no se muestran y queda solo la lista.
             let franjas = null, resto = lista;
-            if (!terminos.length && !hayPrecio && !activeCat && !soloFavs) {
+            if (!terminos.length && !hayPrecio && !activeCat && !soloFavs && !orden) {
                 const f = calcFranjas();
                 const enFranja = new Set([...f.bajas, ...f.nuevos].map(p => p.id));
                 const sobran = lista.filter(p => !enFranja.has(p.id));
@@ -839,12 +847,12 @@
         const aplicarFiltro = {};
         // Buscar/filtrar con una pausa de 200 ms: no se rearma la grilla en cada letra.
         let debT;
-        const aplicarConPausa = () => { clearTimeout(debT); debT = setTimeout(() => applyFilter(), 200); };
+        const aplicarConPausa = () => { clearTimeout(debT); debT = setTimeout(() => { applyFilter(); volverArriba(); }, 200); };
         const sortSel = document.getElementById('sortSelect');
         const ordenGuardado = guardado('nexos_sort');
         if ([...sortSel.options].some(o => o.value === ordenGuardado)) sortSel.value = ordenGuardado;
         document.getElementById('searchInput').addEventListener('input', aplicarConPausa);
-        sortSel.addEventListener('change', () => { guardar('nexos_sort', sortSel.value); applyFilter(); });
+        sortSel.addEventListener('change', () => { guardar('nexos_sort', sortSel.value); applyFilter(); volverArriba(); });
         document.getElementById('priceMin').addEventListener('input', aplicarConPausa);
         document.getElementById('priceMax').addEventListener('input', aplicarConPausa);
         const filtersBtn = document.getElementById('filtersBtn'), filtersBox = document.getElementById('filtersBox');
@@ -854,7 +862,7 @@
         });
         document.getElementById('priceClear').addEventListener('click', () => {
             document.getElementById('priceMin').value = ''; document.getElementById('priceMax').value = '';
-            applyFilter();
+            applyFilter(); volverArriba();
         });
         document.getElementById('moreBtn').addEventListener('click', () => {
             visibles += PAGE;
