@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#0f1316">
-    <title>Nexos Market</title>
+    <title>Nexos Market | Ofertas, novedades y bajas de precio</title>
     <meta name="description" content="Nexos Market: ofertas, novedades y productos que bajaron de precio. Buscá por nombre, categoría o precio y comprá directo.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Nexos Market">
     <meta property="og:locale" content="es_AR">
-    <meta property="og:title" content="Nexos Market">
+    <meta property="og:title" content="Nexos Market | Ofertas, novedades y bajas de precio">
     <meta property="og:description" content="Ofertas, novedades y productos que bajaron de precio.">
-    <!-- IMPORTANTE: al publicar, reemplazá por la dirección completa, ej.: https://tusitio.com/logo.jpg -->
-    <meta property="og:image" content="logo.jpg">
+    <!-- Dirección del sitio: https://market.nexosmaps.com/ (canonical, vista previa y datos estructurados). Si cambiás de dominio, reemplazala en todo este archivo, en sitemap.xml y en robots.txt. -->
+    <link rel="canonical" href="https://market.nexosmaps.com/">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:url" content="https://market.nexosmaps.com/">
+    <meta property="og:image" content="https://market.nexosmaps.com/og.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Nexos Market: ofertas, novedades y productos que bajaron de precio">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nexos Market">
+    <meta name="twitter:description" content="Ofertas, novedades y productos que bajaron de precio.">
+    <meta name="twitter:image" content="https://market.nexosmaps.com/og.jpg">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://market.nexosmaps.com/#org","name":"Nexos Market","url":"https://market.nexosmaps.com/","logo":"https://market.nexosmaps.com/logo.jpg"},{"@type":"WebSite","@id":"https://market.nexosmaps.com/#web","url":"https://market.nexosmaps.com/","name":"Nexos Market","inLanguage":"es-AR","publisher":{"@id":"https://market.nexosmaps.com/#org"},"potentialAction":{"@type":"SearchAction","target":"https://market.nexosmaps.com/?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     <style>
@@ -37,6 +48,7 @@
             --action: #2f5fe3;
             --action-hover: #244fc4;
         }
+        .sr-only { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
         * { box-sizing: border-box; margin: 0; }
         body {
             background: var(--page);
@@ -377,9 +389,39 @@
         @media (min-width: 1100px) {
             .card .thumb img { padding: 6px; }
         }
+
+        .cp { display: block; width: 100%; margin-top: 6px; border: 0; background: none; color: var(--ink-muted); font: 600 .78rem/1.2 inherit; padding: 6px 0; cursor: pointer; }
+        .cp:hover { color: var(--action); }
+        /* ---- Resumen semanal ---- */
+        .cats button.resumen { border-color: var(--magenta); font-weight: 600; }
+        .rs-back { position: fixed; inset: 0; z-index: 100; background: rgba(15,19,22,.65); display: flex; align-items: center; justify-content: center; padding: 12px; }
+        .rs-back[hidden] { display: none; }
+        .rs-box { background: #fff; color: var(--ink); width: min(560px, 100%); max-height: calc(100vh - 24px); display: flex; flex-direction: column; border-radius: 14px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+        .rs-head { display: flex; align-items: flex-start; gap: 10px; padding: 16px 18px 12px; border-bottom: 1px solid var(--card-line); }
+        .rs-head h2 { font-size: 1.15rem; line-height: 1.25; }
+        .rs-head p { color: var(--ink-muted); font-size: .85rem; margin-top: 2px; }
+        .rs-x { margin-left: auto; border: 0; background: #eef0f2; width: 34px; height: 34px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; flex: none; }
+        .rs-list { overflow: auto; padding: 6px 18px 10px; flex: 1; }
+        .rs-list h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-muted); margin: 12px 0 6px; }
+        .rs-item { display: flex; gap: 10px; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--card-line); }
+        .rs-item img { width: 46px; height: 46px; object-fit: contain; border-radius: 8px; background: #f3f4f6; flex: none; }
+        .rs-item a { color: var(--ink); text-decoration: none; font-size: .88rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .rs-item b { display: block; font-size: .9rem; margin-top: 2px; }
+        .rs-item s { color: var(--ink-muted); font-weight: 400; margin-left: 6px; font-size: .8rem; }
+        .rs-item em { color: #0f7a3f; font-style: normal; font-weight: 700; font-size: .8rem; margin-left: 6px; }
+        .rs-more, .rs-note, .rs-empty { color: var(--ink-muted); font-size: .82rem; padding: 8px 0; }
+        .rs-note { background: #fff7e6; border-radius: 8px; padding: 8px 10px; margin: 10px 0 0; color: #7a5200; }
+        .rs-foot { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 18px 16px; border-top: 1px solid var(--card-line); background: #fafbfc; }
+        .rs-foot .rs-b { flex: 1 1 150px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 11px 12px; border-radius: 10px; border: 1px solid var(--card-line); background: #fff; color: var(--ink); font: 600 .9rem/1.2 inherit; text-decoration: none; cursor: pointer; }
+        .rs-foot .rs-b.send { background: #1fa855; border-color: #1fa855; color: #fff; flex-basis: 100%; }
+        .rs-foot .rs-b.send svg { width: 20px; height: 20px; fill: currentColor; }
+        .rs-foot .rs-b:focus-visible, .rs-x:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+        .rs-foot .rs-b[aria-disabled="true"] { opacity: .45; pointer-events: none; }
+        body.rs-open { overflow: hidden; }
     </style>
 </head>
 <body>
+    <h1 class="sr-only">Nexos Market: ofertas, novedades y productos que bajaron de precio</h1>
 
     <div class="top" id="top">
     <header>
@@ -423,6 +465,7 @@
         <div id="destacados"></div>
         <p id="count" aria-live="polite"></p>
         <div id="productGrid"></div>
+        <noscript><p class="empty">Nexos Market necesita JavaScript para mostrar el catálogo de ofertas. Activalo en tu navegador para ver los productos.</p></noscript>
         <div class="more-wrap" id="moreWrap" hidden><button type="button" class="more-btn" id="moreBtn"></button></div>
     </main>
     <button type="button" class="to-top" id="toTop" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>
@@ -663,7 +706,8 @@
                     ${caido
                         ? '<span class="btn btn-off" aria-disabled="true">Publicación no disponible</span>'
                         : `<a class="btn" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(p.link)}" target="_blank" rel="noopener noreferrer sponsored">Ver oferta en Mercado Libre</a>
-                           <a class="wa" data-ev="compartir" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(waLink(p))}" target="_blank" rel="noopener noreferrer">${WA_SVG}<span class="wa-t">Compartir<span class="wa-x"> por WhatsApp</span></span></a>`}
+                           <a class="wa" data-ev="compartir" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(waLink(p))}" target="_blank" rel="noopener noreferrer">${WA_SVG}<span class="wa-t">Compartir<span class="wa-x"> por WhatsApp</span></span></a>
+                           <button type="button" class="cp" data-cp="${escapeHTML(p.id)}">&#128279; Copiar link</button>`}
                 </div>`;
             setupGallery(card, p);
             return card;
@@ -709,6 +753,8 @@
                 renderCats();
                 applyFilter();
                 resaltarNuevo();
+                actualizarSEO();
+                autoResumen();
             } catch (error) {
                 console.error('Error cargando productos:', error);
                 // Mensaje para el público; la pista técnica solo se ve en tu PC.
@@ -753,8 +799,32 @@
         // Categorías: se generan solas a partir de los productos cargados.
         const guardado = k => { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } };
         const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
-        let activeCat = '';   // la categoría NO se recuerda entre visitas: cada vez se arranca viendo todo
+        let activeCat = new URLSearchParams(location.search).get('cat') || '';   // viene del link (?cat=Nombre); no se recuerda entre visitas
         try { localStorage.removeItem('nexos_cat'); } catch (e) {}   // limpia lo que guardaba la versión anterior
+        // Título, descripción y link canónico propios para cada categoría (Google y WhatsApp los leen al compartir/indexar).
+        const META_BASE = { title: document.title, desc: (document.querySelector('meta[name="description"]') || {}).content || '' };
+        function setMeta(sel, attr, val) { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); }
+        function actualizarMeta() {
+            const can = document.querySelector('link[rel="canonical"]');
+            const origen = can ? can.href.split('?')[0] : '';
+            let title = META_BASE.title, desc = META_BASE.desc, url = origen;
+            if (activeCat) {
+                const n = allProducts.filter(p => p.category === activeCat).length;
+                title = activeCat + ' en oferta | Nexos Market';
+                desc = (n ? n + ' productos de ' : 'Productos de ') + activeCat + ' con precios actualizados, ofertas y bajas de precio. Compará y comprá directo en Mercado Libre.';
+                url = origen + '?cat=' + encodeURIComponent(activeCat);
+            }
+            document.title = title;
+            setMeta('meta[name="description"]', 'content', desc);
+            setMeta('meta[property="og:title"]', 'content', title);
+            setMeta('meta[property="og:description"]', 'content', desc);
+            setMeta('meta[name="twitter:title"]', 'content', title);
+            setMeta('meta[name="twitter:description"]', 'content', desc);
+            if (can) { can.href = url; setMeta('meta[property="og:url"]', 'content', url); }
+        }
+        function catUrl() {
+            try { history.replaceState(null, '', activeCat ? '?cat=' + encodeURIComponent(activeCat) : location.pathname); } catch (e) {}
+        }
         function renderCats() {
             const counts = {};
             allProducts.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
@@ -767,18 +837,23 @@
                 b.type = 'button';
                 b.className = (value === activeCat && !soloFavs) ? 'on' : '';
                 b.innerHTML = escapeHTML(label) + '<small>' + n + '</small>';
-                b.addEventListener('click', () => { activeCat = value; soloFavs = false; renderCats(); applyFilter(); volverArriba(); });
+                b.addEventListener('click', () => { activeCat = value; soloFavs = false; catUrl(); renderCats(); applyFilter(); volverArriba(); });
                 nav.appendChild(b);
             };
+            const br = document.createElement('button');
+            br.type = 'button'; br.className = 'resumen'; br.textContent = '📅 Resumen semanal';
+            br.addEventListener('click', abrirResumen);
+            nav.appendChild(br);
             mk('Todas', '', allProducts.length);
             const nFav = allProducts.filter(p => favs.has(String(p.id))).length;
             const bf = document.createElement('button');
             bf.type = 'button';
             bf.className = soloFavs ? 'on' : '';
             bf.innerHTML = '&#9829; Favoritos<small>' + nFav + '</small>';
-            bf.addEventListener('click', () => { soloFavs = !soloFavs; activeCat = ''; renderCats(); applyFilter(); volverArriba(); });
+            bf.addEventListener('click', () => { soloFavs = !soloFavs; activeCat = ''; catUrl(); renderCats(); applyFilter(); volverArriba(); });
             nav.appendChild(bf);
             names.forEach(n => mk(n, n, counts[n]));
+            actualizarMeta();
         }
 
         // Si hay que mostrar el producto recién agregado, se amplía la página una sola vez para incluirlo.
@@ -851,6 +926,7 @@
         const sortSel = document.getElementById('sortSelect');
         const ordenGuardado = guardado('nexos_sort');
         if ([...sortSel.options].some(o => o.value === ordenGuardado)) sortSel.value = ordenGuardado;
+        { const q = new URLSearchParams(location.search).get('q'); if (q) document.getElementById('searchInput').value = q; }
         document.getElementById('searchInput').addEventListener('input', aplicarConPausa);
         sortSel.addEventListener('change', () => { guardar('nexos_sort', sortSel.value); applyFilter(); volverArriba(); });
         document.getElementById('priceMin').addEventListener('input', aplicarConPausa);
@@ -883,6 +959,10 @@
             if (!a) return;
             contarEvento((a.dataset.ev || 'compra') + '/' + a.dataset.track, a.dataset.name);
         }
+        function clickCopiar(e) {
+            const b = e.target.closest && e.target.closest('.cp');
+            if (b) rsCopiar(location.href.split(/[?#]/)[0].replace(/index\.html$/, '') + '?nuevo=' + encodeURIComponent(b.dataset.cp), b);
+        }
         function clickFav(e) {
             const b = e.target.closest && e.target.closest('.fav');
             if (b) toggleFav(b.dataset.fav, b.dataset.name);
@@ -892,6 +972,7 @@
             el.addEventListener('click', contarClick);
             el.addEventListener('auxclick', contarClick);   // clic del medio
             el.addEventListener('click', clickFav);
+            el.addEventListener('click', clickCopiar);
         });
 
         // Si agregás o eliminás productos con el Gestor, la tienda se actualiza sola.
@@ -919,6 +1000,104 @@
         const ES_LOCAL = ['localhost', '127.0.0.1', '[::1]', ''].includes(location.hostname);
         setInterval(() => { if (!document.hidden) pollProducts(); }, ES_LOCAL ? 3000 : 60000);
         document.addEventListener('visibilitychange', () => { if (!document.hidden) pollProducts(); });
+
+        // ---- Resumen semanal de ofertas (se arma solo con productos.json) ----
+        const DIAS_RESUMEN = 7, RS_BAJAS = 5, RS_NUEVOS = 8;
+        const rsPrecio = v => fmtMoney(v, 'ARS').replace(/,00$/, '');
+        const rsCorto = (t, n) => t.length > n ? t.slice(0, n - 1).trimEnd() + '…' : t;
+        const rsUrl = () => location.href.split(/[?#]/)[0].replace(/index\.html$/, '') + '?resumen=1';
+        function calcResumen() {
+            const ok = allProducts.filter(p => p.status !== 'no_disponible');
+            const bajasTodas = ok.filter(p => p.prev != null && p.price != null && p.prev > p.price && pctBaja(p) >= 1 && reciente(p.drop, DIAS_RESUMEN))
+                .sort((a, b) => pctBaja(b) - pctBaja(a));
+            const ids = new Set(bajasTodas.map(p => String(p.id)));
+            const nuevosTodos = ok.filter(p => !ids.has(String(p.id)) && reciente(p.added, DIAS_RESUMEN))
+                .sort((x, y) => (y.added > x.added ? 1 : y.added < x.added ? -1 : y._n - x._n));
+            return { bajas: bajasTodas.slice(0, RS_BAJAS), nuevos: nuevosTodos.slice(0, RS_NUEVOS),
+                     totBajas: bajasTodas.length, totNuevos: nuevosTodos.length };
+        }
+        function rsRango() {
+            const f = d => d.toLocaleDateString('es-AR', { day: 'numeric', month: 'short' }).replace('.', '');
+            const hoy = new Date(), ini = new Date(hoy.getTime() - (DIAS_RESUMEN - 1) * 864e5);
+            return f(ini) + ' al ' + f(hoy);
+        }
+        function rsTexto(r) {
+            const L = ['🔥 *Resumen semanal de ofertas – Nexos Market*', '📅 ' + rsRango(), ''];
+            if (r.bajas.length) {
+                L.push('📉 *Bajaron de precio*');
+                r.bajas.forEach(p => L.push('• ' + rsCorto(p.name, 60) + ' — ' + rsPrecio(p.price) + ' (antes ' + rsPrecio(p.prev) + ', -' + pctBaja(p) + '%)'));
+                L.push('');
+            }
+            if (r.nuevos.length) {
+                L.push('🆕 *Novedades de la semana*');
+                r.nuevos.forEach(p => L.push('• ' + rsCorto(p.name, 60) + ' — ' + (p.price == null ? 'Consultar precio' : rsPrecio(p.price))));
+                L.push('');
+            }
+            L.push('👉 Mirá todas las ofertas: ' + rsUrl());
+            return L.join('\n');
+        }
+        function rsCopiar(texto, btn) {
+            const ok = () => { const t = btn.textContent; btn.textContent = '✓ ¡Copiado!'; setTimeout(() => { btn.textContent = t; }, 2000); };
+            const viejo = () => {
+                const ta = document.createElement('textarea'); ta.value = texto; ta.style.cssText = 'position:fixed;opacity:0';
+                document.body.appendChild(ta); ta.select();
+                try { document.execCommand('copy'); ok(); } catch (e) { prompt('Copiá este texto:', texto); }
+                ta.remove();
+            };
+            if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(texto).then(ok, viejo); else viejo();
+        }
+        let rsBox = null, rsFoco = null;
+        function cerrarResumen() {
+            if (!rsBox || rsBox.hidden) return;
+            rsBox.hidden = true; document.body.classList.remove('rs-open');
+            if (rsFoco && rsFoco.focus) rsFoco.focus();
+        }
+        function abrirResumen() {
+            const r = calcResumen(), hay = r.bajas.length + r.nuevos.length > 0;
+            const item = p => '<div class="rs-item"><img src="' + escapeHTML(p.image || PLACEHOLDER) + '" alt="" loading="lazy" referrerpolicy="no-referrer">' +
+                '<div><a href="' + escapeHTML(p.link) + '" target="_blank" rel="noopener noreferrer sponsored">' + escapeHTML(p.name) + '</a><b>' + formatPrice(p) +
+                (p.prev != null && p.prev > p.price && r.bajas.includes(p) ? '<s>' + fmtMoney(p.prev, p.currency) + '</s><em>-' + pctBaja(p) + '%</em>' : '') + '</b></div></div>';
+            const mas = (tot, n) => tot > n ? '<p class="rs-more">y ' + (tot - n) + ' más en la tienda</p>' : '';
+            const texto = rsTexto(r);
+            if (!rsBox) {
+                rsBox = document.createElement('div'); rsBox.className = 'rs-back'; rsBox.hidden = true;
+                rsBox.addEventListener('click', e => { if (e.target === rsBox) cerrarResumen(); });
+                document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarResumen(); });
+                document.body.appendChild(rsBox);
+            }
+            rsBox.innerHTML = '<div class="rs-box" role="dialog" aria-modal="true" aria-labelledby="rsT">' +
+                '<div class="rs-head"><div><h2 id="rsT">Resumen semanal de ofertas</h2><p>' + rsRango() + ' · ' + r.totBajas + ' bajas de precio · ' + r.totNuevos + ' novedades</p></div>' +
+                '<button type="button" class="rs-x" aria-label="Cerrar">&times;</button></div>' +
+                '<div class="rs-list">' + (hay ? '' : '<p class="rs-empty">Esta semana todavía no hay ofertas nuevas para resumir.</p>') +
+                (r.bajas.length ? '<h3>📉 Bajaron de precio</h3>' + r.bajas.map(item).join('') + mas(r.totBajas, RS_BAJAS) : '') +
+                (r.nuevos.length ? '<h3>🆕 Novedades</h3>' + r.nuevos.map(item).join('') + mas(r.totNuevos, RS_NUEVOS) : '') +
+                (ES_LOCAL || location.protocol === 'file:' ? '<p class="rs-note">Estás viendo la tienda en tu PC: el link solo funcionará para otros cuando la tengas publicada online.</p>' : '') +
+                '</div><div class="rs-foot">' +
+                '<a class="rs-b send" id="rsWa" target="_blank" rel="noopener noreferrer" ' + (hay ? 'href="https://wa.me/?text=' + encodeURIComponent(texto) + '"' : 'aria-disabled="true"') + '>' + WA_SVG + 'Enviar por WhatsApp</a>' +
+                '<a class="rs-b" target="_blank" rel="noopener noreferrer" ' + (hay ? 'href="https://t.me/share/url?url=' + encodeURIComponent(rsUrl()) + '&text=' + encodeURIComponent(texto.split('\n').slice(0, -2).join('\n')) + '"' : 'aria-disabled="true"') + '>✈️ Telegram</a>' +
+                '<button type="button" class="rs-b" id="rsLink">🔗 Copiar link</button>' +
+                '<button type="button" class="rs-b" id="rsMsg"' + (hay ? '' : ' aria-disabled="true"') + '>📋 Copiar mensaje</button></div></div>';
+            rsBox.querySelector('.rs-x').addEventListener('click', cerrarResumen);
+            document.getElementById('rsLink').addEventListener('click', e => rsCopiar(rsUrl(), e.currentTarget));
+            document.getElementById('rsMsg').addEventListener('click', e => { if (hay) rsCopiar(texto, e.currentTarget); });
+            rsFoco = document.activeElement;
+            rsBox.hidden = false; document.body.classList.add('rs-open');
+            rsBox.querySelector('.rs-x').focus();
+        }
+        // Datos para buscadores: Google ejecuta JavaScript y lee esta lista de productos con precio.
+        function actualizarSEO() {
+            try {
+                const ok = allProducts.filter(p => p.status !== 'no_disponible' && p.price != null).slice(0, 50);
+                const ld = { '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: ok.map((p, i) => ({
+                    '@type': 'ListItem', position: i + 1, item: { '@type': 'Product', url: location.href.split(/[?#]/)[0] + '?nuevo=' + encodeURIComponent(p.id), name: p.name, image: p.image, category: p.category,
+                        offers: { '@type': 'Offer', price: p.price, priceCurrency: p.currency, url: p.link, availability: 'https://schema.org/InStock' } } })) };
+                let el = document.getElementById('ld-productos');
+                if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = 'ld-productos'; document.head.appendChild(el); }
+                el.textContent = JSON.stringify(ld);
+            } catch (e) { /* si falla, la tienda sigue igual */ }
+        }
+        let rsAuto = new URLSearchParams(location.search).has('resumen');
+        function autoResumen() { if (rsAuto) { rsAuto = false; abrirResumen(); } }
 
         fetchProducts();
     
