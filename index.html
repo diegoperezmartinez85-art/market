@@ -612,7 +612,7 @@
             const base = location.href.split(/[?#]/)[0];
             const precio = (p.price == null || isNaN(p.price)) ? '' : ' - ' + formatPrice(p);
             const txt = 'Mirá este producto en Nexos Market: ' + p.name + precio + '\n' + base + '?nuevo=' + encodeURIComponent(p.id);
-            return 'https://wa.me/?text=' + encodeURIComponent(txt);
+            return 'https://api.whatsapp.com/send?text=' + encodeURIComponent(txt);
         }
 
         function escapeHTML(s) {
@@ -1024,18 +1024,18 @@
             return f(ini) + ' al ' + f(hoy);
         }
         function rsTexto(r) {
-            const L = ['🔥 *Resumen semanal de ofertas – Nexos Market*', '📅 ' + rsRango(), ''];
+            const L = ['⚡ *Resumen semanal de ofertas – Nexos Market*', '▪ ' + rsRango(), ''];
             if (r.bajas.length) {
-                L.push('📉 *Bajaron de precio*');
+                L.push('⬇️ *Bajaron de precio*');
                 r.bajas.forEach(p => L.push('• ' + rsCorto(p.name, 60) + ' — ' + rsPrecio(p.price) + ' (antes ' + rsPrecio(p.prev) + ', -' + pctBaja(p) + '%)'));
                 L.push('');
             }
             if (r.nuevos.length) {
-                L.push('🆕 *Novedades de la semana*');
+                L.push('✨ *Novedades de la semana*');
                 r.nuevos.forEach(p => L.push('• ' + rsCorto(p.name, 60) + ' — ' + (p.price == null ? 'Consultar precio' : rsPrecio(p.price))));
                 L.push('');
             }
-            L.push('👉 Mirá todas las ofertas: ' + rsUrl());
+            L.push('➡️ Mirá todas las ofertas: ' + rsUrl());
             return L.join('\n');
         }
         function rsCopiar(texto, btn) {
@@ -1075,7 +1075,7 @@
                 (r.nuevos.length ? '<h3>🆕 Novedades</h3>' + r.nuevos.map(item).join('') + mas(r.totNuevos, RS_NUEVOS) : '') +
                 (ES_LOCAL || location.protocol === 'file:' ? '<p class="rs-note">Estás viendo la tienda en tu PC: el link solo funcionará para otros cuando la tengas publicada online.</p>' : '') +
                 '</div><div class="rs-foot">' +
-                '<a class="rs-b send" id="rsWa" target="_blank" rel="noopener noreferrer" ' + (hay ? 'href="https://wa.me/?text=' + encodeURIComponent(texto) + '"' : 'aria-disabled="true"') + '>' + WA_SVG + 'Enviar por WhatsApp</a>' +
+                '<a class="rs-b send" id="rsWa" target="_blank" rel="noopener noreferrer" ' + (hay ? 'href="https://api.whatsapp.com/send?text=' + encodeURIComponent(texto) + '"' : 'aria-disabled="true"') + '>' + WA_SVG + 'Enviar por WhatsApp</a>' +
                 '<a class="rs-b" target="_blank" rel="noopener noreferrer" ' + (hay ? 'href="https://t.me/share/url?url=' + encodeURIComponent(rsUrl()) + '&text=' + encodeURIComponent(texto.split('\n').slice(0, -2).join('\n')) + '"' : 'aria-disabled="true"') + '>✈️ Telegram</a>' +
                 '<button type="button" class="rs-b" id="rsLink">🔗 Copiar link</button>' +
                 '<button type="button" class="rs-b" id="rsMsg"' + (hay ? '' : ' aria-disabled="true"') + '>📋 Copiar mensaje</button></div></div>';
