@@ -5,7 +5,7 @@
     "ml_id": "MLA1481826831",
     "name": "Buclera de Pelo Gadnic B3000 Rizador 3 Tubos 25 mm 150W 180 210 C",
     "category": "Belleza y Cuidado Personal",
-    "price": 48899.0,
+    "price": 52999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_844867-MLA88645832741_072025-O.webp",
     "images": [
@@ -13,8 +13,8 @@
     ],
     "link": "https://meli.la/1T496Fz",
     "source": "https://meli.la/1T496Fz",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -23,7 +23,7 @@
     "ml_id": "MLA1769480651",
     "name": "Auriculares Inalámbricos Xiaomi Redmi Headphones Neo Negro",
     "category": "Celulares y Teléfonos",
-    "price": 79999.0,
+    "price": 89899.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_639081-MLA110410361526_052026-O.webp",
     "images": [
@@ -31,8 +31,8 @@
     ],
     "link": "https://meli.la/1MW5fe8",
     "source": "https://meli.la/1MW5fe8",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -41,7 +41,7 @@
     "ml_id": "MLA1804090647",
     "name": "Bicicleta Mtb Overtech Q5 Lady R29, 21v Con Shimano, Freno A Disco, Con Suspensión, Color Rosa Mate/blanco Tamaño Del Cuadro XS",
     "category": "Computación",
-    "price": 258339.0,
+    "price": 257721.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_741449-MLA118778490935_102026-O.webp",
     "images": [
@@ -49,9 +49,11 @@
     ],
     "link": "https://meli.la/1h867pi",
     "source": "https://meli.la/1h867pi",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
-    "added": "2026-10-13"
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
+    "added": "2026-10-13",
+    "prev_price": 258339.0,
+    "price_drop": "2026-10-20"
   },
   {
     "id": 4,
@@ -59,7 +61,7 @@
     "ml_id": "MLA1428951972",
     "name": "Perfume Her Golden Secret Banderas Edt mujer 80 Ml",
     "category": "Belleza y Cuidado Personal",
-    "price": 39468.0,
+    "price": 42626.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_702688-MLU73471553168_122023-O.webp",
     "images": [
@@ -67,8 +69,8 @@
     ],
     "link": "https://meli.la/1bAH8Qq",
     "source": "https://meli.la/1bAH8Qq",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -77,7 +79,7 @@
     "ml_id": "MLA1396762921",
     "name": "Zapatillas Mujer Nike Court Vision Low Blanco Dh3158-100",
     "category": "Ropa y Accesorios",
-    "price": 145999.0,
+    "price": 149999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_895951-MLA73223898750_122023-O.webp",
     "images": [
@@ -85,11 +87,9 @@
     ],
     "link": "https://meli.la/2R7rZ5R",
     "source": "https://meli.la/2R7rZ5R",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
-    "added": "2026-10-13",
-    "prev_price": 149999.0,
-    "price_drop": "2026-10-15"
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
+    "added": "2026-10-13"
   },
   {
     "id": 6,
@@ -105,8 +105,8 @@
     ],
     "link": "https://meli.la/2BCr8yR",
     "source": "https://meli.la/2BCr8yR",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -115,7 +115,7 @@
     "ml_id": "MLA3911032354",
     "name": "Calvin Klein Euphoria Eau de Parfum for Women 100ml",
     "category": "Otros",
-    "price": 120037.0,
+    "price": 114000.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_717449-MLA117324590344_102026-O.webp",
     "images": [
@@ -123,9 +123,11 @@
     ],
     "link": "https://meli.la/1DcbZC4",
     "source": "https://meli.la/1DcbZC4",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
-    "added": "2026-10-13"
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
+    "added": "2026-10-13",
+    "prev_price": 120037.0,
+    "price_drop": "2026-10-20"
   },
   {
     "id": 8,
@@ -133,7 +135,7 @@
     "ml_id": "MLA3958592214",
     "name": "Freidora De Aire Liliana Af957 6 Lt 1750w",
     "category": "Electrodomésticos y Aires Ac.",
-    "price": 106999.0,
+    "price": 121999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_964462-MLA104781723958_012026-O.webp",
     "images": [
@@ -141,8 +143,8 @@
     ],
     "link": "https://meli.la/1J4Rrdf",
     "source": "https://meli.la/1J4Rrdf",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -151,7 +153,7 @@
     "ml_id": "MLA2707908976",
     "name": "Sandwichera Baza 3 en 1 con Placas Removibles para 2 Sándwiches",
     "category": "Otros",
-    "price": 53340.0,
+    "price": 54990.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_868440-MLA112579786174_062026-O.webp",
     "images": [
@@ -159,8 +161,8 @@
     ],
     "link": "https://meli.la/2D73fgG",
     "source": "https://meli.la/2D73fgG",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -177,8 +179,8 @@
     ],
     "link": "https://meli.la/227mrAM",
     "source": "https://meli.la/227mrAM",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -187,7 +189,7 @@
     "ml_id": "MLA2840092218",
     "name": "Smartphone Moto G17 Evening Blue Memoria interna 128GB - 4GM RAM Motorola",
     "category": "Celulares y Teléfonos",
-    "price": 276156.0,
+    "price": 286199.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_638602-MLA106598723027_022026-O.webp",
     "images": [
@@ -195,11 +197,9 @@
     ],
     "link": "https://meli.la/1Fqm9eA",
     "source": "https://meli.la/1Fqm9eA",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
-    "added": "2026-10-13",
-    "prev_price": 286199.0,
-    "price_drop": "2026-10-15"
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
+    "added": "2026-10-13"
   },
   {
     "id": 12,
@@ -207,7 +207,7 @@
     "ml_id": "MLA2812754482",
     "name": "Batidora planetaria de pie Aiwa Digital 12L 1800W 8 Niveles De Velocidad Color Negro",
     "category": "Electrodomésticos y Aires Ac.",
-    "price": 339499.0,
+    "price": 319999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_609969-MLA91742406602_092025-O.webp",
     "images": [
@@ -215,9 +215,11 @@
     ],
     "link": "https://meli.la/2TuAQ7N",
     "source": "https://meli.la/2TuAQ7N",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
-    "added": "2026-10-13"
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
+    "added": "2026-10-13",
+    "prev_price": 339499.0,
+    "price_drop": "2026-10-20"
   },
   {
     "id": 13,
@@ -225,7 +227,7 @@
     "ml_id": "MLA2013343168",
     "name": "Cafetera Automatica Cuk By Gadnic Torino I Expreso Espumador Vaporizador Presion 20 Bar Tanque Extraible Acero Inoxidable",
     "category": "Electrodomésticos y Aires Ac.",
-    "price": 262499.0,
+    "price": 280149.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_606368-MLA118249747705_092026-O.webp",
     "images": [
@@ -233,8 +235,8 @@
     ],
     "link": "https://meli.la/2ETZ6gF",
     "source": "https://meli.la/2ETZ6gF",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -243,7 +245,7 @@
     "ml_id": "MLA2170192831",
     "name": "Apple iPhone 17 Pro Max (256 GB) - Naranja cósmico",
     "category": "Celulares y Teléfonos",
-    "price": 2537000.0,
+    "price": 2532999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_964942-MLA104127286834_012026-O.webp",
     "images": [
@@ -251,11 +253,11 @@
     ],
     "link": "https://meli.la/12QbyDP",
     "source": "https://meli.la/12QbyDP",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13",
-    "prev_price": 2539000.0,
-    "price_drop": "2026-10-15"
+    "prev_price": 2537000.0,
+    "price_drop": "2026-10-20"
   },
   {
     "id": 15,
@@ -263,7 +265,7 @@
     "ml_id": "MLA1967454307",
     "name": "Perfume Her Secret Pink Absolu Eau De Parfum Antonio Banderas 80ml",
     "category": "Belleza y Cuidado Personal",
-    "price": 44400.0,
+    "price": 49000.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_935230-MLA87957401135_072025-O.webp",
     "images": [
@@ -271,8 +273,8 @@
     ],
     "link": "https://meli.la/13mz3Td",
     "source": "https://meli.la/13mz3Td",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -289,8 +291,8 @@
     ],
     "link": "https://meli.la/2UTGChk",
     "source": "https://meli.la/2UTGChk",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -307,8 +309,8 @@
     ],
     "link": "https://meli.la/33pKZFQ",
     "source": "https://meli.la/33pKZFQ",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -325,8 +327,8 @@
     ],
     "link": "https://meli.la/1vh3uLZ",
     "source": "https://meli.la/1vh3uLZ",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -343,8 +345,8 @@
     ],
     "link": "https://meli.la/1JobBDi",
     "source": "https://meli.la/1JobBDi",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -361,8 +363,8 @@
     ],
     "link": "https://meli.la/2cEZKWg",
     "source": "https://meli.la/2cEZKWg",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -379,8 +381,8 @@
     ],
     "link": "https://meli.la/2e6U8Kx",
     "source": "https://meli.la/2e6U8Kx",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -397,8 +399,8 @@
     ],
     "link": "https://meli.la/2K582AP",
     "source": "https://meli.la/2K582AP",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -415,8 +417,8 @@
     ],
     "link": "https://meli.la/1PBfUTo",
     "source": "https://meli.la/1PBfUTo",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -433,8 +435,8 @@
     ],
     "link": "https://meli.la/2K4kv3V",
     "source": "https://meli.la/2K4kv3V",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13",
     "prev_price": 37993.0,
     "price_drop": "2026-10-14"
@@ -453,8 +455,8 @@
     ],
     "link": "https://meli.la/1hDrmiM",
     "source": "https://meli.la/1hDrmiM",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -471,8 +473,8 @@
     ],
     "link": "https://meli.la/145cEah",
     "source": "https://meli.la/145cEah",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -489,8 +491,8 @@
     ],
     "link": "https://meli.la/1XMhXsQ",
     "source": "https://meli.la/1XMhXsQ",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -507,8 +509,8 @@
     ],
     "link": "https://meli.la/2nqM9Zm",
     "source": "https://meli.la/2nqM9Zm",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -525,8 +527,8 @@
     ],
     "link": "https://meli.la/28ZAfsJ",
     "source": "https://meli.la/28ZAfsJ",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13",
     "prev_price": 305999.0,
     "price_drop": "2026-10-15"
@@ -545,8 +547,8 @@
     ],
     "link": "https://meli.la/1ogpBDj",
     "source": "https://meli.la/1ogpBDj",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -563,8 +565,8 @@
     ],
     "link": "https://meli.la/1BYwM7J",
     "source": "https://meli.la/1BYwM7J",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -581,8 +583,8 @@
     ],
     "link": "https://meli.la/24B4wDn",
     "source": "https://meli.la/24B4wDn",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -599,8 +601,8 @@
     ],
     "link": "https://meli.la/1DxqDwA",
     "source": "https://meli.la/1DxqDwA",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -617,8 +619,8 @@
     ],
     "link": "https://meli.la/1L4EJJ9",
     "source": "https://meli.la/1L4EJJ9",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -635,8 +637,8 @@
     ],
     "link": "https://meli.la/1FR3JhW",
     "source": "https://meli.la/1FR3JhW",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -653,8 +655,8 @@
     ],
     "link": "https://meli.la/2wtXLoS",
     "source": "https://meli.la/2wtXLoS",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-13"
   },
   {
@@ -671,8 +673,8 @@
     ],
     "link": "https://meli.la/22BPgsu",
     "source": "https://meli.la/22BPgsu",
-    "status": "disponible",
-    "checked": "2026-10-15 09:58",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -689,8 +691,8 @@
     ],
     "link": "https://meli.la/1tkeeJq",
     "source": "https://meli.la/1tkeeJq",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -707,8 +709,8 @@
     ],
     "link": "https://meli.la/2N9ac2S",
     "source": "https://meli.la/2N9ac2S",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -725,8 +727,8 @@
     ],
     "link": "https://meli.la/2vsGRU6",
     "source": "https://meli.la/2vsGRU6",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14",
     "prev_price": 63750.0,
     "price_drop": "2026-10-15"
@@ -745,8 +747,8 @@
     ],
     "link": "https://meli.la/337qkfP",
     "source": "https://meli.la/337qkfP",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -763,8 +765,8 @@
     ],
     "link": "https://meli.la/2G1UWtx",
     "source": "https://meli.la/2G1UWtx",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -781,8 +783,8 @@
     ],
     "link": "https://meli.la/2BXFP7X",
     "source": "https://meli.la/2BXFP7X",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -799,8 +801,8 @@
     ],
     "link": "https://meli.la/2Bzrw1G",
     "source": "https://meli.la/2Bzrw1G",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -817,8 +819,8 @@
     ],
     "link": "https://meli.la/1jQnteM",
     "source": "https://meli.la/1jQnteM",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -835,8 +837,8 @@
     ],
     "link": "https://meli.la/1KNhFvZ",
     "source": "https://meli.la/1KNhFvZ",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -853,8 +855,8 @@
     ],
     "link": "https://meli.la/1misTK3",
     "source": "https://meli.la/1misTK3",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -871,8 +873,8 @@
     ],
     "link": "https://meli.la/2koynm3",
     "source": "https://meli.la/2koynm3",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -889,8 +891,8 @@
     ],
     "link": "https://meli.la/2CTNgVq",
     "source": "https://meli.la/2CTNgVq",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -907,8 +909,8 @@
     ],
     "link": "https://meli.la/1rHEKL9",
     "source": "https://meli.la/1rHEKL9",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -925,8 +927,8 @@
     ],
     "link": "https://meli.la/123Pihz",
     "source": "https://meli.la/123Pihz",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -943,8 +945,8 @@
     ],
     "link": "https://meli.la/2Uydqjg",
     "source": "https://meli.la/2Uydqjg",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -961,8 +963,8 @@
     ],
     "link": "https://meli.la/1R4gsZH",
     "source": "https://meli.la/1R4gsZH",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -979,8 +981,8 @@
     ],
     "link": "https://meli.la/2Eevv3C",
     "source": "https://meli.la/2Eevv3C",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14",
     "prev_price": 171422.0,
     "price_drop": "2026-10-15"
@@ -999,8 +1001,8 @@
     ],
     "link": "https://meli.la/2Dw2Mth",
     "source": "https://meli.la/2Dw2Mth",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1017,8 +1019,8 @@
     ],
     "link": "https://meli.la/2pSot8M",
     "source": "https://meli.la/2pSot8M",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1035,8 +1037,8 @@
     ],
     "link": "https://meli.la/1ANyE9c",
     "source": "https://meli.la/1ANyE9c",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1053,8 +1055,8 @@
     ],
     "link": "https://meli.la/17vk2AA",
     "source": "https://meli.la/17vk2AA",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1071,8 +1073,8 @@
     ],
     "link": "https://meli.la/1P2unvU",
     "source": "https://meli.la/1P2unvU",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1089,8 +1091,8 @@
     ],
     "link": "https://meli.la/1h7vSt5",
     "source": "https://meli.la/1h7vSt5",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1107,8 +1109,8 @@
     ],
     "link": "https://meli.la/2cQQVwt",
     "source": "https://meli.la/2cQQVwt",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1125,8 +1127,8 @@
     ],
     "link": "https://meli.la/2MDF27U",
     "source": "https://meli.la/2MDF27U",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1143,8 +1145,8 @@
     ],
     "link": "https://meli.la/25MWjWV",
     "source": "https://meli.la/25MWjWV",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14",
     "prev_price": 299999.0,
     "price_drop": "2026-10-15"
@@ -1163,8 +1165,8 @@
     ],
     "link": "https://meli.la/2hqArtt",
     "source": "https://meli.la/2hqArtt",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14",
     "prev_price": 389500.0,
     "price_drop": "2026-10-15"
@@ -1183,8 +1185,8 @@
     ],
     "link": "https://meli.la/1GxZgof",
     "source": "https://meli.la/1GxZgof",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1201,8 +1203,8 @@
     ],
     "link": "https://meli.la/324hrDp",
     "source": "https://meli.la/324hrDp",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1219,8 +1221,8 @@
     ],
     "link": "https://meli.la/27aGyTn",
     "source": "https://meli.la/27aGyTn",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1237,8 +1239,8 @@
     ],
     "link": "https://meli.la/2etnmAA",
     "source": "https://meli.la/2etnmAA",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1255,8 +1257,8 @@
     ],
     "link": "https://meli.la/1Ghp2q5",
     "source": "https://meli.la/1Ghp2q5",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1273,8 +1275,8 @@
     ],
     "link": "https://meli.la/1ihxNRb",
     "source": "https://meli.la/1ihxNRb",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1291,8 +1293,8 @@
     ],
     "link": "https://meli.la/1uygBY7",
     "source": "https://meli.la/1uygBY7",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1309,8 +1311,8 @@
     ],
     "link": "https://meli.la/1uJ3CQJ",
     "source": "https://meli.la/1uJ3CQJ",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1327,8 +1329,8 @@
     ],
     "link": "https://meli.la/1pTQD1N",
     "source": "https://meli.la/1pTQD1N",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1345,8 +1347,8 @@
     ],
     "link": "https://meli.la/2Ctz9tb",
     "source": "https://meli.la/2Ctz9tb",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1363,8 +1365,8 @@
     ],
     "link": "https://meli.la/1KvaJ96",
     "source": "https://meli.la/1KvaJ96",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1381,8 +1383,8 @@
     ],
     "link": "https://meli.la/1bBtFWK",
     "source": "https://meli.la/1bBtFWK",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1399,8 +1401,8 @@
     ],
     "link": "https://meli.la/26vvRjX",
     "source": "https://meli.la/26vvRjX",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1417,8 +1419,8 @@
     ],
     "link": "https://meli.la/13yYzMM",
     "source": "https://meli.la/13yYzMM",
-    "status": "disponible",
-    "checked": "2026-10-15 09:59",
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-14"
   },
   {
@@ -1435,8 +1437,8 @@
     ],
     "link": "https://meli.la/1zkKrYX",
     "source": "https://meli.la/1zkKrYX",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1453,8 +1455,8 @@
     ],
     "link": "https://meli.la/1WcZeHL",
     "source": "https://meli.la/1WcZeHL",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1471,8 +1473,8 @@
     ],
     "link": "https://meli.la/2oHmifh",
     "source": "https://meli.la/2oHmifh",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1489,8 +1491,8 @@
     ],
     "link": "https://meli.la/23nZc1f",
     "source": "https://meli.la/23nZc1f",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1507,8 +1509,8 @@
     ],
     "link": "https://meli.la/251cdoN",
     "source": "https://meli.la/251cdoN",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1525,8 +1527,8 @@
     ],
     "link": "https://meli.la/324qgnm",
     "source": "https://meli.la/324qgnm",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1543,8 +1545,8 @@
     ],
     "link": "https://meli.la/2ndP7Uf",
     "source": "https://meli.la/2ndP7Uf",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1561,8 +1563,8 @@
     ],
     "link": "https://meli.la/2kkeyxp",
     "source": "https://meli.la/2kkeyxp",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1579,8 +1581,8 @@
     ],
     "link": "https://meli.la/2aGNfQK",
     "source": "https://meli.la/2aGNfQK",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1597,8 +1599,8 @@
     ],
     "link": "https://meli.la/1NM3KyZ",
     "source": "https://meli.la/1NM3KyZ",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1615,8 +1617,8 @@
     ],
     "link": "https://meli.la/2WeMo4a",
     "source": "https://meli.la/2WeMo4a",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1633,8 +1635,8 @@
     ],
     "link": "https://meli.la/2xC6JYL",
     "source": "https://meli.la/2xC6JYL",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1651,8 +1653,8 @@
     ],
     "link": "https://meli.la/2ETocbF",
     "source": "https://meli.la/2ETocbF",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1669,8 +1671,8 @@
     ],
     "link": "https://meli.la/2PdQMpm",
     "source": "https://meli.la/2PdQMpm",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1687,8 +1689,8 @@
     ],
     "link": "https://meli.la/26WVycT",
     "source": "https://meli.la/26WVycT",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1705,8 +1707,8 @@
     ],
     "link": "https://meli.la/2aa7oBX",
     "source": "https://meli.la/2aa7oBX",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1723,8 +1725,8 @@
     ],
     "link": "https://meli.la/1FtCwPS",
     "source": "https://meli.la/1FtCwPS",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1741,8 +1743,8 @@
     ],
     "link": "https://meli.la/1id63YE",
     "source": "https://meli.la/1id63YE",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1759,8 +1761,8 @@
     ],
     "link": "https://meli.la/2VDHMzp",
     "source": "https://meli.la/2VDHMzp",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   },
   {
@@ -1777,8 +1779,8 @@
     ],
     "link": "https://meli.la/2zpLp8A",
     "source": "https://meli.la/2zpLp8A",
-    "status": "disponible",
-    "checked": null,
+    "status": "no_disponible",
+    "checked": "2026-10-20 15:05",
     "added": "2026-10-15"
   }
 ]
