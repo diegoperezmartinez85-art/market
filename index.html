@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0f1316">
+    <meta name="theme-color" content="#18213a">
     <title>Nexos Market | Ofertas, novedades y bajas de precio</title>
     <meta name="description" content="Nexos Market: ofertas, novedades y productos que bajaron de precio. Buscá por nombre, categoría o precio y comprá directo.">
     <meta property="og:type" content="website">
@@ -712,6 +712,19 @@
         .sk-l.btn { width: 100%; height: 40px; border-radius: 12px; margin-top: 6px; }
         @keyframes skShimmer { to { background-position: -200% 0; } }
         @media (prefers-reduced-motion: reduce) { .card.sk .thumb, .sk-l { animation: none; } }
+
+        /* ============ v6: header azul noche (menos contraste) y movimientos más calmos ============ */
+        .top {
+            background:
+                radial-gradient(70% 140% at 50% -30%, rgba(58,109,240,.30), transparent 70%),
+                radial-gradient(40% 100% at 100% 0%, rgba(223,0,91,.07), transparent 70%),
+                linear-gradient(180deg, #1d2848, #151d37);
+            box-shadow: 0 6px 18px rgba(21,29,55,.22);
+        }
+        .bar { border-bottom-color: rgba(255,255,255,.10); }
+        /* Logo: brillo fijo, sin latido */
+        .logo-frame::before { animation: none; opacity: .38; filter: blur(14px); }
+        .pill { background: rgba(255,255,255,.07); }
     </style>
 </head>
 <body>
@@ -1741,7 +1754,7 @@
                 box.hidden = false;
                 // velocidad constante (~45 px/s) sin importar cuánto texto haya
                 const ancho = track.firstElementChild.getBoundingClientRect().width;
-                const vel = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches ? 28 : 45;  // px/s
+                const vel = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches ? 20 : 30;  // px/s
                 track.style.setProperty('--t-dur', Math.max(12, ancho / vel) + 's');
             } catch (e) { /* sin conexión: se deja como estaba */ }
         }
