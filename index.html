@@ -755,6 +755,19 @@
             .cats { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
                             mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); }
         }
+
+        /* ============ v5.2: aire en pastillas de dólar/clima y Novedades como carrusel ============ */
+        /* La fila tenía overflow:hidden y recortaba el brillo neón; se le da margen interno (que se pliega al scrollear) */
+        @media (max-width: 1099px) {
+            .hdr-row { margin: 0 -6px; padding: calc(8px * (1 - var(--k, 0))) 6px calc(12px * (1 - var(--k, 0)));
+                       max-height: calc(70px * (1 - var(--k, 0))); }
+        }
+        /* Novedades: tarjeta más ancha, la siguiente asoma y los puntitos indican posición */
+        .car:not(.car-hero) .car-dots { margin-top: 2px; }
+        @media (max-width: 640px) {
+            .car-track > .card { flex-basis: 72%; }
+            .car:not(.car-hero) .car-track { scroll-padding-inline: 0; }
+        }
     </style>
 </head>
 <body>
@@ -1187,7 +1200,7 @@
             prev.addEventListener('click', () => { parar = true; mover(-1); });
             next.addEventListener('click', () => { parar = true; mover(1); });
             if (dots) {
-                dots.innerHTML = [...tr.children].map((_, k) => '<button type="button" aria-label="Ir a la oferta ' + (k + 1) + '"></button>').join('');
+                dots.innerHTML = [...tr.children].map((_, k) => '<button type="button" aria-label="Ir al producto ' + (k + 1) + '"></button>').join('');
                 dots.addEventListener('click', e => { const bt = e.target.closest('button'); if (bt) { parar = true; ir([...dots.children].indexOf(bt)); } });
             }
             let pend = false;
@@ -1225,7 +1238,7 @@
                 sec.setAttribute('aria-label', titulo);
                 sec.innerHTML = '<div class="sec-head"><div><h2>' + titulo + '</h2><p>' + sub + '</p></div>' +
                     (multi ? '<div class="car-nav"><button type="button" class="car-prev" aria-label="Anterior">&#8249;</button><button type="button" class="car-next" aria-label="Siguiente">&#8250;</button></div>' : '') +
-                    '</div><div class="car-track"></div>' + (hero && multi ? '<div class="car-dots"></div>' : '');
+                    '</div><div class="car-track"></div>' + (multi ? '<div class="car-dots"></div>' : '');
                 const tr = sec.querySelector('.car-track');
                 lista.forEach(p => tr.appendChild(hero ? buildSlide(p) : buildCard(p)));
                 box.appendChild(sec);
