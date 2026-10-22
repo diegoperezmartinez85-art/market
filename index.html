@@ -740,6 +740,21 @@
         /* Logo: brillo fijo, sin latido */
         .logo-frame::before { animation: none; opacity: .38; filter: blur(14px); }
         .pill { background: rgba(255,255,255,.07); }
+
+        /* ============ v5.1: ajustes de header en celular ============ */
+        /* Formas coherentes: buscador, selector y botón de precio con la misma forma que las pastillas */
+        .search input, .search select, .filters-btn { border-radius: 999px; }
+        .search input { padding-right: 14px; text-overflow: ellipsis; }
+        .search select { text-overflow: ellipsis; }
+        /* "Resumen semanal" con borde neutro: el magenta queda solo para Ofertas */
+        .cats button.resumen { border-color: rgba(255,255,255,.12); }
+        @media (max-width: 640px) {
+            .search select { max-width: 34%; padding-left: 12px; }
+            .weather .w-city { max-width: 112px; color: #b7c0cc; }
+            /* Degradé a la derecha: indica que las categorías se deslizan */
+            .cats { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+                            mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); }
+        }
     </style>
 </head>
 <body>
@@ -761,9 +776,9 @@
     </header>
     <div class="bar">
         <div class="search">
-            <input type="search" id="searchInput" placeholder="Buscar productos" aria-label="Buscar productos" autocomplete="off">
+            <input type="search" id="searchInput" placeholder="Buscar…" aria-label="Buscar productos" autocomplete="off">
             <select id="sortSelect" aria-label="Ordenar productos">
-                <option value="">Orden original</option>
+                <option value="">Orden</option>
                 <option value="new">Más nuevos</option>
                 <option value="off">Mayor descuento</option>
                 <option value="asc">Menor precio</option>
