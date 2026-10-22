@@ -14,7 +14,7 @@
     "link": "https://meli.la/1T496Fz",
     "source": "https://meli.la/1T496Fz",
     "status": "disponible",
-    "checked": "2026-10-20 15:32",
+    "checked": "2026-10-22 12:53",
     "added": "2026-10-13"
   },
   {
@@ -32,7 +32,7 @@
     "link": "https://meli.la/1MW5fe8",
     "source": "https://meli.la/1MW5fe8",
     "status": "disponible",
-    "checked": "2026-10-20 15:32",
+    "checked": "2026-10-22 12:53",
     "added": "2026-10-13"
   },
   {
@@ -50,7 +50,7 @@
     "link": "https://meli.la/1h867pi",
     "source": "https://meli.la/1h867pi",
     "status": "disponible",
-    "checked": "2026-10-20 15:32",
+    "checked": "2026-10-22 12:53",
     "added": "2026-10-13",
     "prev_price": 258339.0,
     "price_drop": "2026-10-20"
@@ -61,7 +61,7 @@
     "ml_id": "MLA1428951972",
     "name": "Perfume Her Golden Secret Banderas Edt mujer 80 Ml",
     "category": "Belleza y Cuidado Personal",
-    "price": 42626.0,
+    "price": 30422.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_702688-MLU73471553168_122023-O.webp",
     "images": [
@@ -70,8 +70,10 @@
     "link": "https://meli.la/1bAH8Qq",
     "source": "https://meli.la/1bAH8Qq",
     "status": "disponible",
-    "checked": "2026-10-20 15:32",
-    "added": "2026-10-13"
+    "checked": "2026-10-22 12:53",
+    "added": "2026-10-13",
+    "prev_price": 40520.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 5,
@@ -79,7 +81,7 @@
     "ml_id": "MLA1396762921",
     "name": "Zapatillas Mujer Nike Court Vision Low Blanco Dh3158-100",
     "category": "Ropa y Accesorios",
-    "price": 149999.0,
+    "price": 156799.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_895951-MLA73223898750_122023-O.webp",
     "images": [
@@ -88,7 +90,7 @@
     "link": "https://meli.la/2R7rZ5R",
     "source": "https://meli.la/2R7rZ5R",
     "status": "disponible",
-    "checked": "2026-10-20 15:32",
+    "checked": "2026-10-22 12:53",
     "added": "2026-10-13"
   },
   {
@@ -106,7 +108,7 @@
     "link": "https://meli.la/2BCr8yR",
     "source": "https://meli.la/2BCr8yR",
     "status": "disponible",
-    "checked": "2026-10-20 15:32",
+    "checked": "2026-10-22 12:53",
     "added": "2026-10-13"
   },
   {
@@ -115,7 +117,7 @@
     "ml_id": "MLA3911032354",
     "name": "Calvin Klein Euphoria Eau de Parfum for Women 100ml",
     "category": "Otros",
-    "price": 114000.0,
+    "price": 123750.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_717449-MLA117324590344_102026-O.webp",
     "images": [
@@ -124,10 +126,8 @@
     "link": "https://meli.la/1DcbZC4",
     "source": "https://meli.la/1DcbZC4",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-13",
-    "prev_price": 120037.0,
-    "price_drop": "2026-10-20"
+    "checked": "2026-10-22 12:53",
+    "added": "2026-10-13"
   },
   {
     "id": 8,
@@ -135,7 +135,7 @@
     "ml_id": "MLA3958592214",
     "name": "Freidora De Aire Liliana Af957 6 Lt 1750w",
     "category": "Electrodomésticos y Aires Ac.",
-    "price": 121999.0,
+    "price": 134999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_964462-MLA104781723958_012026-O.webp",
     "images": [
@@ -144,8 +144,10 @@
     "link": "https://meli.la/1J4Rrdf",
     "source": "https://meli.la/1J4Rrdf",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-13"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-13",
+    "prev_price": 138771.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 9,
@@ -153,7 +155,7 @@
     "ml_id": "MLA2707908976",
     "name": "Sandwichera Baza 3 en 1 con Placas Removibles para 2 Sándwiches",
     "category": "Otros",
-    "price": 54990.0,
+    "price": 53340.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_868440-MLA112579786174_062026-O.webp",
     "images": [
@@ -162,26 +164,10 @@
     "link": "https://meli.la/2D73fgG",
     "source": "https://meli.la/2D73fgG",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-13"
-  },
-  {
-    "id": 10,
-    "code": "NX-0013",
-    "ml_id": "MLA3961901934",
-    "name": "Set Renergie Triple Serum Lancôme 50 Ml Todo Tipo De Piel Día/noche",
-    "category": "Otros",
-    "price": 328300.0,
-    "currency": "ARS",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_931720-MLA117315843065_092026-O.webp",
-    "images": [
-      "https://http2.mlstatic.com/D_NQ_NP_931720-MLA117315843065_092026-O.webp"
-    ],
-    "link": "https://meli.la/227mrAM",
-    "source": "https://meli.la/227mrAM",
-    "status": "disponible",
-    "checked": null,
-    "added": "2026-10-13"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-13",
+    "prev_price": 54990.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 11,
@@ -189,7 +175,7 @@
     "ml_id": "MLA2840092218",
     "name": "Smartphone Moto G17 Evening Blue Memoria interna 128GB - 4GM RAM Motorola",
     "category": "Celulares y Teléfonos",
-    "price": 286199.0,
+    "price": 310622.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_638602-MLA106598723027_022026-O.webp",
     "images": [
@@ -198,28 +184,8 @@
     "link": "https://meli.la/1Fqm9eA",
     "source": "https://meli.la/1Fqm9eA",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
-  },
-  {
-    "id": 12,
-    "code": "NX-0015",
-    "ml_id": "MLA2812754482",
-    "name": "Batidora planetaria de pie Aiwa Digital 12L 1800W 8 Niveles De Velocidad Color Negro",
-    "category": "Electrodomésticos y Aires Ac.",
-    "price": 319999.0,
-    "currency": "ARS",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_609969-MLA91742406602_092025-O.webp",
-    "images": [
-      "https://http2.mlstatic.com/D_NQ_NP_609969-MLA91742406602_092025-O.webp"
-    ],
-    "link": "https://meli.la/2TuAQ7N",
-    "source": "https://meli.la/2TuAQ7N",
-    "status": "disponible",
-    "checked": null,
-    "added": "2026-10-13",
-    "prev_price": 339499.0,
-    "price_drop": "2026-10-20"
   },
   {
     "id": 13,
@@ -236,7 +202,7 @@
     "link": "https://meli.la/2ETZ6gF",
     "source": "https://meli.la/2ETZ6gF",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -245,7 +211,7 @@
     "ml_id": "MLA2170192831",
     "name": "Apple iPhone 17 Pro Max (256 GB) - Naranja cósmico",
     "category": "Celulares y Teléfonos",
-    "price": 2532999.0,
+    "price": 2520000.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_964942-MLA104127286834_012026-O.webp",
     "images": [
@@ -254,10 +220,10 @@
     "link": "https://meli.la/12QbyDP",
     "source": "https://meli.la/12QbyDP",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13",
-    "prev_price": 2537000.0,
-    "price_drop": "2026-10-20"
+    "prev_price": 2532999.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 15,
@@ -265,7 +231,7 @@
     "ml_id": "MLA1967454307",
     "name": "Perfume Her Secret Pink Absolu Eau De Parfum Antonio Banderas 80ml",
     "category": "Belleza y Cuidado Personal",
-    "price": 49000.0,
+    "price": 48758.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_935230-MLA87957401135_072025-O.webp",
     "images": [
@@ -274,7 +240,7 @@
     "link": "https://meli.la/13mz3Td",
     "source": "https://meli.la/13mz3Td",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -283,7 +249,7 @@
     "ml_id": "MLA1442499031",
     "name": "Depiladora Ipl Philips Lumea Prestige Bri947 - Alternativa Laser - Rostro + cuerpo + bikini + axilas",
     "category": "Otros",
-    "price": 612291.0,
+    "price": 848828.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_857744-MLA119028575251_102026-O.webp",
     "images": [
@@ -292,7 +258,7 @@
     "link": "https://meli.la/2UTGChk",
     "source": "https://meli.la/2UTGChk",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -310,7 +276,7 @@
     "link": "https://meli.la/33pKZFQ",
     "source": "https://meli.la/33pKZFQ",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -319,7 +285,7 @@
     "ml_id": "MLA2473998604",
     "name": "Modelador Multifunción Mantra Air Nova Nude con 5 Accesorios Intercambiables",
     "category": "Otros",
-    "price": 253433.0,
+    "price": 277193.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_892138-MLA97003697308_112025-O.webp",
     "images": [
@@ -328,7 +294,7 @@
     "link": "https://meli.la/1vh3uLZ",
     "source": "https://meli.la/1vh3uLZ",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -346,7 +312,7 @@
     "link": "https://meli.la/1JobBDi",
     "source": "https://meli.la/1JobBDi",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -355,7 +321,7 @@
     "ml_id": "MLA2654020894",
     "name": "Zapatillas Nike Charge Canvas Para Mujer Negro Im4398-001 Negro 7.5",
     "category": "Ropa y Accesorios",
-    "price": 99999.0,
+    "price": 103899.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_861597-MLA100587519266_122025-O.webp",
     "images": [
@@ -364,7 +330,7 @@
     "link": "https://meli.la/2cEZKWg",
     "source": "https://meli.la/2cEZKWg",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -373,7 +339,7 @@
     "ml_id": "MLA3730804018",
     "name": "Tablet Samsung Galaxy Tab A11 8.7 4GB RAM 64GB Gris Android",
     "category": "Celulares y Teléfonos",
-    "price": 289999.0,
+    "price": 284990.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_968337-MLA100567674726_122025-O.webp",
     "images": [
@@ -382,7 +348,7 @@
     "link": "https://meli.la/2e6U8Kx",
     "source": "https://meli.la/2e6U8Kx",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -391,7 +357,7 @@
     "ml_id": "MLA1501575105",
     "name": "Perfume Idôle Edp 100 Ml Lancôme",
     "category": "Belleza y Cuidado Personal",
-    "price": 221400.0,
+    "price": 295200.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_808796-MLA85602773537_062025-O.webp",
     "images": [
@@ -400,7 +366,7 @@
     "link": "https://meli.la/2K582AP",
     "source": "https://meli.la/2K582AP",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -418,7 +384,7 @@
     "link": "https://meli.la/1PBfUTo",
     "source": "https://meli.la/1PBfUTo",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -436,7 +402,7 @@
     "link": "https://meli.la/2K4kv3V",
     "source": "https://meli.la/2K4kv3V",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13",
     "prev_price": 37993.0,
     "price_drop": "2026-10-14"
@@ -447,7 +413,7 @@
     "ml_id": "MLA1139113028",
     "name": "Secador De Pelo Remington Silk Ac9096 2400w 6 temperaturas / Velocidades Con Difusor Rojo",
     "category": "Belleza y Cuidado Personal",
-    "price": 90990.0,
+    "price": 115000.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_919060-MLA99972139297_112025-O.webp",
     "images": [
@@ -456,8 +422,10 @@
     "link": "https://meli.la/1hDrmiM",
     "source": "https://meli.la/1hDrmiM",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-13"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-13",
+    "prev_price": 151680.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 27,
@@ -465,7 +433,7 @@
     "ml_id": "MLA1516448089",
     "name": "Celular Motorola Moto G15 256gb 8gb Ram + Funda De Regalo Gris",
     "category": "Celulares y Teléfonos",
-    "price": 327999.0,
+    "price": 349999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_879184-MLA90557082581_082025-O.webp",
     "images": [
@@ -474,7 +442,7 @@
     "link": "https://meli.la/145cEah",
     "source": "https://meli.la/145cEah",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -483,7 +451,7 @@
     "ml_id": "MLA3197785166",
     "name": "Celular Samsung Galaxy A16 128 + 4gb Gray Gris Claro",
     "category": "Celulares y Teléfonos",
-    "price": 315999.0,
+    "price": 306970.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_812893-MLA108324869725_032026-O.webp",
     "images": [
@@ -492,8 +460,10 @@
     "link": "https://meli.la/1XMhXsQ",
     "source": "https://meli.la/1XMhXsQ",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-13"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-13",
+    "prev_price": 323999.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 29,
@@ -501,7 +471,7 @@
     "ml_id": "MLA3326609482",
     "name": "Motorola Moto G17 Bordeaux",
     "category": "Celulares y Teléfonos",
-    "price": 380999.0,
+    "price": 399999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_613556-MLA115773573053_082026-O.webp",
     "images": [
@@ -510,7 +480,7 @@
     "link": "https://meli.la/2nqM9Zm",
     "source": "https://meli.la/2nqM9Zm",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -519,7 +489,7 @@
     "ml_id": "MLA1787220579",
     "name": "Celular Samsung Galaxy A16 128GB 4GB RAM",
     "category": "Celulares y Teléfonos",
-    "price": 299999.0,
+    "price": 303769.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_988202-MLA99854807973_112025-O.webp",
     "images": [
@@ -528,10 +498,8 @@
     "link": "https://meli.la/28ZAfsJ",
     "source": "https://meli.la/28ZAfsJ",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-13",
-    "prev_price": 305999.0,
-    "price_drop": "2026-10-15"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-13"
   },
   {
     "id": 31,
@@ -539,7 +507,7 @@
     "ml_id": "MLA1709897981",
     "name": "Apple iPad 11 con chip A16, WiFi de 256 GB",
     "category": "Otros",
-    "price": 1472499.0,
+    "price": 1383673.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_796392-MLA96112483871_102025-O.webp",
     "images": [
@@ -548,8 +516,10 @@
     "link": "https://meli.la/1ogpBDj",
     "source": "https://meli.la/1ogpBDj",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-13"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-13",
+    "prev_price": 1472499.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 32,
@@ -557,7 +527,7 @@
     "ml_id": "MLA3079024330",
     "name": "Smartphone ZTE Blade A56 Pro (4+8)gb+128gb Color Gris + Cargador + Auriculares + Funda Regalo",
     "category": "Electrónica, Audio y Video",
-    "price": 229999.0,
+    "price": 247062.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_782141-MLA111548455055_052026-O.webp",
     "images": [
@@ -566,8 +536,10 @@
     "link": "https://meli.la/1BYwM7J",
     "source": "https://meli.la/1BYwM7J",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-13"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-13",
+    "prev_price": 247897.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 33,
@@ -575,7 +547,7 @@
     "ml_id": "MLA3545710992",
     "name": "Moto G47 Impenetrable",
     "category": "Accesorios para Vehículos",
-    "price": 419999.0,
+    "price": 499998.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_723627-MLA110956892883_042026-O.webp",
     "images": [
@@ -584,7 +556,7 @@
     "link": "https://meli.la/24B4wDn",
     "source": "https://meli.la/24B4wDn",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -593,7 +565,7 @@
     "ml_id": "MLA1670731665",
     "name": "Masajeador Cervical Eléctrico Portatil Inalambrico Batería Recargable Usb Femmto Relajación Cuello Espalda Lumbar",
     "category": "Otros",
-    "price": 54999.0,
+    "price": 70699.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_965769-MLA110594813506_052026-O.webp",
     "images": [
@@ -602,7 +574,7 @@
     "link": "https://meli.la/1DxqDwA",
     "source": "https://meli.la/1DxqDwA",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -611,7 +583,7 @@
     "ml_id": "MLA1575271705",
     "name": "Yogurtera Yelmo Yg-1708v 8 Jarros 1,4 Litros Verde Verde Claro",
     "category": "Otros",
-    "price": 49499.0,
+    "price": 53499.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_994744-MLA112624706032_062026-O.webp",
     "images": [
@@ -620,7 +592,7 @@
     "link": "https://meli.la/1L4EJJ9",
     "source": "https://meli.la/1L4EJJ9",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -629,7 +601,7 @@
     "ml_id": "MLA1485688503",
     "name": "Maquina De Soda Megapack Sodastream Rendimiento Terra Negro",
     "category": "Otros",
-    "price": 171204.0,
+    "price": 176499.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_627861-MLA117805587471_092026-O.webp",
     "images": [
@@ -638,7 +610,7 @@
     "link": "https://meli.la/1FR3JhW",
     "source": "https://meli.la/1FR3JhW",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -647,7 +619,7 @@
     "ml_id": "MLA2966546930",
     "name": "Crema Anticelulitis Y Reafirmante Altiér + Masajeador Neutra",
     "category": "Belleza y Cuidado Personal",
-    "price": 56905.0,
+    "price": 59900.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_762704-MLA113141770608_072026-O.webp",
     "images": [
@@ -656,7 +628,7 @@
     "link": "https://meli.la/2wtXLoS",
     "source": "https://meli.la/2wtXLoS",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-13"
   },
   {
@@ -665,7 +637,7 @@
     "ml_id": "MLA1455375113",
     "name": "Buclera Rizador 3 Barriles Ceramica Vgr V-599 Triple Ondas 230° Color Blanco y Rosa",
     "category": "Construcción",
-    "price": 53890.0,
+    "price": 61890.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_966129-MLA110081753739_042026-O.webp",
     "images": [
@@ -674,7 +646,7 @@
     "link": "https://meli.la/22BPgsu",
     "source": "https://meli.la/22BPgsu",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-14"
   },
   {
@@ -683,7 +655,7 @@
     "ml_id": "MLA2160339457",
     "name": "Apple iPhone 17 (256 GB) - Negro - Distribuidor Autorizado",
     "category": "Celulares y Teléfonos",
-    "price": 2649999.0,
+    "price": 2399999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_908347-MLA104127137314_012026-O.webp",
     "images": [
@@ -692,8 +664,10 @@
     "link": "https://meli.la/1tkeeJq",
     "source": "https://meli.la/1tkeeJq",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14",
+    "prev_price": 2499999.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 40,
@@ -710,8 +684,10 @@
     "link": "https://meli.la/2N9ac2S",
     "source": "https://meli.la/2N9ac2S",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14",
+    "prev_price": 291750.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 41,
@@ -719,7 +695,7 @@
     "ml_id": "MLA3960451130",
     "name": "La Roche Posay Hyalu B5 Serum 30 ml",
     "category": "Otros",
-    "price": 62000.0,
+    "price": 49642.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_863234-MLU76522295223_052024-O.webp",
     "images": [
@@ -728,10 +704,10 @@
     "link": "https://meli.la/2vsGRU6",
     "source": "https://meli.la/2vsGRU6",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-14",
-    "prev_price": 63750.0,
-    "price_drop": "2026-10-15"
+    "prev_price": 62000.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 42,
@@ -739,7 +715,7 @@
     "ml_id": "MLA3195280236",
     "name": "Secador De Pelo Profesional 2400w Koryn F/c 3 Velocidades Rosa",
     "category": "Belleza y Cuidado Personal",
-    "price": 37800.0,
+    "price": 37611.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_732317-MLA109452888784_042026-O.webp",
     "images": [
@@ -748,8 +724,10 @@
     "link": "https://meli.la/337qkfP",
     "source": "https://meli.la/337qkfP",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14",
+    "prev_price": 37800.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 43,
@@ -757,7 +735,7 @@
     "ml_id": "MLA3995560960",
     "name": "Cadena Y Dije Mamá Corazón Zirconia Baño Oro 18 Mujer Regalo Dorado",
     "category": "Joyas y Relojes",
-    "price": 64224.0,
+    "price": 71074.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_793382-MLA118258322409_092026-O.webp",
     "images": [
@@ -766,7 +744,7 @@
     "link": "https://meli.la/2G1UWtx",
     "source": "https://meli.la/2G1UWtx",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-14"
   },
   {
@@ -775,7 +753,7 @@
     "ml_id": "MLA1154241603",
     "name": "Caja Organizadora Simil Rattan Grande Xl Pack Por 12 U",
     "category": "Otros",
-    "price": 196217.0,
+    "price": 191507.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_913590-MLA117247759285_092026-O.webp",
     "images": [
@@ -784,26 +762,10 @@
     "link": "https://meli.la/2BXFP7X",
     "source": "https://meli.la/2BXFP7X",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
-  },
-  {
-    "id": 45,
-    "code": "NX-0048",
-    "ml_id": "MLA3606987354",
-    "name": "Set X6 Perfumes Mini Surtido A Elección Onlyou 30ml",
-    "category": "Belleza y Cuidado Personal",
-    "price": 63665.0,
-    "currency": "ARS",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_945240-MLA113345814948_072026-O.webp",
-    "images": [
-      "https://http2.mlstatic.com/D_NQ_NP_945240-MLA113345814948_072026-O.webp"
-    ],
-    "link": "https://meli.la/2Bzrw1G",
-    "source": "https://meli.la/2Bzrw1G",
-    "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14",
+    "prev_price": 196217.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 46,
@@ -811,7 +773,7 @@
     "ml_id": "MLA1120146213",
     "name": "Perfume Carolina Herrera CH Eau de Toilette feminino Tradicional EDT 50ml para mujer",
     "category": "Belleza y Cuidado Personal",
-    "price": 185779.0,
+    "price": 160989.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_760240-MLA45187823063_032021-O.webp",
     "images": [
@@ -820,8 +782,10 @@
     "link": "https://meli.la/1jQnteM",
     "source": "https://meli.la/1jQnteM",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14",
+    "prev_price": 185779.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 47,
@@ -829,7 +793,7 @@
     "ml_id": "MLA4045464156",
     "name": "Canasto Parrillero Humo Criollo Verduras Papas Mariscos 2x1",
     "category": "Otros",
-    "price": 167500.0,
+    "price": 155000.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_739252-MLA118984766593_102026-O.webp",
     "images": [
@@ -838,8 +802,10 @@
     "link": "https://meli.la/1KNhFvZ",
     "source": "https://meli.la/1KNhFvZ",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14",
+    "prev_price": 175000.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 48,
@@ -847,7 +813,7 @@
     "ml_id": "MLA3887750290",
     "name": "Jogger Cargo Pantalón Mujer Gabardina Importado Cierre Lat",
     "category": "Ropa y Accesorios",
-    "price": 62451.0,
+    "price": 62450.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_927170-MLA115488347114_082026-O.webp",
     "images": [
@@ -856,8 +822,10 @@
     "link": "https://meli.la/1misTK3",
     "source": "https://meli.la/1misTK3",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14",
+    "prev_price": 62451.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 49,
@@ -865,7 +833,7 @@
     "ml_id": "MLA3133496596",
     "name": "perfume Carolina Herrera La Bomba Edp 30 ml de mujer",
     "category": "Belleza y Cuidado Personal",
-    "price": 157745.0,
+    "price": 131643.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_656693-MLA89449461725_082025-O.webp",
     "images": [
@@ -874,8 +842,10 @@
     "link": "https://meli.la/2koynm3",
     "source": "https://meli.la/2koynm3",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14",
+    "prev_price": 157745.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 50,
@@ -883,7 +853,7 @@
     "ml_id": "MLA3132193496",
     "name": "Juego de cubiertos Tramontina Set Cubiertos x24 New Kolor rojo - 24",
     "category": "Otros",
-    "price": 22371.0,
+    "price": 22800.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_757382-MLA82085207603_012025-O.webp",
     "images": [
@@ -892,7 +862,7 @@
     "link": "https://meli.la/2CTNgVq",
     "source": "https://meli.la/2CTNgVq",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-14"
   },
   {
@@ -901,7 +871,7 @@
     "ml_id": "MLA3450018712",
     "name": "Combo 4 Discos De 2.5 Kg. 25 Mm Para Mancuernas Negro",
     "category": "Computación",
-    "price": 27396.0,
+    "price": 30619.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_915499-MLA111935405620_062026-O.webp",
     "images": [
@@ -910,7 +880,7 @@
     "link": "https://meli.la/1rHEKL9",
     "source": "https://meli.la/1rHEKL9",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-14"
   },
   {
@@ -919,7 +889,7 @@
     "ml_id": "MLA3275842258",
     "name": "Jogger Cargo Gabardina Semi-elastizada Rover's Verde Liso 40",
     "category": "Otros",
-    "price": 29355.0,
+    "price": 30900.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_748309-MLA111253955469_052026-O.webp",
     "images": [
@@ -928,7 +898,7 @@
     "link": "https://meli.la/123Pihz",
     "source": "https://meli.la/123Pihz",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-14"
   },
   {
@@ -937,7 +907,7 @@
     "ml_id": "MLA1574843710",
     "name": "Zapatillas Para Niño/a Nike Revolution 6 Dd1096-003",
     "category": "Ropa y Accesorios",
-    "price": 88376.0,
+    "price": 82499.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_808880-MLA74667192794_022024-O.webp",
     "images": [
@@ -946,8 +916,10 @@
     "link": "https://meli.la/2Uydqjg",
     "source": "https://meli.la/2Uydqjg",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14",
+    "prev_price": 88376.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 54,
@@ -964,7 +936,7 @@
     "link": "https://meli.la/1R4gsZH",
     "source": "https://meli.la/1R4gsZH",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-14"
   },
   {
@@ -973,7 +945,7 @@
     "ml_id": "MLA1134152473",
     "name": "Botas Montagne Seilas Gtx Hombre Trekking Impermeables",
     "category": "Ropa y Accesorios",
-    "price": 169136.0,
+    "price": 217134.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_992757-MLA88231295678_072025-O.webp",
     "images": [
@@ -982,10 +954,8 @@
     "link": "https://meli.la/2Eevv3C",
     "source": "https://meli.la/2Eevv3C",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14",
-    "prev_price": 171422.0,
-    "price_drop": "2026-10-15"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14"
   },
   {
     "id": 56,
@@ -993,7 +963,7 @@
     "ml_id": "MLA1381574589",
     "name": "Zapatillas Deportivas Mujer Livianas Basto Art 31",
     "category": "Ropa y Accesorios",
-    "price": 43491.0,
+    "price": 44991.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_658974-MLA95819328515_102025-O.webp",
     "images": [
@@ -1002,7 +972,7 @@
     "link": "https://meli.la/2Dw2Mth",
     "source": "https://meli.la/2Dw2Mth",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:54",
     "added": "2026-10-14"
   },
   {
@@ -1011,7 +981,7 @@
     "ml_id": "MLA2622317986",
     "name": "Zapatillas Nike Sb Alleyoop Para Mujer Morado Cq0369-601",
     "category": "Ropa y Accesorios",
-    "price": 129999.0,
+    "price": 127499.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_705928-MLA99664781976_122025-O.webp",
     "images": [
@@ -1020,8 +990,10 @@
     "link": "https://meli.la/2pSot8M",
     "source": "https://meli.la/2pSot8M",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:54",
+    "added": "2026-10-14",
+    "prev_price": 129999.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 58,
@@ -1029,7 +1001,7 @@
     "ml_id": "MLA1654466860",
     "name": "Tablet 64gb 4gb Ram 10 + Funda Android 14 Bluetooth Full Hd Gris",
     "category": "Computación",
-    "price": 178589.0,
+    "price": 178588.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_684823-MLA90485331064_082025-O.webp",
     "images": [
@@ -1038,8 +1010,10 @@
     "link": "https://meli.la/1ANyE9c",
     "source": "https://meli.la/1ANyE9c",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-14",
+    "prev_price": 178589.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 59,
@@ -1047,7 +1021,7 @@
     "ml_id": "MLA1771892499",
     "name": "Ggh Keyboard Case For iPad Pro 11 Inch (4th/3rd/2nd/1st Oro Rosa",
     "category": "Otros",
-    "price": 141548.0,
+    "price": 153252.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_908483-MLA110192698498_052026-O.webp",
     "images": [
@@ -1056,7 +1030,7 @@
     "link": "https://meli.la/17vk2AA",
     "source": "https://meli.la/17vk2AA",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1074,7 +1048,7 @@
     "link": "https://meli.la/1P2unvU",
     "source": "https://meli.la/1P2unvU",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1083,7 +1057,7 @@
     "ml_id": "MLA3634627080",
     "name": "Bicicleta Playera Olmo Amelie Rapide Paseo Shimano Rodado 26 Color Verde Tamaño del cuadro 18",
     "category": "Deportes y Fitness",
-    "price": 433641.0,
+    "price": 451409.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_989504-MLA100028036103_122025-O.webp",
     "images": [
@@ -1092,7 +1066,7 @@
     "link": "https://meli.la/1h7vSt5",
     "source": "https://meli.la/1h7vSt5",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1101,7 +1075,7 @@
     "ml_id": "MLA2062125414",
     "name": "Bicicleta Eléctrica M3 R20 Negro",
     "category": "Deportes y Fitness",
-    "price": 2103621.0,
+    "price": 2186012.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_644663-MLA111763874677_052026-O.webp",
     "images": [
@@ -1110,7 +1084,7 @@
     "link": "https://meli.la/2cQQVwt",
     "source": "https://meli.la/2cQQVwt",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1128,7 +1102,7 @@
     "link": "https://meli.la/2MDF27U",
     "source": "https://meli.la/2MDF27U",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1137,7 +1111,7 @@
     "ml_id": "MLA2416592924",
     "name": "Bicicleta BMX Fire Bird Freestyle Rodado 20 Acero V-brakes Cromado/Negro",
     "category": "Deportes y Fitness",
-    "price": 272216.0,
+    "price": 279059.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_827852-MLA113719069650_072026-O.webp",
     "images": [
@@ -1146,10 +1120,8 @@
     "link": "https://meli.la/25MWjWV",
     "source": "https://meli.la/25MWjWV",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14",
-    "prev_price": 299999.0,
-    "price_drop": "2026-10-15"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-14"
   },
   {
     "id": 65,
@@ -1166,7 +1138,7 @@
     "link": "https://meli.la/2hqArtt",
     "source": "https://meli.la/2hqArtt",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14",
     "prev_price": 389500.0,
     "price_drop": "2026-10-15"
@@ -1177,7 +1149,7 @@
     "ml_id": "MLA2581227750",
     "name": "Monopatin Electrico Logus L6 350w - 8.5 - Auton.12km",
     "category": "Otros",
-    "price": 519000.0,
+    "price": 521221.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_890407-MLA116710118366_092026-O.webp",
     "images": [
@@ -1186,7 +1158,7 @@
     "link": "https://meli.la/1GxZgof",
     "source": "https://meli.la/1GxZgof",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1195,7 +1167,7 @@
     "ml_id": "MLA1450684147",
     "name": "Monopatín Eléctrico Logus L7 Pro Max 350W 10\" Plegable con Batería Extraíble",
     "category": "Otros",
-    "price": 814821.0,
+    "price": 823943.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_712068-MLA117866236423_092026-O.webp",
     "images": [
@@ -1204,7 +1176,7 @@
     "link": "https://meli.la/324hrDp",
     "source": "https://meli.la/324hrDp",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1213,7 +1185,7 @@
     "ml_id": "MLA1888238653",
     "name": "Monopatín Eléctrico HONEYWHALE M2 MAX-B 500W Para Adultos Velocidad 32Km/h, Asiento de Altura Regulable Tiene Función de Bloqueo, Amortiguación de las ruedas delanteras y traseras",
     "category": "Otros",
-    "price": 980142.0,
+    "price": 999000.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_782147-MLA117838226209_092026-O.webp",
     "images": [
@@ -1222,7 +1194,7 @@
     "link": "https://meli.la/27aGyTn",
     "source": "https://meli.la/27aGyTn",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1240,7 +1212,7 @@
     "link": "https://meli.la/2etnmAA",
     "source": "https://meli.la/2etnmAA",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1249,7 +1221,7 @@
     "ml_id": "MLA2852093050",
     "name": "Neumático Dunlop Sp Touring R1 175/70r13 82T Tecnología Japonesa",
     "category": "Accesorios para Vehículos",
-    "price": 114623.0,
+    "price": 114622.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_932098-MLA99394069790_112025-O.webp",
     "images": [
@@ -1258,8 +1230,10 @@
     "link": "https://meli.la/1Ghp2q5",
     "source": "https://meli.la/1Ghp2q5",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-14",
+    "prev_price": 114623.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 71,
@@ -1276,7 +1250,7 @@
     "link": "https://meli.la/1ihxNRb",
     "source": "https://meli.la/1ihxNRb",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1285,7 +1259,7 @@
     "ml_id": "MLA2478393734",
     "name": "Kit X2 Neumáticos Zeta Energy Ztr50 175 70 R13 82h H",
     "category": "Accesorios para Vehículos",
-    "price": 230993.0,
+    "price": 230825.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_763720-MLA118149523325_092026-O.webp",
     "images": [
@@ -1294,8 +1268,10 @@
     "link": "https://meli.la/1uygBY7",
     "source": "https://meli.la/1uygBY7",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-14",
+    "prev_price": 230993.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 73,
@@ -1303,7 +1279,7 @@
     "ml_id": "MLA1543934469",
     "name": "Reloj Inteligente Bleck Viva Slim Elegante Mujer Dorado Gold Rosa Dorado Rosa Dorado Rosa Dorado",
     "category": "Joyas y Relojes",
-    "price": 136728.0,
+    "price": 121432.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_716120-MLA99504323566_112025-O.webp",
     "images": [
@@ -1312,8 +1288,10 @@
     "link": "https://meli.la/1uJ3CQJ",
     "source": "https://meli.la/1uJ3CQJ",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-14",
+    "prev_price": 136728.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 74,
@@ -1321,7 +1299,7 @@
     "ml_id": "MLA2452955896",
     "name": "Zapatillas Hush Puppies Mujer Irem Ultra Livianas Elastizada",
     "category": "Ropa y Accesorios",
-    "price": 119590.0,
+    "price": 123490.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_960435-MLA95248062331_102025-O.webp",
     "images": [
@@ -1330,7 +1308,7 @@
     "link": "https://meli.la/1pTQD1N",
     "source": "https://meli.la/1pTQD1N",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1339,7 +1317,7 @@
     "ml_id": "MLA1628217632",
     "name": "Smartwatch JD Hawai Rosa Gold Pantalla Amoled 1.43\" Llamadas Bluetooth IP68 Reloj Inteligente",
     "category": "Electrónica, Audio y Video",
-    "price": 44899.0,
+    "price": 49999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_878619-MLA116951653174_092026-O.webp",
     "images": [
@@ -1348,7 +1326,7 @@
     "link": "https://meli.la/2Ctz9tb",
     "source": "https://meli.la/2Ctz9tb",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1357,7 +1335,7 @@
     "ml_id": "MLA3897026736",
     "name": "Pava Electrica 1.8l Vidrio Templado 1800w Luz Led 360 Base Giratoria Aitech Apagado Automatico Calienta Agua Rapido Hervidor Electrico Cocina Termo Mate Te Cafe Seguridad Antiseco Hogar",
     "category": "Electrodomésticos y Aires Ac.",
-    "price": 26999.0,
+    "price": 56000.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_803510-MLA113897446698_072026-O.webp",
     "images": [
@@ -1366,7 +1344,7 @@
     "link": "https://meli.la/1KvaJ96",
     "source": "https://meli.la/1KvaJ96",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1384,7 +1362,7 @@
     "link": "https://meli.la/1bBtFWK",
     "source": "https://meli.la/1bBtFWK",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1393,7 +1371,7 @@
     "ml_id": "MLA3799270702",
     "name": "Licuadora De Mano Daewoo Lm3125 1000w Batidor- Picador Mixer Plateado",
     "category": "Electrodomésticos y Aires Ac.",
-    "price": 94999.0,
+    "price": 99999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_705705-MLA114772625036_082026-O.webp",
     "images": [
@@ -1402,7 +1380,7 @@
     "link": "https://meli.la/26vvRjX",
     "source": "https://meli.la/26vvRjX",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-14"
   },
   {
@@ -1411,7 +1389,7 @@
     "ml_id": "MLA2097557211",
     "name": "Barra Colágeno Volufiline Anti Ojeras Y Arrugas. Multi Balm Normal Día/noche",
     "category": "Otros",
-    "price": 64590.0,
+    "price": 39900.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_759492-MLA116167237460_092026-O.webp",
     "images": [
@@ -1420,8 +1398,10 @@
     "link": "https://meli.la/13yYzMM",
     "source": "https://meli.la/13yYzMM",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-14"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-14",
+    "prev_price": 64590.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 81,
@@ -1429,7 +1409,7 @@
     "ml_id": "MLA2396626876",
     "name": "Apple iPhone 17 Pro (256 GB) - Color plata - Distribuidor Autorizado",
     "category": "Celulares y Teléfonos",
-    "price": 2999999.0,
+    "price": 3319999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_608809-MLA91747026128_092025-O.webp",
     "images": [
@@ -1438,7 +1418,7 @@
     "link": "https://meli.la/1zkKrYX",
     "source": "https://meli.la/1zkKrYX",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1456,7 +1436,7 @@
     "link": "https://meli.la/1WcZeHL",
     "source": "https://meli.la/1WcZeHL",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1474,7 +1454,7 @@
     "link": "https://meli.la/2oHmifh",
     "source": "https://meli.la/2oHmifh",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1483,7 +1463,7 @@
     "ml_id": "MLA1434520627",
     "name": "Sensor Alarma Detector CO Monoxido De Carbono - Geneve",
     "category": "Otros",
-    "price": 9867.0,
+    "price": 9570.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_615076-MLA115646012482_092026-O.webp",
     "images": [
@@ -1492,8 +1472,10 @@
     "link": "https://meli.la/23nZc1f",
     "source": "https://meli.la/23nZc1f",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-15"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-15",
+    "prev_price": 9867.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 85,
@@ -1510,7 +1492,7 @@
     "link": "https://meli.la/251cdoN",
     "source": "https://meli.la/251cdoN",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1519,7 +1501,7 @@
     "ml_id": "MLA1641598781",
     "name": "Hidrolavadora Electrica Alta Presion Trent Hlt203 1600 Psi 110 Bar Con Accesorios",
     "category": "Otros",
-    "price": 87222.0,
+    "price": 87304.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_870020-MLA110125632865_042026-O.webp",
     "images": [
@@ -1528,8 +1510,10 @@
     "link": "https://meli.la/324qgnm",
     "source": "https://meli.la/324qgnm",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-15"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-15",
+    "prev_price": 89110.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 87,
@@ -1537,7 +1521,7 @@
     "ml_id": "MLA1761733245",
     "name": "Óleo Extraordinario Reparación de Puntas L'Oréal Elvive 100Ml",
     "category": "Otros",
-    "price": 19782.0,
+    "price": 15392.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_721474-MLA110623108637_042026-O.webp",
     "images": [
@@ -1546,8 +1530,10 @@
     "link": "https://meli.la/2ndP7Uf",
     "source": "https://meli.la/2ndP7Uf",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-15"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-15",
+    "prev_price": 19782.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 88,
@@ -1555,7 +1541,7 @@
     "ml_id": "MLA1880594628",
     "name": "Planchita De Pelo GA.MA Italy Elegance Bella Tourmaline Ion Negra",
     "category": "Belleza y Cuidado Personal",
-    "price": 57494.0,
+    "price": 59404.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_633882-MLA99984694631_112025-O.webp",
     "images": [
@@ -1564,7 +1550,7 @@
     "link": "https://meli.la/2kkeyxp",
     "source": "https://meli.la/2kkeyxp",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1573,7 +1559,7 @@
     "ml_id": "MLA3694364532",
     "name": "Randers Arg-409 Cinta Motorizada 12km/h Color Negro",
     "category": "Otros",
-    "price": 796076.0,
+    "price": 650643.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_972526-MLA113675916684_072026-O.webp",
     "images": [
@@ -1582,8 +1568,10 @@
     "link": "https://meli.la/2aGNfQK",
     "source": "https://meli.la/2aGNfQK",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-15"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-15",
+    "prev_price": 796076.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 90,
@@ -1591,7 +1579,7 @@
     "ml_id": "MLA1495006379",
     "name": "Contadora De Billetes Gadnic MC-01 1000 Billetes x Minuto Homologada Detecta Billetes Falsos",
     "category": "Otros",
-    "price": 64349.0,
+    "price": 64899.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_757541-MLA99895298289_112025-O.webp",
     "images": [
@@ -1600,7 +1588,7 @@
     "link": "https://meli.la/1NM3KyZ",
     "source": "https://meli.la/1NM3KyZ",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1609,7 +1597,7 @@
     "ml_id": "MLA1666646761",
     "name": "Colchón Calm Elemental 1 Plaza 80x190 Espuma En Caja",
     "category": "Hogar, Muebles y Jardín",
-    "price": 209889.0,
+    "price": 204163.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_746921-MLA102677201493_122025-O.webp",
     "images": [
@@ -1618,7 +1606,7 @@
     "link": "https://meli.la/2WeMo4a",
     "source": "https://meli.la/2WeMo4a",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1627,7 +1615,7 @@
     "ml_id": "MLA1108941865",
     "name": "Secador De Pelo Ultracomb Tourmaline Ion Pro Sc-4606 Negro 3 Temperaturas cool shot 1 Boquilla Negro / Rojo",
     "category": "Belleza y Cuidado Personal",
-    "price": 41435.0,
+    "price": 42309.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_640980-MLA112498151866_062026-O.webp",
     "images": [
@@ -1636,8 +1624,10 @@
     "link": "https://meli.la/2xC6JYL",
     "source": "https://meli.la/2xC6JYL",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-15"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-15",
+    "prev_price": 43999.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 93,
@@ -1654,7 +1644,7 @@
     "link": "https://meli.la/2ETocbF",
     "source": "https://meli.la/2ETocbF",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1663,7 +1653,7 @@
     "ml_id": "MLA1514109439",
     "name": "Plancha Estampadora Sublimadora Mini Portátil Economica Rojo",
     "category": "Otros",
-    "price": 71499.0,
+    "price": 69354.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_882354-MLA116382271270_092026-O.webp",
     "images": [
@@ -1672,8 +1662,10 @@
     "link": "https://meli.la/2PdQMpm",
     "source": "https://meli.la/2PdQMpm",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-15"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-15",
+    "prev_price": 71499.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 95,
@@ -1690,7 +1682,7 @@
     "link": "https://meli.la/26WVycT",
     "source": "https://meli.la/26WVycT",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1699,7 +1691,7 @@
     "ml_id": "MLA1994757156",
     "name": "Compresor de Aire Portátil JD Air Master 150 PSI para Neumáticos y Pelotas con Linterna y Power Bank",
     "category": "Accesorios para Vehículos",
-    "price": 42321.0,
+    "price": 44999.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_743791-MLA114908812903_072026-O.webp",
     "images": [
@@ -1708,7 +1700,7 @@
     "link": "https://meli.la/2aa7oBX",
     "source": "https://meli.la/2aa7oBX",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1726,7 +1718,7 @@
     "link": "https://meli.la/1FtCwPS",
     "source": "https://meli.la/1FtCwPS",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1735,7 +1727,7 @@
     "ml_id": "MLA1629168131",
     "name": "Set De Mesas Ratonas Nórdicas Boomerang Melamina Blanca Justo Makario",
     "category": "Hogar, Muebles y Jardín",
-    "price": 40701.0,
+    "price": 79799.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_708154-MLA117981994641_092026-O.webp",
     "images": [
@@ -1744,7 +1736,7 @@
     "link": "https://meli.la/1id63YE",
     "source": "https://meli.la/1id63YE",
     "status": "disponible",
-    "checked": null,
+    "checked": "2026-10-22 12:55",
     "added": "2026-10-15"
   },
   {
@@ -1753,7 +1745,7 @@
     "ml_id": "MLA1456430263",
     "name": "Kit Mancuernas Y Barra Con Tope A Rosca 25 Kg Discos Pvc",
     "category": "Deportes y Fitness",
-    "price": 87289.0,
+    "price": 79989.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_750350-MLA114905526091_072026-O.webp",
     "images": [
@@ -1762,8 +1754,10 @@
     "link": "https://meli.la/2VDHMzp",
     "source": "https://meli.la/2VDHMzp",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-15"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-15",
+    "prev_price": 87289.0,
+    "price_drop": "2026-10-22"
   },
   {
     "id": 100,
@@ -1771,7 +1765,7 @@
     "ml_id": "MLA2078101532",
     "name": "Inflador De Neumaticos Inalambrico Mini Recargable Gadnic Compresor De Aire Portatil 150 PSI Pantalla Digital Compacto Boquillas Incluidas",
     "category": "Accesorios para Vehículos",
-    "price": 32999.0,
+    "price": 30099.0,
     "currency": "ARS",
     "image": "https://http2.mlstatic.com/D_NQ_NP_649700-MLA110082198520_042026-O.webp",
     "images": [
@@ -1780,7 +1774,9 @@
     "link": "https://meli.la/2zpLp8A",
     "source": "https://meli.la/2zpLp8A",
     "status": "disponible",
-    "checked": null,
-    "added": "2026-10-15"
+    "checked": "2026-10-22 12:55",
+    "added": "2026-10-15",
+    "prev_price": 32999.0,
+    "price_drop": "2026-10-22"
   }
 ]

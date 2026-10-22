@@ -626,6 +626,11 @@
                 <input id="dlIn" type="text" inputmode="decimal" autocomplete="off" placeholder="Ej: 150000">
                 <div class="dl-out" id="dlOut"></div>
             </div>
+            <div class="dl-conv">
+                <label for="dlInUsd">&#191;Cu&aacute;nto es en pesos? Escrib&iacute; un monto en d&oacute;lares</label>
+                <input id="dlInUsd" type="text" inputmode="decimal" autocomplete="off" placeholder="Ej: 100">
+                <div class="dl-out" id="dlOutUsd"></div>
+            </div>
             <p class="sh-foot">Cotizaciones: DolarApi.com &middot; Son valores de referencia</p>
         </section>
     </div>
@@ -1523,6 +1528,7 @@
             document.getElementById('dlFecha').textContent = ult && !isNaN(ult) ? 'Actualizado ' +
                 ult.toLocaleString('es-AR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }) : 'Cotizaciones de referencia';
             calcConv();
+            calcConvUsd();
         }
         function calcConv() {
             const out = document.getElementById('dlOut');
@@ -1532,6 +1538,17 @@
             out.innerHTML = [['oficial', 'Oficial'], ['blue', 'Blue'], ['bolsa', 'MEP']].map(([casa, n]) => {
                 const d = DOLAR_LISTA.find(x => x && x.casa === casa);
                 return d && d.venta > 0 ? '<div><small>' + n + '</small><b>' + usd(v / d.venta) + '</b></div>' : '';
+            }).join('');
+        }
+        // Dólares -> pesos (se usa la cotización de venta, igual que el conversor de arriba)
+        function calcConvUsd() {
+            const out = document.getElementById('dlOutUsd');
+            const v = parseFloat(String(document.getElementById('dlInUsd').value).replace(/\./g, '').replace(',', '.'));
+            if (!DOLAR_LISTA || !(v > 0)) { out.innerHTML = ''; return; }
+            const ars = n => '$ ' + new Intl.NumberFormat('es-AR', { maximumFractionDigits: 0 }).format(n);
+            out.innerHTML = [['oficial', 'Oficial'], ['blue', 'Blue'], ['bolsa', 'MEP'], ['tarjeta', 'Tarjeta']].map(([casa, n]) => {
+                const d = DOLAR_LISTA.find(x => x && x.casa === casa);
+                return d && d.venta > 0 ? '<div><small>' + n + '</small><b>' + ars(v * d.venta) + '</b></div>' : '';
             }).join('');
         }
 
@@ -1572,6 +1589,7 @@
             t.addEventListener('click', abrirD);
             t.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrirD(); } });
             document.getElementById('dlIn').addEventListener('input', calcConv);
+            document.getElementById('dlInUsd').addEventListener('input', calcConvUsd);
             // En el celular: arrastrar la barrita hacia abajo cierra el panel
             back.querySelectorAll('.sh-grab').forEach(g => {
                 const box = g.closest('.sh-box');
