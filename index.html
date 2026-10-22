@@ -27,6 +27,9 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://market.nexosmaps.com/#org","name":"Nexos Market","url":"https://market.nexosmaps.com/","logo":"https://market.nexosmaps.com/logo.jpg"},{"@type":"WebSite","@id":"https://market.nexosmaps.com/#web","url":"https://market.nexosmaps.com/","name":"Nexos Market","inLanguage":"es-AR","publisher":{"@id":"https://market.nexosmaps.com/#org"},"potentialAction":{"@type":"SearchAction","target":"https://market.nexosmaps.com/?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #0f1316;
@@ -548,6 +551,93 @@
         .dl-out div { text-align: center; padding: 8px 4px; border-radius: 12px; background: rgba(255,255,255,.05); }
         .dl-out small { display: block; color: var(--muted); font-size: .7rem; }
         .dl-out b { color: var(--cyan); font-size: .92rem; }
+
+        /* ============ v3: tipografía, fondo y carruseles ============ */
+        :root { --page-2: #f3f5f8; --font: "Plus Jakarta Sans", "Inter", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+        body { font-family: var(--font); background: var(--page-2); }
+        .sec-title, .sec-head h2 { font-size: 1.35rem; font-weight: 800; letter-spacing: -.015em; line-height: 1.15; }
+        .sec-title { margin: 26px 0 12px; }
+        .sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin: 22px 0 10px; }
+        .sec-head p { color: var(--ink-muted); font-size: .85rem; margin-top: 4px; }
+        .car-nav { display: flex; gap: 8px; flex: none; }
+        .car-nav button { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--card-line); background: #fff; color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer; }
+        .car-nav button:hover:not(:disabled) { border-color: var(--action); color: var(--action); }
+        .car-nav button:disabled { opacity: .35; cursor: default; }
+        .car-nav button:focus-visible, .car-dots button:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+        .car-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 6px;
+                     padding: 6px 6px 14px; margin: 0 -6px; scrollbar-width: none; overscroll-behavior-x: contain; }
+        .car-track::-webkit-scrollbar { display: none; }
+        .car-track > * { scroll-snap-align: start; flex: 0 0 auto; }
+        .car-track > .card { flex-basis: clamp(210px, 21vw, 250px); }
+        .car-dots { display: flex; justify-content: center; gap: 6px; }
+        .car-dots button { position: relative; width: 8px; height: 8px; padding: 0; border: 0; border-radius: 99px; background: #c5cbd3; cursor: pointer; transition: width .2s, background .2s; }
+        .car-dots button::after { content: ""; position: absolute; inset: -8px -4px; }
+        .car-dots button[aria-current="true"] { width: 24px; background: var(--action); }
+
+        /* Oferta destacada: el descuento es lo primero que se lee */
+        .car-track > .slide { flex-basis: min(580px, 86%); display: grid; grid-template-columns: minmax(0, 42%) minmax(0, 1fr); min-height: 270px;
+            background: #fff; border: 1px solid var(--card-line); border-radius: 18px; overflow: hidden; box-shadow: 0 1px 2px rgba(17,24,39,.06);
+            scroll-margin-top: calc(var(--bar-h, 120px) + 16px); }
+        .slide.nuevo { outline: 3px solid #df005b; outline-offset: 2px; }
+        .s-img { position: relative; background: #f4f6f9; }
+        .s-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 14px; }
+        .s-off { position: absolute; top: 12px; left: 12px; z-index: 2; background: #0f7a3f; color: #fff; padding: 8px 12px; border-radius: 12px;
+                 font-size: 1.5rem; font-weight: 800; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+        .s-body { display: flex; flex-direction: column; gap: 8px; padding: 18px; min-width: 0; }
+        .s-body h3 { font-size: 1.05rem; line-height: 1.3; font-weight: 700; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .s-price { margin-top: auto; display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 10px; }
+        .s-price b { font-size: 1.9rem; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+        .s-price s { color: var(--ink-muted); font-size: .9rem; }
+        .s-save { flex-basis: 100%; color: #0f7a3f; font-weight: 700; font-size: .85rem; margin-top: 2px; }
+        .s-body .btn { margin-top: 4px; }
+
+        /* Pulido general */
+        @media (min-width: 641px) { .card { border-radius: 16px; } }
+        .card .thumb { background: #f4f6f9; }
+        .btn { border-radius: 12px; font-weight: 700; }
+        .more-btn { border-radius: 12px; }
+
+        @media (max-width: 640px) {
+            .sec-title, .sec-head h2 { font-size: 1.15rem; }
+            .car-track { gap: 10px; }
+            .car-track > .slide { flex-basis: 88%; grid-template-columns: minmax(0, 38%) minmax(0, 1fr); min-height: 230px; border-radius: 14px; }
+            .car-track > .card { flex-basis: 62%; }
+            .s-body { padding: 12px; gap: 6px; }
+            .s-body h3 { font-size: .9rem; }
+            .s-price b { font-size: 1.35rem; }
+            .s-off { top: 8px; left: 8px; padding: 6px 8px; border-radius: 9px; font-size: 1.05rem; }
+        }
+        @media (hover: none) { .car-nav { display: none; } }
+
+        /* ============ v3: encabezado ============ */
+        /* Fondo con un brillo suave de la marca arriba, en vez de plano */
+        .top { background: radial-gradient(70% 140% at 50% -30%, rgba(58,109,240,.20), transparent 70%), radial-gradient(40% 100% at 100% 0%, rgba(223,0,91,.10), transparent 70%), var(--bg); }
+        header, .bar { background: transparent; }
+        /* El logo se achica de a poco al scrollear (usa --k, que ya calcula tu script) */
+        .logo-frame { width: min(calc(460px - 230px * var(--k, 0)), 100%); margin: calc(8px - 4px * var(--k, 0)) auto calc(10px - 5px * var(--k, 0));
+                      box-shadow: 0 0 5px rgba(13,169,217,.45), 0 0 14px rgba(122,47,214,.28); }
+        .logo-frame::before { opacity: .45; }
+        /* La leyenda de precios actualizados se pliega al scrollear, igual que dólar/clima */
+        .sync-badge { font-size: .74rem; margin: calc(8px * (1 - var(--k, 0))) 0 calc(4px * (1 - var(--k, 0)));
+                      max-height: calc(22px * (1 - var(--k, 0))); opacity: calc(1 - var(--k, 0) * 1.6); overflow: hidden; }
+        .top.k-full .sync-badge { visibility: hidden; }
+        /* Dólar y clima: vidrio esmerilado */
+        .pill { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+        /* Buscador: lupa, borde de marca al enfocar y selector con flecha propia */
+        .search input { padding-left: 40px; border-radius: 12px; background-color: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12);
+            background-repeat: no-repeat; background-position: 14px center; background-size: 18px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2398a2ad' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E"); }
+        .search select, .filters-btn { border-radius: 12px; background-color: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); }
+        .search select { -webkit-appearance: none; appearance: none; padding-right: 30px; background-repeat: no-repeat; background-position: right 10px center; background-size: 14px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2398a2ad' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); }
+        .filters input { background-color: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); }
+        /* Categorías: un poco más cómodas de tocar */
+        .cats { gap: 6px; }
+        .cats button { padding: 6px 14px; border-color: rgba(255,255,255,.12); background: rgba(255,255,255,.06); transition: background .15s, border-color .15s; }
+        .cats button:hover { background: rgba(255,255,255,.12); }
+        .cats button.on { background: var(--brand); }
+        .cats button.ofertas { background: rgba(223,0,91,.18); }
+        .cats button.ofertas.on { background: var(--magenta); }
     </style>
 </head>
 <body>
@@ -901,19 +991,90 @@
             const bajas = ok.filter(bajoPrecio).sort((x, y) => pctBaja(y) - pctBaja(x)).slice(0, 12);
             return { nuevos, bajas };
         }
+        // ---- Carrusel de ofertas (bajas de precio) + franja deslizable de novedades ----
+        const REDUCE = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let carTimer = null;
+        function buildSlide(p) {
+            const a = document.createElement('article');
+            a.className = 'slide'; a.dataset.id = p.id;
+            if (destacadoId !== null && String(p.id) === String(destacadoId)) a.classList.add('nuevo');
+            const esFav = favs.has(String(p.id));
+            const t = esFav ? 'Quitar de favoritos' : 'Guardar en favoritos';
+            a.innerHTML = `
+                <div class="s-img"><span class="s-off" aria-label="Bajó ${pctBaja(p)}% de precio">&minus;${pctBaja(p)}%</span><button type="button" class="fav" data-fav="${escapeHTML(p.id)}" data-name="${escapeHTML(p.name)}" aria-pressed="${esFav}" aria-label="${t}" title="${t}">&#9829;</button><img src="${escapeHTML(p.image || PLACEHOLDER)}" alt="${escapeHTML(p.name)}" loading="lazy" decoding="async" width="300" height="300" referrerpolicy="no-referrer"></div>
+                <div class="s-body">
+                    <span class="chip">${escapeHTML(p.category)}</span>
+                    <h3 title="${escapeHTML(p.name)}">${escapeHTML(p.name)}</h3>
+                    <p class="s-price"><b>${formatPrice(p)}</b><s>${fmtMoney(p.prev, p.currency)}</s><span class="s-save">Ahorrás ${fmtMoney(p.prev - p.price, p.currency)}</span>${p.price >= 1000 ? '<span class="cuotas">Hasta 12 cuotas de ' + fmtMoney(p.price / 12, p.currency) + '</span>' : ''}</p>
+                    <a class="btn" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(p.link)}" target="_blank" rel="noopener noreferrer sponsored"><span>Ver oferta en Mercado Libre</span>${EXT_SVG}</a>
+                </div>`;
+            const img = a.querySelector('img');
+            img.addEventListener('error', () => { if (img.src !== PLACEHOLDER) img.src = PLACEHOLDER; });
+            return a;
+        }
+        function initCarousel(box, hero) {
+            const tr = box.querySelector('.car-track'), prev = box.querySelector('.car-prev'), next = box.querySelector('.car-next'), dots = box.querySelector('.car-dots');
+            const n = tr.children.length;
+            const paso = () => tr.children[1].offsetLeft - tr.children[0].offsetLeft;
+            const fin = () => tr.scrollLeft >= tr.scrollWidth - tr.clientWidth - 2;
+            const ir = i => tr.scrollTo({ left: i * paso(), behavior: REDUCE ? 'auto' : 'smooth' });
+            const mover = d => {
+                if (!hero) { tr.scrollBy({ left: d * tr.clientWidth * .85, behavior: REDUCE ? 'auto' : 'smooth' }); return; }
+                if (d > 0 && fin()) ir(0);
+                else if (d < 0 && tr.scrollLeft <= 2) tr.scrollTo({ left: tr.scrollWidth, behavior: REDUCE ? 'auto' : 'smooth' });
+                else ir(Math.round(tr.scrollLeft / paso()) + d);
+            };
+            let parar = false;
+            prev.addEventListener('click', () => { parar = true; mover(-1); });
+            next.addEventListener('click', () => { parar = true; mover(1); });
+            if (dots) {
+                dots.innerHTML = [...tr.children].map((_, k) => '<button type="button" aria-label="Ir a la oferta ' + (k + 1) + '"></button>').join('');
+                dots.addEventListener('click', e => { const bt = e.target.closest('button'); if (bt) { parar = true; ir([...dots.children].indexOf(bt)); } });
+            }
+            let pend = false;
+            const pintar = () => {
+                pend = false;
+                if (dots) { const i = fin() ? n - 1 : Math.round(tr.scrollLeft / paso()); [...dots.children].forEach((d, k) => d.setAttribute('aria-current', k === i)); }
+                if (!hero) { prev.disabled = tr.scrollLeft <= 2; next.disabled = fin(); }
+            };
+            tr.addEventListener('scroll', () => { if (!pend) { pend = true; requestAnimationFrame(pintar); } }, { passive: true });
+            pintar();
+            if (!hero || REDUCE) return;
+            // Avance automático: se frena con el mouse o el foco encima, al tocar, con la pestaña oculta o fuera de pantalla.
+            let pausa = false, visible = true;
+            box.addEventListener('mouseenter', () => { pausa = true; });
+            box.addEventListener('mouseleave', () => { pausa = false; });
+            box.addEventListener('focusin', () => { pausa = true; });
+            box.addEventListener('focusout', () => { pausa = false; });
+            box.addEventListener('touchstart', () => { parar = true; }, { passive: true });
+            if (window.IntersectionObserver) new IntersectionObserver(en => { visible = en[0].isIntersecting; }).observe(box);
+            carTimer = setInterval(() => { if (!parar && !pausa && visible && !document.hidden) mover(1); }, 5500);
+        }
         function renderDestacados(f) {
+            clearInterval(carTimer);
             const box = document.getElementById('destacados');
+            const vieja = box.querySelector('.car-hero .car-track');
+            const x0 = vieja ? vieja.scrollLeft : 0;   // si se vuelve a armar (chequeo automático), conserva la posición
             box.innerHTML = '';
             if (!f) return;
-            const franja = (titulo, lista) => {
+            const seccion = (titulo, sub, lista, hero) => {
                 if (!lista.length) return;
-                const h = document.createElement('h2'); h.className = 'sec-title'; h.textContent = titulo;
-                const st = document.createElement('div'); st.className = 'strip';
-                lista.forEach(p => st.appendChild(buildCard(p)));
-                box.append(h, st);
+                const multi = lista.length > 1;
+                const sec = document.createElement('section');
+                sec.className = 'car' + (hero ? ' car-hero' : '');
+                sec.setAttribute('aria-roledescription', 'carrusel');
+                sec.setAttribute('aria-label', titulo);
+                sec.innerHTML = '<div class="sec-head"><div><h2>' + titulo + '</h2><p>' + sub + '</p></div>' +
+                    (multi ? '<div class="car-nav"><button type="button" class="car-prev" aria-label="Anterior">&#8249;</button><button type="button" class="car-next" aria-label="Siguiente">&#8250;</button></div>' : '') +
+                    '</div><div class="car-track"></div>' + (hero && multi ? '<div class="car-dots"></div>' : '');
+                const tr = sec.querySelector('.car-track');
+                lista.forEach(p => tr.appendChild(hero ? buildSlide(p) : buildCard(p)));
+                box.appendChild(sec);
+                if (multi) initCarousel(sec, hero);
+                if (hero && x0) tr.scrollLeft = x0;
             };
-            franja('Bajó de precio', f.bajas);
-            franja('Novedades', f.nuevos);
+            seccion('Ofertas del momento', 'Bajaron de precio en los últimos ' + DIAS_BAJA + ' días, de mayor a menor descuento', f.bajas, true);
+            seccion('Novedades', 'Sumados en los últimos ' + DIAS_NUEVO + ' días', f.nuevos, false);
             if (box.children.length) {
                 const h = document.createElement('h2'); h.className = 'sec-title'; h.textContent = 'Más productos';
                 box.appendChild(h);
@@ -955,7 +1116,7 @@
         let nuevoMostrado = false;
         function resaltarNuevo() {
             if (NUEVO === null || nuevoMostrado) return;
-            const card = [...document.querySelectorAll('#destacados .card, #productGrid .card')]
+            const card = [...document.querySelectorAll('#destacados .card, #destacados .slide, #productGrid .card')]
                 .find(c => c.dataset.id === NUEVO);
             if (!card) return;
             nuevoMostrado = true;
@@ -970,7 +1131,7 @@
             document.getElementById('priceMin').value = ''; document.getElementById('priceMax').value = '';
             destacadoId = id; expandirDestacado = true;
             renderCats(); applyFilter(false);
-            const card = [...document.querySelectorAll('#destacados .card, #productGrid .card')].find(c => c.dataset.id === id);
+            const card = [...document.querySelectorAll('#destacados .card, #destacados .slide, #productGrid .card')].find(c => c.dataset.id === id);
             if (!card) return;
             document.querySelectorAll('.card.nuevo').forEach(c => c.classList.remove('nuevo'));
             card.classList.add('nuevo');
