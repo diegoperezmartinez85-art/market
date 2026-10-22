@@ -713,6 +713,21 @@
         @keyframes skShimmer { to { background-position: -200% 0; } }
         @media (prefers-reduced-motion: reduce) { .card.sk .thumb, .sk-l { animation: none; } }
 
+        /* ============ v7: footer discreto y ventana legal ============ */
+        .site-foot { max-width: 1200px; margin: 0 auto; padding: 8px max(20px, env(safe-area-inset-right)) 36px max(20px, env(safe-area-inset-left)); text-align: center; color: var(--ink-muted); }
+        .foot-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 18px; padding-top: 18px; border-top: 1px solid var(--card-line); }
+        .foot-links button, .foot-links a { background: none; border: 0; padding: 4px 2px; font: inherit; font-size: .82rem; font-weight: 600; color: var(--ink-muted); text-decoration: none; cursor: pointer; }
+        .foot-links button:hover, .foot-links a:hover, .foot-copy a:hover { color: var(--action); text-decoration: underline; }
+        .foot-links button:focus-visible, .foot-links a:focus-visible, .foot-copy a:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; border-radius: 4px; }
+        .foot-note { max-width: 720px; margin: 10px auto 0; font-size: .72rem; line-height: 1.5; color: #7b8591; }
+        .foot-copy { margin-top: 10px; font-size: .72rem; color: #7b8591; }
+        .foot-copy a { color: inherit; text-decoration: none; }
+        .lg-box .rs-list h3 { text-transform: none; letter-spacing: 0; font-size: .95rem; color: var(--ink); margin: 16px 0 4px; }
+        .lg-box .rs-list p, .lg-box .rs-list li { font-size: .88rem; line-height: 1.55; color: #3a4452; }
+        .lg-box .rs-list ul { margin: 6px 0 0; padding-left: 20px; }
+        .lg-box .rs-list a { color: var(--action); }
+        .lg-box .rs-list .lg-date { color: var(--ink-muted); font-size: .78rem; margin-top: 14px; }
+
         /* ============ v6: header azul noche (menos contraste) y movimientos más calmos ============ */
         .top {
             background:
@@ -747,9 +762,10 @@
     <div class="bar">
         <div class="search">
             <input type="search" id="searchInput" placeholder="Buscar productos" aria-label="Buscar productos" autocomplete="off">
-            <select id="sortSelect" aria-label="Ordenar por precio">
+            <select id="sortSelect" aria-label="Ordenar productos">
                 <option value="">Orden original</option>
                 <option value="new">Más nuevos</option>
+                <option value="off">Mayor descuento</option>
                 <option value="asc">Menor precio</option>
                 <option value="desc">Mayor precio</option>
                 <option value="az">Nombre A-Z</option>
@@ -763,7 +779,7 @@
             <input type="text" id="priceMax" inputmode="numeric" autocomplete="off" placeholder="Máx $" aria-label="Precio máximo">
             <button type="button" class="clear" id="priceClear" hidden>Limpiar</button>
         </div>
-        <div class="sync-badge" aria-label="Precios verificados con Mercado Libre"><span class="sync-dot"></span> Precios actualizados automáticamente con Mercado Libre</div>
+        <div class="sync-badge" aria-label="Precios de referencia tomados de Mercado Libre"><span class="sync-dot"></span> Precios de referencia de Mercado Libre &middot; pueden variar</div>
         <nav class="cats" id="cats" aria-label="Categorías"></nav>
     </div>
     </div>
@@ -775,6 +791,15 @@
         <noscript><p class="empty">Nexos Market necesita JavaScript para mostrar el catálogo de ofertas. Activalo en tu navegador para ver los productos.</p></noscript>
         <div class="more-wrap" id="moreWrap" hidden><button type="button" class="more-btn" id="moreBtn"></button></div>
     </main>
+    <footer class="site-foot">
+        <nav class="foot-links" aria-label="Información del sitio">
+            <button type="button" data-legal="about">Quiénes somos</button>
+            <button type="button" data-legal="privacy">Privacidad</button>
+            <a href="mailto:info@nexosmaps.com">Contacto</a>
+        </nav>
+        <p class="foot-note">Nexos Market es un sitio independiente, sin relación oficial con Mercado Libre. Los precios son de referencia y pueden cambiar; la compra se concreta en Mercado Libre. Algunos enlaces pueden generar una comisión para nosotros, sin costo adicional para vos.</p>
+        <p class="foot-copy">&copy; <span id="footYear"></span> Nexos Market &middot; <a href="mailto:info@nexosmaps.com">info@nexosmaps.com</a></p>
+    </footer>
     <button type="button" class="to-top" id="toTop" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>
 
         <div class="sh-back" id="shBack" hidden>
@@ -857,7 +882,10 @@
         let allProducts = [];
         // Producto recién agregado (borde de color). Se guarda acá para que NO se pierda
         // cada vez que la grilla se vuelve a armar (al tocar una categoría, buscar, etc.).
-        let destacadoId = new URLSearchParams(location.search).get('nuevo');
+        // ?nuevo=ID (desde el Gestor) marca el producto con el borde de color; ?p=ID (links compartidos) lo marca con un resaltado suave.
+        const _qs = new URLSearchParams(location.search);
+        let destacadoId = _qs.get('nuevo') ?? _qs.get('p');
+        let destSuave = _qs.get('nuevo') === null && _qs.get('p') !== null;
 
         const PLACEHOLDER = 'data:image/svg+xml;utf8,' + encodeURIComponent(
             '<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><rect width="300" height="300" fill="#eef0f2"/>' +
@@ -877,8 +905,11 @@
             return edad >= -1 && edad <= dias;
         }
         const esNuevo = p => reciente(p.added, DIAS_NUEVO);
-        const bajoPrecio = p => p.prev != null && p.price != null && p.prev > p.price && reciente(p.drop, DIAS_BAJA);
+        const MIN_BAJA = 5;   // % mínimo de baja para mostrar la etiqueta verde, entrar a "Ofertas del momento" y al filtro Ofertas
+        const bajoPrecio = p => p.prev != null && p.price != null && p.prev > p.price && pctBaja(p) >= MIN_BAJA && reciente(p.drop, DIAS_BAJA);
         const pctBaja = p => Math.round((1 - p.price / p.prev) * 100);
+        // Oferta vigente (sin importar hace cuánto bajó): tiene precio anterior mayor y el descuento llega al mínimo.
+        const esOferta = p => p.status !== 'no_disponible' && p.prev != null && p.price != null && p.prev > p.price && pctBaja(p) >= MIN_BAJA;
 
         function normalize(raw, index) {
             const p = normalizeBase(raw, index);
@@ -990,7 +1021,7 @@
         function waLink(p) {
             const base = location.href.split(/[?#]/)[0];
             const precio = (p.price == null || isNaN(p.price)) ? '' : ' - ' + formatPrice(p);
-            const txt = 'Mirá este producto en Nexos Market: ' + p.name + precio + '\n' + base + '?nuevo=' + encodeURIComponent(p.id);
+            const txt = 'Mirá este producto en Nexos Market: ' + p.name + precio + '\n' + base + '?p=' + encodeURIComponent(p.id);
             return 'https://api.whatsapp.com/send?text=' + encodeURIComponent(txt);
         }
 
@@ -1074,7 +1105,7 @@
             card.dataset.id = p.id;
             const caido = p.status === 'no_disponible';
             if (caido) card.classList.add('caido');
-            if (destacadoId !== null && String(p.id) === String(destacadoId)) card.classList.add('nuevo');
+            if (destacadoId !== null && String(p.id) === String(destacadoId)) card.classList.add(destSuave ? 'compartido' : 'nuevo');
             const baja = !caido && bajoPrecio(p);
             const tags = caido ? '<span class="badge-off">No disponible</span>'
                 : ((esNuevo(p) || baja) ? '<span class="badges">' + (esNuevo(p) ? '<span class="tag new">Nuevo</span>' : '') +
@@ -1086,7 +1117,7 @@
                 <div class="body">
                     <div class="meta"><span class="chip">${escapeHTML(p.category)}</span>${p.code ? '<span class="code">' + escapeHTML(p.code) + '</span>' : ''}</div>
                     <h2 title="${escapeHTML(p.name)}">${escapeHTML(p.name)}</h2>
-                    <p class="price">${formatPrice(p)}${baja ? '<span class="was">' + fmtMoney(p.prev, p.currency) + '</span><span class="save">Ahorrás ' + fmtMoney(p.prev - p.price, p.currency) + '</span>' : ''}${antesFav != null ? '<span class="favdrop">&#9829; Bajó desde tu última visita (antes ' + fmtMoney(antesFav, p.currency) + ')</span>' : ''}${!caido && p.price != null && p.price >= 1000 ? '<span class="cuotas">Hasta 12 cuotas de ' + fmtMoney(p.price / 12, p.currency) + '</span>' : ''}</p>
+                    <p class="price">${formatPrice(p)}${baja ? '<span class="was">' + fmtMoney(p.prev, p.currency) + '</span><span class="save">Ahorrás ' + fmtMoney(p.prev - p.price, p.currency) + '</span>' : ''}${antesFav != null ? '<span class="favdrop">&#9829; Bajó desde tu última visita (antes ' + fmtMoney(antesFav, p.currency) + ')</span>' : ''}${!caido && p.price != null && p.price >= 1000 ? '<span class="cuotas">Cuotas según medio de pago</span>' : ''}</p>
                     ${caido
                         ? '<span class="btn btn-off" aria-disabled="true">Publicación no disponible</span>'
                         : `<a class="btn" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(p.link)}" target="_blank" rel="noopener noreferrer sponsored"><span>Ver oferta en Mercado Libre</span>${EXT_SVG}</a>
@@ -1110,7 +1141,7 @@
         function buildSlide(p) {
             const a = document.createElement('article');
             a.className = 'slide'; a.dataset.id = p.id;
-            if (destacadoId !== null && String(p.id) === String(destacadoId)) a.classList.add('nuevo');
+            if (destacadoId !== null && String(p.id) === String(destacadoId)) a.classList.add(destSuave ? 'compartido' : 'nuevo');
             const esFav = favs.has(String(p.id));
             const t = esFav ? 'Quitar de favoritos' : 'Guardar en favoritos';
             a.innerHTML = `
@@ -1118,7 +1149,7 @@
                 <div class="s-body">
                     <span class="chip">${escapeHTML(p.category)}</span>
                     <h3 title="${escapeHTML(p.name)}">${escapeHTML(p.name)}</h3>
-                    <p class="s-price"><b>${formatPrice(p)}</b><s>${fmtMoney(p.prev, p.currency)}</s><span class="s-save">Ahorrás ${fmtMoney(p.prev - p.price, p.currency)}</span>${p.price >= 1000 ? '<span class="cuotas">Hasta 12 cuotas de ' + fmtMoney(p.price / 12, p.currency) + '</span>' : ''}</p>
+                    <p class="s-price"><b>${formatPrice(p)}</b><s>${fmtMoney(p.prev, p.currency)}</s><span class="s-save">Ahorrás ${fmtMoney(p.prev - p.price, p.currency)}</span>${p.price >= 1000 ? '<span class="cuotas">Cuotas según medio de pago</span>' : ''}</p>
                     <a class="btn" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(p.link)}" target="_blank" rel="noopener noreferrer sponsored"><span>Ver oferta en Mercado Libre</span>${EXT_SVG}</a>
                 </div>`;
             const img = a.querySelector('img');
@@ -1233,7 +1264,7 @@
         }
 
         // Abierto desde el Gestor (?nuevo=ID): se desplaza al producto recien agregado y lo resalta.
-        const NUEVO = new URLSearchParams(location.search).get('nuevo');
+        const NUEVO = destacadoId;   // el id que vino en el link (?nuevo= o ?p=), si hay
         let nuevoMostrado = false;
         function resaltarNuevo() {
             if (NUEVO === null || nuevoMostrado) return;
@@ -1241,7 +1272,7 @@
                 .find(c => c.dataset.id === NUEVO);
             if (!card) return;
             nuevoMostrado = true;
-            card.classList.add('nuevo');
+            card.classList.add(destSuave ? 'compartido' : 'nuevo');
             updateBarH(); card.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
@@ -1250,11 +1281,11 @@
             // el producto nuevo tiene que verse: se limpian búsqueda, categoría y precio
             activeCat = ''; document.getElementById('searchInput').value = '';
             document.getElementById('priceMin').value = ''; document.getElementById('priceMax').value = '';
-            destacadoId = id; expandirDestacado = true;
+            destacadoId = id; destSuave = false; expandirDestacado = true;
             renderCats(); applyFilter(false);
             const card = [...document.querySelectorAll('#destacados .card, #destacados .slide, #productGrid .card')].find(c => c.dataset.id === id);
             if (!card) return;
-            document.querySelectorAll('.card.nuevo').forEach(c => c.classList.remove('nuevo'));
+            document.querySelectorAll('.card.nuevo, .card.compartido, .slide.compartido').forEach(c => c.classList.remove('nuevo', 'compartido'));
             card.classList.add('nuevo');
             updateBarH(); card.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
@@ -1328,7 +1359,7 @@
             nav.appendChild(br);
             mk('Todas', '', allProducts.length, '\uD83D\uDECD\uFE0F');
             // Botón 🔥 Ofertas
-            const nOfertas = allProducts.filter(p => p.status !== 'no_disponible' && p.prev != null && p.price != null && p.prev > p.price).length;
+            const nOfertas = allProducts.filter(esOferta).length;
             if (nOfertas > 0) {
                 const bo = document.createElement('button');
                 bo.type = 'button';
@@ -1371,7 +1402,7 @@
             const lista = allProducts.filter(p =>
                 (!activeCat || p.category === activeCat) &&
                 (!soloFavs || favs.has(String(p.id))) &&
-                (!soloOfertas || (p.status !== 'no_disponible' && p.prev != null && p.price != null && p.prev > p.price)) &&
+                (!soloOfertas || esOferta(p)) &&
                 // búsqueda sin tildes y por varias palabras: tienen que estar todas (en cualquier orden)
                 terminos.every(t => p._h.includes(t)) &&
                 // con filtro de precio, los "Consultar precio" (sin precio) quedan afuera
@@ -1385,6 +1416,7 @@
                 const na = a.status === 'no_disponible', nb = b.status === 'no_disponible';
                 if (na !== nb) return na ? 1 : -1;
                 if (orden === 'new') return (b.added > a.added ? 1 : b.added < a.added ? -1 : 0) || (b._n - a._n);
+                if (orden === 'off') return (esOferta(b) ? pctBaja(b) : -1) - (esOferta(a) ? pctBaja(a) : -1) || (a._n - b._n);   // las que no son oferta quedan al final
                 if (orden === 'az') return a.name.localeCompare(b.name, 'es', { sensitivity: 'base' });
                 if (orden === 'asc' || orden === 'desc') {
                     const sa = a.price == null || isNaN(a.price), sb = b.price == null || isNaN(b.price);
@@ -1455,7 +1487,7 @@
         }
         function clickCopiar(e) {
             const b = e.target.closest && e.target.closest('.cp');
-            if (b) rsCopiar(location.href.split(/[?#]/)[0].replace(/index\.html$/, '') + '?nuevo=' + encodeURIComponent(b.dataset.cp), b);
+            if (b) rsCopiar(location.href.split(/[?#]/)[0].replace(/index\.html$/, '') + '?p=' + encodeURIComponent(b.dataset.cp), b);
         }
         function clickFav(e) {
             const b = e.target.closest && e.target.closest('.fav');
@@ -1503,7 +1535,7 @@
         const rsUrl = () => location.href.split(/[?#]/)[0].replace(/index\.html$/, '') + '?resumen=1';
         function calcResumen() {
             const ok = allProducts.filter(p => p.status !== 'no_disponible');
-            const bajasTodas = ok.filter(p => p.prev != null && p.price != null && p.prev > p.price && pctBaja(p) >= 1 && reciente(p.drop, DIAS_RESUMEN))
+            const bajasTodas = ok.filter(p => p.prev != null && p.price != null && p.prev > p.price && pctBaja(p) >= MIN_BAJA && reciente(p.drop, DIAS_RESUMEN))
                 .sort((a, b) => pctBaja(b) - pctBaja(a));
             const ids = new Set(bajasTodas.map(p => String(p.id)));
             const nuevosTodos = ok.filter(p => !ids.has(String(p.id)) && reciente(p.added, DIAS_RESUMEN))
@@ -1584,13 +1616,66 @@
             try {
                 const ok = allProducts.filter(p => p.status !== 'no_disponible' && p.price != null).slice(0, 50);
                 const ld = { '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: ok.map((p, i) => ({
-                    '@type': 'ListItem', position: i + 1, item: { '@type': 'Product', url: location.href.split(/[?#]/)[0] + '?nuevo=' + encodeURIComponent(p.id), name: p.name, image: p.image, category: p.category,
+                    '@type': 'ListItem', position: i + 1, item: { '@type': 'Product', url: location.href.split(/[?#]/)[0] + '?p=' + encodeURIComponent(p.id), name: p.name, image: p.image, category: p.category,
                         offers: { '@type': 'Offer', price: p.price, priceCurrency: p.currency, url: p.link, availability: 'https://schema.org/InStock' } } })) };
                 let el = document.getElementById('ld-productos');
                 if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = 'ld-productos'; document.head.appendChild(el); }
                 el.textContent = JSON.stringify(ld);
             } catch (e) { /* si falla, la tienda sigue igual */ }
         }
+        // ---- Ventana legal: Quiénes somos / Privacidad ----
+        const LEGAL = {
+            about: { t: 'Quiénes somos', h:
+                '<p>Nexos Market es un sitio independiente que reúne ofertas, novedades y bajas de precio de Mercado Libre para que puedas compararlas en un solo lugar.</p>' +
+                '<h3>Cómo funciona</h3>' +
+                '<p>Mostramos precios de referencia que se revisan periódicamente. Pueden cambiar sin aviso, y el precio final, el stock, las cuotas y el envío son los que figuren en Mercado Libre al momento de comprar. La compra se realiza siempre en Mercado Libre, no en este sitio.</p>' +
+                '<h3>Enlaces</h3>' +
+                '<p>Algunos enlaces pueden generar una comisión para Nexos Market, sin ningún costo adicional para vos. No es una relación oficial: Nexos Market no pertenece a Mercado Libre ni está avalado por esa empresa.</p>' +
+                '<h3>Contacto</h3>' +
+                '<p>Escribinos a <a href="mailto:info@nexosmaps.com">info@nexosmaps.com</a> si encontrás un precio desactualizado, una publicación caída o tenés cualquier consulta.</p>' },
+            privacy: { t: 'Política de privacidad', h:
+                '<p>No tenés que crear una cuenta ni darnos datos personales para usar Nexos Market. Esto es lo que ocurre en tu navegador:</p>' +
+                '<h3>Datos guardados en tu dispositivo</h3>' +
+                '<ul><li>Tus favoritos, el último precio visto de cada uno, el orden elegido y la zona del clima se guardan en el almacenamiento local de tu navegador. No se envían a ningún servidor nuestro y podés borrarlos limpiando los datos del sitio.</li></ul>' +
+                '<h3>Estadísticas</h3>' +
+                '<p>Usamos GoatCounter, un servicio de estadísticas que no usa cookies ni crea perfiles de visitantes, para contar visitas, clics en las ofertas y búsquedas sin resultado, de forma anónima.</p>' +
+                '<h3>Servicios de terceros</h3>' +
+                '<ul><li><b>Clima:</b> Open-Meteo, con la ubicación de la zona elegida o aproximada.</li>' +
+                '<li><b>Ubicación aproximada:</b> para mostrar el clima de tu zona consultamos tu dirección IP a ipwho.is (o geojs.io como respaldo). No pedimos permiso de ubicación del dispositivo ni guardamos tu IP.</li>' +
+                '<li><b>Dólar:</b> DolarApi.com.</li>' +
+                '<li><b>Tipografía:</b> Google Fonts.</li>' +
+                '<li><b>Imágenes y compras:</b> las fotos se cargan desde Mercado Libre y, al tocar una oferta, pasás al sitio de Mercado Libre, que tiene sus propias políticas de privacidad.</li></ul>' +
+                '<p>Estos servicios pueden recibir tu IP y datos técnicos del navegador al responder cada consulta, según sus propias políticas.</p>' +
+                '<h3>Consultas</h3>' +
+                '<p>Para cualquier duda sobre privacidad escribinos a <a href="mailto:info@nexosmaps.com">info@nexosmaps.com</a>.</p>' +
+                '<p class="lg-date">Última actualización: octubre de 2026.</p>' }
+        };
+        let lgBox = null, lgFoco = null;
+        function cerrarLegal() {
+            if (!lgBox || lgBox.hidden) return;
+            lgBox.hidden = true; document.body.classList.remove('rs-open');
+            if (lgFoco && lgFoco.focus) lgFoco.focus();
+        }
+        function abrirLegal(clave) {
+            const d = LEGAL[clave];
+            if (!d) return;
+            if (!lgBox) {
+                lgBox = document.createElement('div'); lgBox.className = 'rs-back'; lgBox.hidden = true;
+                lgBox.addEventListener('click', e => { if (e.target === lgBox) cerrarLegal(); });
+                document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarLegal(); });
+                document.body.appendChild(lgBox);
+            }
+            lgBox.innerHTML = '<div class="rs-box lg-box" role="dialog" aria-modal="true" aria-labelledby="lgT">' +
+                '<div class="rs-head"><div><h2 id="lgT">' + d.t + '</h2></div><button type="button" class="rs-x" aria-label="Cerrar">&times;</button></div>' +
+                '<div class="rs-list">' + d.h + '</div></div>';
+            lgBox.querySelector('.rs-x').addEventListener('click', cerrarLegal);
+            lgFoco = document.activeElement;
+            lgBox.hidden = false; document.body.classList.add('rs-open');
+            lgBox.querySelector('.rs-x').focus();
+        }
+        document.querySelectorAll('[data-legal]').forEach(b => b.addEventListener('click', () => abrirLegal(b.dataset.legal)));
+        { const y = document.getElementById('footYear'); if (y) y.textContent = new Date().getFullYear(); }
+
         let rsAuto = new URLSearchParams(location.search).has('resumen');
         function autoResumen() { if (rsAuto) { rsAuto = false; abrirResumen(); } }
 
