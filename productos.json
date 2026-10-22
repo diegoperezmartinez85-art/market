@@ -1778,5 +1778,455 @@
     "added": "2026-10-15",
     "prev_price": 32999.0,
     "price_drop": "2026-10-22"
+  },
+  {
+    "id": 101,
+    "code": "NX-0107",
+    "ml_id": "MLA4012474426",
+    "name": "Colchón Norden Signia Pillow Top 2 Plazas Híbrido Resortes En Caja 140 x 190 x 25cm Altura Espuma de Alta Densidad Premium 28D Blanco",
+    "category": "Hogar, Muebles y Jardín",
+    "price": 386172.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_945039-MLA118458437013_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_945039-MLA118458437013_092026-O.webp"
+    ],
+    "link": "https://meli.la/2VZuZvy",
+    "source": "https://meli.la/2VZuZvy",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 102,
+    "code": "NX-0108",
+    "ml_id": "MLA1388784269",
+    "name": "Depiladora Láser Definitiva Gadnic T3 IPL 999999 Pulsos 5 Niveles Filtro UV Blanco Pantalla LED",
+    "category": "Otros",
+    "price": 103599.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_953924-MLA104150497687_012026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_953924-MLA104150497687_012026-O.webp"
+    ],
+    "link": "https://meli.la/2DWbY4Q",
+    "source": "https://meli.la/2DWbY4Q",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 103,
+    "code": "NX-0109",
+    "ml_id": "MLA3578120922",
+    "name": "Cinta Caminadora Eléctrica | Noxi Sport | Para Correr | Negro",
+    "category": "Otros",
+    "price": 323999.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_668695-MLA117443033682_102026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_668695-MLA117443033682_102026-O.webp"
+    ],
+    "link": "https://meli.la/1ifH3fJ",
+    "source": "https://meli.la/1ifH3fJ",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 104,
+    "code": "NX-0110",
+    "ml_id": "MLA3232938724",
+    "name": "Mopa Trapeador Con Separador Agua Limpia Y Sucia Cleandry Transparentes",
+    "category": "Otros",
+    "price": 65294.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_612277-MLA110804111739_042026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_612277-MLA110804111739_042026-O.webp"
+    ],
+    "link": "https://meli.la/1Y1Ton4",
+    "source": "https://meli.la/1Y1Ton4",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 105,
+    "code": "NX-0111",
+    "ml_id": "MLA1957430501",
+    "name": "Aire Acondicionado Split BGH Inverter Frío/Calor 3000F",
+    "category": "Electrodomésticos y Aires Ac.",
+    "price": 849999.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_827926-MLA116660875524_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_827926-MLA116660875524_092026-O.webp"
+    ],
+    "link": "https://meli.la/2HTBnJe",
+    "source": "https://meli.la/2HTBnJe",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 106,
+    "code": "NX-0112",
+    "ml_id": "MLA3069155456",
+    "name": "Smart Tv Noblex 32\" Hd Vidaa Dolby Digital",
+    "category": "Electrónica, Audio y Video",
+    "price": 287119.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_679109-MLA100245563133_122025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_679109-MLA100245563133_122025-O.webp"
+    ],
+    "link": "https://meli.la/1o5bo5x",
+    "source": "https://meli.la/1o5bo5x",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 107,
+    "code": "NX-0113",
+    "ml_id": "MLA1370360897",
+    "name": "2 Cajas Selladas Tiras Reactivas Accu Chek Guide Total 100 Negro",
+    "category": "Otros",
+    "price": 77343.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_636824-MLA112947758994_072026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_636824-MLA112947758994_072026-O.webp"
+    ],
+    "link": "https://meli.la/18yjQfd",
+    "source": "https://meli.la/18yjQfd",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 108,
+    "code": "NX-0114",
+    "ml_id": "MLA2017590302",
+    "name": "Bomba Presurizadora Vasser Pre1 120w Para 1-2 Baños",
+    "category": "Otros",
+    "price": 61109.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_728550-MLA101084281275_122025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_728550-MLA101084281275_122025-O.webp"
+    ],
+    "link": "https://meli.la/2bfK4d1",
+    "source": "https://meli.la/2bfK4d1",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 109,
+    "code": "NX-0115",
+    "ml_id": "MLA3448465094",
+    "name": "Smart Tv Samsung 55 Qled Q6f 4k Smart Tv",
+    "category": "Electrónica, Audio y Video",
+    "price": 879999.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_840312-MLA108249322714_032026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_840312-MLA108249322714_032026-O.webp"
+    ],
+    "link": "https://meli.la/2fXazPD",
+    "source": "https://meli.la/2fXazPD",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 110,
+    "code": "NX-0116",
+    "ml_id": "MLA1958665928",
+    "name": "Mesa Exterior Plegable 180 Cm Polipropileno Hierro - Alpina Color Blanco",
+    "category": "Hogar, Muebles y Jardín",
+    "price": 73990.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_929011-MLA103621741834_012026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_929011-MLA103621741834_012026-O.webp"
+    ],
+    "link": "https://meli.la/1G3QeVJ",
+    "source": "https://meli.la/1G3QeVJ",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 111,
+    "code": "NX-0117",
+    "ml_id": "MLA2393010232",
+    "name": "Silla Oficina Apoyacabeza Ejecutiva Ergonomica Respaldo Alto Negro",
+    "category": "Hogar, Muebles y Jardín",
+    "price": 110499.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_993825-MLA113856668453_062026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_993825-MLA113856668453_062026-O.webp"
+    ],
+    "link": "https://meli.la/2uyuuKF",
+    "source": "https://meli.la/2uyuuKF",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 112,
+    "code": "NX-0118",
+    "ml_id": "MLA1756523232",
+    "name": "Espejo Digital Luz Led Táctil Desempañador Baño 80x60cm Aluminio",
+    "category": "Otros",
+    "price": 98999.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_713863-MLA114913822797_072026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_713863-MLA114913822797_072026-O.webp"
+    ],
+    "link": "https://meli.la/1XtcSd6",
+    "source": "https://meli.la/1XtcSd6",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 113,
+    "code": "NX-0119",
+    "ml_id": "MLA1948657080",
+    "name": "Freidora de Aire Novohome 4.5 Litros Airfryer Display Pantalla Digital Sin Aceite 1200w Color Negro",
+    "category": "Electrodomésticos y Aires Ac.",
+    "price": 79990.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_822969-MLA115525004419_082026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_822969-MLA115525004419_082026-O.webp"
+    ],
+    "link": "https://meli.la/1whDTq1",
+    "source": "https://meli.la/1whDTq1",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 114,
+    "code": "NX-0120",
+    "ml_id": "MLA3348837170",
+    "name": "Desmalezadora Motoguadaña A Explosion Naftera 52cc 2,2hp Pideweb Brd-52 Bordeadora Carretel Con Tanza Cuchilla Y Accesorios Uso Profesional",
+    "category": "Otros",
+    "price": 141097.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_647079-MLA99898654047_112025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_647079-MLA99898654047_112025-O.webp"
+    ],
+    "link": "https://meli.la/1nXP4V2",
+    "source": "https://meli.la/1nXP4V2",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 115,
+    "code": "NX-0121",
+    "ml_id": "MLA2225768143",
+    "name": "Kit 2 Camaras Seguridad Geotek 3mp Ip Wifi Exterior Full Hd Domo Vision Nocturna Inteligente Deteccion Movimiento",
+    "category": "Cámaras y Accesorios",
+    "price": 76349.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_615628-MLA107470659885_022026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_615628-MLA107470659885_022026-O.webp"
+    ],
+    "link": "https://meli.la/2heQkJh",
+    "source": "https://meli.la/2heQkJh",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 116,
+    "code": "NX-0122",
+    "ml_id": "MLA3070683812",
+    "name": "Smartphone ZTE Blade A56 Pro (4+8)gb+128gb Color Dorado + Cargador + Auriculares + Funda Regalo",
+    "category": "Celulares y Teléfonos",
+    "price": 199999.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_995220-MLA111545257763_052026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_995220-MLA111545257763_052026-O.webp"
+    ],
+    "link": "https://meli.la/2PxsUc2",
+    "source": "https://meli.la/2PxsUc2",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 117,
+    "code": "NX-0123",
+    "ml_id": "MLA2465385642",
+    "name": "Placard Reno 3 Puertas Corredizas 1 Con Espejo Blanco",
+    "category": "Hogar, Muebles y Jardín",
+    "price": 489919.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_864607-MLA116672438992_092026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_864607-MLA116672438992_092026-O.webp"
+    ],
+    "link": "https://meli.la/19CfkCR",
+    "source": "https://meli.la/19CfkCR",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 118,
+    "code": "NX-0124",
+    "ml_id": "MLA1729150579",
+    "name": "Tensiómetro Digital De Brazo San-up Medipress 192 Mediciones Blanco",
+    "category": "Salud y Equipamiento Médico",
+    "price": 39424.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_951463-MLA108237514998_032026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_951463-MLA108237514998_032026-O.webp"
+    ],
+    "link": "https://meli.la/2EeJ1Mh",
+    "source": "https://meli.la/2EeJ1Mh",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 119,
+    "code": "NX-0125",
+    "ml_id": "MLA1590898879",
+    "name": "Escalera Articulada Aluminio - 12 Escalones",
+    "category": "Otros",
+    "price": 131990.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_951730-MLA115151644946_082026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_951730-MLA115151644946_082026-O.webp"
+    ],
+    "link": "https://meli.la/1MoXYC3",
+    "source": "https://meli.la/1MoXYC3",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 120,
+    "code": "NX-0126",
+    "ml_id": "MLA2472985190",
+    "name": "Combo Hidrolavadora Aspiradora Electrica Alta Presion Trent Amarillo 50hz",
+    "category": "Electrodomésticos y Aires Ac.",
+    "price": 159410.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_950948-MLA117850110870_102026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_950948-MLA117850110870_102026-O.webp"
+    ],
+    "link": "https://meli.la/2koXhLx",
+    "source": "https://meli.la/2koXhLx",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 121,
+    "code": "NX-0127",
+    "ml_id": "MLA2283282744",
+    "name": "Smart Tv Noblex Dv43x7180 43 Google Tv",
+    "category": "Electrónica, Audio y Video",
+    "price": 499999.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_968858-MLA94517734898_102025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_968858-MLA94517734898_102025-O.webp"
+    ],
+    "link": "https://meli.la/2WrqQtz",
+    "source": "https://meli.la/2WrqQtz",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 122,
+    "code": "NX-0128",
+    "ml_id": "MLA1451294128",
+    "name": "Afeitadora Philips QP2724/10 Oneblade Recorta Modela y Afeita Carga USB",
+    "category": "Belleza y Cuidado Personal",
+    "price": 57285.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_617534-MLA99501603138_112025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_617534-MLA99501603138_112025-O.webp"
+    ],
+    "link": "https://meli.la/1dWHocy",
+    "source": "https://meli.la/1dWHocy",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 123,
+    "code": "NX-0129",
+    "ml_id": "MLA2417822056",
+    "name": "Taladro Inalámbrico Percutor Brushless Metalkraff 21v 50 Nm Azul Oscuro",
+    "category": "Herramientas",
+    "price": 75250.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_929378-MLA96776680226_112025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_929378-MLA96776680226_112025-O.webp"
+    ],
+    "link": "https://meli.la/2fB1hUC",
+    "source": "https://meli.la/2fB1hUC",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 124,
+    "code": "NX-0130",
+    "ml_id": "MLA2842747978",
+    "name": "Kit De Internet Vía Satélite Starlink Mini X",
+    "category": "Otros",
+    "price": 219000.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_777425-MLA107510615965_022026-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_777425-MLA107510615965_022026-O.webp"
+    ],
+    "link": "https://meli.la/1X4rqKG",
+    "source": "https://meli.la/1X4rqKG",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
+  },
+  {
+    "id": 125,
+    "code": "NX-0131",
+    "ml_id": "MLA1429399351",
+    "name": "Afeitadora Eléctrica Hombre Shaver VGR V-325 Recargable Inalámbrica Negro y azul",
+    "category": "Belleza y Cuidado Personal",
+    "price": 42790.0,
+    "currency": "ARS",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_781043-MLA99501107520_112025-O.webp",
+    "images": [
+      "https://http2.mlstatic.com/D_NQ_NP_781043-MLA99501107520_112025-O.webp"
+    ],
+    "link": "https://meli.la/2WHGzwx",
+    "source": "https://meli.la/2WHGzwx",
+    "status": "disponible",
+    "checked": null,
+    "added": "2026-10-22"
   }
 ]
