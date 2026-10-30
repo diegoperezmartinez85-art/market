@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#18213a">
+    <meta name="theme-color" content="#0f1316">
     <title>Nexos Market | Ofertas, novedades y bajas de precio</title>
     <meta name="description" content="Nexos Market: ofertas, novedades y productos que bajaron de precio. Buscá por nombre, categoría o precio y comprá directo.">
     <meta property="og:type" content="website">
@@ -25,7 +25,7 @@
     <meta name="twitter:description" content="Ofertas, novedades y productos que bajaron de precio.">
     <meta name="twitter:image" content="https://market.nexosmaps.com/og.jpg">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://market.nexosmaps.com/#org","name":"Nexos Market","url":"https://market.nexosmaps.com/","logo":"https://market.nexosmaps.com/logo.jpg"},{"@type":"WebSite","@id":"https://market.nexosmaps.com/#web","url":"https://market.nexosmaps.com/","name":"Nexos Market","inLanguage":"es-AR","publisher":{"@id":"https://market.nexosmaps.com/#org"},"potentialAction":{"@type":"SearchAction","target":"https://market.nexosmaps.com/?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
-    <link rel="preload" as="image" href="logo.jpg" fetchpriority="high">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -640,145 +640,171 @@
         .cats button.ofertas { background: rgba(223,0,91,.18); }
         .cats button.ofertas.on { background: var(--magenta); }
 
-        /* ============ v4: carruseles con fondo, logo fijo, bordes de tarjeta más marcados ============ */
-        /* Logo: mantiene siempre su tamaño al scrollear */
-        .logo-frame { width: min(460px, 100%); margin: 8px auto 10px; }
-
-        /* Carruseles: panel con color de fondo para que se noten */
-        .car { border-radius: 22px; padding: 18px 18px 12px; margin: 18px 0 26px; position: relative; overflow: hidden; }
-        .car .sec-head { margin-top: 0; }
-        .car-hero {
-            background: radial-gradient(90% 120% at 0% 0%, rgba(58,109,240,.55), transparent 60%),
-                        radial-gradient(70% 100% at 100% 100%, rgba(223,0,91,.40), transparent 60%),
-                        linear-gradient(135deg, #12183a, #1d1650);
-            border: 1px solid #3a4aa8; box-shadow: 0 10px 30px rgba(29,22,80,.28);
+        /* ============ v4: más sobrio y confiable ============ */
+        /* Logo: borde de marca fino, sin el brillo neón que late */
+        .logo-frame { width: min(calc(380px - 170px * var(--k, 0)), 100%); box-shadow: none; }
+        .logo-frame::before { animation: none; opacity: .18; filter: blur(16px); }
+        /* Franja de confianza */
+        .trust { list-style: none; padding: 0; margin: 0 0 6px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+        .trust li { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid var(--card-line); border-radius: 14px; padding: 12px 14px; }
+        .trust li > span { flex: none; width: 38px; height: 38px; border-radius: 10px; background: #eef3fe; display: grid; place-items: center; font-size: 1.15rem; }
+        .trust b { display: block; font-size: .9rem; }
+        .trust small { display: block; font-size: .78rem; color: var(--ink-muted); }
+        @media (max-width: 760px) {
+            .trust { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -12px 4px; padding: 0 12px 4px; gap: 8px; scrollbar-width: none; }
+            .trust::-webkit-scrollbar { display: none; }
+            .trust li { flex: 0 0 78%; scroll-snap-align: start; padding: 10px 12px; }
         }
-        .car-hero .sec-head h2 { color: #fff; }
-        .car-hero .sec-head p { color: #c3cbf5; }
-        .car-hero .car-nav button { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.35); color: #fff; }
-        .car-hero .car-nav button:hover:not(:disabled) { background: #fff; color: #1d1650; border-color: #fff; }
-        .car-hero .car-dots button { background: rgba(255,255,255,.35); }
-        .car-hero .car-dots button[aria-current="true"] { background: #fff; }
-        .car-hero .car-nav button:focus-visible, .car-hero .car-dots button:focus-visible { outline-color: #fff; }
-        .car-hero .slide { border-color: transparent; box-shadow: 0 6px 18px rgba(0,0,0,.30); }
+        /* Tarjeta: un solo botón fuerte; compartir y copiar en una fila discreta */
+        .acts { display: flex; gap: 6px; margin-top: 6px; }
+        .acts .wa { flex: 1 1 auto; min-width: 0; border-width: 1px; }
+        .acts .cp { flex: none; width: 42px; margin: 0; padding: 0; border: 1px solid var(--card-line); border-radius: 10px; background: #fff; font-size: 1rem; }
+        .acts .cp:hover { border-color: var(--action); }
+        .card .meta .chip { background: transparent; border: 0; padding: 0; color: var(--ink-muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
+        .btn { box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 4px 12px rgba(47,95,227,.22); }
+        @media (max-width: 640px) { .acts .cp { width: 40px; } .acts .wa { padding: 8px 4px; } }
+        /* Pie de página */
+        .site-foot { background: var(--bg); color: #c9d1d9; padding: 36px max(20px, env(safe-area-inset-left)) 24px; margin-top: 24px; border-top: 2px solid transparent; border-image: var(--brand) 1; }
+        .sf-in { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+        .site-foot b { color: #fff; display: block; margin-bottom: 6px; }
+        .site-foot p { font-size: .86rem; line-height: 1.55; margin-bottom: 6px; }
+        .sf-copy { max-width: 1200px; margin: 22px auto 0 !important; color: var(--muted); font-size: .78rem !important; }
+        @media (max-width: 640px) { .sf-in { grid-template-columns: 1fr; gap: 18px; } }
 
-        .car:not(.car-hero) {
-            background: linear-gradient(180deg, #dfe8ff, #eef2ff);
-            border: 1px solid #b7c6f5; box-shadow: 0 6px 20px rgba(47,95,227,.12);
+        /* ============ v5: íconos de línea, banners y pulido ============ */
+        .ic { width: 1.15em; height: 1.15em; flex: none; vertical-align: -.2em; }
+        /* Categorías: con ícono, sin barra de scroll gris, con difuminado en los bordes */
+        .cats { scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 40px), transparent); padding-right: 40px; }
+        .cats::-webkit-scrollbar { display: none; }
+        .cats button { display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; font-weight: 500; }
+        .cats button .ic { width: 16px; height: 16px; opacity: .85; }
+        .cats button.on .ic { opacity: 1; }
+        .cats button small { opacity: .6; margin-left: 0; font-weight: 600; }
+        .cats button.ofertas .ic { color: #ff4d8d; } .cats button.ofertas.on .ic { color: #fff; }
+        .cats button.resumen .ic { color: var(--cyan); }
+        .cats-wrap { position: relative; max-width: 1200px; margin: 0 auto; }
+        .cats-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18);
+            background: rgba(15,19,22,.92); color: var(--text); display: none; align-items: center; justify-content: center; cursor: pointer; }
+        .cats-arrow.l { left: -6px; } .cats-arrow.r { right: -6px; }
+        @media (hover: hover) and (min-width: 700px) { .cats-arrow.show { display: inline-flex; } }
+        .filters-btn .ic { width: 20px; height: 20px; }
+        .t-ico .ic { width: 22px; height: 22px; color: #3ddc84; }
+        .weather .w-ico .ic { width: 28px; height: 28px; }
+        .wx { color: #cfe8ff; } .wx-sun { color: #ffc93c; } .wx-rain { color: #6fc3ff; }
+        .to-top { display: inline-flex; align-items: center; justify-content: center; }
+        .to-top .ic { width: 22px; height: 22px; }
+        .fav { display: inline-flex; align-items: center; justify-content: center; }
+        .fav .ic { width: 19px; height: 19px; }
+        .fav[aria-pressed="true"] .ic { fill: currentColor; }
+        .acts .cp { display: inline-flex; align-items: center; justify-content: center; color: var(--ink-muted); }
+        .acts .cp .ic { width: 18px; height: 18px; }
+        .car-nav button { display: inline-flex; align-items: center; justify-content: center; }
+        .car-nav .ic { width: 20px; height: 20px; }
+        .sec-head h2 { display: flex; align-items: center; gap: 10px; }
+        .sec-ic { width: 26px; height: 26px; padding: 5px; box-sizing: content-box; border-radius: 10px; color: var(--magenta); background: #fde7ef; }
+        .car-hero .sec-ic { color: #fff; background: linear-gradient(135deg, #ff6a3d, var(--magenta)); }
+        .trust li > span { color: var(--action); background: #eef3fe; }
+        .trust li > span .ic { width: 20px; height: 20px; }
+        .trust li:nth-child(2) > span { color: #0f7a3f; background: #e8f6ee; }
+        .trust li:nth-child(3) > span { color: #7a2fd6; background: #f2eafd; }
+        .trust[hidden] { display: none; }
+        .rs-list h3 { display: flex; align-items: center; gap: 6px; }
+        .rs-foot .rs-b .ic { width: 18px; height: 18px; }
+        .dl-head h2 { display: flex; align-items: center; gap: 8px; }
+        .dl-head h2 .ic { color: #3ddc84; }
+        .cl-ico .ic { width: clamp(3rem, 13vw, 4.4rem); height: clamp(3rem, 13vw, 4.4rem); stroke-width: 1.4; }
+        .cl-chip .ic { display: block; margin: 0 auto 4px; color: var(--cyan); }
+        .cl-moon { display: flex; align-items: center; justify-content: center; gap: 14px; text-align: left; }
+        .cl-moon small { display: block; color: var(--muted); font-size: .72rem; }
+        .luna { width: 44px; height: 44px; color: #f3f0d7; filter: drop-shadow(0 0 10px rgba(243,240,215,.35)); }
+        .cl-day .e .ic { width: 28px; height: 28px; }
+        .cl-day .r .ic { width: 14px; height: 14px; vertical-align: -2px; }
+
+        /* Banners */
+        .hero { position: relative; overflow: hidden; border-radius: 22px; margin: 0 0 14px; isolation: isolate; }
+        .hero[hidden] { display: none; }
+        .hero-track { display: flex; transition: transform .55s cubic-bezier(.2,.8,.2,1); }
+        @media (prefers-reduced-motion: reduce) { .hero-track { transition: none; } }
+        .bn { flex: 0 0 100%; min-width: 0; position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center;
+              gap: 20px; padding: 34px 40px; min-height: 250px; color: #fff; overflow: hidden; background: #12161b; }
+        .bn::before { content: ""; position: absolute; inset: 0; z-index: -1; }
+        .bn-event::before { background: radial-gradient(60% 120% at 100% 0%, rgba(223,0,91,.55), transparent 60%), radial-gradient(60% 120% at 0% 100%, rgba(58,109,240,.55), transparent 60%), linear-gradient(120deg, #0b0e14, #1a1030); }
+        .bn-deal::before { background: radial-gradient(70% 130% at 100% 50%, rgba(15,122,63,.55), transparent 60%), linear-gradient(120deg, #07130d, #0f1c17); }
+        .bn-cat::before { background: radial-gradient(70% 130% at 100% 40%, rgba(13,169,217,.5), transparent 60%), linear-gradient(120deg, #081118, #0e1a24); }
+        .bn-cat2::before { background: radial-gradient(70% 130% at 100% 40%, rgba(122,47,214,.55), transparent 60%), linear-gradient(120deg, #0f0b18, #1a1228); }
+        .bn-new::before { background: radial-gradient(70% 130% at 100% 40%, rgba(255,140,40,.45), transparent 60%), linear-gradient(120deg, #140e08, #1f160c); }
+        .bn-eye { display: inline-flex; align-items: center; gap: 7px; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+                  padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16); }
+        .bn-eye .ic { width: 15px; height: 15px; }
+        .bn h2 { font-size: clamp(1.6rem, 3.6vw, 2.6rem); font-weight: 800; letter-spacing: -.025em; line-height: 1.05; margin: 14px 0 10px; }
+        .bn-event h2 { background: linear-gradient(90deg, #fff, #ffb3d1); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .bn p { color: rgba(255,255,255,.75); font-size: .95rem; max-width: 46ch; }
+        .bn-cta { margin-top: 20px; display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer; font: 700 .95rem/1 var(--font);
+                  color: #0f1316; background: #fff; padding: 13px 20px; border-radius: 12px; transition: transform .15s, box-shadow .15s; }
+        .bn-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0,0,0,.35); }
+        .bn-cta:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+        .bn-cta .ic { width: 18px; height: 18px; }
+        .bn-imgs { position: relative; height: 220px; max-width: 520px; width: 100%; justify-self: center; }
+        .bn-imgs span { position: absolute; top: 50%; width: min(40%, 190px); aspect-ratio: 1; background: #fff; border-radius: 18px; overflow: hidden;
+                        box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+        .bn-imgs span img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+        .bn-imgs span:nth-child(1) { left: 6%; transform: translateY(-50%) rotate(-6deg); z-index: 1; }
+        .bn-imgs span:nth-child(2) { left: 50%; transform: translate(-50%, -50%) scale(1.12); z-index: 3; }
+        .bn-imgs span:nth-child(3) { right: 6%; transform: translateY(-50%) rotate(6deg); z-index: 2; }
+        .bn-dots { position: absolute; left: 40px; bottom: 16px; display: flex; gap: 6px; }
+        .bn-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 99px; background: rgba(255,255,255,.35); cursor: pointer; transition: width .2s, background .2s; position: relative; }
+        .bn-dots button::after { content: ""; position: absolute; inset: -8px -4px; }
+        .bn-dots button[aria-current="true"] { width: 24px; background: #fff; }
+        @media (max-width: 760px) {
+            .hero { border-radius: 16px; }
+            .bn { grid-template-columns: 1fr; padding: 20px 18px 34px; min-height: 0; gap: 4px; }
+            .bn-imgs { order: -1; height: 120px; }
+            .bn-imgs span { width: 30%; border-radius: 12px; }
+            .bn-imgs span:nth-child(1) { left: 12%; } .bn-imgs span:nth-child(3) { right: 12%; }
+            .bn h2 { margin: 10px 0 6px; }
+            .bn p { font-size: .86rem; }
+            .bn-cta { margin-top: 14px; padding: 11px 16px; }
+            .bn-dots { left: 18px; bottom: 12px; }
         }
-        .car:not(.car-hero) .sec-head h2 { color: #14234f; }
-        .car:not(.car-hero) .sec-head p { color: #43517f; }
-        .car:not(.car-hero) .car-nav button { border-color: #9fb2ea; }
 
+        /* ============ Logo vectorial ============ */
+        .logo-frame { width: auto !important; display: flex; align-items: center; justify-content: center; gap: calc(14px - 4px * var(--k, 0));
+            margin: calc(16px - 8px * var(--k, 0)) auto calc(14px - 8px * var(--k, 0)) !important; padding: 0; background: none; border-radius: 0; box-shadow: none; text-decoration: none; }
+        .logo-frame::before { display: none; }
+        .logo-frame .mark { width: calc(56px - 22px * var(--k, 0)); height: calc(56px - 22px * var(--k, 0)); flex: none;
+            filter: drop-shadow(0 6px 18px rgba(58,109,240,.45)); transition: transform .2s; }
+        @media (hover: hover) { .logo-frame:hover .mark { transform: rotate(-4deg) scale(1.04); } }
+        .logo-frame .wm { display: flex; align-items: baseline; gap: .26em; font-size: calc(36px - 12px * var(--k, 0)); line-height: 1; letter-spacing: -.035em; white-space: nowrap; }
+        .logo-frame .n { font-weight: 800; color: #fff; }
+        .logo-frame .m { font-weight: 500; background: var(--brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
         @media (max-width: 640px) {
-            .car { border-radius: 16px; padding: 14px 12px 10px; margin: 14px 0 20px; }
+            .logo-frame .mark { width: calc(46px - 14px * var(--k, 0)); height: calc(46px - 14px * var(--k, 0)); }
+            .logo-frame .wm { font-size: calc(30px - 8px * var(--k, 0)); }
         }
-
-        /* Tarjetas: borde más visible */
-        .card { border: 1.5px solid #a9b4c6; box-shadow: 0 1px 3px rgba(17,24,39,.12); }
-        .card:hover { border-color: var(--action); }
-        .card.caido { border-color: #b9c1cd; }
-        .car-track > .slide { border: 1.5px solid #a9b4c6; }
-
-        /* ============ v4.1: borde neón sutil en dólar y clima (se nota que son botones) ============ */
-        .pill.ticker, .pill.weather {
-            border: 1px solid rgba(13,169,217,.65);
-            box-shadow: 0 0 4px rgba(13,169,217,.45), 0 0 12px rgba(58,109,240,.25), inset 0 0 8px rgba(13,169,217,.10);
-            transition: box-shadow .2s, border-color .2s, background .2s;
-        }
-        .pill.ticker:hover, .pill.weather:hover {
-            border-color: rgba(13,169,217,.95); background: rgba(13,169,217,.10);
-            box-shadow: 0 0 6px rgba(13,169,217,.7), 0 0 18px rgba(122,47,214,.40), inset 0 0 10px rgba(13,169,217,.16);
-        }
-        .pill.ticker:active, .pill.weather:active { transform: scale(.98); }
-        @media (prefers-reduced-motion: reduce) { .pill.ticker, .pill.weather { transition: none; } }
-
-        /* ============ v5: aviso de baja en favoritos, esqueletos de carga, íconos de categoría ============ */
-        .favdrop { flex-basis: 100%; margin-top: 4px; padding: 5px 8px; border-radius: 8px; background: #e8f6ee; color: #0f7a3f;
-                   font-size: .74rem; font-weight: 700; line-height: 1.25; }
-        .cats button.alerta { position: relative; border-color: var(--magenta); }
-        .cats button.alerta::after { content: ""; position: absolute; top: 3px; right: 5px; width: 9px; height: 9px; border-radius: 50%;
-                                      background: var(--magenta); box-shadow: 0 0 6px var(--magenta); }
-        .cats .ci { margin-right: 6px; font-size: .95em; }
-
-        .card.sk { pointer-events: none; box-shadow: none; border-color: #d5dbe5; }
-        .card.sk .thumb, .sk-l {
-            background: linear-gradient(90deg, #e6eaf0 25%, #f3f5f8 50%, #e6eaf0 75%); background-size: 200% 100%;
-            animation: skShimmer 1.3s linear infinite;
-        }
-        .sk-l { display: block; height: 12px; border-radius: 6px; }
-        .sk-l.w40 { width: 40%; } .sk-l.w100 { width: 100%; height: 14px; } .sk-l.w70 { width: 70%; height: 14px; }
-        .sk-l.price { width: 55%; height: 26px; margin-top: 10px; }
-        .sk-l.btn { width: 100%; height: 40px; border-radius: 12px; margin-top: 6px; }
-        @keyframes skShimmer { to { background-position: -200% 0; } }
-        @media (prefers-reduced-motion: reduce) { .card.sk .thumb, .sk-l { animation: none; } }
-
-        /* ============ v7: footer discreto y ventana legal ============ */
-        .site-foot { max-width: 1200px; margin: 0 auto; padding: 8px max(20px, env(safe-area-inset-right)) 36px max(20px, env(safe-area-inset-left)); text-align: center; color: var(--ink-muted); }
-        .foot-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 18px; padding-top: 18px; border-top: 1px solid var(--card-line); }
-        .foot-links button, .foot-links a { background: none; border: 0; padding: 4px 2px; font: inherit; font-size: .82rem; font-weight: 600; color: var(--ink-muted); text-decoration: none; cursor: pointer; }
-        .foot-links button:hover, .foot-links a:hover, .foot-copy a:hover { color: var(--action); text-decoration: underline; }
-        .foot-links button:focus-visible, .foot-links a:focus-visible, .foot-copy a:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; border-radius: 4px; }
-        .foot-note { max-width: 720px; margin: 10px auto 0; font-size: .72rem; line-height: 1.5; color: #7b8591; }
-        .foot-copy { margin-top: 10px; font-size: .72rem; color: #7b8591; }
-        .foot-copy a { color: inherit; text-decoration: none; }
-        .lg-box .rs-list h3 { text-transform: none; letter-spacing: 0; font-size: .95rem; color: var(--ink); margin: 16px 0 4px; }
-        .lg-box .rs-list p, .lg-box .rs-list li { font-size: .88rem; line-height: 1.55; color: #3a4452; }
-        .lg-box .rs-list ul { margin: 6px 0 0; padding-left: 20px; }
-        .lg-box .rs-list a { color: var(--action); }
-        .lg-box .rs-list .lg-date { color: var(--ink-muted); font-size: .78rem; margin-top: 14px; }
-
-        /* ============ v6: header azul noche (menos contraste) y movimientos más calmos ============ */
-        .top {
-            background:
-                radial-gradient(70% 140% at 50% -30%, rgba(58,109,240,.30), transparent 70%),
-                radial-gradient(40% 100% at 100% 0%, rgba(223,0,91,.07), transparent 70%),
-                linear-gradient(180deg, #1d2848, #151d37);
-            box-shadow: 0 6px 18px rgba(21,29,55,.22);
-        }
-        .bar { border-bottom-color: rgba(255,255,255,.10); }
-        /* Logo: brillo fijo, sin latido */
-        .logo-frame::before { animation: none; opacity: .38; filter: blur(14px); }
-        .pill { background: rgba(255,255,255,.07); }
-
-        /* ============ v5.1: ajustes de header en celular ============ */
-        /* Formas coherentes: buscador, selector y botón de precio con la misma forma que las pastillas */
-        .search input, .search select, .filters-btn { border-radius: 999px; }
-        .search input { padding-right: 14px; text-overflow: ellipsis; }
-        .search select { text-overflow: ellipsis; }
-        /* "Resumen semanal" con borde neutro: el magenta queda solo para Ofertas */
-        .cats button.resumen { border-color: rgba(255,255,255,.12); }
-        @media (max-width: 640px) {
-            .search select { max-width: 34%; padding-left: 12px; }
-            .weather .w-city { max-width: 112px; color: #b7c0cc; }
-            /* Degradé a la derecha: indica que las categorías se deslizan */
-            .cats { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
-                            mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); }
-        }
-
-        /* ============ v5.2: aire en pastillas de dólar/clima y Novedades como carrusel ============ */
-        /* La fila tenía overflow:hidden y recortaba el brillo neón; se le da margen interno (que se pliega al scrollear) */
-        @media (max-width: 1099px) {
-            .hdr-row { margin: 0 -6px; padding: calc(8px * (1 - var(--k, 0))) 6px calc(12px * (1 - var(--k, 0)));
-                       max-height: calc(70px * (1 - var(--k, 0))); }
-        }
-        /* Novedades: tarjeta más ancha, la siguiente asoma y los puntitos indican posición */
-        .car:not(.car-hero) .car-dots { margin-top: 2px; }
-        @media (max-width: 640px) {
-            .car-track > .card { flex-basis: 72%; }
-            .car:not(.car-hero) .car-track { scroll-padding-inline: 0; }
-        }
+        @media (min-width: 1100px) { .logo-frame { margin-top: calc(18px - 8px * var(--k, 0)) !important; } }
     </style>
 </head>
 <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-banknote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></symbol><symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol><symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></symbol><symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol><symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol><symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol><symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol><symbol id="i-trend-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 17-8.5-8.5-5 5L2 7"/><path d="M16 17h6v-6"/></symbol><symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M5 3v4M3 5h4M19 17v4M17 19h4"/></symbol><symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4Z"/></symbol><symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol><symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></symbol><symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol><symbol id="i-chev-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-chev-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol><symbol id="i-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7Z"/></symbol><symbol id="i-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></symbol><symbol id="i-thermo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol><symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42Z"/><circle cx="7.5" cy="7.5" r="1"/></symbol><symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol><symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01Z"/></symbol><symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol><symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol><symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol><symbol id="i-cloud-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2M4.93 4.93l1.41 1.41M20 12h2M19.07 4.93l-1.41 1.41M15.95 12.65a4 4 0 0 0-5.93-4.13"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></symbol><symbol id="i-cloud-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.08 9A5 5 0 0 1 16 2.1 5 5 0 0 0 22 10.5a5 5 0 0 1-4 1.9"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></symbol><symbol id="i-cloud-fog" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.9A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24"/><path d="M16 17H7M17 21H9"/></symbol><symbol id="i-cloud-drizzle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.9A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24"/><path d="M8 19v1M8 14v1M16 19v1M16 14v1M12 21v1M12 16v1"/></symbol><symbol id="i-cloud-rain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.9A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24"/><path d="M16 14v6M8 14v6M12 16v6"/></symbol><symbol id="i-snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20M5 5l14 14M19 5 5 19"/></symbol><symbol id="i-storm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.9A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24"/><path d="m13 12-3 5h4l-3 5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol><symbol id="i-laptop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></symbol><symbol id="i-gamepad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/></symbol><symbol id="i-headphones" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol><symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3Z"/><circle cx="12" cy="13" r="3"/></symbol><symbol id="i-appliance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="15" rx="2"/><rect x="6" y="8" width="8" height="7" rx="1"/><path d="M18 8v7M6 19v2M18 19v2"/></symbol><symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a2 2 0 0 1-2 2h-4v-6H9v6H5a2 2 0 0 1-2-2Z"/></symbol><symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94Z"/></symbol><symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></symbol><symbol id="i-shirt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23Z"/></symbol><symbol id="i-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5v11M17.5 6.5v11M3.5 9v6M20.5 9v6M6.5 12h11"/></symbol><symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol><symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol><symbol id="i-watch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6"/><path d="M12 10v2l1 1M16.13 7.66l-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05M7.88 16.36l.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05"/></symbol><symbol id="i-baby" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01M15 12h.01M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></symbol><symbol id="i-paw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.05Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></symbol><symbol id="i-blocks" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><path d="M17 3v8M13 7h8"/></symbol><symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol><symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol><symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol><symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></symbol><symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></symbol><symbol id="i-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol><symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol><symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2a10 10 0 0 0 0 20c.93 0 1.6-.8 1.6-1.7 0-.44-.18-.84-.44-1.13-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.56-2.5 5.56-5.55C21.97 6.01 17.46 2 12 2Z"/></symbol><symbol id="i-gem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6M2 9h20"/></symbol><symbol id="i-tv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="m17 2-5 5-5-5"/></symbol></defs></svg>
     <h1 class="sr-only">Nexos Market: ofertas, novedades y productos que bajaron de precio</h1>
 
     <div class="top" id="top">
     <header>
-        <div class="logo-frame"><img class="logo" src="logo.jpg" width="640" height="160" alt="Nexos Market" fetchpriority="high" decoding="async"></div>
+        <div class="logo-frame"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><defs>
+<linearGradient id="nxBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3f5"/><stop offset=".55" stop-color="#3a6df0"/><stop offset="1" stop-color="#6b3fe0"/></linearGradient>
+<linearGradient id="nxPin" x1="0" y1="0" x2="1" y2=".9"><stop offset="0" stop-color="#8b3dff"/><stop offset=".55" stop-color="#e0198a"/><stop offset="1" stop-color="#ff2d6f"/></linearGradient>
+<radialGradient id="nxGlow" cx=".25" cy=".15" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="2" y="2" width="60" height="60" rx="16" fill="url(#nxBg)"/>
+<rect x="2" y="2" width="60" height="60" rx="16" fill="url(#nxGlow)"/>
+<path d="M2 40c14-6 26 8 60-2v8c0 8.8-7.2 16-16 16H18c-8.8 0-16-7.2-16-16Z" fill="#fff" opacity=".08"/>
+<g transform="translate(32 33) scale(1.17) translate(-32 -33)"><ellipse cx="32" cy="53.5" rx="8" ry="1.8" fill="#ff5fa8" opacity=".75"/>
+<path d="M32 52C26 44.6 17.5 37.6 17.5 27.5a14.5 14.5 0 0 1 29 0C46.5 37.6 38 44.6 32 52Z" fill="url(#nxPin)"/>
+<path d="M32 13a14.5 14.5 0 0 1 14.5 14.5c0 4-1.4 7.6-3.5 11L32 13Z" fill="#fff" opacity=".12"/>
+<circle cx="32" cy="27" r="5.6" fill="#1a1433"/></g></svg><span class="wm"><span class="n">Nexos</span><span class="m">Market</span></span></div>
         <div class="hdr-row">
             <div class="pill ticker" id="ticker" hidden role="button" aria-haspopup="dialog" aria-label="Cotización del dólar: tocá para ver el detalle" tabindex="0">
-                <span class="t-ico" aria-hidden="true">&#128181;</span>
+                <span class="t-ico"><svg class="ic" aria-hidden="true"><use href="#i-banknote"/></svg></span>
                 <div class="t-view"><div class="t-track" id="tTrack"></div></div>
             </div>
             <button type="button" class="pill weather" id="weather" hidden aria-haspopup="dialog" title="Clima: tocá para ver el pronóstico">
@@ -789,16 +815,15 @@
     </header>
     <div class="bar">
         <div class="search">
-            <input type="search" id="searchInput" placeholder="Buscar…" aria-label="Buscar productos" autocomplete="off">
-            <select id="sortSelect" aria-label="Ordenar productos">
-                <option value="">Orden</option>
+            <input type="search" id="searchInput" placeholder="Buscar productos" aria-label="Buscar productos" autocomplete="off">
+            <select id="sortSelect" aria-label="Ordenar por precio">
+                <option value="">Destacados</option>
                 <option value="new">Más nuevos</option>
-                <option value="off">Mayor descuento</option>
                 <option value="asc">Menor precio</option>
                 <option value="desc">Mayor precio</option>
                 <option value="az">Nombre A-Z</option>
             </select>
-            <button type="button" class="filters-btn" id="filtersBtn" aria-expanded="false" aria-controls="filtersBox" aria-label="Filtrar por precio" title="Filtrar por precio">$&#8239;&#9662;</button>
+            <button type="button" class="filters-btn" id="filtersBtn" aria-expanded="false" aria-controls="filtersBox" aria-label="Filtrar por precio" title="Filtrar por precio"><svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg></button>
         </div>
         <div class="filters" id="filtersBox">
             <span>Precio</span>
@@ -807,12 +832,18 @@
             <input type="text" id="priceMax" inputmode="numeric" autocomplete="off" placeholder="Máx $" aria-label="Precio máximo">
             <button type="button" class="clear" id="priceClear" hidden>Limpiar</button>
         </div>
-        <div class="sync-badge" aria-label="Precios de referencia tomados de Mercado Libre"><span class="sync-dot"></span> Precios de referencia de Mercado Libre &middot; pueden variar</div>
-        <nav class="cats" id="cats" aria-label="Categorías"></nav>
+        <div class="sync-badge" aria-label="Precios verificados con Mercado Libre"><span class="sync-dot"></span> Precios actualizados automáticamente con Mercado Libre</div>
+        <div class="cats-wrap"><button type="button" class="cats-arrow l" id="catsL" aria-label="Ver categorías anteriores" tabindex="-1"><svg class="ic" aria-hidden="true"><use href="#i-chev-left"/></svg></button><nav class="cats" id="cats" aria-label="Categorías"></nav><button type="button" class="cats-arrow r" id="catsR" aria-label="Ver más categorías" tabindex="-1"><svg class="ic" aria-hidden="true"><use href="#i-chev-right"/></svg></button></div>
     </div>
     </div>
 
     <main>
+        <section class="hero" id="banners" aria-roledescription="carrusel" aria-label="Destacados" hidden></section>
+        <ul class="trust" aria-label="Por qué comprar acá">
+            <li><span><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span><div><b>Comprás en Mercado Libre</b><small>Pagás y recibís con Compra Protegida de ML</small></div></li>
+            <li><span><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg></span><div><b>Precios revisados a diario</b><small id="trustFecha">Te avisamos cuando algo baja</small></div></li>
+            <li><span><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg></span><div><b>Envíos y garantía de ML</b><small>Igual que si lo buscás vos en la app</small></div></li>
+        </ul>
         <div id="destacados"></div>
         <p id="count" aria-live="polite"></p>
         <div id="productGrid"></div>
@@ -820,15 +851,20 @@
         <div class="more-wrap" id="moreWrap" hidden><button type="button" class="more-btn" id="moreBtn"></button></div>
     </main>
     <footer class="site-foot">
-        <nav class="foot-links" aria-label="Información del sitio">
-            <button type="button" data-legal="about">Quiénes somos</button>
-            <button type="button" data-legal="privacy">Privacidad</button>
-            <a href="mailto:info@nexosmaps.com">Contacto</a>
-        </nav>
-        <p class="foot-note">Nexos Market es un sitio independiente, sin relación oficial con Mercado Libre. Los precios son de referencia y pueden cambiar; la compra se concreta en Mercado Libre. Algunos enlaces pueden generar una comisión para nosotros, sin costo adicional para vos.</p>
-        <p class="foot-copy">&copy; <span id="footYear"></span> Nexos Market &middot; <a href="mailto:info@nexosmaps.com">info@nexosmaps.com</a></p>
+        <div class="sf-in">
+            <div>
+                <b>Nexos Market</b>
+                <p>Juntamos ofertas y bajas de precio de Mercado Libre en un solo lugar. No vendemos ni cobramos nada: la compra, el pago, el envío y la garantía son de Mercado Libre.</p>
+            </div>
+            <div>
+                <b>Transparencia</b>
+                <p>Participamos del programa de afiliados de Mercado Libre: si comprás desde acá recibimos una pequeña comisión, sin costo extra para vos. El precio final siempre lo confirma Mercado Libre.</p>
+                <p id="footFecha"></p>
+            </div>
+        </div>
+        <p class="sf-copy">&copy; <span id="footYear"></span> Nexos Market &middot; market.nexosmaps.com</p>
     </footer>
-    <button type="button" class="to-top" id="toTop" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>
+    <button type="button" class="to-top" id="toTop" aria-label="Volver arriba" title="Volver arriba"><svg class="ic" aria-hidden="true"><use href="#i-arrow-up"/></svg></button>
 
         <div class="sh-back" id="shBack" hidden>
         <section class="sh-box" id="shClima" role="dialog" aria-modal="true" aria-labelledby="shClimaT" hidden>
@@ -849,7 +885,7 @@
         <section class="sh-box" id="shDolar" role="dialog" aria-modal="true" aria-labelledby="shDolarT" hidden>
             <button type="button" class="sh-grab" aria-label="Cerrar"><span></span></button>
             <button type="button" class="sh-x" aria-label="Cerrar">&#10005;</button>
-            <div class="dl-head"><h2 id="shDolarT">&#128181; Dólar hoy</h2><small id="dlFecha">Cotizaciones de referencia</small></div>
+            <div class="dl-head"><h2 id="shDolarT"><svg class="ic" aria-hidden="true"><use href="#i-banknote"/></svg> Dólar hoy</h2><small id="dlFecha">Cotizaciones de referencia</small></div>
             <div class="dl-list" id="dlList"></div>
             <div class="dl-conv">
                 <label for="dlIn">&#191;Cu&aacute;nto es en d&oacute;lares? Escrib&iacute; un precio en pesos</label>
@@ -907,13 +943,25 @@
             update();
         })();
 
+        // Íconos de línea (sprite al principio del body)
+        const ico = (n, c) => '<svg class="' + (c || 'ic') + '" aria-hidden="true"><use href="#i-' + n + '"/></svg>';
+        const CAT_ICO = {
+            'Celulares y Teléfonos': 'phone', 'Computación': 'laptop', 'Consolas y Videojuegos': 'gamepad',
+            'Electrónica, Audio y Video': 'headphones', 'Cámaras y Accesorios': 'camera',
+            'Electrodomésticos y Aires Ac.': 'appliance', 'Hogar, Muebles y Jardín': 'home', 'Herramientas': 'wrench',
+            'Construcción': 'building', 'Ropa y Accesorios': 'shirt', 'Deportes y Fitness': 'dumbbell',
+            'Belleza y Cuidado Personal': 'sparkles', 'Accesorios para Vehículos': 'car',
+            'Salud y Equipamiento Médico': 'pulse', 'Joyas y Relojes': 'watch', 'Bebés': 'baby',
+            'Animales y Mascotas': 'paw', 'Juegos y Juguetes': 'blocks', 'Libros, Revistas y Comics': 'book',
+            'Instrumentos Musicales': 'music', 'Música, Películas y Series': 'tv', 'Industrias y Oficinas': 'briefcase',
+            'Agro': 'leaf', 'Alimentos y Bebidas': 'utensils', 'Souvenirs, Cotillón y Fiestas': 'gift',
+            'Arte, Librería y Mercería': 'palette', 'Antigüedades y Colecciones': 'gem'
+        };
+        const catIco = c => CAT_ICO[c] || 'box';
         let allProducts = [];
         // Producto recién agregado (borde de color). Se guarda acá para que NO se pierda
         // cada vez que la grilla se vuelve a armar (al tocar una categoría, buscar, etc.).
-        // ?nuevo=ID (desde el Gestor) marca el producto con el borde de color; ?p=ID (links compartidos) lo marca con un resaltado suave.
-        const _qs = new URLSearchParams(location.search);
-        let destacadoId = _qs.get('nuevo') ?? _qs.get('p');
-        let destSuave = _qs.get('nuevo') === null && _qs.get('p') !== null;
+        let destacadoId = new URLSearchParams(location.search).get('nuevo');
 
         const PLACEHOLDER = 'data:image/svg+xml;utf8,' + encodeURIComponent(
             '<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><rect width="300" height="300" fill="#eef0f2"/>' +
@@ -933,17 +981,17 @@
             return edad >= -1 && edad <= dias;
         }
         const esNuevo = p => reciente(p.added, DIAS_NUEVO);
-        const MIN_BAJA = 5;   // % mínimo de baja para mostrar la etiqueta verde, entrar a "Ofertas del momento" y al filtro Ofertas
-        const bajoPrecio = p => p.prev != null && p.price != null && p.prev > p.price && pctBaja(p) >= MIN_BAJA && reciente(p.drop, DIAS_BAJA);
+        const BAJA_MIN = 3;   // % mínimo para mostrar "bajó de precio" (un -0% parece falso)
+        const bajoPrecio = p => p.prev != null && p.price != null && p.prev > p.price && (1 - p.price / p.prev) * 100 >= BAJA_MIN && reciente(p.drop, DIAS_BAJA);
         const pctBaja = p => Math.round((1 - p.price / p.prev) * 100);
-        // Oferta vigente (sin importar hace cuánto bajó): tiene precio anterior mayor y el descuento llega al mínimo.
-        const esOferta = p => p.status !== 'no_disponible' && p.prev != null && p.price != null && p.prev > p.price && pctBaja(p) >= MIN_BAJA;
 
         function normalize(raw, index) {
             const p = normalizeBase(raw, index);
             p.added = raw.added || '';
             p.prev = raw.prev_price != null ? Number(raw.prev_price) : null;
             p.drop = raw.price_drop || '';
+            p.checked = raw.checked || '';
+            p.page = raw.page || '';
             p._h = norm(p.name + ' ' + p.category + ' ' + p.code);
             return p;
         }
@@ -983,7 +1031,7 @@
         function fmtMoney(v, cur) {
             try {
                 return new Intl.NumberFormat('es-AR', {
-                    style: 'currency', currency: cur, maximumFractionDigits: 2
+                    style: 'currency', currency: cur, minimumFractionDigits: 0, maximumFractionDigits: 0
                 }).format(v);
             } catch (e) {
                 return '$' + v.toFixed(2);
@@ -1001,27 +1049,6 @@
         function saveFavs() { try { localStorage.setItem(FAV_KEY, JSON.stringify([...favs])); } catch (e) {} }
         let soloFavs = false;
         let soloOfertas = false;
-        // Último precio visto de cada favorito: si ahora es menor, se avisa "Bajó desde tu última visita".
-        const FAVP_KEY = 'nexos_favprices';
-        let favPrecios = {};
-        try { favPrecios = JSON.parse(localStorage.getItem(FAVP_KEY) || '{}') || {}; } catch (e) { favPrecios = {}; }
-        const favBaja = {};   // id -> precio de la visita anterior (solo los que bajaron)
-        function guardarFavPrecios() { try { localStorage.setItem(FAVP_KEY, JSON.stringify(favPrecios)); } catch (e) {} }
-        function revisarFavs() {
-            let cambio = false;
-            allProducts.forEach(p => {
-                const id = String(p.id);
-                if (!favs.has(id) || p.status === 'no_disponible' || p.price == null || isNaN(p.price)) return;
-                const antes = favPrecios[id];
-                if (typeof antes === 'number') {
-                    if (p.price < antes && !favBaja[id]) favBaja[id] = antes;       // bajó: se conserva el precio de la visita anterior
-                    else if (p.price > antes) delete favBaja[id];                    // volvió a subir: se quita el aviso
-                }
-                if (antes !== p.price) { favPrecios[id] = p.price; cambio = true; }
-            });
-            if (cambio) guardarFavPrecios();
-        }
-        const hayFavBaja = () => allProducts.some(p => favs.has(String(p.id)) && favBaja[String(p.id)] && p.price < favBaja[String(p.id)]);
         function contarEvento(path, title) {
             if (!GOATCOUNTER || !window.goatcounter || !window.goatcounter.count) return;
             window.goatcounter.count({ path: path, title: title || path, event: true });
@@ -1031,10 +1058,6 @@
             const on = !favs.has(id);
             if (on) favs.add(id); else favs.delete(id);
             saveFavs();
-            if (on) {
-                const pr = allProducts.find(x => String(x.id) === id);
-                if (pr && pr.price != null && !isNaN(pr.price)) { favPrecios[id] = pr.price; guardarFavPrecios(); }
-            } else { delete favPrecios[id]; delete favBaja[id]; guardarFavPrecios(); }
             document.querySelectorAll('.fav[data-fav="' + id + '"]').forEach(b => {
                 b.setAttribute('aria-pressed', on);
                 b.title = on ? 'Quitar de favoritos' : 'Guardar en favoritos'; b.setAttribute('aria-label', b.title);
@@ -1046,10 +1069,12 @@
 
         // ---- Compartir por WhatsApp ----
         const WA_SVG = '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.2.6 4.4 1.7 6.3L3 29l7.4-1.9c1.8 1 3.8 1.500 5.800 1.500 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.900c-1.900 0-3.700-.5-5.300-1.500l-.4-.2-4.400 1.100 1.200-4.300-.3-.4a10.300 10.300 0 0 1-1.600-5.500C5.200 9.800 10 5.100 16 5.100s10.800 4.700 10.800 10.500S22 25.900 16 25.900zm5.900-7.700c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-.9 1.200-.2.200-.3.200-.6.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.200-.2-.3 0-.5.100-.7l.5-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5 0-.2-.7-1.700-1-2.300-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.500 3.100 1.200 3.100.8 3.600.8.600-.1 1.900-.8 2.200-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4z"/></svg>';
+        // Link para compartir: la página propia del producto (con foto y precio en la vista previa).
+        const BASE_URL = () => location.href.split(/[?#]/)[0].replace(/index\.html$/, '');
+        const prodUrl = p => BASE_URL() + (p.page ? p.page : '?nuevo=' + encodeURIComponent(p.id));
         function waLink(p) {
-            const base = location.href.split(/[?#]/)[0];
             const precio = (p.price == null || isNaN(p.price)) ? '' : ' - ' + formatPrice(p);
-            const txt = 'Mirá este producto en Nexos Market: ' + p.name + precio + '\n' + base + '?p=' + encodeURIComponent(p.id);
+            const txt = '🔥 Mirá esta oferta: ' + p.name + precio + '\n' + prodUrl(p);
             return 'https://api.whatsapp.com/send?text=' + encodeURIComponent(txt);
         }
 
@@ -1105,7 +1130,7 @@
             if (products.length === 0) {
                 count.textContent = '';
                 grid.innerHTML = soloFavs
-                    ? '<p class="empty">Todavía no guardaste favoritos. Tocá el corazón &#9829; de un producto para guardarlo acá.</p>'
+                    ? '<p class="empty">Todavía no guardaste favoritos. Tocá el corazón de un producto para guardarlo acá.</p>'
                     : allProducts.length
                     ? '<p class="empty">No encontramos productos con esos filtros. Probá con otra palabra o ampliá el precio.</p>'
                     : '<p class="empty">Todavía no hay productos cargados.</p>';
@@ -1133,24 +1158,23 @@
             card.dataset.id = p.id;
             const caido = p.status === 'no_disponible';
             if (caido) card.classList.add('caido');
-            if (destacadoId !== null && String(p.id) === String(destacadoId)) card.classList.add(destSuave ? 'compartido' : 'nuevo');
+            if (destacadoId !== null && String(p.id) === String(destacadoId)) card.classList.add('nuevo');
             const baja = !caido && bajoPrecio(p);
             const tags = caido ? '<span class="badge-off">No disponible</span>'
                 : ((esNuevo(p) || baja) ? '<span class="badges">' + (esNuevo(p) ? '<span class="tag new">Nuevo</span>' : '') +
                     (baja ? '<span class="tag drop" title="Bajó de precio" aria-label="Bajó ' + pctBaja(p) + '% de precio">&minus;' + pctBaja(p) + '%</span>' : '') + '</span>' : '');
             const esFav = favs.has(String(p.id));
-            const antesFav = (esFav && !caido && favBaja[String(p.id)] && p.price != null && p.price < favBaja[String(p.id)]) ? favBaja[String(p.id)] : null;
             card.innerHTML = `
-                <div class="thumb">${tags}<button type="button" class="fav" data-fav="${escapeHTML(p.id)}" data-name="${escapeHTML(p.name)}" aria-pressed="${esFav}" aria-label="${esFav ? 'Quitar de favoritos' : 'Guardar en favoritos'}" title="${esFav ? 'Quitar de favoritos' : 'Guardar en favoritos'}">&#9829;</button><img src="${escapeHTML(p.image || PLACEHOLDER)}" alt="${escapeHTML(p.name)}" loading="lazy" decoding="async" width="300" height="300" referrerpolicy="no-referrer"></div>
+                <div class="thumb">${tags}<button type="button" class="fav" data-fav="${escapeHTML(p.id)}" data-name="${escapeHTML(p.name)}" aria-pressed="${esFav}" aria-label="${esFav ? 'Quitar de favoritos' : 'Guardar en favoritos'}" title="${esFav ? 'Quitar de favoritos' : 'Guardar en favoritos'}">${ico('heart')}</button><img src="${escapeHTML(p.image || PLACEHOLDER)}" alt="${escapeHTML(p.name)}" loading="lazy" decoding="async" width="300" height="300" referrerpolicy="no-referrer"></div>
                 <div class="body">
-                    <div class="meta"><span class="chip">${escapeHTML(p.category)}</span>${p.code ? '<span class="code">' + escapeHTML(p.code) + '</span>' : ''}</div>
+                    <div class="meta"><span class="chip">${escapeHTML(p.category)}</span></div>
                     <h2 title="${escapeHTML(p.name)}">${escapeHTML(p.name)}</h2>
-                    <p class="price">${formatPrice(p)}${baja ? '<span class="was">' + fmtMoney(p.prev, p.currency) + '</span><span class="save">Ahorrás ' + fmtMoney(p.prev - p.price, p.currency) + '</span>' : ''}${antesFav != null ? '<span class="favdrop">&#9829; Bajó desde tu última visita (antes ' + fmtMoney(antesFav, p.currency) + ')</span>' : ''}${!caido && p.price != null && p.price >= 1000 ? '<span class="cuotas">Cuotas según medio de pago</span>' : ''}</p>
+                    <p class="price">${formatPrice(p)}${baja ? '<span class="was">' + fmtMoney(p.prev, p.currency) + '</span><span class="save">Ahorrás ' + fmtMoney(p.prev - p.price, p.currency) + '</span>' : ''}</p>
                     ${caido
                         ? '<span class="btn btn-off" aria-disabled="true">Publicación no disponible</span>'
-                        : `<a class="btn" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(p.link)}" target="_blank" rel="noopener noreferrer sponsored"><span>Ver oferta en Mercado Libre</span>${EXT_SVG}</a>
-                           <a class="wa" data-ev="compartir" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(waLink(p))}" target="_blank" rel="noopener noreferrer">${WA_SVG}<span class="wa-t">Compartir<span class="wa-x"> por WhatsApp</span></span></a>
-                           <button type="button" class="cp" data-cp="${escapeHTML(p.id)}">&#128279; Copiar link</button>`}
+                        : `<a class="btn" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(p.link)}" target="_blank" rel="noopener noreferrer sponsored"><span>Ver en Mercado Libre</span>${EXT_SVG}</a>
+                           <div class="acts"><a class="wa" data-ev="compartir" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(waLink(p))}" target="_blank" rel="noopener noreferrer">${WA_SVG}<span class="wa-t">Compartir<span class="wa-x"> por WhatsApp</span></span></a>
+                           <button type="button" class="cp" data-cp="${escapeHTML(prodUrl(p))}" aria-label="Copiar link" title="Copiar link">${ico('link')}</button></div>`}
                 </div>`;
             setupGallery(card, p);
             return card;
@@ -1169,16 +1193,16 @@
         function buildSlide(p) {
             const a = document.createElement('article');
             a.className = 'slide'; a.dataset.id = p.id;
-            if (destacadoId !== null && String(p.id) === String(destacadoId)) a.classList.add(destSuave ? 'compartido' : 'nuevo');
+            if (destacadoId !== null && String(p.id) === String(destacadoId)) a.classList.add('nuevo');
             const esFav = favs.has(String(p.id));
             const t = esFav ? 'Quitar de favoritos' : 'Guardar en favoritos';
             a.innerHTML = `
-                <div class="s-img"><span class="s-off" aria-label="Bajó ${pctBaja(p)}% de precio">&minus;${pctBaja(p)}%</span><button type="button" class="fav" data-fav="${escapeHTML(p.id)}" data-name="${escapeHTML(p.name)}" aria-pressed="${esFav}" aria-label="${t}" title="${t}">&#9829;</button><img src="${escapeHTML(p.image || PLACEHOLDER)}" alt="${escapeHTML(p.name)}" loading="lazy" decoding="async" width="300" height="300" referrerpolicy="no-referrer"></div>
+                <div class="s-img"><span class="s-off" aria-label="Bajó ${pctBaja(p)}% de precio">&minus;${pctBaja(p)}%</span><button type="button" class="fav" data-fav="${escapeHTML(p.id)}" data-name="${escapeHTML(p.name)}" aria-pressed="${esFav}" aria-label="${t}" title="${t}">${ico('heart')}</button><img src="${escapeHTML(p.image || PLACEHOLDER)}" alt="${escapeHTML(p.name)}" loading="lazy" decoding="async" width="300" height="300" referrerpolicy="no-referrer"></div>
                 <div class="s-body">
                     <span class="chip">${escapeHTML(p.category)}</span>
                     <h3 title="${escapeHTML(p.name)}">${escapeHTML(p.name)}</h3>
-                    <p class="s-price"><b>${formatPrice(p)}</b><s>${fmtMoney(p.prev, p.currency)}</s><span class="s-save">Ahorrás ${fmtMoney(p.prev - p.price, p.currency)}</span>${p.price >= 1000 ? '<span class="cuotas">Cuotas según medio de pago</span>' : ''}</p>
-                    <a class="btn" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(p.link)}" target="_blank" rel="noopener noreferrer sponsored"><span>Ver oferta en Mercado Libre</span>${EXT_SVG}</a>
+                    <p class="s-price"><b>${formatPrice(p)}</b><s>${fmtMoney(p.prev, p.currency)}</s><span class="s-save">Ahorrás ${fmtMoney(p.prev - p.price, p.currency)}</span></p>
+                    <a class="btn" data-track="${escapeHTML(p.code || p.id)}" data-name="${escapeHTML(p.name)}" href="${escapeHTML(p.link)}" target="_blank" rel="noopener noreferrer sponsored"><span>Ver en Mercado Libre</span>${EXT_SVG}</a>
                 </div>`;
             const img = a.querySelector('img');
             img.addEventListener('error', () => { if (img.src !== PLACEHOLDER) img.src = PLACEHOLDER; });
@@ -1200,7 +1224,7 @@
             prev.addEventListener('click', () => { parar = true; mover(-1); });
             next.addEventListener('click', () => { parar = true; mover(1); });
             if (dots) {
-                dots.innerHTML = [...tr.children].map((_, k) => '<button type="button" aria-label="Ir al producto ' + (k + 1) + '"></button>').join('');
+                dots.innerHTML = [...tr.children].map((_, k) => '<button type="button" aria-label="Ir a la oferta ' + (k + 1) + '"></button>').join('');
                 dots.addEventListener('click', e => { const bt = e.target.closest('button'); if (bt) { parar = true; ir([...dots.children].indexOf(bt)); } });
             }
             let pend = false;
@@ -1236,9 +1260,9 @@
                 sec.className = 'car' + (hero ? ' car-hero' : '');
                 sec.setAttribute('aria-roledescription', 'carrusel');
                 sec.setAttribute('aria-label', titulo);
-                sec.innerHTML = '<div class="sec-head"><div><h2>' + titulo + '</h2><p>' + sub + '</p></div>' +
-                    (multi ? '<div class="car-nav"><button type="button" class="car-prev" aria-label="Anterior">&#8249;</button><button type="button" class="car-next" aria-label="Siguiente">&#8250;</button></div>' : '') +
-                    '</div><div class="car-track"></div>' + (multi ? '<div class="car-dots"></div>' : '');
+                sec.innerHTML = '<div class="sec-head"><div><h2>' + ico(hero ? 'flame' : 'sparkles', 'ic sec-ic') + titulo + '</h2><p>' + sub + '</p></div>' +
+                    (multi ? '<div class="car-nav"><button type="button" class="car-prev" aria-label="Anterior">' + ico('chev-left') + '</button><button type="button" class="car-next" aria-label="Siguiente">' + ico('chev-right') + '</button></div>' : '') +
+                    '</div><div class="car-track"></div>' + (hero && multi ? '<div class="car-dots"></div>' : '');
                 const tr = sec.querySelector('.car-track');
                 lista.forEach(p => tr.appendChild(hero ? buildSlide(p) : buildCard(p)));
                 box.appendChild(sec);
@@ -1253,32 +1277,123 @@
             }
         }
 
+
+        // ---- Banners de arriba: se arman solos con los productos y la fecha ----
+        // Fechas especiales: editá esta lista para agregar las que quieras (desde = cuándo empieza a anunciarse).
+        const EVENTOS = [
+            { nombre: 'CyberMonday', desde: '2026-10-26', inicio: '2026-11-02', fin: '2026-11-04' },
+            { nombre: 'Black Friday', desde: '2026-11-20', inicio: '2026-11-27', fin: '2026-11-30' },
+            { nombre: 'Navidad', desde: '2026-12-01', inicio: '2026-12-01', fin: '2026-12-24', regalo: true },
+        ];
+        let bnTimer = null, bnIdx = 0;
+        function fechaLarga(iso) {
+            return new Date(iso + 'T12:00:00').toLocaleDateString('es-AR', { day: 'numeric', month: 'long' });
+        }
+        function armarBanners() {
+            const ok = allProducts.filter(p => p.status !== 'no_disponible' && p.image);
+            if (!ok.length) return [];
+            const out = [];
+            const fotos = l => l.filter(p => p.image).slice(0, 3).map(p => p.image);
+            const bajas = ok.filter(bajoPrecio).sort((a, b) => pctBaja(b) - pctBaja(a));
+            const hoy = new Date().toISOString().slice(0, 10);
+            const ev = EVENTOS.find(e => hoy >= e.desde && hoy <= e.fin);
+            if (ev) {
+                const ya = hoy >= ev.inicio;
+                const dias = Math.round((new Date(ev.inicio + 'T00:00:00') - new Date(hoy + 'T00:00:00')) / 864e5);
+                out.push({ tema: 'event', icon: ev.regalo ? 'gift' : 'zap',
+                    eyebrow: ya ? ev.nombre + ' en curso' : (dias <= 1 ? ev.nombre + ' ¡empieza mañana!' : 'Faltan ' + dias + ' días'),
+                    title: ya ? (ev.regalo ? 'Regalos para todos los gustos' : 'Las mejores ofertas del ' + ev.nombre)
+                              : 'Se viene el ' + ev.nombre,
+                    sub: ya ? 'Revisamos los precios todos los días: aprovechá antes de que se terminen.'
+                            : 'Del ' + fechaLarga(ev.inicio) + ' al ' + fechaLarga(ev.fin) + '. Guardá tus favoritos con el corazón y te esperan acá.',
+                    cta: ya ? 'Ver ofertas' : 'Ver qué hay', act: 'ofertas', imgs: fotos(bajas.length >= 3 ? bajas : ok) });
+            }
+            if (bajas.length) {
+                out.push({ tema: 'deal', icon: 'trend-down', eyebrow: bajas.length + ' productos bajaron de precio',
+                    title: 'Hasta ' + pctBaja(bajas[0]) + '% menos', sub: 'Precios que bajaron en las últimas semanas, verificados con Mercado Libre.',
+                    cta: 'Ver ofertas', act: 'ofertas', imgs: fotos(bajas) });
+            }
+            const porCat = {};
+            ok.forEach(p => { (porCat[p.category] = porCat[p.category] || []).push(p); });
+            const top = Object.entries(porCat).filter(([c]) => c !== 'Otros').sort((a, b) => b[1].length - a[1].length).slice(0, 2);
+            top.forEach(([cat, l], k) => {
+                const ord = l.slice().sort((a, b) => (bajoPrecio(b) ? pctBaja(b) : 0) - (bajoPrecio(a) ? pctBaja(a) : 0));
+                out.push({ tema: k ? 'cat2' : 'cat', icon: catIco(cat), eyebrow: l.length + ' productos',
+                    title: cat, sub: 'Los más elegidos de la categoría, con precio actualizado.', cta: 'Ver ' + cat.split(/[,y]/)[0].trim().toLowerCase(),
+                    act: 'cat:' + cat, imgs: fotos(ord) });
+            });
+            const nuevos = ok.filter(esNuevo);
+            if (nuevos.length >= 3) {
+                out.push({ tema: 'new', icon: 'sparkles', eyebrow: 'Novedades', title: nuevos.length + ' productos nuevos',
+                    sub: 'Sumados en los últimos ' + DIAS_NUEVO + ' días.', cta: 'Ver novedades', act: 'nuevos',
+                    imgs: fotos(nuevos.sort((a, b) => (b.added > a.added ? 1 : -1))) });
+            }
+            return out.slice(0, 5);
+        }
+        function bannerAccion(act) {
+            soloFavs = false; soloOfertas = false; activeCat = '';
+            if (act === 'ofertas') soloOfertas = true;
+            else if (act === 'nuevos') { document.getElementById('sortSelect').value = 'new'; }
+            else if (act.startsWith('cat:')) activeCat = act.slice(4);
+            catUrl(); renderCats(); applyFilter();
+            const g = document.getElementById('count');
+            updateBarH(); scrollTo({ top: g.getBoundingClientRect().top + scrollY - (topEl.offsetHeight + 12), behavior: REDUCE ? 'auto' : 'smooth' });
+        }
+        function renderBanners() {
+            const box = document.getElementById('banners');
+            clearInterval(bnTimer);
+            const bs = armarBanners();
+            if (!bs.length) { box.innerHTML = ''; return; }
+            bnIdx = Math.min(bnIdx, bs.length - 1);
+            box.innerHTML = '<div class="hero-track">' + bs.map((b, k) =>
+                '<article class="bn bn-' + b.tema + '" role="group" aria-roledescription="banner" aria-label="' + (k + 1) + ' de ' + bs.length + '"' + (k === bnIdx ? '' : ' aria-hidden="true"') + '>' +
+                '<div class="bn-txt"><span class="bn-eye">' + ico(b.icon) + escapeHTML(b.eyebrow) + '</span>' +
+                '<h2>' + escapeHTML(b.title) + '</h2><p>' + escapeHTML(b.sub) + '</p>' +
+                '<button type="button" class="bn-cta" data-act="' + escapeHTML(b.act) + '" tabindex="' + (k === bnIdx ? 0 : -1) + '">' + escapeHTML(b.cta) + ico('arrow-right') + '</button></div>' +
+                '<div class="bn-imgs" aria-hidden="true">' + b.imgs.map(u => '<span><img src="' + escapeHTML(u) + '" alt="" loading="lazy" referrerpolicy="no-referrer"></span>').join('') + '</div>' +
+                '</article>').join('') + '</div>' +
+                (bs.length > 1 ? '<div class="bn-dots">' + bs.map((_, k) => '<button type="button" aria-label="Banner ' + (k + 1) + '"' + (k === bnIdx ? ' aria-current="true"' : '') + '></button>').join('') + '</div>' : '');
+            box.querySelectorAll('.bn-imgs img').forEach(im => im.addEventListener('error', () => { im.parentNode.remove(); }));
+            const ir = k => {
+                bnIdx = (k + bs.length) % bs.length;
+                box.querySelector('.hero-track').style.transform = 'translateX(' + (-100 * bnIdx) + '%)';
+                box.querySelectorAll('.bn').forEach((el, j) => { el.setAttribute('aria-hidden', j !== bnIdx); el.querySelector('.bn-cta').tabIndex = j === bnIdx ? 0 : -1; });
+                box.querySelectorAll('.bn-dots button').forEach((d, j) => d.setAttribute('aria-current', j === bnIdx));
+            };
+            ir(bnIdx);
+            box.onclick = e => {
+                const c = e.target.closest('.bn-cta'); if (c) { bannerAccion(c.dataset.act); return; }
+                const d = e.target.closest('.bn-dots button'); if (d) { pausaBn = true; ir([...d.parentNode.children].indexOf(d)); }
+            };
+            // deslizar con el dedo
+            let x0 = null;
+            box.ontouchstart = e => { x0 = e.touches[0].clientX; pausaBn = true; };
+            box.ontouchend = e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 40) ir(bnIdx + (dx < 0 ? 1 : -1)); };
+            let pausaBn = false, sobre = false;
+            box.onmouseenter = () => { sobre = true; }; box.onmouseleave = () => { sobre = false; };
+            if (bs.length > 1 && !REDUCE) bnTimer = setInterval(() => { if (!pausaBn && !sobre && !document.hidden) ir(bnIdx + 1); }, 6000);
+        }
+
         async function fetchProducts() {
             const grid = document.getElementById('productGrid');
-            if (!allProducts.length) {
-                grid.setAttribute('aria-busy', 'true');
-                grid.innerHTML = '<span class="sr-only" role="status">Cargando productos…</span>' +
-                    Array.from({ length: 8 }, () => '<div class="card sk" aria-hidden="true"><div class="thumb"></div><div class="body">' +
-                        '<i class="sk-l w40"></i><i class="sk-l w100"></i><i class="sk-l w70"></i><i class="sk-l price"></i><i class="sk-l btn"></i></div></div>').join('');
-            }
+            if (!allProducts.length) grid.innerHTML = '<p class="empty">Cargando productos…</p>';
             try {
                 const response = await fetch('productos.json', { cache: 'no-store' });
                 if (!response.ok) throw new Error('HTTP ' + response.status);
                 const raw = await response.text();
-                grid.removeAttribute('aria-busy');
                 const data = JSON.parse(raw);
                 if (!Array.isArray(data)) throw new Error('formato inesperado');
                 lastRaw = raw;
                 allProducts = data.map(normalize);
-                revisarFavs();
                 renderCats();
+                renderBanners();
                 applyFilter();
                 resaltarNuevo();
                 actualizarSEO();
+                pintarFechaRevision();
                 autoResumen();
             } catch (error) {
                 console.error('Error cargando productos:', error);
-                grid.removeAttribute('aria-busy');
                 // Mensaje para el público; la pista técnica solo se ve en tu PC.
                 const tecnica = (ES_LOCAL || location.protocol === 'file:')
                     ? '<small>Para vos: abrí la tienda con iniciar.bat (o con "python -m http.server") en lugar de hacer doble clic en index.html.</small>' : '';
@@ -1292,7 +1407,7 @@
         }
 
         // Abierto desde el Gestor (?nuevo=ID): se desplaza al producto recien agregado y lo resalta.
-        const NUEVO = destacadoId;   // el id que vino en el link (?nuevo= o ?p=), si hay
+        const NUEVO = new URLSearchParams(location.search).get('nuevo');
         let nuevoMostrado = false;
         function resaltarNuevo() {
             if (NUEVO === null || nuevoMostrado) return;
@@ -1300,7 +1415,7 @@
                 .find(c => c.dataset.id === NUEVO);
             if (!card) return;
             nuevoMostrado = true;
-            card.classList.add(destSuave ? 'compartido' : 'nuevo');
+            card.classList.add('nuevo');
             updateBarH(); card.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
@@ -1309,11 +1424,11 @@
             // el producto nuevo tiene que verse: se limpian búsqueda, categoría y precio
             activeCat = ''; document.getElementById('searchInput').value = '';
             document.getElementById('priceMin').value = ''; document.getElementById('priceMax').value = '';
-            destacadoId = id; destSuave = false; expandirDestacado = true;
+            destacadoId = id; expandirDestacado = true;
             renderCats(); applyFilter(false);
             const card = [...document.querySelectorAll('#destacados .card, #destacados .slide, #productGrid .card')].find(c => c.dataset.id === id);
             if (!card) return;
-            document.querySelectorAll('.card.nuevo, .card.compartido, .slide.compartido').forEach(c => c.classList.remove('nuevo', 'compartido'));
+            document.querySelectorAll('.card.nuevo').forEach(c => c.classList.remove('nuevo'));
             card.classList.add('nuevo');
             updateBarH(); card.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
@@ -1347,25 +1462,6 @@
         function catUrl() {
             try { history.replaceState(null, '', activeCat ? '?cat=' + encodeURIComponent(activeCat) : location.pathname); } catch (e) {}
         }
-        // Ícono por categoría: se elige por palabras clave del nombre (sin tildes); si no coincide, una etiqueta genérica.
-        const ICONOS_CAT = [
-            [/vehic|auto|moto|neumat|repuest/, '\uD83D\uDE97'], [/belleza|cuidado|perfum|cosmet|maquill/, '\uD83D\uDC84'],
-            [/camara|fotograf/, '\uD83D\uDCF7'], [/celular|telefon|smartphone/, '\uD83D\uDCF1'],
-            [/computa|notebook|laptop|inform|tablet|impres/, '\uD83D\uDCBB'], [/audio|auricul|parlante|sonido/, '\uD83C\uDFA7'],
-            [/consola|videojuego|gaming|juego/, '\uD83C\uDFAE'], [/electrodom|climatiz|ventil/, '\uD83D\uDD0C'],
-            [/televis|\btv\b|video/, '\uD83D\uDCFA'], [/deporte|fitness|gimnas|ciclis|bicic/, '\uD83C\uDFCB\uFE0F'],
-            [/ropa|indument|moda|calzado|zapat|accesorios de moda/, '\uD83D\uDC55'], [/bebe|juguete|infantil|ninos/, '\uD83E\uDDF8'],
-            [/herramient|construc|ferret|industri/, '\uD83D\uDD27'], [/salud|suplement|farmac|equipamiento medico/, '\uD83D\uDC8A'],
-            [/hogar|mueble|decor|jardin|iluminac|cama|colchon/, '\uD83C\uDFE0'], [/cocina|alimento|bebida|gourmet/, '\uD83C\uDF7D\uFE0F'],
-            [/mascota|animal|perro|gato/, '\uD83D\uDC3E'], [/libro|revista|educa|papeler|oficina/, '\uD83D\uDCDA'],
-            [/instrumento|music/, '\uD83C\uDFB8'], [/viaje|camping|pesca|aire libre/, '\u26FA'],
-            [/otro/, '\uD83D\uDCE6']
-        ];
-        function iconoCat(nombre) {
-            const n = norm(nombre);
-            for (const [re, ico] of ICONOS_CAT) if (re.test(n)) return ico;
-            return '\uD83C\uDFF7\uFE0F';
-        }
         function renderCats() {
             const counts = {};
             allProducts.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
@@ -1373,38 +1469,37 @@
             if (activeCat && !counts[activeCat]) activeCat = '';
             const nav = document.getElementById('cats');
             nav.innerHTML = '';
-            const mk = (label, value, n, ico) => {
+            const mk = (label, value, n) => {
                 const b = document.createElement('button');
                 b.type = 'button';
                 b.className = (value === activeCat && !soloFavs && !soloOfertas) ? 'on' : '';
-                b.innerHTML = '<span class="ci" aria-hidden="true">' + ico + '</span>' + escapeHTML(label) + '<small>' + n + '</small>';
+                b.innerHTML = ico(value ? catIco(value) : 'box') + escapeHTML(label) + '<small>' + n + '</small>';
                 b.addEventListener('click', () => { activeCat = value; soloFavs = false; soloOfertas = false; catUrl(); renderCats(); applyFilter(); volverArriba(); });
                 nav.appendChild(b);
             };
             const br = document.createElement('button');
-            br.type = 'button'; br.className = 'resumen'; br.textContent = '📅 Resumen semanal';
+            br.type = 'button'; br.className = 'resumen'; br.innerHTML = ico('calendar') + 'Resumen semanal';
             br.addEventListener('click', abrirResumen);
             nav.appendChild(br);
-            mk('Todas', '', allProducts.length, '\uD83D\uDECD\uFE0F');
-            // Botón 🔥 Ofertas
-            const nOfertas = allProducts.filter(esOferta).length;
+            mk('Todas', '', allProducts.length);
+            // Botón Ofertas
+            const nOfertas = allProducts.filter(p => p.status !== 'no_disponible' && bajoPrecio(p)).length;
             if (nOfertas > 0) {
                 const bo = document.createElement('button');
                 bo.type = 'button';
                 bo.className = 'ofertas' + (soloOfertas ? ' on' : '');
-                bo.innerHTML = '🔥 Ofertas<small>' + nOfertas + '</small>';
+                bo.innerHTML = ico('flame') + 'Ofertas<small>' + nOfertas + '</small>';
                 bo.addEventListener('click', () => { soloOfertas = !soloOfertas; soloFavs = false; activeCat = ''; catUrl(); renderCats(); applyFilter(); volverArriba(); });
                 nav.appendChild(bo);
             }
             const nFav = allProducts.filter(p => favs.has(String(p.id))).length;
             const bf = document.createElement('button');
             bf.type = 'button';
-            bf.className = (soloFavs ? 'on' : '') + (hayFavBaja() ? ' alerta' : '');
-            bf.innerHTML = '&#9829; Favoritos<small>' + nFav + '</small>';
-            if (hayFavBaja()) bf.title = 'Hay favoritos que bajaron de precio desde tu última visita';
+            bf.className = soloFavs ? 'on' : '';
+            bf.innerHTML = ico('heart') + 'Favoritos<small>' + nFav + '</small>';
             bf.addEventListener('click', () => { soloFavs = !soloFavs; soloOfertas = false; activeCat = ''; catUrl(); renderCats(); applyFilter(); volverArriba(); });
             nav.appendChild(bf);
-            names.forEach(n => mk(n, n, counts[n], iconoCat(n)));
+            names.forEach(n => mk(n, n, counts[n]));
             actualizarMeta();
         }
 
@@ -1430,7 +1525,7 @@
             const lista = allProducts.filter(p =>
                 (!activeCat || p.category === activeCat) &&
                 (!soloFavs || favs.has(String(p.id))) &&
-                (!soloOfertas || esOferta(p)) &&
+                (!soloOfertas || (p.status !== 'no_disponible' && bajoPrecio(p))) &&
                 // búsqueda sin tildes y por varias palabras: tienen que estar todas (en cualquier orden)
                 terminos.every(t => p._h.includes(t)) &&
                 // con filtro de precio, los "Consultar precio" (sin precio) quedan afuera
@@ -1444,7 +1539,6 @@
                 const na = a.status === 'no_disponible', nb = b.status === 'no_disponible';
                 if (na !== nb) return na ? 1 : -1;
                 if (orden === 'new') return (b.added > a.added ? 1 : b.added < a.added ? -1 : 0) || (b._n - a._n);
-                if (orden === 'off') return (esOferta(b) ? pctBaja(b) : -1) - (esOferta(a) ? pctBaja(a) : -1) || (a._n - b._n);   // las que no son oferta quedan al final
                 if (orden === 'az') return a.name.localeCompare(b.name, 'es', { sensitivity: 'base' });
                 if (orden === 'asc' || orden === 'desc') {
                     const sa = a.price == null || isNaN(a.price), sb = b.price == null || isNaN(b.price);
@@ -1467,6 +1561,8 @@
                 if (enFranja.size && sobran.length) { franjas = f; resto = sobran; }
             }
             renderDestacados(franjas);
+            document.getElementById('banners').hidden = !franjas || !document.querySelector('#banners .bn');
+            document.querySelector('.trust').hidden = !franjas;
             displayProducts(resto);
             // búsquedas sin resultado: sirven para saber qué te piden y no tenés
             clearTimeout(aplicarFiltro.t);
@@ -1515,7 +1611,7 @@
         }
         function clickCopiar(e) {
             const b = e.target.closest && e.target.closest('.cp');
-            if (b) rsCopiar(location.href.split(/[?#]/)[0].replace(/index\.html$/, '') + '?p=' + encodeURIComponent(b.dataset.cp), b);
+            if (b) rsCopiar(b.dataset.cp, b);
         }
         function clickFav(e) {
             const b = e.target.closest && e.target.closest('.fav');
@@ -1540,9 +1636,9 @@
                     const primera = lastRaw === null;   // la carga inicial había fallado
                     const antes = new Set(allProducts.map(p => String(p.id)));
                     allProducts = JSON.parse(raw).map(normalize);
-                    revisarFavs();
                     const nuevos = allProducts.filter(p => !antes.has(String(p.id)));
                     renderCats();
+                    renderBanners();
                     applyFilter(false);
                     resaltarNuevo();
                     if (!primera && nuevos.length) resaltarId(String(nuevos[nuevos.length - 1].id));
@@ -1563,7 +1659,7 @@
         const rsUrl = () => location.href.split(/[?#]/)[0].replace(/index\.html$/, '') + '?resumen=1';
         function calcResumen() {
             const ok = allProducts.filter(p => p.status !== 'no_disponible');
-            const bajasTodas = ok.filter(p => p.prev != null && p.price != null && p.prev > p.price && pctBaja(p) >= MIN_BAJA && reciente(p.drop, DIAS_RESUMEN))
+            const bajasTodas = ok.filter(p => p.prev != null && p.price != null && p.prev > p.price && pctBaja(p) >= BAJA_MIN && reciente(p.drop, DIAS_RESUMEN))
                 .sort((a, b) => pctBaja(b) - pctBaja(a));
             const ids = new Set(bajasTodas.map(p => String(p.id)));
             const nuevosTodos = ok.filter(p => !ids.has(String(p.id)) && reciente(p.added, DIAS_RESUMEN))
@@ -1580,7 +1676,7 @@
             const L = ['⚡ *Resumen semanal de ofertas – Nexos Market*', '▪ ' + rsRango(), ''];
             if (r.bajas.length) {
                 L.push('⬇️ *Bajaron de precio*');
-                r.bajas.forEach(p => L.push('• ' + rsCorto(p.name, 60) + ' — ' + rsPrecio(p.price) + ' (antes ' + rsPrecio(p.prev) + ', -' + pctBaja(p) + '%)'));
+                r.bajas.forEach(p => L.push('• ' + rsCorto(p.name, 60) + ' — ' + rsPrecio(p.price) + ' (antes ' + rsPrecio(p.prev) + ', -' + pctBaja(p) + '%)' + (p.page ? '\n  ' + prodUrl(p) : '')));
                 L.push('');
             }
             if (r.nuevos.length) {
@@ -1592,7 +1688,7 @@
             return L.join('\n');
         }
         function rsCopiar(texto, btn) {
-            const ok = () => { const t = btn.textContent; btn.textContent = '✓ ¡Copiado!'; setTimeout(() => { btn.textContent = t; }, 2000); };
+            const ok = () => { const t = btn.innerHTML; btn.innerHTML = ico('check') + '¡Copiado!'; setTimeout(() => { btn.innerHTML = t; }, 2000); };
             const viejo = () => {
                 const ta = document.createElement('textarea'); ta.value = texto; ta.style.cssText = 'position:fixed;opacity:0';
                 document.body.appendChild(ta); ta.select();
@@ -1624,14 +1720,14 @@
                 '<div class="rs-head"><div><h2 id="rsT">Resumen semanal de ofertas</h2><p>' + rsRango() + ' · ' + r.totBajas + ' bajas de precio · ' + r.totNuevos + ' novedades</p></div>' +
                 '<button type="button" class="rs-x" aria-label="Cerrar">&times;</button></div>' +
                 '<div class="rs-list">' + (hay ? '' : '<p class="rs-empty">Esta semana todavía no hay ofertas nuevas para resumir.</p>') +
-                (r.bajas.length ? '<h3>📉 Bajaron de precio</h3>' + r.bajas.map(item).join('') + mas(r.totBajas, RS_BAJAS) : '') +
-                (r.nuevos.length ? '<h3>🆕 Novedades</h3>' + r.nuevos.map(item).join('') + mas(r.totNuevos, RS_NUEVOS) : '') +
+                (r.bajas.length ? '<h3>' + ico('trend-down') + 'Bajaron de precio</h3>' + r.bajas.map(item).join('') + mas(r.totBajas, RS_BAJAS) : '') +
+                (r.nuevos.length ? '<h3>' + ico('sparkles') + 'Novedades</h3>' + r.nuevos.map(item).join('') + mas(r.totNuevos, RS_NUEVOS) : '') +
                 (ES_LOCAL || location.protocol === 'file:' ? '<p class="rs-note">Estás viendo la tienda en tu PC: el link solo funcionará para otros cuando la tengas publicada online.</p>' : '') +
                 '</div><div class="rs-foot">' +
                 '<a class="rs-b send" id="rsWa" target="_blank" rel="noopener noreferrer" ' + (hay ? 'href="https://api.whatsapp.com/send?text=' + encodeURIComponent(texto) + '"' : 'aria-disabled="true"') + '>' + WA_SVG + 'Enviar por WhatsApp</a>' +
-                '<a class="rs-b" target="_blank" rel="noopener noreferrer" ' + (hay ? 'href="https://t.me/share/url?url=' + encodeURIComponent(rsUrl()) + '&text=' + encodeURIComponent(texto.split('\n').slice(0, -2).join('\n')) + '"' : 'aria-disabled="true"') + '>✈️ Telegram</a>' +
-                '<button type="button" class="rs-b" id="rsLink">🔗 Copiar link</button>' +
-                '<button type="button" class="rs-b" id="rsMsg"' + (hay ? '' : ' aria-disabled="true"') + '>📋 Copiar mensaje</button></div></div>';
+                '<a class="rs-b" target="_blank" rel="noopener noreferrer" ' + (hay ? 'href="https://t.me/share/url?url=' + encodeURIComponent(rsUrl()) + '&text=' + encodeURIComponent(texto.split('\n').slice(0, -2).join('\n')) + '"' : 'aria-disabled="true"') + '>' + ico('send') + 'Telegram</a>' +
+                '<button type="button" class="rs-b" id="rsLink">' + ico('link') + 'Copiar link</button>' +
+                '<button type="button" class="rs-b" id="rsMsg"' + (hay ? '' : ' aria-disabled="true"') + '>' + ico('copy') + 'Copiar mensaje</button></div></div>';
             rsBox.querySelector('.rs-x').addEventListener('click', cerrarResumen);
             document.getElementById('rsLink').addEventListener('click', e => rsCopiar(rsUrl(), e.currentTarget));
             document.getElementById('rsMsg').addEventListener('click', e => { if (hay) rsCopiar(texto, e.currentTarget); });
@@ -1644,69 +1740,39 @@
             try {
                 const ok = allProducts.filter(p => p.status !== 'no_disponible' && p.price != null).slice(0, 50);
                 const ld = { '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: ok.map((p, i) => ({
-                    '@type': 'ListItem', position: i + 1, item: { '@type': 'Product', url: location.href.split(/[?#]/)[0] + '?p=' + encodeURIComponent(p.id), name: p.name, image: p.image, category: p.category,
+                    '@type': 'ListItem', position: i + 1, item: { '@type': 'Product', url: prodUrl(p), name: p.name, image: p.image, category: p.category,
                         offers: { '@type': 'Offer', price: p.price, priceCurrency: p.currency, url: p.link, availability: 'https://schema.org/InStock' } } })) };
                 let el = document.getElementById('ld-productos');
                 if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = 'ld-productos'; document.head.appendChild(el); }
                 el.textContent = JSON.stringify(ld);
             } catch (e) { /* si falla, la tienda sigue igual */ }
         }
-        // ---- Ventana legal: Quiénes somos / Privacidad ----
-        const LEGAL = {
-            about: { t: 'Quiénes somos', h:
-                '<p>Nexos Market es un sitio independiente que reúne ofertas, novedades y bajas de precio de Mercado Libre para que puedas compararlas en un solo lugar.</p>' +
-                '<h3>Cómo funciona</h3>' +
-                '<p>Mostramos precios de referencia que se revisan periódicamente. Pueden cambiar sin aviso, y el precio final, el stock, las cuotas y el envío son los que figuren en Mercado Libre al momento de comprar. La compra se realiza siempre en Mercado Libre, no en este sitio.</p>' +
-                '<h3>Enlaces</h3>' +
-                '<p>Algunos enlaces pueden generar una comisión para Nexos Market, sin ningún costo adicional para vos. No es una relación oficial: Nexos Market no pertenece a Mercado Libre ni está avalado por esa empresa.</p>' +
-                '<h3>Contacto</h3>' +
-                '<p>Escribinos a <a href="mailto:info@nexosmaps.com">info@nexosmaps.com</a> si encontrás un precio desactualizado, una publicación caída o tenés cualquier consulta.</p>' },
-            privacy: { t: 'Política de privacidad', h:
-                '<p>No tenés que crear una cuenta ni darnos datos personales para usar Nexos Market. Esto es lo que ocurre en tu navegador:</p>' +
-                '<h3>Datos guardados en tu dispositivo</h3>' +
-                '<ul><li>Tus favoritos, el último precio visto de cada uno, el orden elegido y la zona del clima se guardan en el almacenamiento local de tu navegador. No se envían a ningún servidor nuestro y podés borrarlos limpiando los datos del sitio.</li></ul>' +
-                '<h3>Estadísticas</h3>' +
-                '<p>Usamos GoatCounter, un servicio de estadísticas que no usa cookies ni crea perfiles de visitantes, para contar visitas, clics en las ofertas y búsquedas sin resultado, de forma anónima.</p>' +
-                '<h3>Servicios de terceros</h3>' +
-                '<ul><li><b>Clima:</b> Open-Meteo, con la ubicación de la zona elegida o aproximada.</li>' +
-                '<li><b>Ubicación aproximada:</b> para mostrar el clima de tu zona consultamos tu dirección IP a ipwho.is (o geojs.io como respaldo). No pedimos permiso de ubicación del dispositivo ni guardamos tu IP.</li>' +
-                '<li><b>Dólar:</b> DolarApi.com.</li>' +
-                '<li><b>Tipografía:</b> Google Fonts.</li>' +
-                '<li><b>Imágenes y compras:</b> las fotos se cargan desde Mercado Libre y, al tocar una oferta, pasás al sitio de Mercado Libre, que tiene sus propias políticas de privacidad.</li></ul>' +
-                '<p>Estos servicios pueden recibir tu IP y datos técnicos del navegador al responder cada consulta, según sus propias políticas.</p>' +
-                '<h3>Consultas</h3>' +
-                '<p>Para cualquier duda sobre privacidad escribinos a <a href="mailto:info@nexosmaps.com">info@nexosmaps.com</a>.</p>' +
-                '<p class="lg-date">Última actualización: octubre de 2026.</p>' }
-        };
-        let lgBox = null, lgFoco = null;
-        function cerrarLegal() {
-            if (!lgBox || lgBox.hidden) return;
-            lgBox.hidden = true; document.body.classList.remove('rs-open');
-            if (lgFoco && lgFoco.focus) lgFoco.focus();
+        function pintarFechaRevision() {
+            const ult = allProducts.map(p => p.checked).filter(Boolean).sort().pop();
+            document.getElementById('footYear').textContent = new Date().getFullYear();
+            if (!ult) return;
+            const d = new Date(ult.replace(' ', 'T'));
+            if (isNaN(d)) return;
+            const txt = d.toLocaleDateString('es-AR', { day: 'numeric', month: 'long' });
+            document.getElementById('trustFecha').textContent = 'Última revisión: ' + txt;
+            document.getElementById('footFecha').textContent = 'Precios revisados por última vez el ' + txt + '.';
         }
-        function abrirLegal(clave) {
-            const d = LEGAL[clave];
-            if (!d) return;
-            if (!lgBox) {
-                lgBox = document.createElement('div'); lgBox.className = 'rs-back'; lgBox.hidden = true;
-                lgBox.addEventListener('click', e => { if (e.target === lgBox) cerrarLegal(); });
-                document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarLegal(); });
-                document.body.appendChild(lgBox);
-            }
-            lgBox.innerHTML = '<div class="rs-box lg-box" role="dialog" aria-modal="true" aria-labelledby="lgT">' +
-                '<div class="rs-head"><div><h2 id="lgT">' + d.t + '</h2></div><button type="button" class="rs-x" aria-label="Cerrar">&times;</button></div>' +
-                '<div class="rs-list">' + d.h + '</div></div>';
-            lgBox.querySelector('.rs-x').addEventListener('click', cerrarLegal);
-            lgFoco = document.activeElement;
-            lgBox.hidden = false; document.body.classList.add('rs-open');
-            lgBox.querySelector('.rs-x').focus();
-        }
-        document.querySelectorAll('[data-legal]').forEach(b => b.addEventListener('click', () => abrirLegal(b.dataset.legal)));
-        { const y = document.getElementById('footYear'); if (y) y.textContent = new Date().getFullYear(); }
-
         let rsAuto = new URLSearchParams(location.search).has('resumen');
         function autoResumen() { if (rsAuto) { rsAuto = false; abrirResumen(); } }
 
+        (function () {   // flechas de la barra de categorías (solo con mouse)
+            const nav = document.getElementById('cats'), L = document.getElementById('catsL'), R = document.getElementById('catsR');
+            const upd = () => {
+                const max = nav.scrollWidth - nav.clientWidth - 2;
+                L.classList.toggle('show', nav.scrollLeft > 2); R.classList.toggle('show', nav.scrollLeft < max);
+                nav.style.webkitMaskImage = nav.style.maskImage = nav.scrollLeft < max ? '' : 'none';
+            };
+            L.addEventListener('click', () => nav.scrollBy({ left: -nav.clientWidth * .7, behavior: 'smooth' }));
+            R.addEventListener('click', () => nav.scrollBy({ left: nav.clientWidth * .7, behavior: 'smooth' }));
+            nav.addEventListener('scroll', upd, { passive: true });
+            addEventListener('resize', upd);
+            new MutationObserver(upd).observe(nav, { childList: true });
+        })();
         fetchProducts();
     
         // Clima según tu ubicación (Open-Meteo: gratis y sin clave). Se refresca cada 15 min.
@@ -1728,17 +1794,17 @@
         const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
         const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
 
-        function climaEmoji(code, esDia) {
-            if (code === 0) return esDia ? '\u2600\uFE0F' : '\uD83C\uDF19';          // despejado: sol / luna
-            if (code === 1) return esDia ? '\uD83C\uDF24\uFE0F' : '\uD83C\uDF19';   // mayormente despejado
-            if (code === 2) return esDia ? '\u26C5' : '\u2601\uFE0F';                 // parcialmente nublado
-            if (code === 3) return '\u2601\uFE0F';                                      // nublado
-            if (code === 45 || code === 48) return '\uD83C\uDF2B\uFE0F';              // niebla
-            if (code >= 51 && code <= 57) return '\uD83C\uDF26\uFE0F';                // llovizna
-            if ((code >= 61 && code <= 67) || (code >= 80 && code <= 82)) return '\uD83C\uDF27\uFE0F'; // lluvia
-            if ((code >= 71 && code <= 77) || code === 85 || code === 86) return '\u2744\uFE0F';       // nieve
-            if (code >= 95) return '\u26C8\uFE0F';                                      // tormenta
-            return '\u26C5';
+        function climaEmoji(code, esDia) {   // devuelve un ícono de línea (SVG)
+            let n = 'cloud-sun';
+            if (code === 0) n = esDia ? 'sun' : 'moon';
+            else if (code === 1 || code === 2) n = esDia ? 'cloud-sun' : 'cloud-moon';
+            else if (code === 3) n = 'cloud';
+            else if (code === 45 || code === 48) n = 'cloud-fog';
+            else if (code >= 51 && code <= 57) n = 'cloud-drizzle';
+            else if ((code >= 61 && code <= 67) || (code >= 80 && code <= 82)) n = 'cloud-rain';
+            else if ((code >= 71 && code <= 77) || code === 85 || code === 86) n = 'snow';
+            else if (code >= 95) n = 'storm';
+            return ico(n, 'ic wx' + (n === 'sun' ? ' wx-sun' : n.includes('rain') || n.includes('drizzle') || n === 'storm' ? ' wx-rain' : ''));
         }
 
         let CLIMA_DATA = null, DOLAR_LISTA = null;   // lo último que se leyó: lo usan los paneles desplegables
@@ -1755,7 +1821,7 @@
                 const c = j.current;
                 if (!c || typeof c.temperature_2m !== 'number') throw new Error('sin datos');
                 CLIMA_DATA = { c: c, daily: j.daily || null, ciudad: CLIMA.ciudad, lat: CLIMA.lat };
-                document.getElementById('wIco').textContent = climaEmoji(c.weather_code, c.is_day === 1);
+                document.getElementById('wIco').innerHTML = climaEmoji(c.weather_code, c.is_day === 1);
                 document.getElementById('wTemp').textContent = Math.round(c.temperature_2m) + '\u00B0C';
                 document.getElementById('wCity').textContent = CLIMA.ciudad;
                 box.title = CLIMA.ciudad + ': ' + Math.round(c.temperature_2m) + '\u00B0C \u2014 tocá para ver el pronóstico';
@@ -1815,7 +1881,7 @@
         (function iniciarClima() {
             const sel = document.getElementById('wSel');
             const o = document.createElement('option');
-            o.value = 'auto'; o.textContent = '\uD83D\uDCCD Mi zona (automática)';
+            o.value = 'auto'; o.textContent = 'Mi zona (automática)';
             sel.appendChild(o);
             PROVINCIAS.forEach((p, i) => {
                 const op = document.createElement('option');
@@ -1867,7 +1933,7 @@
                 box.hidden = false;
                 // velocidad constante (~45 px/s) sin importar cuánto texto haya
                 const ancho = track.firstElementChild.getBoundingClientRect().width;
-                const vel = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches ? 20 : 30;  // px/s
+                const vel = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches ? 28 : 45;  // px/s
                 track.style.setProperty('--t-dur', Math.max(12, ancho / vel) + 's');
             } catch (e) { /* sin conexión: se deja como estaba */ }
         }
@@ -1882,10 +1948,20 @@
             const ciclo = 29.530588853, ref = Date.UTC(2000, 0, 6, 18, 14);
             let edad = ((d.getTime() - ref) / 86400000) % ciclo;
             if (edad < 0) edad += ciclo;
-            const i = Math.floor(edad / ciclo * 8 + 0.5) % 8;
-            return [['Luna nueva', '\uD83C\uDF11'], ['Luna creciente', '\uD83C\uDF12'], ['Cuarto creciente', '\uD83C\uDF13'],
-                    ['Gibosa creciente', '\uD83C\uDF14'], ['Luna llena', '\uD83C\uDF15'], ['Gibosa menguante', '\uD83C\uDF16'],
-                    ['Cuarto menguante', '\uD83C\uDF17'], ['Luna menguante', '\uD83C\uDF18']][i];
+            const f = edad / ciclo, i = Math.floor(f * 8 + 0.5) % 8;
+            const nombres = ['Luna nueva', 'Luna creciente', 'Cuarto creciente', 'Gibosa creciente', 'Luna llena',
+                             'Gibosa menguante', 'Cuarto menguante', 'Luna menguante'];
+            return [nombres[i], f];
+        }
+        // Dibuja la luna con la parte iluminada real. sur=true: hemisferio sur (se ve espejada).
+        function lunaSVG(f, sur) {
+            const rx = Math.abs(Math.cos(2 * Math.PI * f)) * 9, menguante = f > 0.5;
+            const gibosa = f > 0.25 && f < 0.75;
+            const lit = f < 0.02 || f > 0.98 ? '' :
+                '<path d="M12 3 A9 9 0 0 1 12 21 A' + rx.toFixed(2) + ' 9 0 0 ' + (gibosa ? 1 : 0) + ' 12 3Z" fill="currentColor"/>';
+            const espejo = menguante !== !!sur;
+            return '<svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="rgba(255,255,255,.08)" stroke="currentColor" stroke-width="1.2"/>' +
+                '<g' + (espejo ? ' transform="matrix(-1 0 0 1 24 0)"' : '') + '>' + lit + '</g></svg>';
         }
         const nombreDia = f => {
             const n = new Date(f + 'T12:00:00Z').toLocaleDateString('es-AR', { weekday: 'short', timeZone: 'UTC' }).replace('.', '');
@@ -1897,16 +1973,15 @@
             if (!d) return;
             const c = d.c;
             const num = x => typeof x === 'number' ? Math.round(x) : '-';
-            document.getElementById('clIco').textContent = climaEmoji(c.weather_code, c.is_day === 1);
+            document.getElementById('clIco').innerHTML = climaEmoji(c.weather_code, c.is_day === 1);
             document.getElementById('clTemp').textContent = num(c.temperature_2m) + '\u00B0';
             document.getElementById('clDesc').textContent = climaTxt(c.weather_code);
             document.getElementById('clCity').textContent = d.ciudad;
-            const chip = (t, v) => '<div class="cl-chip"><small>' + t + '</small><b>' + v + '</b></div>';
-            document.getElementById('clChips').innerHTML = chip('Sensación', num(c.apparent_temperature) + '\u00B0') +
-                chip('Humedad', num(c.relative_humidity_2m) + '%') + chip('Viento', num(c.wind_speed_10m) + ' km/h');
+            const chip = (t, v, n) => '<div class="cl-chip">' + ico(n) + '<small>' + t + '</small><b>' + v + '</b></div>';
+            document.getElementById('clChips').innerHTML = chip('Sensación', num(c.apparent_temperature) + '\u00B0', 'thermo') +
+                chip('Humedad', num(c.relative_humidity_2m) + '%', 'droplet') + chip('Viento', num(c.wind_speed_10m) + ' km/h', 'wind');
             const f = faseLunar(new Date());
-            document.getElementById('clMoon').innerHTML = '<span aria-hidden="true">\uD83D\uDD2D</span> <b>Fase lunar:</b> ' + f[0] +
-                ' <span class="mo' + (d.lat < 0 ? ' flip' : '') + '" aria-hidden="true">' + f[1] + '</span>';
+            document.getElementById('clMoon').innerHTML = lunaSVG(f[1], d.lat < 0) + '<div><small>Fase lunar</small><b>' + f[0] + '</b></div>';
             const dy = d.daily, filas = [];
             if (dy && dy.time) {
                 for (let i = 1; i < Math.min(6, dy.time.length); i++) {   // desde mañana: los próximos 5 días
@@ -1915,7 +1990,7 @@
                     filas.push('<div class="cl-day"><span class="d">' + nombreDia(dy.time[i]) + '</span>' +
                         '<span class="e" aria-hidden="true">' + climaEmoji(dy.weather_code[i], true) + '</span>' +
                         '<span class="t"><b>' + num(dy.temperature_2m_max[i]) + '\u00B0</b><span>' + num(dy.temperature_2m_min[i]) + '\u00B0</span></span>' +
-                        '<span class="r">\uD83D\uDCA7 ' + (typeof p === 'number' ? p + '%' : '-') + (v >= 20 ? ' \uD83D\uDCA8 ' + v : '') + '</span></div>');
+                        '<span class="r">' + ico('droplet') + (typeof p === 'number' ? p + '%' : '-') + (v >= 20 ? ' ' + ico('wind') + v : '') + '</span></div>');
                 }
             }
             document.getElementById('clDays').innerHTML = filas.join('');

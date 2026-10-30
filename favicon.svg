@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs>
+<linearGradient id="nxBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3f5"/><stop offset=".55" stop-color="#3a6df0"/><stop offset="1" stop-color="#6b3fe0"/></linearGradient>
+<linearGradient id="nxPin" x1="0" y1="0" x2="1" y2=".9"><stop offset="0" stop-color="#8b3dff"/><stop offset=".55" stop-color="#e0198a"/><stop offset="1" stop-color="#ff2d6f"/></linearGradient>
+<radialGradient id="nxGlow" cx=".25" cy=".15" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="2" y="2" width="60" height="60" rx="16" fill="url(#nxBg)"/>
+<rect x="2" y="2" width="60" height="60" rx="16" fill="url(#nxGlow)"/>
+<path d="M2 40c14-6 26 8 60-2v8c0 8.8-7.2 16-16 16H18c-8.8 0-16-7.2-16-16Z" fill="#fff" opacity=".08"/>
+<g transform="translate(32 33) scale(1.17) translate(-32 -33)"><ellipse cx="32" cy="53.5" rx="8" ry="1.8" fill="#ff5fa8" opacity=".75"/>
+<path d="M32 52C26 44.6 17.5 37.6 17.5 27.5a14.5 14.5 0 0 1 29 0C46.5 37.6 38 44.6 32 52Z" fill="url(#nxPin)"/>
+<path d="M32 13a14.5 14.5 0 0 1 14.5 14.5c0 4-1.4 7.6-3.5 11L32 13Z" fill="#fff" opacity=".12"/>
+<circle cx="32" cy="27" r="5.6" fill="#1a1433"/></g></svg>
