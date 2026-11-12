@@ -34,11 +34,14 @@ const NEXOS_WHATSAPP = "5491121305416";   // número de Nexos para "Quiero la m�
 const ES_MUESTRA = true;
 </script>
 <script>
-/* Muestra por rubro: ?r=estetica | veterinaria | odontologia | kinesiologia | lavadero (sin r = barbería) */
+/* Muestra por rubro: ?r=estetica | unas | veterinaria | odontologia | kinesiologia | lavadero (sin r = barbería) */
 const RUBROS = {
   estetica: { nombre: "Aura", rubro: "Estética", tag: "Centro de estética · Caseros", h1: "Tu momento de <span>cuidarte</span>.<br>Turnos en 30 segundos.",
     p: "Elegí tratamiento, día y horario. Te confirmamos por WhatsApp y te esperamos.", accion: "turno", acc: "#e9a3b9", bg: "#141013", soft: true,
     serv: [["facial", "Limpieza facial profunda", "Higiene, extracción y máscara", 60, 18000, 1], ["laser", "Depilación láser", "Por zona, equipo de última generación", 30, 15000], ["masaje", "Masaje descontracturante", "Espalda, cuello y hombros", 60, 20000], ["pestanas", "Lifting de pestañas", "Con tinte incluido", 60, 20000]] },
+  unas: { nombre: "Pétalo", rubro: "Nails", tag: "Manicuría y uñas · Pablo Podestá", h1: "Uñas <span>impecables</span>.<br>Turnos en 30 segundos.",
+    p: "Elegí el servicio, el día y el horario. Te confirmamos por WhatsApp y te esperamos.", accion: "turno", acc: "#f0a6c4", bg: "#140f12", soft: true,
+    serv: [["semi", "Esmaltado semipermanente", "Manos, con diseño simple", 60, 12000, 1], ["kapping", "Kapping", "Refuerzo sobre uña natural", 90, 16000], ["esculpidas", "Uñas esculpidas", "Acrílico o gel, largo a elección", 120, 22000], ["retiro", "Retiro", "Retiro de semi o esculpidas", 30, 5000]] },
   veterinaria: { nombre: "Patitas", rubro: "Veterinaria", tag: "Veterinaria de barrio · Hurlingham", h1: "Cuidamos a tu <span>mascota</span>.<br>Turnos en 30 segundos.",
     p: "Elegí la consulta, el día y el horario. Te confirmamos por WhatsApp y te esperamos sin hacer fila.", accion: "turno", acc: "#63c98f", bg: "#0d1210",
     serv: [["consulta", "Consulta clínica", "Revisión general de tu mascota", 30, 12000, 1], ["vacuna", "Vacunación", "Plan de vacunas y libreta", 30, 9000], ["bano", "Baño y corte", "Peluquería canina y felina", 60, 15000], ["cachorro", "Control de cachorro", "Primeras consultas y desparasitación", 30, 10000]] },
@@ -236,12 +239,14 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;"
 const DIAS = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
 const DIAS_L = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
 
-$("#brand").innerHTML = esc(NEGOCIO.nombre) + " <span>" + esc(NEGOCIO.rubro) + "</span>";
-document.title = NEGOCIO.nombre + " " + NEGOCIO.rubro + (ES_MUESTRA ? " · Página de ejemplo" : "");
+{ const sn = t => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  if (sn(NEGOCIO.nombre).includes(sn(NEGOCIO.rubro))) NEGOCIO.rubro = ""; }
+$("#brand").innerHTML = esc(NEGOCIO.nombre) + (NEGOCIO.rubro ? " <span>" + esc(NEGOCIO.rubro) + "</span>" : "");
+document.title = (NEGOCIO.nombre + " " + NEGOCIO.rubro).trim() + (ES_MUESTRA ? " · Página de ejemplo" : "");
 $("#dir").textContent = NEGOCIO.direccion;
 $("#mapa").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(NEGOCIO.direccion);
 $("#ig").href = "https://instagram.com/" + NEGOCIO.instagram; $("#ig").textContent = "@" + NEGOCIO.instagram;
-$("#foot").textContent = "© " + new Date().getFullYear() + " " + NEGOCIO.nombre + " " + NEGOCIO.rubro;
+$("#foot").textContent = "© " + new Date().getFullYear() + " " + (NEGOCIO.nombre + " " + NEGOCIO.rubro).trim();
 $("#heroWa").href = $("#fab").href = wa(NEGOCIO.whatsapp, "Hola " + NEGOCIO.nombre + ", quería hacer una consulta.");
 $("#horarios").innerHTML = [1, 2, 3, 4, 5, 6, 0].map(d => {
   const h = NEGOCIO.agenda[d];
