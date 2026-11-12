@@ -71,6 +71,8 @@ if (R) {
     NEGOCIO.instagram = (q.get("ig") || n).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9._]/g, "");
     document.title = n + " · Turnos online (vista previa)";
   }
+  const z = (q.get("z") || "").trim().slice(0, 30);
+  if (z && R) R.tag = R.tag.split("·")[0].trim() + " · " + z;
 })();
 </script>
 <style>
@@ -240,7 +242,8 @@ const DIAS = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
 const DIAS_L = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
 
 { const sn = t => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  if (sn(NEGOCIO.nombre).includes(sn(NEGOCIO.rubro))) NEGOCIO.rubro = ""; }
+  const n = sn(NEGOCIO.nombre);
+  if (n.includes(sn(NEGOCIO.rubro)) || /estetica|nails|unas|spa|beauty|belleza|skin|salon|studio|style/.test(n)) NEGOCIO.rubro = ""; }
 $("#brand").innerHTML = esc(NEGOCIO.nombre) + (NEGOCIO.rubro ? " <span>" + esc(NEGOCIO.rubro) + "</span>" : "");
 document.title = (NEGOCIO.nombre + " " + NEGOCIO.rubro).trim() + (ES_MUESTRA ? " · Página de ejemplo" : "");
 $("#dir").textContent = NEGOCIO.direccion;
