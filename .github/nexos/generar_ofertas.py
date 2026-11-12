@@ -385,18 +385,83 @@ document.addEventListener('click',async e=>{{
 """
 
 
+RANGOS = [(0, 25000, "Hasta $25.000"), (25000, 50000, "De $25.000 a $50.000"),
+          (50000, 100000, "De $50.000 a $100.000"), (100000, 300000, "De $100.000 a $300.000"),
+          (300000, 10 ** 12, "Más de $300.000")]
+
+
+def pagina_regalos(products):
+    url = SITE + "regalos/"
+    vs = vivos(products)
+    secciones, total = [], 0
+    for lo, hi, titulo in RANGOS:
+        grupo = [p for p in vs if lo <= p["price"] < hi]
+        grupo.sort(key=lambda p: (-pct(p), -(1 if (p.get("added") or "") >= "2026-11-12" else 0), p["price"]))
+        grupo = grupo[:16]
+        if not grupo:
+            continue
+        total += len(grupo)
+        cards = "".join(
+            f'<a class="card" href="../{E(gp.page_name(p))}"><img src="{E(p.get("image"))}" alt="{E(p.get("name"))}" '
+            f'loading="lazy" referrerpolicy="no-referrer">' + (f'<i class="b">-{pct(p)}%</i>' if pct(p) else "")
+            + f'<b>{E(money(p.get("price")))}</b><span>{E(p.get("name"))}</span></a>' for p in grupo)
+        ancla = gp.slug(titulo)
+        secciones.append((ancla, titulo, f'<h2 id="{ancla}">{E(titulo)}</h2><div class="grid">{cards}</div>'))
+    nav = " ".join(f'<a href="#{a}">{E(t)}</a>' for a, t, _ in secciones)
+    titulo = "Regalos de Navidad 2026 por presupuesto: ideas para todos los bolsillos"
+    desc = ("Ideas de regalos para Navidad ordenadas por precio: juguetes, tecnología, belleza y hogar. "
+            "Precios revisados todos los días, compra protegida en Mercado Libre.")
+    wa = "https://api.whatsapp.com/send?text=" + quote(f"Ideas de regalos para Navidad por presupuesto 🎁 {url}")
+    return f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{E(titulo)} | {gp.MARCA}</title>
+<meta name="description" content="{E(desc)}">
+<link rel="canonical" href="{url}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{gp.MARCA}">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Regalos de Navidad por presupuesto 🎁">
+<meta property="og:description" content="{E(desc)}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{SITE}ofertas/og.jpg?v={time.strftime('%Y%m%d')}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>{CSS_OF}
+.rng{{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}}.rng a{{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;text-decoration:none;color:var(--ink);font-weight:600;font-size:.9rem}}
+</style>
+</head>
+<body>
+{cabecera()}
+<main>
+<p class="crumb"><a href="../">Inicio</a> &rsaquo; Regalos de Navidad</p>
+<h1>Regalos de Navidad por presupuesto</h1>
+<p class="intro">Elegí cuánto querés gastar y mirá las mejores ideas. {total} productos con precio revisado el {time.strftime('%d/%m')}; pagás y recibís en Mercado Libre.</p>
+<nav class="rng">{nav}</nav>
+{''.join(h for _, _, h in secciones)}
+<a class="wa" href="{wa}" target="_blank" rel="noopener">Compartir la lista por WhatsApp</a>
+<a class="all" href="../ofertas/">Ver lo que bajó de precio hoy &rarr;</a>
+<p class="note">Este sitio participa del programa de afiliados de Mercado Libre.</p>
+</main>
+</body>
+</html>
+"""
+
+
 def agregar_al_sitemap(raiz):
     path = os.path.join(raiz, "sitemap.xml")
     try:
         s = open(path, encoding="utf-8").read()
     except OSError:
         return
-    u = SITE + "ofertas/"
-    if u in s:
-        return
-    item = (f"<url><loc>{u}</loc><lastmod>{time.strftime('%Y-%m-%d')}</lastmod>"
-            "<changefreq>daily</changefreq><priority>0.9</priority></url>\n")
-    s = s.replace("</urlset>", item + "</urlset>")
+    for u in (SITE + "ofertas/", SITE + "regalos/"):
+        if u in s:
+            continue
+        item = (f"<url><loc>{u}</loc><lastmod>{time.strftime('%Y-%m-%d')}</lastmod>"
+                "<changefreq>daily</changefreq><priority>0.9</priority></url>\n")
+        s = s.replace("</urlset>", item + "</urlset>")
     open(path, "w", encoding="utf-8").write(s)
 
 
@@ -428,6 +493,9 @@ def generar(raiz, products, con_imagenes=True):
     with open(os.path.join(kdir, "textos.txt"), "w", encoding="utf-8") as f:
         f.write(f"Ofertas de hoy en Nexos Market 🛍️ (precios del {time.strftime('%d/%m')}, pueden cambiar)\n\n")
         f.write("\n\n".join(texto(p) for p in kit) + f"\n\nMás ofertas 👉 {SITE}ofertas/\n")
+    os.makedirs(os.path.join(raiz, "regalos"), exist_ok=True)
+    with open(os.path.join(raiz, "regalos", "index.html"), "w", encoding="utf-8") as f:
+        f.write(pagina_regalos(products))
     agregar_al_sitemap(raiz)
     return {"ofertas": len(lista), "kit": len(kit), "fotos_ok": sum(1 for v in fotos.values() if v)}
 
