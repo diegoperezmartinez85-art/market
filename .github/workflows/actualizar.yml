@@ -9,6 +9,7 @@ on:
     paths:
       - ".github/workflows/actualizar.yml"
       - ".github/nexos/**"
+      - "productos.json"         # cuando subís productos nuevos: páginas y precios en minutos
 
 permissions:
   contents: write
