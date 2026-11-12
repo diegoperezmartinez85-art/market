@@ -110,6 +110,12 @@ def placeholder(w, h):
     return im
 
 
+def encajar(img, w, h):
+    """Escala la foto (agrandando si hace falta) para que ocupe el recuadro sin deformarse."""
+    k = min(w / img.width, h / img.height)
+    return img.resize((max(1, int(img.width * k)), max(1, int(img.height * k))), Image.LANCZOS)
+
+
 def wrap(draw, texto, fnt, ancho, max_lineas):
     palabras, lineas, cur = (texto or "").split(), [], ""
     for w in palabras:
@@ -172,8 +178,7 @@ def tarjeta(p, foto, historia=False):
     d.rounded_rectangle((px0, py0, px1, py1), radius=40, fill=WHITE)
     pad = 50
     fw, fh = px1 - px0 - 2 * pad, py1 - py0 - 2 * pad
-    ph = (foto or placeholder(fw, fh)).copy()
-    ph.thumbnail((fw, fh))
+    ph = encajar(foto or placeholder(fw, fh), fw, fh)
     im.paste(ph, (px0 + pad + (fw - ph.width) // 2, py0 + pad + (fh - ph.height) // 2))
     if pc:
         fb = font("Black", 64)
@@ -221,8 +226,7 @@ def og_ofertas(lista, fotos):
     x = 60
     for p in lista[:3]:
         d.rounded_rectangle((x, 320, x + 340, 590), radius=28, fill=WHITE)
-        ph = (fotos.get(p.get("code")) or placeholder(300, 230)).copy()
-        ph.thumbnail((300, 230))
+        ph = encajar(fotos.get(p.get("code")) or placeholder(300, 230), 300, 230)
         im.paste(ph, (x + 20 + (300 - ph.width) // 2, 340 + (230 - ph.height) // 2))
         if pct(p):
             t = f"-{pct(p)}%"
