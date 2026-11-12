@@ -14,7 +14,7 @@
   "link": "https://meli.la/1T496Fz",
   "source": "https://meli.la/1T496Fz",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0004-buclera-de-pelo-gadnic-b3000-rizador-3-tubos-25-mm-150w-180.html"
  },
@@ -33,7 +33,7 @@
   "link": "https://meli.la/1MW5fe8",
   "source": "https://meli.la/1MW5fe8",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0005-auriculares-inalambricos-xiaomi-redmi-headphones-neo-negro.html"
  },
@@ -43,7 +43,7 @@
   "ml_id": "MLA1804090647",
   "name": "Bicicleta Mtb Overtech Q5 Lady R29, 21v Con Shimano, Freno A Disco, Con Suspensión, Color Rosa Mate/blanco Tamaño Del Cuadro XS",
   "category": "Deportes y Fitness",
-  "price": 299999.0,
+  "price": 279999.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_741449-MLA118778490935_102026-O.webp",
   "images": [
@@ -52,9 +52,11 @@
   "link": "https://meli.la/1h867pi",
   "source": "https://meli.la/1h867pi",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
-  "page": "p/nx-0006-bicicleta-mtb-overtech-q5-lady-r29-21v-con-shimano-freno-a-d.html"
+  "page": "p/nx-0006-bicicleta-mtb-overtech-q5-lady-r29-21v-con-shimano-freno-a-d.html",
+  "prev_price": 299999.0,
+  "price_drop": "2026-11-12"
  },
  {
   "id": 4,
@@ -71,7 +73,7 @@
   "link": "https://meli.la/1bAH8Qq",
   "source": "https://meli.la/1bAH8Qq",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0007-perfume-her-golden-secret-banderas-edt-mujer-80-ml.html",
   "prev_price": 36800.0,
@@ -92,7 +94,7 @@
   "link": "https://meli.la/2R7rZ5R",
   "source": "https://meli.la/2R7rZ5R",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0008-zapatillas-mujer-nike-court-vision-low-blanco-dh3158-100.html"
  },
@@ -111,7 +113,7 @@
   "link": "https://meli.la/2BCr8yR",
   "source": "https://meli.la/2BCr8yR",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0009-chaleco-sastrero-mujer-aitana-c5014.html"
  },
@@ -130,7 +132,7 @@
   "link": "https://meli.la/1DcbZC4",
   "source": "https://meli.la/1DcbZC4",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0010-calvin-klein-euphoria-eau-de-parfum-for-women-100ml.html",
   "prev_price": 123750.0,
@@ -151,7 +153,7 @@
   "link": "https://meli.la/1Fqm9eA",
   "source": "https://meli.la/1Fqm9eA",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0014-smartphone-moto-g17-evening-blue-memoria-interna-128gb-4gm-r.html",
   "prev_price": 319999.0,
@@ -172,7 +174,7 @@
   "link": "https://meli.la/2ETZ6gF",
   "source": "https://meli.la/2ETZ6gF",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0016-cafetera-automatica-cuk-by-gadnic-torino-i-expreso-espumador.html"
  },
@@ -191,7 +193,7 @@
   "link": "https://meli.la/12QbyDP",
   "source": "https://meli.la/12QbyDP",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0017-apple-iphone-17-pro-max-256-gb-naranja-cosmico.html",
   "prev_price": 2505000.0,
@@ -212,7 +214,7 @@
   "link": "https://meli.la/13mz3Td",
   "source": "https://meli.la/13mz3Td",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0018-perfume-her-secret-pink-absolu-eau-de-parfum-antonio-bandera.html",
   "prev_price": 49570.0,
@@ -224,7 +226,7 @@
   "ml_id": "MLA1442499031",
   "name": "Depiladora Ipl Philips Lumea Prestige Bri947 - Alternativa Laser - Rostro + cuerpo + bikini + axilas",
   "category": "Belleza y Cuidado Personal",
-  "price": 717799.0,
+  "price": 715990.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_857744-MLA119028575251_102026-O.webp",
   "images": [
@@ -233,9 +235,11 @@
   "link": "https://meli.la/2UTGChk",
   "source": "https://meli.la/2UTGChk",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
-  "page": "p/nx-0019-depiladora-ipl-philips-lumea-prestige-bri947-alternativa-las.html"
+  "page": "p/nx-0019-depiladora-ipl-philips-lumea-prestige-bri947-alternativa-las.html",
+  "prev_price": 717799.0,
+  "price_drop": "2026-11-12"
  },
  {
   "id": 17,
@@ -243,7 +247,7 @@
   "ml_id": "MLA2227378702",
   "name": "Sérum Rostro Revitalift Ácido Hialurónico L'Oréal Paris 30ml",
   "category": "Belleza y Cuidado Personal",
-  "price": 28095.0,
+  "price": 38359.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_600230-MLU72273908364_102023-O.webp",
   "images": [
@@ -252,7 +256,7 @@
   "link": "https://meli.la/33pKZFQ",
   "source": "https://meli.la/33pKZFQ",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0020-serum-rostro-revitalift-acido-hialuronico-l-oreal-paris-30ml.html"
  },
@@ -271,7 +275,7 @@
   "link": "https://meli.la/1JobBDi",
   "source": "https://meli.la/1JobBDi",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0022-mochila-nike-elemental-dd0562-492-azul-liso.html"
  },
@@ -290,7 +294,7 @@
   "link": "https://meli.la/2cEZKWg",
   "source": "https://meli.la/2cEZKWg",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0023-zapatillas-nike-charge-canvas-para-mujer-negro-im4398-001-ne.html"
  },
@@ -309,7 +313,7 @@
   "link": "https://meli.la/2e6U8Kx",
   "source": "https://meli.la/2e6U8Kx",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0024-tablet-samsung-galaxy-tab-a11-8-7-4gb-ram-64gb-gris-android.html"
  },
@@ -328,7 +332,7 @@
   "link": "https://meli.la/2K582AP",
   "source": "https://meli.la/2K582AP",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0025-perfume-idole-edp-100-ml-lancome.html"
  },
@@ -347,7 +351,7 @@
   "link": "https://meli.la/1PBfUTo",
   "source": "https://meli.la/1PBfUTo",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "prev_price": 44999.0,
   "price_drop": "2026-11-06",
@@ -368,7 +372,7 @@
   "link": "https://meli.la/2K4kv3V",
   "source": "https://meli.la/2K4kv3V",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "prev_price": 37993.0,
   "price_drop": "2026-10-14",
@@ -389,7 +393,7 @@
   "link": "https://meli.la/1hDrmiM",
   "source": "https://meli.la/1hDrmiM",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0029-secador-de-pelo-remington-silk-ac9096-2400w-6-temperaturas-v.html"
  },
@@ -408,7 +412,7 @@
   "link": "https://meli.la/145cEah",
   "source": "https://meli.la/145cEah",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0030-celular-motorola-moto-g15-256gb-8gb-ram-funda-de-regalo-gris.html"
  },
@@ -427,7 +431,7 @@
   "link": "https://meli.la/1XMhXsQ",
   "source": "https://meli.la/1XMhXsQ",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0031-celular-samsung-galaxy-a16-128-4gb-gray-gris-claro.html"
  },
@@ -446,7 +450,7 @@
   "link": "https://meli.la/2nqM9Zm",
   "source": "https://meli.la/2nqM9Zm",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:10",
   "added": "2026-10-13",
   "page": "p/nx-0032-motorola-moto-g17-bordeaux.html"
  },
@@ -465,7 +469,7 @@
   "link": "https://meli.la/28ZAfsJ",
   "source": "https://meli.la/28ZAfsJ",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-13",
   "page": "p/nx-0033-celular-samsung-galaxy-a16-128gb-4gb-ram.html",
   "prev_price": 348230.0,
@@ -477,7 +481,7 @@
   "ml_id": "MLA1709897981",
   "name": "Apple iPad 11 con chip A16, WiFi de 256 GB",
   "category": "Computación",
-  "price": 1309000.0,
+  "price": 1383673.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_796392-MLA96112483871_102025-O.webp",
   "images": [
@@ -486,11 +490,9 @@
   "link": "https://meli.la/1ogpBDj",
   "source": "https://meli.la/1ogpBDj",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-13",
-  "page": "p/nx-0034-apple-ipad-11-con-chip-a16-wifi-de-256-gb.html",
-  "prev_price": 1432113.0,
-  "price_drop": "2026-11-12"
+  "page": "p/nx-0034-apple-ipad-11-con-chip-a16-wifi-de-256-gb.html"
  },
  {
   "id": 32,
@@ -498,7 +500,7 @@
   "ml_id": "MLA3079024330",
   "name": "Smartphone ZTE Blade A56 Pro (4+8)gb+128gb Color Gris + Cargador + Auriculares + Funda Regalo",
   "category": "Celulares y Teléfonos",
-  "price": 199999.0,
+  "price": 249999.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_782141-MLA111548455055_052026-O.webp",
   "images": [
@@ -507,7 +509,7 @@
   "link": "https://meli.la/1BYwM7J",
   "source": "https://meli.la/1BYwM7J",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-13",
   "page": "p/nx-0035-smartphone-zte-blade-a56-pro-4-8-gb-128gb-color-gris-cargado.html"
  },
@@ -526,7 +528,7 @@
   "link": "https://meli.la/24B4wDn",
   "source": "https://meli.la/24B4wDn",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-13",
   "page": "p/nx-0036-moto-g47-impenetrable.html"
  },
@@ -545,7 +547,7 @@
   "link": "https://meli.la/1DxqDwA",
   "source": "https://meli.la/1DxqDwA",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-13",
   "prev_price": 32999.0,
   "price_drop": "2026-11-12",
@@ -566,7 +568,7 @@
   "link": "https://meli.la/1L4EJJ9",
   "source": "https://meli.la/1L4EJJ9",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-13",
   "prev_price": 53499.0,
   "price_drop": "2026-11-06",
@@ -587,7 +589,7 @@
   "link": "https://meli.la/1FR3JhW",
   "source": "https://meli.la/1FR3JhW",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-13",
   "prev_price": 176499.0,
   "price_drop": "2026-11-06",
@@ -608,7 +610,7 @@
   "link": "https://meli.la/22BPgsu",
   "source": "https://meli.la/22BPgsu",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0041-buclera-rizador-3-barriles-ceramica-vgr-v-599-triple-ondas-2.html"
  },
@@ -627,7 +629,7 @@
   "link": "https://meli.la/1tkeeJq",
   "source": "https://meli.la/1tkeeJq",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "prev_price": 2399999.0,
   "price_drop": "2026-11-12",
@@ -648,7 +650,7 @@
   "link": "https://meli.la/2vsGRU6",
   "source": "https://meli.la/2vsGRU6",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0044-la-roche-posay-hyalu-b5-serum-30-ml.html"
  },
@@ -667,7 +669,7 @@
   "link": "https://meli.la/337qkfP",
   "source": "https://meli.la/337qkfP",
   "status": "no_disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "prev_price": 37611.0,
   "price_drop": "2026-11-06",
@@ -688,7 +690,7 @@
   "link": "https://meli.la/2G1UWtx",
   "source": "https://meli.la/2G1UWtx",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0046-cadena-y-dije-mama-corazon-zirconia-bano-oro-18-mujer-regalo.html"
  },
@@ -707,7 +709,7 @@
   "link": "https://meli.la/2BXFP7X",
   "source": "https://meli.la/2BXFP7X",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "prev_price": 191507.0,
   "price_drop": "2026-11-06",
@@ -728,7 +730,7 @@
   "link": "https://meli.la/1jQnteM",
   "source": "https://meli.la/1jQnteM",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0049-perfume-carolina-herrera-ch-eau-de-toilette-feminino-tradici.html"
  },
@@ -747,7 +749,7 @@
   "link": "https://meli.la/1KNhFvZ",
   "source": "https://meli.la/1KNhFvZ",
   "status": "no_disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0050-canasto-parrillero-humo-criollo-verduras-papas-mariscos-2x1.html"
  },
@@ -766,7 +768,7 @@
   "link": "https://meli.la/1misTK3",
   "source": "https://meli.la/1misTK3",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0051-jogger-cargo-pantalon-mujer-gabardina-importado-cierre-lat.html"
  },
@@ -785,7 +787,7 @@
   "link": "https://meli.la/2koynm3",
   "source": "https://meli.la/2koynm3",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0052-perfume-carolina-herrera-la-bomba-edp-30-ml-de-mujer.html"
  },
@@ -795,7 +797,7 @@
   "ml_id": "MLA3132193496",
   "name": "Juego de cubiertos Tramontina Set Cubiertos x24 New Kolor rojo - 24",
   "category": "Hogar, Muebles y Jardín",
-  "price": 22457.0,
+  "price": 22800.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_757382-MLA82085207603_012025-O.webp",
   "images": [
@@ -804,7 +806,7 @@
   "link": "https://meli.la/2CTNgVq",
   "source": "https://meli.la/2CTNgVq",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0053-juego-de-cubiertos-tramontina-set-cubiertos-x24-new-kolor-ro.html"
  },
@@ -823,7 +825,7 @@
   "link": "https://meli.la/1rHEKL9",
   "source": "https://meli.la/1rHEKL9",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "prev_price": 29700.0,
   "price_drop": "2026-11-12",
@@ -844,7 +846,7 @@
   "link": "https://meli.la/123Pihz",
   "source": "https://meli.la/123Pihz",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "prev_price": 30900.0,
   "price_drop": "2026-11-06",
@@ -856,7 +858,7 @@
   "ml_id": "MLA1574843710",
   "name": "Zapatillas Para Niño/a Nike Revolution 6 Dd1096-003",
   "category": "Ropa y Accesorios",
-  "price": 82499.0,
+  "price": 87999.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_808880-MLA74667192794_022024-O.webp",
   "images": [
@@ -864,11 +866,9 @@
   ],
   "link": "https://meli.la/2Uydqjg",
   "source": "https://meli.la/2Uydqjg",
-  "status": "no_disponible",
-  "checked": "2026-11-12 13:26",
+  "status": "disponible",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
-  "prev_price": 88376.0,
-  "price_drop": "2026-10-22",
   "page": "p/nx-0056-zapatillas-para-nino-a-nike-revolution-6-dd1096-003.html"
  },
  {
@@ -877,7 +877,7 @@
   "ml_id": "MLA1412758434",
   "name": "Zapatillas Salomon Hombre - X- Adventure M - Trail Running",
   "category": "Ropa y Accesorios",
-  "price": 179999.0,
+  "price": 134999.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_807654-MLA74523500738_022024-O.webp",
   "images": [
@@ -886,9 +886,11 @@
   "link": "https://meli.la/1R4gsZH",
   "source": "https://meli.la/1R4gsZH",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
-  "page": "p/nx-0057-zapatillas-salomon-hombre-x-adventure-m-trail-running.html"
+  "page": "p/nx-0057-zapatillas-salomon-hombre-x-adventure-m-trail-running.html",
+  "prev_price": 179999.0,
+  "price_drop": "2026-11-12"
  },
  {
   "id": 55,
@@ -905,7 +907,7 @@
   "link": "https://meli.la/2Eevv3C",
   "source": "https://meli.la/2Eevv3C",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "prev_price": 195706.0,
   "price_drop": "2026-11-12",
@@ -926,7 +928,7 @@
   "link": "https://meli.la/2Dw2Mth",
   "source": "https://meli.la/2Dw2Mth",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "prev_price": 44991.0,
   "price_drop": "2026-11-06",
@@ -947,7 +949,7 @@
   "link": "https://meli.la/2pSot8M",
   "source": "https://meli.la/2pSot8M",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0060-zapatillas-nike-sb-alleyoop-para-mujer-morado-cq0369-601.html"
  },
@@ -966,7 +968,7 @@
   "link": "https://meli.la/1ANyE9c",
   "source": "https://meli.la/1ANyE9c",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0061-tablet-64gb-4gb-ram-10-funda-android-14-bluetooth-full-hd-gr.html"
  },
@@ -985,7 +987,7 @@
   "link": "https://meli.la/17vk2AA",
   "source": "https://meli.la/17vk2AA",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0062-ggh-keyboard-case-for-ipad-pro-11-inch-4th-3rd-2nd-1st-oro-r.html"
  },
@@ -1004,7 +1006,7 @@
   "link": "https://meli.la/1P2unvU",
   "source": "https://meli.la/1P2unvU",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0063-bicicleta-electrica-m7-40km-h-negro-no-especifica.html"
  },
@@ -1023,7 +1025,7 @@
   "link": "https://meli.la/1h7vSt5",
   "source": "https://meli.la/1h7vSt5",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0064-bicicleta-playera-olmo-amelie-rapide-paseo-shimano-rodado-26.html"
  },
@@ -1033,7 +1035,7 @@
   "ml_id": "MLA2062125414",
   "name": "Bicicleta Eléctrica M3 R20 Negro",
   "category": "Deportes y Fitness",
-  "price": 2999000.0,
+  "price": 2039320.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_644663-MLA111763874677_052026-O.webp",
   "images": [
@@ -1042,9 +1044,11 @@
   "link": "https://meli.la/2cQQVwt",
   "source": "https://meli.la/2cQQVwt",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
-  "page": "p/nx-0065-bicicleta-electrica-m3-r20-negro.html"
+  "page": "p/nx-0065-bicicleta-electrica-m3-r20-negro.html",
+  "prev_price": 2999000.0,
+  "price_drop": "2026-11-12"
  },
  {
   "id": 63,
@@ -1061,7 +1065,7 @@
   "link": "https://meli.la/2MDF27U",
   "source": "https://meli.la/2MDF27U",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0066-bicicleta-plegable-fire-bird-curve-rodado-20.html"
  },
@@ -1080,7 +1084,7 @@
   "link": "https://meli.la/25MWjWV",
   "source": "https://meli.la/25MWjWV",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0067-bicicleta-bmx-fire-bird-freestyle-rodado-20-acero-v-brakes-c.html",
   "prev_price": 287999.0,
@@ -1101,7 +1105,7 @@
   "link": "https://meli.la/2hqArtt",
   "source": "https://meli.la/2hqArtt",
   "status": "no_disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0068-bicicleta-fire-bird-curve-plegable-6-velocidades-color-negro.html"
  },
@@ -1120,7 +1124,7 @@
   "link": "https://meli.la/1GxZgof",
   "source": "https://meli.la/1GxZgof",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0069-monopatin-electrico-logus-l6-350w-8-5-auton-12km.html"
  },
@@ -1139,7 +1143,7 @@
   "link": "https://meli.la/324hrDp",
   "source": "https://meli.la/324hrDp",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0070-monopatin-electrico-logus-l7-pro-max-350w-10-plegable-con-ba.html"
  },
@@ -1158,7 +1162,7 @@
   "link": "https://meli.la/27aGyTn",
   "source": "https://meli.la/27aGyTn",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0071-monopatin-electrico-honeywhale-m2-max-b-500w-para-adultos-ve.html"
  },
@@ -1177,7 +1181,7 @@
   "link": "https://meli.la/2etnmAA",
   "source": "https://meli.la/2etnmAA",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0072-neumatico-aplus-175-70r13-82t-a609-cubierta-auto-rodado-13-1.html"
  },
@@ -1196,7 +1200,7 @@
   "link": "https://meli.la/1Ghp2q5",
   "source": "https://meli.la/1Ghp2q5",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0073-neumatico-dunlop-sp-touring-r1-175-70r13-82t-tecnologia-japo.html"
  },
@@ -1215,7 +1219,7 @@
   "link": "https://meli.la/1ihxNRb",
   "source": "https://meli.la/1ihxNRb",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0074-kit-x2-neumaticos-175-70-r13-mirage-mr-166-82t-t.html"
  },
@@ -1234,7 +1238,7 @@
   "link": "https://meli.la/1uJ3CQJ",
   "source": "https://meli.la/1uJ3CQJ",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0076-reloj-inteligente-bleck-viva-slim-elegante-mujer-dorado-gold.html"
  },
@@ -1253,7 +1257,7 @@
   "link": "https://meli.la/1pTQD1N",
   "source": "https://meli.la/1pTQD1N",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0077-zapatillas-hush-puppies-mujer-irem-ultra-livianas-elastizada.html"
  },
@@ -1272,7 +1276,7 @@
   "link": "https://meli.la/2Ctz9tb",
   "source": "https://meli.la/2Ctz9tb",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0078-smartwatch-jd-hawai-rosa-gold-pantalla-amoled-1-43-llamadas.html"
  },
@@ -1291,7 +1295,7 @@
   "link": "https://meli.la/1KvaJ96",
   "source": "https://meli.la/1KvaJ96",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "prev_price": 54455.0,
   "price_drop": "2026-11-12",
@@ -1312,7 +1316,7 @@
   "link": "https://meli.la/1bBtFWK",
   "source": "https://meli.la/1bBtFWK",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0081-kit-serum-facial-h7-crema-gradual-neceser-the-perfect-glow.html"
  },
@@ -1331,7 +1335,7 @@
   "link": "https://meli.la/26vvRjX",
   "source": "https://meli.la/26vvRjX",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0082-licuadora-de-mano-daewoo-lm3125-1000w-batidor-picador-mixer.html"
  },
@@ -1350,7 +1354,7 @@
   "link": "https://meli.la/13yYzMM",
   "source": "https://meli.la/13yYzMM",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-14",
   "page": "p/nx-0083-barra-colageno-volufiline-anti-ojeras-y-arrugas-multi-balm-n.html",
   "prev_price": 49990.0,
@@ -1371,7 +1375,7 @@
   "link": "https://meli.la/1zkKrYX",
   "source": "https://meli.la/1zkKrYX",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0086-apple-iphone-17-pro-256-gb-color-plata-distribuidor-autoriza.html"
  },
@@ -1390,7 +1394,7 @@
   "link": "https://meli.la/1WcZeHL",
   "source": "https://meli.la/1WcZeHL",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "prev_price": 103503.0,
   "price_drop": "2026-11-12",
@@ -1411,7 +1415,7 @@
   "link": "https://meli.la/2oHmifh",
   "source": "https://meli.la/2oHmifh",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0088-gel-limpiador-crema-anti-imperfecciones-con-acido-salicilico.html"
  },
@@ -1430,7 +1434,7 @@
   "link": "https://meli.la/23nZc1f",
   "source": "https://meli.la/23nZc1f",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0089-sensor-alarma-detector-co-monoxido-de-carbono-geneve.html"
  },
@@ -1449,7 +1453,7 @@
   "link": "https://meli.la/251cdoN",
   "source": "https://meli.la/251cdoN",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0090-bisglicinato-de-magnesio-quelado-1000-mg-60-comprimidos-dr-s.html"
  },
@@ -1468,7 +1472,7 @@
   "link": "https://meli.la/324qgnm",
   "source": "https://meli.la/324qgnm",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0091-hidrolavadora-electrica-alta-presion-trent-hlt203-1600-psi-1.html",
   "prev_price": 108999.0,
@@ -1489,7 +1493,7 @@
   "link": "https://meli.la/2ndP7Uf",
   "source": "https://meli.la/2ndP7Uf",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0092-oleo-extraordinario-reparacion-de-puntas-l-oreal-elvive-100m.html"
  },
@@ -1508,7 +1512,7 @@
   "link": "https://meli.la/2kkeyxp",
   "source": "https://meli.la/2kkeyxp",
   "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0093-planchita-de-pelo-ga-ma-italy-elegance-bella-tourmaline-ion.html",
   "prev_price": 63900.0,
@@ -1528,8 +1532,8 @@
   ],
   "link": "https://meli.la/2aGNfQK",
   "source": "https://meli.la/2aGNfQK",
-  "status": "disponible",
-  "checked": "2026-11-12 13:26",
+  "status": "no_disponible",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0094-randers-arg-409-cinta-motorizada-12km-h-color-negro.html",
   "prev_price": 661125.0,
@@ -1550,7 +1554,7 @@
   "link": "https://meli.la/1NM3KyZ",
   "source": "https://meli.la/1NM3KyZ",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0095-contadora-de-billetes-gadnic-mc-01-1000-billetes-x-minuto-ho.html"
  },
@@ -1569,7 +1573,7 @@
   "link": "https://meli.la/2WeMo4a",
   "source": "https://meli.la/2WeMo4a",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0096-colchon-calm-elemental-1-plaza-80x190-espuma-en-caja.html"
  },
@@ -1588,7 +1592,7 @@
   "link": "https://meli.la/2xC6JYL",
   "source": "https://meli.la/2xC6JYL",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0097-secador-de-pelo-ultracomb-tourmaline-ion-pro-sc-4606-negro-3.html"
  },
@@ -1607,7 +1611,7 @@
   "link": "https://meli.la/2ETocbF",
   "source": "https://meli.la/2ETocbF",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0098-mascara-de-pestanas-maybelline-colossal-bubble-wtp-very-blac.html"
  },
@@ -1617,7 +1621,7 @@
   "ml_id": "MLA1514109439",
   "name": "Plancha Estampadora Sublimadora Mini Portátil Economica Rojo",
   "category": "Industrias y Oficinas",
-  "price": 71928.0,
+  "price": 72927.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_882354-MLA116382271270_092026-O.webp",
   "images": [
@@ -1626,7 +1630,7 @@
   "link": "https://meli.la/2PdQMpm",
   "source": "https://meli.la/2PdQMpm",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0099-plancha-estampadora-sublimadora-mini-portatil-economica-rojo.html"
  },
@@ -1645,7 +1649,7 @@
   "link": "https://meli.la/26WVycT",
   "source": "https://meli.la/26WVycT",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0100-camara-seguridad-ip-1080p-wifi-v-nocturna-motorizada-geotek.html"
  },
@@ -1664,7 +1668,7 @@
   "link": "https://meli.la/2aa7oBX",
   "source": "https://meli.la/2aa7oBX",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0101-compresor-de-aire-portatil-jd-air-master-150-psi-para-neumat.html"
  },
@@ -1683,7 +1687,7 @@
   "link": "https://meli.la/1FtCwPS",
   "source": "https://meli.la/1FtCwPS",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0102-vanitory-colgante-50cm-nordico-bacha-griferia-espejo-marron.html"
  },
@@ -1702,7 +1706,7 @@
   "link": "https://meli.la/1id63YE",
   "source": "https://meli.la/1id63YE",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "prev_price": 79799.0,
   "price_drop": "2026-11-06",
@@ -1723,7 +1727,7 @@
   "link": "https://meli.la/2VDHMzp",
   "source": "https://meli.la/2VDHMzp",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0104-kit-mancuernas-y-barra-con-tope-a-rosca-25-kg-discos-pvc.html"
  },
@@ -1742,7 +1746,7 @@
   "link": "https://meli.la/2zpLp8A",
   "source": "https://meli.la/2zpLp8A",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-15",
   "page": "p/nx-0105-inflador-de-neumaticos-inalambrico-mini-recargable-gadnic-co.html"
  },
@@ -1761,7 +1765,7 @@
   "link": "https://meli.la/2VZuZvy",
   "source": "https://meli.la/2VZuZvy",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0107-colchon-norden-signia-pillow-top-2-plazas-hibrido-resortes-e.html"
  },
@@ -1780,7 +1784,7 @@
   "link": "https://meli.la/2DWbY4Q",
   "source": "https://meli.la/2DWbY4Q",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0108-depiladora-laser-definitiva-gadnic-t3-ipl-999999-pulsos-5-ni.html"
  },
@@ -1790,7 +1794,7 @@
   "ml_id": "MLA1957430501",
   "name": "Aire Acondicionado Split BGH Inverter Frío/Calor 3000F",
   "category": "Electrodomésticos y Aires Ac.",
-  "price": 919999.0,
+  "price": 839799.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_827926-MLA116660875524_092026-O.webp",
   "images": [
@@ -1799,9 +1803,11 @@
   "link": "https://meli.la/2HTBnJe",
   "source": "https://meli.la/2HTBnJe",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
-  "page": "p/nx-0111-aire-acondicionado-split-bgh-inverter-frio-calor-3000f.html"
+  "page": "p/nx-0111-aire-acondicionado-split-bgh-inverter-frio-calor-3000f.html",
+  "prev_price": 919999.0,
+  "price_drop": "2026-11-12"
  },
  {
   "id": 106,
@@ -1818,7 +1824,7 @@
   "link": "https://meli.la/1o5bo5x",
   "source": "https://meli.la/1o5bo5x",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0112-smart-tv-noblex-32-hd-vidaa-dolby-digital.html",
   "prev_price": 499999.0,
@@ -1839,7 +1845,7 @@
   "link": "https://meli.la/18yjQfd",
   "source": "https://meli.la/18yjQfd",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "prev_price": 75999.0,
   "price_drop": "2026-11-12",
@@ -1860,7 +1866,7 @@
   "link": "https://meli.la/2bfK4d1",
   "source": "https://meli.la/2bfK4d1",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0114-bomba-presurizadora-vasser-pre1-120w-para-1-2-banos.html",
   "prev_price": 64949.0,
@@ -1872,7 +1878,7 @@
   "ml_id": "MLA3448465094",
   "name": "Smart Tv Samsung 55 Qled Q6f 4k Smart Tv",
   "category": "Electrónica, Audio y Video",
-  "price": 837335.0,
+  "price": 835999.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_840312-MLA108249322714_032026-O.webp",
   "images": [
@@ -1881,9 +1887,11 @@
   "link": "https://meli.la/2fXazPD",
   "source": "https://meli.la/2fXazPD",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
-  "page": "p/nx-0115-smart-tv-samsung-55-qled-q6f-4k-smart-tv.html"
+  "page": "p/nx-0115-smart-tv-samsung-55-qled-q6f-4k-smart-tv.html",
+  "prev_price": 837335.0,
+  "price_drop": "2026-11-12"
  },
  {
   "id": 110,
@@ -1900,7 +1908,7 @@
   "link": "https://meli.la/1G3QeVJ",
   "source": "https://meli.la/1G3QeVJ",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0116-mesa-exterior-plegable-180-cm-polipropileno-hierro-alpina-co.html"
  },
@@ -1919,7 +1927,7 @@
   "link": "https://meli.la/2uyuuKF",
   "source": "https://meli.la/2uyuuKF",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0117-silla-oficina-apoyacabeza-ejecutiva-ergonomica-respaldo-alto.html",
   "prev_price": 149999.0,
@@ -1940,7 +1948,7 @@
   "link": "https://meli.la/1XtcSd6",
   "source": "https://meli.la/1XtcSd6",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0118-espejo-digital-luz-led-tactil-desempanador-bano-80x60cm-alum.html"
  },
@@ -1959,7 +1967,7 @@
   "link": "https://meli.la/1whDTq1",
   "source": "https://meli.la/1whDTq1",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0119-freidora-de-aire-novohome-4-5-litros-airfryer-display-pantal.html"
  },
@@ -1978,7 +1986,7 @@
   "link": "https://meli.la/1nXP4V2",
   "source": "https://meli.la/1nXP4V2",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0120-desmalezadora-motoguadana-a-explosion-naftera-52cc-2-2hp-pid.html"
  },
@@ -1997,7 +2005,7 @@
   "link": "https://meli.la/2heQkJh",
   "source": "https://meli.la/2heQkJh",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0121-kit-2-camaras-seguridad-geotek-3mp-ip-wifi-exterior-full-hd.html"
  },
@@ -2016,7 +2024,7 @@
   "link": "https://meli.la/2PxsUc2",
   "source": "https://meli.la/2PxsUc2",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0122-smartphone-zte-blade-a56-pro-4-8-gb-128gb-color-dorado-carga.html"
  },
@@ -2035,7 +2043,7 @@
   "link": "https://meli.la/19CfkCR",
   "source": "https://meli.la/19CfkCR",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0123-placard-reno-3-puertas-corredizas-1-con-espejo-blanco.html"
  },
@@ -2045,7 +2053,7 @@
   "ml_id": "MLA1729150579",
   "name": "Tensiómetro Digital De Brazo San-up Medipress 192 Mediciones Blanco",
   "category": "Salud y Equipamiento Médico",
-  "price": 41999.0,
+  "price": 39999.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_951463-MLA108237514998_032026-O.webp",
   "images": [
@@ -2054,9 +2062,11 @@
   "link": "https://meli.la/2EeJ1Mh",
   "source": "https://meli.la/2EeJ1Mh",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
-  "page": "p/nx-0124-tensiometro-digital-de-brazo-san-up-medipress-192-mediciones.html"
+  "page": "p/nx-0124-tensiometro-digital-de-brazo-san-up-medipress-192-mediciones.html",
+  "prev_price": 41999.0,
+  "price_drop": "2026-11-12"
  },
  {
   "id": 119,
@@ -2073,7 +2083,7 @@
   "link": "https://meli.la/1MoXYC3",
   "source": "https://meli.la/1MoXYC3",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0125-escalera-articulada-aluminio-12-escalones.html"
  },
@@ -2092,7 +2102,7 @@
   "link": "https://meli.la/2koXhLx",
   "source": "https://meli.la/2koXhLx",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0126-combo-hidrolavadora-aspiradora-electrica-alta-presion-trent.html"
  },
@@ -2102,7 +2112,7 @@
   "ml_id": "MLA2283282744",
   "name": "Smart Tv Noblex Dv43x7180 43 Google Tv",
   "category": "Electrónica, Audio y Video",
-  "price": 571038.0,
+  "price": 526999.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_968858-MLA94517734898_102025-O.webp",
   "images": [
@@ -2111,9 +2121,11 @@
   "link": "https://meli.la/2WrqQtz",
   "source": "https://meli.la/2WrqQtz",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
-  "page": "p/nx-0127-smart-tv-noblex-dv43x7180-43-google-tv.html"
+  "page": "p/nx-0127-smart-tv-noblex-dv43x7180-43-google-tv.html",
+  "prev_price": 571038.0,
+  "price_drop": "2026-11-12"
  },
  {
   "id": 122,
@@ -2121,7 +2133,7 @@
   "ml_id": "MLA1451294128",
   "name": "Afeitadora Philips QP2724/10 Oneblade Recorta Modela y Afeita Carga USB",
   "category": "Belleza y Cuidado Personal",
-  "price": 61999.0,
+  "price": 62999.0,
   "currency": "ARS",
   "image": "https://http2.mlstatic.com/D_NQ_NP_617534-MLA99501603138_112025-O.webp",
   "images": [
@@ -2130,7 +2142,7 @@
   "link": "https://meli.la/1dWHocy",
   "source": "https://meli.la/1dWHocy",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0128-afeitadora-philips-qp2724-10-oneblade-recorta-modela-y-afeit.html"
  },
@@ -2149,7 +2161,7 @@
   "link": "https://meli.la/2fB1hUC",
   "source": "https://meli.la/2fB1hUC",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0129-taladro-inalambrico-percutor-brushless-metalkraff-21v-50-nm.html",
   "prev_price": 90300.0,
@@ -2170,7 +2182,7 @@
   "link": "https://meli.la/1X4rqKG",
   "source": "https://meli.la/1X4rqKG",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "prev_price": 219000.0,
   "price_drop": "2026-11-06",
@@ -2191,7 +2203,7 @@
   "link": "https://meli.la/2WHGzwx",
   "source": "https://meli.la/2WHGzwx",
   "status": "disponible",
-  "checked": "2026-11-12 13:27",
+  "checked": "2026-11-12 16:11",
   "added": "2026-10-22",
   "page": "p/nx-0131-afeitadora-electrica-hombre-shaver-vgr-v-325-recargable-inal.html"
  }
