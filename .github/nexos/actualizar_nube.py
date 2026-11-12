@@ -4,6 +4,7 @@ Nexos Market - actualización automática en GitHub (corre sola todos los días)
 1. Revisa cada producto en Mercado Libre: precio actual y si sigue disponible.
 2. Marca las bajas de precio (para el cartel de descuento y la sección Ofertas).
 3. Regenera las páginas de producto, el sitemap y productos.json.
+4. Arma la página de ofertas y el kit diario para redes (ofertas/).
 
 Seguridad:
 - Nunca borra productos: los caídos quedan marcados "no disponible" (la tienda los muestra así).
@@ -28,6 +29,7 @@ except AttributeError:
 
 import gestor_nexos_v2 as g      # noqa: E402
 import generar_paginas as gp     # noqa: E402
+import generar_ofertas as go     # noqa: E402
 
 TMP = os.environ.get("RUNNER_TEMP", "/tmp")
 g.JSON_PATH = os.path.join(RAIZ, "productos.json")
@@ -79,6 +81,11 @@ def main():
 
     n = gp.generar(RAIZ, g.load_products())
     lineas.append(f"- Páginas regeneradas: {n}")
+    try:
+        r = go.generar(RAIZ, g.load_products())
+        lineas.append(f"- Ofertas: {r['ofertas']} en la página · kit del día: {r['kit']} (fotos {r['fotos_ok']})")
+    except Exception as e:      # el kit nunca frena la actualización de precios
+        lineas.append(f"- Kit de ofertas: error ({e})")
     print("\n".join(lineas))
     resumen_md(lineas)
 
