@@ -37,6 +37,7 @@ SITE = gp.SITE_URL
 E = gp.E
 money = gp.money
 KIT_N = 5            # publicaciones por día
+CANAL = "https://whatsapp.com/channel/0029Vb97B2I2v1IlIV2BFu1w"   # canal de WhatsApp de ofertas
 FONTS = os.path.join(AQUI, "fonts")
 
 BG = (15, 19, 22)
@@ -276,6 +277,7 @@ h1{font-size:1.6rem}
 .acts{display:flex;flex-wrap:wrap;gap:8px}
 .acts a,.acts button{border:0;border-radius:10px;padding:10px 12px;font:700 .9rem system-ui,sans-serif;cursor:pointer;text-decoration:none;background:#eef3fe;color:#1a56c9}
 .acts .pri{background:var(--action);color:#fff}
+.canal{display:block;text-align:center;text-decoration:none;background:#128c4b;color:#fff;font-weight:700;border-radius:12px;padding:12px;margin:14px 0}
 .tip{background:#fff8e6;border:1px solid #f3dfa6;border-radius:12px;padding:10px 12px;font-size:.9rem;margin-bottom:16px}
 @media(max-width:600px){.item{grid-template-columns:1fr}}
 """
@@ -323,6 +325,7 @@ def pagina_ofertas(lista, nuevos):
 <h1>Bajaron de precio</h1>
 <p class="intro">{len(lista)} productos más baratos que cuando los empezamos a seguir. Precios revisados el {fecha}; el precio final lo confirma Mercado Libre.</p>
 <div class="grid">{cards}</div>
+<a class="canal" href="{CANAL}" target="_blank" rel="noopener">🔔 Seguí el canal de ofertas en WhatsApp</a>
 {f'<h2>Recién agregados</h2><div class="grid">{cards_n}</div>' if cards_n else ''}
 <a class="wa" href="{wa}" target="_blank" rel="noopener">Compartir estas ofertas por WhatsApp</a>
 <a class="all" href="../">Ver todos los productos &rarr;</a>
@@ -440,6 +443,7 @@ def pagina_regalos(products):
 <h1>Regalos de Navidad por presupuesto</h1>
 <p class="intro">Elegí cuánto querés gastar y mirá las mejores ideas. {total} productos con precio revisado el {time.strftime('%d/%m')}; pagás y recibís en Mercado Libre.</p>
 <nav class="rng">{nav}</nav>
+<a class="canal" href="{CANAL}" target="_blank" rel="noopener">🔔 Seguí el canal de ofertas en WhatsApp</a>
 {''.join(h for _, _, h in secciones)}
 <a class="wa" href="{wa}" target="_blank" rel="noopener">Compartir la lista por WhatsApp</a>
 <a class="all" href="../ofertas/">Ver lo que bajó de precio hoy &rarr;</a>
