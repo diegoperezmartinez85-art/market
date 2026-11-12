@@ -119,10 +119,11 @@ h2{font-family:var(--display);text-transform:uppercase;font-size:clamp(1.7rem,4v
 .svc .p{font-weight:700;color:var(--gold)}
 .svc .tag{position:absolute;top:10px;right:10px;background:var(--gold);color:var(--gold-ink);font-size:.68rem;font-weight:800;border-radius:6px;padding:2px 6px}
 .svc[aria-pressed="true"]{border-color:var(--gold);background:#231d12}
-.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
 .days::-webkit-scrollbar{display:none}
-.day{flex:none;width:64px;background:var(--panel2);border:1.5px solid var(--line);border-radius:12px;padding:8px 0;text-align:center;color:var(--ink);cursor:pointer;font:inherit}
-.day small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase}
+.day{min-width:0;background:var(--panel2);border:1.5px solid var(--line);border-radius:12px;padding:8px 0;text-align:center;color:var(--ink);cursor:pointer;font:inherit}
+.day small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:clip}
+@media(max-width:420px){.day small{font-size:.6rem;letter-spacing:-.01em}}
 .day b{font-size:1.2rem}
 .day[disabled]{opacity:.35;cursor:not-allowed}
 .day[aria-pressed="true"]{border-color:var(--gold);background:#231d12}
@@ -268,7 +269,7 @@ function renderDias() {
   $("#days").innerHTML = proximosDias().map((d, i) => {
     const abierto = !!NEGOCIO.agenda[d.getDay()];
     return '<button type="button" class="day" data-i="' + i + '"' + (abierto ? "" : " disabled") + ' aria-pressed="' + (st.dia && st.dia.getTime() === d.getTime()) + '">' +
-      "<small>" + (i === 0 ? "Hoy" : i === 1 ? "Mañana" : DIAS[d.getDay()]) + "</small><b>" + d.getDate() + "</b></button>";
+      "<small>" + (i === 0 ? "Hoy" : DIAS[d.getDay()]) + "</small><b>" + d.getDate() + "</b></button>";
   }).join("");
 }
 function renderSlots() {
