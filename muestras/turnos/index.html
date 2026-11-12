@@ -59,6 +59,16 @@ if (R) {
   SERVICIOS.length = 0;
   R.serv.forEach(a => SERVICIOS.push({ id: a[0], nombre: a[1], detalle: a[2], min: a[3], precio: a[4], top: !!a[5] }));
 }
+/* Vista previa personalizada: ?n=Nombre del negocio (y opcional ?ig=usuario) */
+(function () {
+  const q = new URLSearchParams(location.search);
+  const n = (q.get("n") || "").trim().slice(0, 28);
+  if (n) {
+    NEGOCIO.nombre = n;
+    NEGOCIO.instagram = (q.get("ig") || n).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9._]/g, "");
+    document.title = n + " · Turnos online (vista previa)";
+  }
+})();
 </script>
 <style>
 :root{--bg:#0e0e0f;--panel:#17171a;--panel2:#1f1f23;--line:#2b2b31;--ink:#f3f1ec;--muted:#a19d95;--gold:#d8a657;--gold-ink:#1a1405;--ok:#25d366;
