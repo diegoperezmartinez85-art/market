@@ -651,9 +651,9 @@
         .trust b { display: block; font-size: .9rem; }
         .trust small { display: block; font-size: .78rem; color: var(--ink-muted); }
         @media (max-width: 760px) {
-            .trust { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -12px 4px; padding: 0 12px 4px; gap: 8px; scrollbar-width: none; }
+            .trust { grid-template-columns: 1fr; gap: 6px; }
             .trust::-webkit-scrollbar { display: none; }
-            .trust li { flex: 0 0 78%; scroll-snap-align: start; padding: 10px 12px; }
+            .trust li { padding: 8px 12px; }
         }
         /* Tarjeta: un solo botón fuerte; compartir y copiar en una fila discreta */
         .acts { display: flex; gap: 6px; margin-top: 6px; }

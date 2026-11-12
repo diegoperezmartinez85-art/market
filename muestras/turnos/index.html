@@ -71,6 +71,7 @@ if (R) {
 })();
 </script>
 <style>
+html,body{overflow-x:clip}
 :root{--bg:#0e0e0f;--panel:#17171a;--panel2:#1f1f23;--line:#2b2b31;--ink:#f3f1ec;--muted:#a19d95;--gold:#d8a657;--gold-ink:#1a1405;--ok:#25d366;
   --display:"Archivo Black",Impact,sans-serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
 *{box-sizing:border-box;margin:0}
@@ -87,6 +88,8 @@ header.top .wrap{height:64px;display:flex;align-items:center;justify-content:spa
 .brand{font-family:var(--display);font-size:1.4rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
 .brand span{color:var(--gold)}
 @media(max-width:520px){.brand{font-size:1.1rem;white-space:nowrap}header.top .btn{padding:10px 14px;font-size:.88rem;white-space:nowrap}}
+header.top .wrap{gap:12px}.brand{min-width:0;overflow:hidden;text-overflow:ellipsis}header.top .btn{flex:none}
+@media(max-width:380px){.brand{font-size:.98rem}header.top .btn{padding:9px 12px;font-size:.84rem;gap:6px}header.top .btn .ic{width:16px;height:16px}}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:13px 20px;font:700 .96rem var(--sans);cursor:pointer;text-decoration:none}
 .btn-g{background:var(--gold);color:var(--gold-ink)}
 .btn-o{border:1.5px solid var(--line);color:var(--ink);background:transparent}
@@ -169,7 +172,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 <div class="demo" id="demo" hidden><div class="wrap"><span><b>Página de ejemplo.</b> Tus clientes sacan turno solos y te llega por WhatsApp. Lista en 7 días.</span><a id="demoCta" href="#" target="_blank" rel="noopener">Quiero la mía</a></div></div>
 
-<header class="top"><div class="wrap"><a class="brand" href="#" id="brand"></a><a class="btn btn-g" href="#turnos"><svg class="ic"><use href="#i-cal"/></svg>Sacar turno</a></div></header>
+<header class="top"><div class="wrap"><a class="brand" href="#" id="brand"></a><a class="btn btn-g hbtn" href="#turnos"><svg class="ic"><use href="#i-cal"/></svg>Sacar turno</a></div></header>
 
 <main>
 <section class="hero"><div class="wrap">
@@ -306,5 +309,6 @@ $("#confirmar").onclick = () => {
 };
 renderSvcs(); renderDias(); renderSum();
 </script>
+<script>if(innerWidth<=400){const h=document.querySelector(".hbtn");if(h&&h.lastChild.textContent.trim()==="Sacar turno")h.lastChild.textContent="Turno";}</script>
 </body>
 </html>

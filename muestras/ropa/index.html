@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+html,body{overflow-x:clip}
 /* =====================================================================
    CONFIGURACIÓN — lo único que hay que cambiar para cada cliente
    ===================================================================== */
@@ -57,6 +58,7 @@ header.top{position:sticky;top:0;z-index:20;background:rgba(246,241,234,.88);bac
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{font-family:var(--serif);font-size:1.6rem;font-weight:700;letter-spacing:-.02em;text-decoration:none}
 .brand small{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px}
+@media(max-width:400px){.brand{font-size:1.35rem;white-space:nowrap}.brand small{display:none}}
 nav.links{display:flex;gap:22px;font-size:.92rem;font-weight:500}
 nav.links a{text-decoration:none;color:var(--muted)}
 nav.links a:hover{color:var(--ink)}
@@ -95,7 +97,7 @@ nav.links a:hover{color:var(--ink)}
 section{padding:56px 0}
 h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-.02em;line-height:1.1}
 .sub{color:var(--muted);margin-top:8px}
-.filters{display:flex;gap:8px;margin:24px 0 22px;overflow-x:auto;scrollbar-width:none}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 22px}
 .filters::-webkit-scrollbar{display:none}
 .filters button{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 16px;font:500 .9rem var(--sans);cursor:pointer}
 .filters button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -135,8 +137,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 /* Carrito */
 .scrim{position:fixed;inset:0;background:rgba(20,15,12,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
 .scrim.on{opacity:1;pointer-events:auto}
-.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--surface);z-index:41;transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column}
-.drawer.on{transform:none}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--surface);z-index:41;transform:translateX(100%);visibility:hidden;transition:transform .25s ease,visibility 0s .25s;display:flex;flex-direction:column}
+.drawer.on{transform:none;visibility:visible;transition:transform .25s ease}
 .drawer header{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
 .drawer header b{font-family:var(--serif);font-size:1.35rem}
 .x{border:0;background:none;cursor:pointer;color:var(--ink);padding:6px}
