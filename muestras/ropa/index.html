@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumbre Indumentaria · Página de ejemplo</title>
+<meta name="description" content="Página de ejemplo de un catálogo online con pedido por WhatsApp, hecha por Nexos Web.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Así puede verse la página de tu negocio">
+<meta property="og:description" content="Catálogo online con pedidos por WhatsApp, lista en 5 días. Ejemplo hecho por Nexos Web.">
+<meta property="og:image" content="https://market.nexosmaps.com/muestras/ropa/og.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   CONFIGURACIÓN — lo único que hay que cambiar para cada cliente
+   ===================================================================== */
+</style>
+<script>
+const NEGOCIO = {
+  nombre: "Lumbre",
+  rubro: "Indumentaria",
+  whatsapp: "5491100000000",          // número del comercio (con 549 y código de área, sin 0 ni 15)
+  direccion: "Av. Siempre Viva 742, Tu Barrio",
+  horarios: [["Lunes a viernes", "10 a 20 h"], ["Sábados", "10 a 14 h"], ["Domingos", "Cerrado"]],
+  instagram: "lumbre.indumentaria",
+};
+// Quién hizo la página (cartel de "página de ejemplo")
+const NEXOS_WHATSAPP = "";              // tu número para que te escriban los comercios
+const ES_MUESTRA = true;                // false en la página real del cliente
+</script>
+<style>
+:root{
+  --bg:#f6f1ea; --surface:#fffdf9; --ink:#1f1a17; --muted:#6e645c; --line:#e6ddd2;
+  --accent:#b4532a; --accent-ink:#fff; --deep:#2b211c; --ok:#1f7a4a;
+  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.ic{width:20px;height:20px;flex:none}
+
+/* Cartel de muestra */
+.demo{background:var(--deep);color:#f6efe6;font-size:.88rem}
+.demo .wrap{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 20px;flex-wrap:wrap;text-align:center}
+.demo b{color:#ffcfa8}
+.demo a{background:#ffcfa8;color:var(--deep);text-decoration:none;font-weight:700;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* Encabezado */
+header.top{position:sticky;top:0;z-index:20;background:rgba(246,241,234,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--serif);font-size:1.6rem;font-weight:700;letter-spacing:-.02em;text-decoration:none}
+.brand small{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:8px}
+nav.links{display:flex;gap:22px;font-size:.92rem;font-weight:500}
+nav.links a{text-decoration:none;color:var(--muted)}
+nav.links a:hover{color:var(--ink)}
+.cart-btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:9px 16px;font:600 .9rem var(--sans);cursor:pointer}
+.cart-btn .n{background:var(--accent);border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:.78rem;padding:0 6px}
+@media(max-width:760px){nav.links{display:none}}
+
+/* Portada */
+.hero{padding:56px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.4rem,5.4vw,4.2rem);line-height:1.02;letter-spacing:-.03em;margin:14px 0 16px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);font-size:1.08rem;max-width:44ch}
+.ctas{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:12px;padding:14px 20px;font-weight:700;font-size:.98rem;border:0;cursor:pointer;font-family:var(--sans)}
+.btn-p{background:var(--accent);color:var(--accent-ink)}
+.btn-p:hover{filter:brightness(1.06)}
+.btn-s{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+.facts{display:flex;gap:26px;margin-top:30px;color:var(--muted);font-size:.88rem;flex-wrap:wrap}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.hero-art{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:linear-gradient(160deg,#e9c9ad,#c7764f 55%,#7b3a22)}
+.hero-art svg{position:absolute;inset:0;width:100%;height:100%}
+.hero-art .tag{position:absolute;left:18px;bottom:18px;background:var(--surface);border-radius:14px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.hero-art .tag b{display:block;font-family:var(--serif);font-size:1.15rem}
+.hero-art .tag small{color:var(--muted)}
+@media(max-width:860px){.hero{padding:28px 0 20px}.hero .wrap{grid-template-columns:1fr;gap:24px}.hero-art{aspect-ratio:16/10;order:-1}}
+
+/* Franja Navidad */
+.promo{background:var(--deep);color:#f6efe6}
+.promo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;flex-wrap:wrap}
+.promo b{font-family:var(--serif);font-size:1.25rem;font-weight:500}
+.promo span{color:#d8c9b9;font-size:.92rem}
+
+/* Catálogo */
+section{padding:56px 0}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-.02em;line-height:1.1}
+.sub{color:var(--muted);margin-top:8px}
+.filters{display:flex;gap:8px;margin:24px 0 22px;overflow-x:auto;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filters button{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 16px;font:500 .9rem var(--sans);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media(max-width:980px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card .art{aspect-ratio:1/1;display:grid;place-items:center;position:relative}
+.card .art svg{width:58%;height:58%}
+.card .badge{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;font-size:.72rem;font-weight:700;border-radius:8px;padding:3px 8px}
+.card .body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:.98rem;font-weight:600;line-height:1.3}
+.card .price{font-family:var(--serif);font-size:1.25rem;font-weight:700}
+.card .price s{font-family:var(--sans);font-size:.85rem;color:var(--muted);font-weight:400;margin-left:6px}
+.sizes{display:flex;gap:6px;flex-wrap:wrap}
+.sizes button{min-width:36px;height:32px;border:1px solid var(--line);background:#fff;border-radius:8px;font:600 .8rem var(--sans);cursor:pointer;color:var(--ink)}
+.sizes button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:#fff}
+.add{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:6px;border:0;background:var(--ink);color:#fff;border-radius:10px;padding:11px;font:600 .9rem var(--sans);cursor:pointer}
+.add:disabled{background:#cfc6bc;cursor:not-allowed}
+.add.ok{background:var(--ok)}
+
+/* Info */
+.info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+@media(max-width:860px){.info{grid-template-columns:1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.box h3{display:flex;align-items:center;gap:10px;font-size:1.02rem;margin-bottom:12px}
+.box h3 .ic{color:var(--accent)}
+.box table{width:100%;border-collapse:collapse;font-size:.94rem}
+.box td{padding:6px 0;border-bottom:1px dashed var(--line)}
+.box td:last-child{text-align:right;font-weight:600}
+.box p{color:var(--muted);font-size:.94rem}
+.box a.lnk{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:600;color:var(--accent);text-decoration:none}
+
+footer{border-top:1px solid var(--line);padding:28px 0 100px;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* Carrito */
+.scrim{position:fixed;inset:0;background:rgba(20,15,12,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--surface);z-index:41;transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.drawer header{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
+.drawer header b{font-family:var(--serif);font-size:1.35rem}
+.x{border:0;background:none;cursor:pointer;color:var(--ink);padding:6px}
+.items{flex:1;overflow:auto;padding:8px 20px}
+.it{display:flex;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.it .sw{width:52px;height:52px;border-radius:12px;flex:none;display:grid;place-items:center}
+.it .sw svg{width:60%;height:60%}
+.it .t{flex:1;min-width:0}
+.it .t b{display:block;font-size:.92rem;font-weight:600}
+.it .t small{color:var(--muted)}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:28px;height:28px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer;font-weight:700}
+.empty{color:var(--muted);text-align:center;padding:40px 10px}
+.drawer footer{padding:16px 20px 20px;border-top:1px solid var(--line);color:var(--ink)}
+.total{display:flex;justify-content:space-between;font-weight:700;font-size:1.05rem;margin-bottom:12px}
+.drawer input{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;margin-bottom:10px;background:#fff}
+.send{width:100%;justify-content:center;background:#1f7a4a;color:#fff}
+.send:disabled{background:#cfc6bc}
+
+.fab{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:#1f7a4a;color:#fff;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+.fab .ic{width:28px;height:28px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:.9rem;opacity:0;transition:.2s;z-index:50;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <!-- prendas -->
+  <symbol id="g-remera" viewBox="0 0 100 100"><path d="M34 14 18 22 8 40l14 7 6-9v50h44V38l6 9 14-7-10-18-16-8c-2 7-8 11-16 11s-14-4-16-11Z" fill="currentColor"/></symbol>
+  <symbol id="g-buzo" viewBox="0 0 100 100"><path d="M36 12 18 20 8 64l13 3 7-30v53h44V37l7 30 13-3-10-44-18-8c-2 6-7 10-14 10s-12-4-14-10Z" fill="currentColor"/><path d="M40 70h20v10H40z" fill="#000" opacity=".12"/></symbol>
+  <symbol id="g-pantalon" viewBox="0 0 100 100"><path d="M28 10h44l6 80H58L50 40l-8 50H22Z" fill="currentColor"/><path d="M28 10h44v8H28z" fill="#000" opacity=".15"/></symbol>
+  <symbol id="g-vestido" viewBox="0 0 100 100"><path d="M40 8h20l-2 14 8 18 16 50H18l16-50 8-18Z" fill="currentColor"/></symbol>
+  <symbol id="g-campera" viewBox="0 0 100 100"><path d="M34 12 16 20 8 70l12 3 8-32v49h44V41l8 32 12-3-8-50-18-8-16 14Z" fill="currentColor"/><path d="M49 26h2v64h-2z" fill="#000" opacity=".25"/></symbol>
+  <symbol id="g-gorra" viewBox="0 0 100 100"><path d="M18 60c0-22 14-36 32-36s32 14 32 36Z" fill="currentColor"/><path d="M50 60h42c0 6-6 10-14 10H50Z" fill="currentColor" opacity=".8"/><circle cx="50" cy="24" r="4" fill="#000" opacity=".2"/></symbol>
+  <symbol id="g-bolso" viewBox="0 0 100 100"><path d="M36 34c0-10 6-18 14-18s14 8 14 18" fill="none" stroke="currentColor" stroke-width="6"/><path d="M18 34h64l-6 54H24Z" fill="currentColor"/></symbol>
+  <symbol id="g-short" viewBox="0 0 100 100"><path d="M22 22h56l8 52H58l-8-24-8 24H14Z" fill="currentColor"/><path d="M22 22h56v8H22z" fill="#000" opacity=".15"/></symbol>
+</defs></svg>
+
+<div class="demo" id="demo" hidden>
+  <div class="wrap"><span><b>Página de ejemplo.</b> Así puede verse la de tu negocio: catálogo, pedidos por WhatsApp y tu dominio, lista en 5 días.</span><a id="demoCta" href="#" target="_blank" rel="noopener">Quiero la mía</a></div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" id="brand">Lumbre<small>Indumentaria</small></a>
+    <nav class="links" aria-label="Secciones"><a href="#catalogo">Catálogo</a><a href="#visitanos">Visitanos</a><a href="#como">Cómo comprar</a></nav>
+    <button class="cart-btn" type="button" id="openCart" aria-label="Ver pedido"><svg class="ic"><use href="#i-bag"/></svg>Pedido <span class="n" id="cartN">0</span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding-bottom:40px">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><svg class="ic"><use href="#i-gift"/></svg>Colección verano · Fiestas 2026</span>
+      <h1>Ropa linda, cómoda y <em>de acá</em>.</h1>
+      <p>Elegí tus prendas, armá el pedido y mandalo por WhatsApp. Te confirmamos stock al toque y lo retirás o te lo enviamos.</p>
+      <div class="ctas">
+        <a class="btn btn-p" href="#catalogo">Ver catálogo<svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-s" id="heroWa" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Escribinos</a>
+      </div>
+      <div class="facts">
+        <span><svg class="ic"><use href="#i-truck"/></svg>Envíos en el día</span>
+        <span><svg class="ic"><use href="#i-card"/></svg>3 cuotas sin interés</span>
+        <span><svg class="ic"><use href="#i-gift"/></svg>Envoltorio de regalo gratis</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+        <circle cx="300" cy="110" r="70" fill="#f7d9bf" opacity=".55"/>
+        <path d="M0 380 Q120 330 220 380 T400 360 V500 H0Z" fill="#5e2a17" opacity=".55"/>
+        <g transform="translate(70 120) scale(2.6)" color="#fff7ee"><use href="#g-vestido" width="100" height="100"/></g>
+        <g transform="translate(205 190) scale(1.6)" color="#2b211c"><use href="#g-bolso" width="100" height="100"/></g>
+      </svg>
+      <div class="tag"><b>Vestido Brisa</b><small>Lino · desde $42.900</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="promo"><div class="wrap"><b>Regalos de fin de año con envoltorio gratis</b><span>Pedí antes del 23 de diciembre y lo tenés para Navidad.</span></div></div>
+
+<section id="catalogo">
+  <div class="wrap">
+    <h2>Catálogo</h2>
+    <p class="sub">Tocá el talle y sumalo al pedido. Al final lo mandás por WhatsApp en un solo mensaje.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filtrar por categoría"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="visitanos" style="padding-top:8px">
+  <div class="wrap">
+    <h2>Visitanos</h2>
+    <div class="info">
+      <div class="box"><h3><svg class="ic"><use href="#i-clock"/></svg>Horarios</h3><table id="horarios"></table></div>
+      <div class="box"><h3><svg class="ic"><use href="#i-pin"/></svg>Dónde estamos</h3><p id="dir"></p><a class="lnk" id="mapa" href="#" target="_blank" rel="noopener">Cómo llegar<svg class="ic"><use href="#i-arrow"/></svg></a></div>
+      <div class="box" id="como"><h3><svg class="ic"><use href="#i-bag"/></svg>Cómo comprar</h3><p>1. Armá tu pedido acá. 2. Mandalo por WhatsApp. 3. Te confirmamos stock y forma de pago (efectivo, transferencia o Mercado Pago). 4. Retirás o te lo enviamos.</p><a class="lnk" id="ig" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg><span></span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span id="foot"></span><span id="credit">Página hecha por Nexos Web</span></div></footer>
+
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Tu pedido" aria-hidden="true">
+  <header><b>Tu pedido</b><button class="x" type="button" id="closeCart" aria-label="Cerrar"><svg class="ic"><use href="#i-x"/></svg></button></header>
+  <div class="items" id="items"></div>
+  <footer>
+    <div class="total"><span>Total</span><span id="total">$0</span></div>
+    <input id="cliente" placeholder="Tu nombre" autocomplete="name">
+    <button class="btn send" type="button" id="send" disabled><svg class="ic"><use href="#i-wa"/></svg>Enviar pedido por WhatsApp</button>
+  </footer>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+// Catálogo — en la página real se reemplaza por los productos del cliente (o fotos)
+const PRODUCTOS = [
+  { id: 1, nombre: "Remera Oversize Algodón", cat: "Remeras", precio: 18900, g: "remera", color: "#e8dccb", tinta: "#2b211c", talles: ["S","M","L","XL"] },
+  { id: 2, nombre: "Remera Rayada Marinera", cat: "Remeras", precio: 21500, antes: 25900, g: "remera", color: "#d9e3ea", tinta: "#1e3a5f", talles: ["S","M","L"] },
+  { id: 3, nombre: "Vestido Brisa de Lino", cat: "Vestidos", precio: 42900, g: "vestido", color: "#f3d9c4", tinta: "#b4532a", talles: ["S","M","L"] },
+  { id: 4, nombre: "Vestido Noche Satinado", cat: "Vestidos", precio: 56900, g: "vestido", color: "#2b211c", tinta: "#e9c9ad", talles: ["S","M"] },
+  { id: 5, nombre: "Pantalón Sastrero Wide Leg", cat: "Pantalones", precio: 38500, g: "pantalon", color: "#ede6dc", tinta: "#6b4e3d", talles: ["36","38","40","42"] },
+  { id: 6, nombre: "Short de Jean Tiro Alto", cat: "Pantalones", precio: 24900, antes: 29900, g: "short", color: "#dce6f2", tinta: "#3b5b8c", talles: ["36","38","40"] },
+  { id: 7, nombre: "Bolso Tote de Lona", cat: "Accesorios", precio: 16900, g: "bolso", color: "#efe3c8", tinta: "#8a6a2f", talles: ["Único"] },
+  { id: 8, nombre: "Gorra de Gabardina", cat: "Accesorios", precio: 12500, g: "gorra", color: "#e3ece3", tinta: "#3f6b4b", talles: ["Único"] },
+];
+
+const $ = s => document.querySelector(s);
+const fmt = n => "$" + Math.round(n).toLocaleString("es-AR");
+const wa = (num, txt) => "https://wa.me/" + num + (txt ? "?text=" + encodeURIComponent(txt) : "");
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+// Datos del negocio
+document.title = NEGOCIO.nombre + " " + NEGOCIO.rubro + (ES_MUESTRA ? " · Página de ejemplo" : "");
+$("#brand").innerHTML = esc(NEGOCIO.nombre) + "<small>" + esc(NEGOCIO.rubro) + "</small>";
+$("#horarios").innerHTML = NEGOCIO.horarios.map(h => "<tr><td>" + esc(h[0]) + "</td><td>" + esc(h[1]) + "</td></tr>").join("");
+$("#dir").textContent = NEGOCIO.direccion;
+$("#mapa").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(NEGOCIO.direccion);
+$("#ig").href = "https://instagram.com/" + NEGOCIO.instagram;
+$("#ig span").textContent = "@" + NEGOCIO.instagram;
+$("#foot").textContent = "© " + new Date().getFullYear() + " " + NEGOCIO.nombre + " " + NEGOCIO.rubro;
+const saludo = "Hola " + NEGOCIO.nombre + ", vi su página y quería consultar.";
+$("#heroWa").href = $("#fab").href = wa(NEGOCIO.whatsapp, saludo);
+if (ES_MUESTRA) {
+  $("#demo").hidden = false;
+  const msg = "Hola Diego, vi la página de ejemplo y quiero una para mi negocio.";
+  $("#demoCta").href = NEXOS_WHATSAPP ? wa(NEXOS_WHATSAPP, msg) : "https://market.nexosmaps.com/";
+}
+
+// Catálogo
+let filtro = "Todo";
+const elegido = {};               // id -> talle
+const carrito = [];               // {id, talle, n}
+function art(p) {
+  return '<svg viewBox="0 0 100 100" style="color:' + p.tinta + '"><use href="#g-' + p.g + '"/></svg>';
+}
+function renderFiltros() {
+  const cats = ["Todo", ...new Set(PRODUCTOS.map(p => p.cat))];
+  $("#filters").innerHTML = cats.map(c => '<button type="button" aria-pressed="' + (c === filtro) + '">' + esc(c) + "</button>").join("");
+}
+function renderGrid() {
+  const lista = PRODUCTOS.filter(p => filtro === "Todo" || p.cat === filtro);
+  $("#grid").innerHTML = lista.map(p => {
+    if (p.talles.length === 1) elegido[p.id] = p.talles[0];
+    const off = p.antes ? Math.round((1 - p.precio / p.antes) * 100) : 0;
+    return '<article class="card" data-id="' + p.id + '">' +
+      '<div class="art" style="background:' + p.color + '">' + art(p) + (off ? '<span class="badge">-' + off + "%</span>" : "") + "</div>" +
+      '<div class="body"><h3>' + esc(p.nombre) + "</h3>" +
+      '<div class="price">' + fmt(p.precio) + (p.antes ? "<s>" + fmt(p.antes) + "</s>" : "") + "</div>" +
+      '<div class="sizes" role="group" aria-label="Talle">' + p.talles.map(t => '<button type="button" data-t="' + esc(t) + '" aria-pressed="' + (elegido[p.id] === t) + '">' + esc(t) + "</button>").join("") + "</div>" +
+      '<button type="button" class="add"' + (elegido[p.id] ? "" : " disabled") + ">" + (elegido[p.id] ? "Sumar al pedido" : "Elegí un talle") + "</button>" +
+      "</div></article>";
+  }).join("");
+}
+$("#filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  filtro = b.textContent; renderFiltros(); renderGrid();
+});
+$("#grid").addEventListener("click", e => {
+  const card = e.target.closest(".card"); if (!card) return;
+  const id = +card.dataset.id;
+  const t = e.target.closest(".sizes button");
+  if (t) { elegido[id] = t.dataset.t; renderGrid(); return; }
+  const add = e.target.closest(".add");
+  if (add && elegido[id]) {
+    const ya = carrito.find(c => c.id === id && c.talle === elegido[id]);
+    ya ? ya.n++ : carrito.push({ id, talle: elegido[id], n: 1 });
+    renderCarrito();
+    add.textContent = "¡Sumado!"; add.classList.add("ok");
+    setTimeout(() => { add.textContent = "Sumar al pedido"; add.classList.remove("ok"); }, 1200);
+    toast("Sumado al pedido");
+  }
+});
+
+// Carrito
+function renderCarrito() {
+  const n = carrito.reduce((a, c) => a + c.n, 0);
+  $("#cartN").textContent = n;
+  let total = 0;
+  $("#items").innerHTML = carrito.length ? carrito.map((c, i) => {
+    const p = PRODUCTOS.find(x => x.id === c.id); total += p.precio * c.n;
+    return '<div class="it"><div class="sw" style="background:' + p.color + '">' + art(p) + '</div>' +
+      '<div class="t"><b>' + esc(p.nombre) + "</b><small>Talle " + esc(c.talle) + " · " + fmt(p.precio) + "</small></div>" +
+      '<div class="qty"><button type="button" data-i="' + i + '" data-d="-1" aria-label="Quitar uno">−</button><span>' + c.n + '</span><button type="button" data-i="' + i + '" data-d="1" aria-label="Sumar uno">+</button></div></div>';
+  }).join("") : '<p class="empty">Tu pedido está vacío. Elegí talle y tocá «Sumar al pedido».</p>';
+  $("#total").textContent = fmt(total);
+  $("#send").disabled = !carrito.length;
+}
+$("#items").addEventListener("click", e => {
+  const b = e.target.closest("button[data-i]"); if (!b) return;
+  const c = carrito[+b.dataset.i]; c.n += +b.dataset.d;
+  if (c.n <= 0) carrito.splice(+b.dataset.i, 1);
+  renderCarrito();
+});
+function abrir(on) {
+  $("#drawer").classList.toggle("on", on); $("#scrim").classList.toggle("on", on);
+  $("#drawer").setAttribute("aria-hidden", !on);
+  if (on) $("#closeCart").focus();
+}
+$("#openCart").onclick = () => abrir(true);
+$("#closeCart").onclick = $("#scrim").onclick = () => abrir(false);
+addEventListener("keydown", e => { if (e.key === "Escape") abrir(false); });
+$("#send").onclick = () => {
+  const nombre = $("#cliente").value.trim();
+  let total = 0;
+  const lineas = carrito.map(c => {
+    const p = PRODUCTOS.find(x => x.id === c.id); total += p.precio * c.n;
+    return "• " + c.n + " x " + p.nombre + " (talle " + c.talle + ") — " + fmt(p.precio * c.n);
+  });
+  const txt = "Hola " + NEGOCIO.nombre + "! " + (nombre ? "Soy " + nombre + ". " : "") +
+    "Quiero hacer este pedido:\n" + lineas.join("\n") + "\nTotal: " + fmt(total) + "\n¿Tienen stock?";
+  window.open(wa(NEGOCIO.whatsapp, txt), "_blank", "noopener");
+};
+let tt;
+function toast(m) { const t = $("#toast"); t.textContent = m; t.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("on"), 1400); }
+
+renderFiltros(); renderGrid(); renderCarrito();
+</script>
+</body>
+</html>
