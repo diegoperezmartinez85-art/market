@@ -735,7 +735,7 @@ def build_entry(products, data, ml_id, link, category_override=None, source=None
         "id": next_id(products),
         "code": next_code(products),
         "ml_id": ml_id,
-        "name": data["name"],
+        "name": re.sub(r"\s+-\s+\$\s?[\d.,]+\s*$", "", data["name"]).strip(),   # ML a veces pega " - $ precio"
         "category": (category_override
                      or normalize_category(data.get("category"))
                      or guess_category(data.get("name"))
