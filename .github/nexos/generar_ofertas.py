@@ -336,9 +336,18 @@ def pagina_ofertas(lista, nuevos):
 """
 
 
-def pagina_kit(kit, con_imagenes):
+def pagina_kit(kit, con_imagenes, resumen=None):
     fecha = time.strftime("%d/%m")
     items = []
+    if resumen:
+        v = time.strftime("%Y%m%d")
+        img = f'<img src="resumen-post.jpg?v={v}" alt="">' if con_imagenes else ""
+        bot = ('<button class="pri" data-share="resumen-historia.jpg">Compartir historia</button>'
+               '<button data-share="resumen-post.jpg">Compartir post</button>' if con_imagenes else "")
+        items.append(f'<div class="item">{img}<div><p><b>☀️ Resumen de la mañana</b> · dólar, clima y oferta del día</p>'
+                     f'<pre id="t0">{E(resumen)}</pre><div class="acts">{bot}<button data-copy="t0">Copiar texto</button>'
+                     f'<a href="https://api.whatsapp.com/send?text={E(quote(resumen))}" target="_blank" rel="noopener">Mandar por WhatsApp</a>'
+                     '</div></div></div>')
     for i, p in enumerate(kit, 1):
         t = texto(p)
         img = (f'<img src="post-{i}.jpg?v={time.strftime("%Y%m%d")}" alt="">' if con_imagenes
@@ -460,7 +469,7 @@ def agregar_al_sitemap(raiz):
         s = open(path, encoding="utf-8").read()
     except OSError:
         return
-    for u in (SITE + "ofertas/", SITE + "regalos/"):
+    for u in (SITE + "ofertas/", SITE + "regalos/", SITE + "dolar/"):
         if u in s:
             continue
         item = (f"<url><loc>{u}</loc><lastmod>{time.strftime('%Y-%m-%d')}</lastmod>"
@@ -492,8 +501,17 @@ def generar(raiz, products, con_imagenes=True):
 
     with open(os.path.join(odir, "index.html"), "w", encoding="utf-8") as f:
         f.write(pagina_ofertas(lista, nuevos))
+    resumen = None
+    try:
+        import generar_resumen as gr
+        resumen = gr.generar(raiz, products, hay_img)
+    except Exception as e:          # el resumen nunca frena el resto
+        print("resumen:", e)
+    if resumen:
+        with open(os.path.join(kdir, "resumen.txt"), "w", encoding="utf-8") as f:
+            f.write(resumen + "\n")
     with open(os.path.join(kdir, "index.html"), "w", encoding="utf-8") as f:
-        f.write(pagina_kit(kit, hay_img))
+        f.write(pagina_kit(kit, hay_img, resumen))
     with open(os.path.join(kdir, "textos.txt"), "w", encoding="utf-8") as f:
         f.write(f"Ofertas de hoy en Nexos Market 🛍️ (precios del {time.strftime('%d/%m')}, pueden cambiar)\n\n")
         f.write("\n\n".join(texto(p) for p in kit) + f"\n\nMás ofertas 👉 {SITE}ofertas/\n")
@@ -501,7 +519,7 @@ def generar(raiz, products, con_imagenes=True):
     with open(os.path.join(raiz, "regalos", "index.html"), "w", encoding="utf-8") as f:
         f.write(pagina_regalos(products))
     agregar_al_sitemap(raiz)
-    return {"ofertas": len(lista), "kit": len(kit), "fotos_ok": sum(1 for v in fotos.values() if v)}
+    return {"ofertas": len(lista), "kit": len(kit), "fotos_ok": sum(1 for v in fotos.values() if v), "resumen": bool(resumen)}
 
 
 if __name__ == "__main__":
