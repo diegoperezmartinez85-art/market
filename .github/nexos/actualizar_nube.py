@@ -47,7 +47,60 @@ def resumen_md(lineas):
             f.write("\n".join(lineas) + "\n")
 
 
+ALTAS = os.path.join(AQUI, "altas.json")
+
+
+def _palabras(t):
+    return {w for w in g._norm(t).replace("-", " ").split() if len(w) > 2}
+
+
+def procesar_altas(lineas):
+    """Agrega los productos de altas.json (link de afiliado + producto original). Nunca borra nada."""
+    try:
+        cola = json.load(open(ALTAS, encoding="utf-8"))
+    except (OSError, ValueError):
+        return
+    if not cola:
+        return
+    products = g.load_products()
+    ya = {p.get("link") for p in products}
+    pendientes, agregados = [], 0
+    lineas.append("## Altas de productos")
+    for it in cola:
+        if it["link"] in ya:
+            lineas.append(f"- {it['n']}. ya estaba: {it['esperado']}")
+            continue
+        data, ml_id = g.fetch_product(it["link"])          # lo que realmente abre el link de afiliado
+        data_src, id_src = g.fetch_product(it["source"])
+        if not data and not data_src:
+            pendientes.append(it)
+            lineas.append(f"- {it['n']}. no se pudo leer (se reintenta mañana): {it['esperado']}")
+            continue
+        base = data if (data and data.get("image") and data.get("price")) else (data_src or data)
+        aviso = ""
+        if data and data_src:
+            comun = _palabras(data["name"]) & _palabras(data_src["name"])
+            if len(comun) < 2:
+                aviso = f" ⚠ el link abre «{data['name']}», no «{data_src['name']}»"
+                base = data
+        q = g.build_entry(products, base, ml_id or id_src, it["link"],
+                          category_override=it.get("category") if not aviso else None, source=it["source"])
+        products.append(q)
+        agregados += 1
+        lineas.append(f"- {it['n']}. {q['code']} {q['name']} · {q.get('price')}{aviso}")
+    g.save_products(products)
+    with open(ALTAS, "w", encoding="utf-8") as f:
+        json.dump(pendientes, f, ensure_ascii=False, indent=1)
+    lineas.append(f"- Agregados: {agregados} · pendientes: {len(pendientes)}")
+
+
 def main():
+    altas = []
+    try:
+        procesar_altas(altas)
+    except Exception as e:
+        altas.append(f"- Altas: error ({e})")
+    print("\n".join(altas), flush=True)
     respaldo = os.path.join(TMP, "productos_antes.json")
     shutil.copyfile(g.JSON_PATH, respaldo)
     total = len(g.load_products())
@@ -59,7 +112,7 @@ def main():
 
     res = g.verify_links(progress=prog)
     ok = res["disponible"] + res["no_disponible"]
-    lineas = [
+    lineas = altas + [
         "## Actualización de precios",
         f"- Revisados: {total}",
         f"- Disponibles: {res['disponible']}",
