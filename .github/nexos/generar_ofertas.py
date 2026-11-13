@@ -535,15 +535,16 @@ def generar(raiz, products, con_imagenes=True):
             items = [por_code[c] for c in tema.get("codes", []) if c in por_code]
             tdir = os.path.join(kdir, "_tema")
             os.makedirs(tdir, exist_ok=True)
-            hist = []
+            hist, fotos_t = [], []
             for i, p in enumerate(items, 1):
                 f = fotos.get(p.get("code")) or bajar_imagen(p.get("image"))
+                fotos_t.append(f)
                 h = os.path.join(tdir, f"h{i}.jpg")
                 tarjeta(p, f, historia=True).save(h, quality=88)
                 hist.append(h)
             nombre = tema.get("nombre", "reel-tema") + ".mp4"
             if hist and generar_reel.generar(kdir, len(hist), hist, nombre,
-                                             (tema.get("l1"), tema.get("l2"), tema.get("l3"))):
+                                             (tema.get("l1"), tema.get("l2"), tema.get("l3")), fotos_t[:3]):
                 reel_tema = {"archivo": nombre, "texto": tema.get("texto", ""), "titulo": tema.get("l1", "")}
             import shutil
             shutil.rmtree(tdir, ignore_errors=True)
@@ -556,7 +557,7 @@ def generar(raiz, products, con_imagenes=True):
     if hay_img:
         try:
             import generar_reel
-            hay_reel = generar_reel.generar(kdir, len(kit))
+            hay_reel = generar_reel.generar(kdir, len(kit), fotos=[fotos.get(p.get("code")) for p in kit[:3]])
         except Exception as e:
             print("reel:", e)
 
