@@ -339,9 +339,16 @@ def pagina_ofertas(lista, nuevos):
 """
 
 
-def pagina_kit(kit, con_imagenes, resumen=None, reel=False):
+def pagina_kit(kit, con_imagenes, resumen=None, reel=False, reel_tema=None):
     fecha = time.strftime("%d/%m")
     items = []
+    if reel_tema:
+        v = time.strftime("%Y%m%d")
+        a = reel_tema["archivo"]
+        items.append(f'<div class="item"><video src="{a}?v={v}" controls playsinline muted style="width:100%;border-radius:12px"></video>'
+                     f'<div><p><b>🎬 Reel especial</b> · {E(reel_tema["titulo"])}</p>'
+                     f'<pre id="tt">{E(reel_tema["texto"])}</pre><div class="acts"><button class="pri" data-share="{a}" data-type="video/mp4">Compartir Reel</button>'
+                     f'<a href="{a}" download>Bajar Reel</a><button data-copy="tt">Copiar texto</button></div></div></div>')
     if reel:
         v = time.strftime("%Y%m%d")
         cap = (f"{len(kit)} ofertas de Mercado Libre que bajaron de precio 🔥 Precios del {fecha}.\n"
@@ -512,6 +519,36 @@ def generar(raiz, products, con_imagenes=True):
             tarjeta(p, f).save(os.path.join(kdir, f"post-{i}.jpg"), quality=88)
             tarjeta(p, f, historia=True).save(os.path.join(kdir, f"historia-{i}.jpg"), quality=88)
         og_ofertas(lista or kit, fotos).save(os.path.join(odir, "og.jpg"), quality=88)
+    tema = None
+    try:
+        tema = json.load(open(os.path.join(AQUI, "reel_tema.json"), encoding="utf-8"))
+    except (OSError, ValueError):
+        pass
+    for f in os.listdir(kdir):
+        if f.startswith("reel-") and f.endswith((".mp4", ".jpg")) and f != "reel-portada.jpg":
+            os.remove(os.path.join(kdir, f))
+    reel_tema = None
+    if hay_img and tema:
+        try:
+            import generar_reel
+            por_code = {p.get("code"): p for p in vivos(products)}
+            items = [por_code[c] for c in tema.get("codes", []) if c in por_code]
+            tdir = os.path.join(kdir, "_tema")
+            os.makedirs(tdir, exist_ok=True)
+            hist = []
+            for i, p in enumerate(items, 1):
+                f = fotos.get(p.get("code")) or bajar_imagen(p.get("image"))
+                h = os.path.join(tdir, f"h{i}.jpg")
+                tarjeta(p, f, historia=True).save(h, quality=88)
+                hist.append(h)
+            nombre = tema.get("nombre", "reel-tema") + ".mp4"
+            if hist and generar_reel.generar(kdir, len(hist), hist, nombre,
+                                             (tema.get("l1"), tema.get("l2"), tema.get("l3"))):
+                reel_tema = {"archivo": nombre, "texto": tema.get("texto", ""), "titulo": tema.get("l1", "")}
+            import shutil
+            shutil.rmtree(tdir, ignore_errors=True)
+        except Exception as e:
+            print("reel tema:", e)
     for f in ("reel.mp4", "reel-portada.jpg"):
         if os.path.exists(os.path.join(kdir, f)):
             os.remove(os.path.join(kdir, f))
@@ -535,7 +572,7 @@ def generar(raiz, products, con_imagenes=True):
         with open(os.path.join(kdir, "resumen.txt"), "w", encoding="utf-8") as f:
             f.write(resumen + "\n")
     with open(os.path.join(kdir, "index.html"), "w", encoding="utf-8") as f:
-        f.write(pagina_kit(kit, hay_img, resumen, hay_reel))
+        f.write(pagina_kit(kit, hay_img, resumen, hay_reel, reel_tema))
     with open(os.path.join(kdir, "textos.txt"), "w", encoding="utf-8") as f:
         f.write(f"Ofertas de hoy en Nexos Market 🛍️ (precios del {time.strftime('%d/%m')}, pueden cambiar)\n\n")
         f.write("\n\n".join(texto(p) for p in kit) + f"\n\nMás ofertas 👉 {SITE}ofertas/\n")

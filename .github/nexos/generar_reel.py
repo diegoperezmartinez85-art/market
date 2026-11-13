@@ -23,16 +23,22 @@ FADE = 0.4
 
 
 def _centrado(d, y, texto, fnt, color):
+    # achica la letra si el texto no entra en el ancho
+    try:
+        while d.textlength(texto, font=fnt) > W - 120 and fnt.size > 30:
+            fnt = fnt.font_variant(size=fnt.size - 4)
+    except AttributeError:
+        pass
     d.text(((W - d.textlength(texto, font=fnt)) / 2, y), texto, font=fnt, fill=color)
 
 
-def portada(n, path):
+def portada(n, path, l1=None, l2=None, l3=None):
     im = Image.new("RGB", (W, H), go.BG)
     d = ImageDraw.Draw(im)
     go.marca(im, d, 200, x=(W - 330) // 2)
-    _centrado(d, 620, f"{n} ofertas", go.font("Black", 140), go.WHITE)
-    _centrado(d, 790, "que bajaron de precio", go.font("Black", 88), go.CYAN)
-    _centrado(d, 960, "en Mercado Libre", go.font("Bold", 64), go.MUTED)
+    _centrado(d, 620, l1 or f"{n} ofertas", go.font("Black", 120 if l1 else 140), go.WHITE)
+    _centrado(d, 790, l2 or "que bajaron de precio", go.font("Black", 88), go.CYAN)
+    _centrado(d, 960, l3 or "en Mercado Libre", go.font("Bold", 64), go.MUTED)
     d.rounded_rectangle((240, 1180, W - 240, 1280), radius=50, fill=go.GREEN)
     _centrado(d, 1203, "Precios del " + time.strftime("%d/%m"), go.font("Bold", 48), go.WHITE)
     im.save(path, quality=90)
@@ -51,17 +57,17 @@ def cierre(path):
     im.save(path, quality=90)
 
 
-def generar(kdir, n):
+def generar(kdir, n, historias=None, salida="reel.mp4", textos=None):
     """Crea kdir/reel.mp4 (y reel-portada.jpg). Devuelve True si salió bien."""
     if not (Image and shutil.which("ffmpeg") and n):
         return False
     tmp = os.path.join(kdir, "_reel")
     os.makedirs(tmp, exist_ok=True)
     try:
-        frames = [os.path.join(kdir, "reel-portada.jpg")]
-        portada(n, frames[0])
-        frames += [os.path.join(kdir, f"historia-{i}.jpg") for i in range(1, n + 1)
-                   if os.path.exists(os.path.join(kdir, f"historia-{i}.jpg"))]
+        frames = [os.path.join(kdir, salida.replace(".mp4", "-portada.jpg"))]
+        portada(n, frames[0], *(textos or ()))
+        frames += historias or [os.path.join(kdir, f"historia-{i}.jpg") for i in range(1, n + 1)
+                                if os.path.exists(os.path.join(kdir, f"historia-{i}.jpg"))]
         frames.append(os.path.join(tmp, "cierre.jpg"))
         cierre(frames[-1])
         durs = [2.2] + [DUR] * (len(frames) - 2) + [2.4]
@@ -79,7 +85,7 @@ def generar(kdir, n):
             prev = out
         cmd += ["-filter_complex", ";".join(partes), "-map", f"[{prev}]",
                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-pix_fmt", "yuv420p",
-                "-movflags", "+faststart", os.path.join(kdir, "reel.mp4")]
+                "-movflags", "+faststart", os.path.join(kdir, salida)]
         subprocess.run(cmd, check=True, timeout=300)
         return True
     except Exception as e:
