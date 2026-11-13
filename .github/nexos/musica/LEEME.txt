@@ -1,0 +1,5 @@
+Música de los Reels (Pixabay, licencia de uso gratuito también comercial):
+- sunshine.m4a   "Sunshine (Pop Rock Instrumental)" de bluelike_u — Pixabay #297493 (desde 0:06)
+- rain-dance.m4a "Rain Dance (Pop Rock Instrumental)" de bluelike_u — Pixabay #297498 (desde 0:05.5)
+Para agregar otro tema: subir un .m4a o .mp3 a esta carpeta.
+El Reel diario rota entre los temas; el Reel por tema usa el indicado en reel_tema.json ("musica").

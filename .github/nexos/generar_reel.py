@@ -94,7 +94,7 @@ def cierre(path):
     im.save(path, quality=90)
 
 
-def generar(kdir, n, historias=None, salida="reel.mp4", textos=None, fotos=None):
+def generar(kdir, n, historias=None, salida="reel.mp4", textos=None, fotos=None, tema_musical=None):
     """Crea kdir/reel.mp4 (y reel-portada.jpg). Devuelve True si salió bien."""
     if not (Image and shutil.which("ffmpeg") and n):
         return False
@@ -121,13 +121,24 @@ def generar(kdir, n, historias=None, salida="reel.mp4", textos=None, fotos=None)
             partes.append(f"[{prev}][v{i}]xfade=transition=fade:duration={FADE}:offset={off:.2f}[{out}]")
             prev = out
         audio = None
-        try:
-            import musica
-            total = sum(durs) + FADE
-            audio = musica.generar(total, os.path.join(tmp, "musica.wav"), semilla=int(time.strftime("%j")) + len(salida))
+        total = sum(durs) + FADE
+        mdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "musica")
+        temas = sorted(f for f in os.listdir(mdir) if f.endswith((".m4a", ".mp3"))) if os.path.isdir(mdir) else []
+        elegido = tema_musical if tema_musical in temas else (temas[int(time.strftime("%j")) % len(temas)] if temas else None)
+        if elegido:      # tema de Pixabay con fade de entrada y salida
+            audio = os.path.join(tmp, "musica.m4a")
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", os.path.join(mdir, elegido), "-t", f"{total:.2f}",
+                            "-af", f"afade=t=in:d=0.3,afade=t=out:st={max(0, total - 1.5):.2f}:d=1.5",
+                            "-c:a", "aac", "-b:a", "160k", audio], check=True, timeout=120)
+        else:            # sin temas: música original generada por código
+            try:
+                import musica
+                audio = musica.generar(total, os.path.join(tmp, "musica.wav"), semilla=int(time.strftime("%j")) + len(salida))
+            except Exception as e:
+                print("musica:", e)
+                audio = None
+        if audio:
             cmd += ["-i", audio]
-        except Exception as e:
-            print("musica:", e)
         cmd += ["-filter_complex", ";".join(partes), "-map", f"[{prev}]"]
         if audio:
             cmd += ["-map", f"{len(frames)}:a", "-c:a", "aac", "-b:a", "160k", "-shortest"]

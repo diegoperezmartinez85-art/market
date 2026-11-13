@@ -544,7 +544,8 @@ def generar(raiz, products, con_imagenes=True):
                 hist.append(h)
             nombre = tema.get("nombre", "reel-tema") + ".mp4"
             if hist and generar_reel.generar(kdir, len(hist), hist, nombre,
-                                             (tema.get("l1"), tema.get("l2"), tema.get("l3")), fotos_t[:3]):
+                                             (tema.get("l1"), tema.get("l2"), tema.get("l3")), fotos_t[:3],
+                                             tema.get("musica")):
                 reel_tema = {"archivo": nombre, "texto": tema.get("texto", ""), "titulo": tema.get("l1", "")}
             import shutil
             shutil.rmtree(tdir, ignore_errors=True)
@@ -557,7 +558,8 @@ def generar(raiz, products, con_imagenes=True):
     if hay_img:
         try:
             import generar_reel
-            hay_reel = generar_reel.generar(kdir, len(kit), fotos=[fotos.get(p.get("code")) for p in kit[:3]])
+            hay_reel = generar_reel.generar(kdir, len(kit), fotos=[fotos.get(p.get("code")) for p in kit[:3]],
+                                            tema_musical="rain-dance.m4a")
         except Exception as e:
             print("reel:", e)
 
