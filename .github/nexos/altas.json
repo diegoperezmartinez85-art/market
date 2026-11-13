@@ -1,1 +1,100 @@
-[]
+[
+ {
+  "n": 1,
+  "link": "https://meli.la/23sEfKG",
+  "source": "https://www.mercadolibre.com.ar/p/MLA50574653",
+  "esperado": "Sérum Celimax retinal",
+  "category": "Belleza y Cuidado Personal"
+ },
+ {
+  "n": 2,
+  "link": "https://meli.la/2zaUNDL",
+  "source": "https://www.mercadolibre.com.ar/p/MLA70237860",
+  "esperado": "Starlink Mini Car Pack",
+  "category": "Computación"
+ },
+ {
+  "n": 3,
+  "link": "https://meli.la/1gHbbFM",
+  "source": "https://www.mercadolibre.com.ar/p/MLA18010993",
+  "esperado": "Joystick DualSense PS5 negro",
+  "category": "Consolas y Videojuegos"
+ },
+ {
+  "n": 4,
+  "link": "https://meli.la/1n3dQxX",
+  "source": "https://www.mercadolibre.com.ar/p/MLA36623514",
+  "esperado": "Auriculares Lenovo XT80",
+  "category": "Electrónica, Audio y Video"
+ },
+ {
+  "n": 5,
+  "link": "https://meli.la/1SgoWVz",
+  "source": "https://www.mercadolibre.com.ar/p/MLA18535197",
+  "esperado": "Creatina Star Nutrition",
+  "category": "Deportes y Fitness"
+ },
+ {
+  "n": 6,
+  "link": "https://meli.la/1JBkMhd",
+  "source": "https://www.mercadolibre.com.ar/p/MLA18907230",
+  "esperado": "Creatina ENA",
+  "category": "Deportes y Fitness"
+ },
+ {
+  "n": 7,
+  "link": "https://meli.la/1QcLoEB",
+  "source": "https://www.mercadolibre.com.ar/p/MLA81288502",
+  "esperado": "Termo Ozz 1 L",
+  "category": "Deportes y Fitness"
+ },
+ {
+  "n": 8,
+  "link": "https://meli.la/1Lxj94K",
+  "source": "https://www.mercadolibre.com.ar/p/MLA34021541",
+  "esperado": "Proteína SPX Whey",
+  "category": "Deportes y Fitness"
+ },
+ {
+  "n": 9,
+  "link": "https://meli.la/2ch2b9Q",
+  "source": "https://www.mercadolibre.com.ar/p/MLA26994482",
+  "esperado": "Hidrolavadora Trent HLT307",
+  "category": "Herramientas"
+ },
+ {
+  "n": 10,
+  "link": "https://meli.la/2Dz9cTw",
+  "source": "https://www.mercadolibre.com.ar/up/MLAU150016207",
+  "esperado": "Caja de herramientas 46 piezas",
+  "category": "Herramientas"
+ },
+ {
+  "n": 11,
+  "link": "https://meli.la/2bpNn3z",
+  "source": "https://www.mercadolibre.com.ar/p/MLA44076642",
+  "esperado": "Máscara fotosensible para soldar",
+  "category": "Herramientas"
+ },
+ {
+  "n": 12,
+  "link": "https://meli.la/2RY2d3f",
+  "source": "https://www.mercadolibre.com.ar/p/MLA81161883",
+  "esperado": "Squishy Butter antiestrés",
+  "category": "Juegos y Juguetes"
+ },
+ {
+  "n": 13,
+  "link": "https://meli.la/1juWtDJ",
+  "source": "https://www.mercadolibre.com.ar/p/MLA63181497",
+  "esperado": "Juego Basta Apretá Ya",
+  "category": "Juegos y Juguetes"
+ },
+ {
+  "n": 14,
+  "link": "https://meli.la/1zNhUus",
+  "source": "https://www.mercadolibre.com.ar/up/MLAU4382017422",
+  "esperado": "Puzzle Lago di Braies",
+  "category": "Juegos y Juguetes"
+ }
+]
