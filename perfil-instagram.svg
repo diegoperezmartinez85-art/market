@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080"><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3f5"/><stop offset=".55" stop-color="#3a6df0"/><stop offset="1" stop-color="#6b3fe0"/></linearGradient>
+<linearGradient id="pin" x1="0" y1="0" x2="1" y2=".9"><stop offset="0" stop-color="#8b3dff"/><stop offset=".55" stop-color="#e0198a"/><stop offset="1" stop-color="#ff2d6f"/></linearGradient>
+<radialGradient id="glow" cx=".3" cy=".2" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2230"/><stop offset="1" stop-color="#0d1117"/></linearGradient></defs><rect width="1080" height="1080" fill="url(#bg)"/><rect width="1080" height="1080" fill="url(#glow)"/><g transform="translate(540 520) scale(17) translate(-32 -33)">
+<ellipse cx="32" cy="53.5" rx="8" ry="1.8" fill="#ff5fa8" opacity=".75"/>
+<path d="M32 52C26 44.6 17.5 37.6 17.5 27.5a14.5 14.5 0 0 1 29 0C46.5 37.6 38 44.6 32 52Z" fill="url(#pin)"/>
+<path d="M32 13a14.5 14.5 0 0 1 14.5 14.5c0 4-1.4 7.6-3.5 11L32 13Z" fill="#fff" opacity=".14"/><circle cx="32" cy="27" r="8.2" fill="#fff"/><text x="32" y="31.2" text-anchor="middle" font-family="Inter,Arial" font-weight="900" font-size="12" fill="#e0198a">%</text></g></svg>

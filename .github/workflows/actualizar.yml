@@ -30,7 +30,9 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependencias
-        run: pip install requests pillow
+        run: |
+          pip install requests pillow
+          command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
 
       - name: Revisar precios y regenerar páginas
         id: run

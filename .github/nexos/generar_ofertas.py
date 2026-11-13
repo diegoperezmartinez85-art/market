@@ -37,6 +37,7 @@ SITE = gp.SITE_URL
 E = gp.E
 money = gp.money
 KIT_N = 5            # publicaciones por día
+INSTAGRAM = "https://www.instagram.com/nexos.marketofertas/"
 CANAL = "https://whatsapp.com/channel/0029Vb97B2I2v1IlIV2BFu1w"   # canal de WhatsApp de ofertas
 FONTS = os.path.join(AQUI, "fonts")
 
@@ -278,6 +279,7 @@ h1{font-size:1.6rem}
 .acts a,.acts button{border:0;border-radius:10px;padding:10px 12px;font:700 .9rem system-ui,sans-serif;cursor:pointer;text-decoration:none;background:#eef3fe;color:#1a56c9}
 .acts .pri{background:var(--action);color:#fff}
 .canal{display:block;text-align:center;text-decoration:none;background:#128c4b;color:#fff;font-weight:700;border-radius:12px;padding:12px;margin:14px 0}
+.ig{display:block;text-align:center;text-decoration:none;background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af);color:#fff;font-weight:700;border-radius:12px;padding:12px;margin:-4px 0 14px}
 .tip{background:#fff8e6;border:1px solid #f3dfa6;border-radius:12px;padding:10px 12px;font-size:.9rem;margin-bottom:16px}
 @media(max-width:600px){.item{grid-template-columns:1fr}}
 """
@@ -326,6 +328,7 @@ def pagina_ofertas(lista, nuevos):
 <p class="intro">{len(lista)} productos más baratos que cuando los empezamos a seguir. Precios revisados el {fecha}; el precio final lo confirma Mercado Libre.</p>
 <div class="grid">{cards}</div>
 <a class="canal" href="{CANAL}" target="_blank" rel="noopener">🔔 Seguí el canal de ofertas en WhatsApp</a>
+<a class="ig" href="{INSTAGRAM}" target="_blank" rel="noopener">📸 Seguinos en Instagram @nexos.marketofertas</a>
 {f'<h2>Recién agregados</h2><div class="grid">{cards_n}</div>' if cards_n else ''}
 <a class="wa" href="{wa}" target="_blank" rel="noopener">Compartir estas ofertas por WhatsApp</a>
 <a class="all" href="../">Ver todos los productos &rarr;</a>
@@ -336,9 +339,19 @@ def pagina_ofertas(lista, nuevos):
 """
 
 
-def pagina_kit(kit, con_imagenes, resumen=None):
+def pagina_kit(kit, con_imagenes, resumen=None, reel=False):
     fecha = time.strftime("%d/%m")
     items = []
+    if reel:
+        v = time.strftime("%Y%m%d")
+        cap = (f"{len(kit)} ofertas de Mercado Libre que bajaron de precio 🔥 Precios del {fecha}.\n"
+               "👉 Link en la bio para ver cada una y comprar seguro en Mercado Libre.\n"
+               "Seguinos para ver las ofertas de cada día. Contiene links de afiliado.\n\n"
+               "#ofertas #mercadolibre #ofertasargentina #regalosdenavidad #ahorro")
+        items.append(f'<div class="item"><video src="reel.mp4?v={v}" controls playsinline muted style="width:100%;border-radius:12px"></video>'
+                     f'<div><p><b>🎬 Reel del día</b> · subilo a Instagram y elegí una música de la biblioteca</p>'
+                     f'<pre id="tr">{E(cap)}</pre><div class="acts"><button class="pri" data-share="reel.mp4" data-type="video/mp4">Compartir Reel</button>'
+                     f'<a href="reel.mp4" download>Bajar Reel</a><button data-copy="tr">Copiar texto</button></div></div></div>')
     if resumen:
         v = time.strftime("%Y%m%d")
         img = f'<img src="resumen-post.jpg?v={v}" alt="">' if con_imagenes else ""
@@ -387,7 +400,7 @@ document.addEventListener('click',async e=>{{
   const s=e.target.closest('[data-share]');if(!s)return;
   const pre=s.closest('.item').querySelector('pre');const txt=pre.innerText;
   try{{navigator.clipboard&&navigator.clipboard.writeText(txt)}}catch(_){{}}
-  try{{const b=await (await fetch(s.dataset.share)).blob();const f=new File([b],s.dataset.share,{{type:'image/jpeg'}});
+  try{{const b=await (await fetch(s.dataset.share)).blob();const f=new File([b],s.dataset.share,{{type:s.dataset.type||'image/jpeg'}});
     if(navigator.canShare&&navigator.canShare({{files:[f]}})){{await navigator.share({{files:[f],text:txt}});return}}}}catch(err){{if(err&&err.name==='AbortError')return}}
   const a=document.createElement('a');a.href=s.dataset.share;a.download=s.dataset.share;a.click();aviso('Imagen descargada · texto copiado');
 }});
@@ -453,6 +466,7 @@ def pagina_regalos(products):
 <p class="intro">Elegí cuánto querés gastar y mirá las mejores ideas. {total} productos con precio revisado el {time.strftime('%d/%m')}; pagás y recibís en Mercado Libre.</p>
 <nav class="rng">{nav}</nav>
 <a class="canal" href="{CANAL}" target="_blank" rel="noopener">🔔 Seguí el canal de ofertas en WhatsApp</a>
+<a class="ig" href="{INSTAGRAM}" target="_blank" rel="noopener">📸 Seguinos en Instagram @nexos.marketofertas</a>
 {''.join(h for _, _, h in secciones)}
 <a class="wa" href="{wa}" target="_blank" rel="noopener">Compartir la lista por WhatsApp</a>
 <a class="all" href="../ofertas/">Ver lo que bajó de precio hoy &rarr;</a>
@@ -498,6 +512,16 @@ def generar(raiz, products, con_imagenes=True):
             tarjeta(p, f).save(os.path.join(kdir, f"post-{i}.jpg"), quality=88)
             tarjeta(p, f, historia=True).save(os.path.join(kdir, f"historia-{i}.jpg"), quality=88)
         og_ofertas(lista or kit, fotos).save(os.path.join(odir, "og.jpg"), quality=88)
+    for f in ("reel.mp4", "reel-portada.jpg"):
+        if os.path.exists(os.path.join(kdir, f)):
+            os.remove(os.path.join(kdir, f))
+    hay_reel = False
+    if hay_img:
+        try:
+            import generar_reel
+            hay_reel = generar_reel.generar(kdir, len(kit))
+        except Exception as e:
+            print("reel:", e)
 
     with open(os.path.join(odir, "index.html"), "w", encoding="utf-8") as f:
         f.write(pagina_ofertas(lista, nuevos))
@@ -511,7 +535,7 @@ def generar(raiz, products, con_imagenes=True):
         with open(os.path.join(kdir, "resumen.txt"), "w", encoding="utf-8") as f:
             f.write(resumen + "\n")
     with open(os.path.join(kdir, "index.html"), "w", encoding="utf-8") as f:
-        f.write(pagina_kit(kit, hay_img, resumen))
+        f.write(pagina_kit(kit, hay_img, resumen, hay_reel))
     with open(os.path.join(kdir, "textos.txt"), "w", encoding="utf-8") as f:
         f.write(f"Ofertas de hoy en Nexos Market 🛍️ (precios del {time.strftime('%d/%m')}, pueden cambiar)\n\n")
         f.write("\n\n".join(texto(p) for p in kit) + f"\n\nMás ofertas 👉 {SITE}ofertas/\n")
@@ -519,7 +543,7 @@ def generar(raiz, products, con_imagenes=True):
     with open(os.path.join(raiz, "regalos", "index.html"), "w", encoding="utf-8") as f:
         f.write(pagina_regalos(products))
     agregar_al_sitemap(raiz)
-    return {"ofertas": len(lista), "kit": len(kit), "fotos_ok": sum(1 for v in fotos.values() if v), "resumen": bool(resumen)}
+    return {"ofertas": len(lista), "kit": len(kit), "fotos_ok": sum(1 for v in fotos.values() if v), "resumen": bool(resumen), "reel": hay_reel}
 
 
 if __name__ == "__main__":

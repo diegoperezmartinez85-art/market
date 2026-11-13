@@ -191,6 +191,7 @@ def render_page(p, relacionados):
 </article>
 {f'<h2>Más ofertas de {E(cat)}</h2><div class="rel">{rel_html}</div>' if rel_html else ''}
 <a class="wa" href="https://whatsapp.com/channel/0029Vb97B2I2v1IlIV2BFu1w" target="_blank" rel="noopener">🔔 Seguí el canal de ofertas en WhatsApp</a>
+<a class="all" href="https://www.instagram.com/nexos.marketofertas/" target="_blank" rel="noopener">📸 Seguinos en Instagram @nexos.marketofertas</a>
 <a class="all" href="../">Ver todas las ofertas de {MARCA} &rarr;</a>
 </main>
 </body>
