@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "n": 1,
+  "link": "https://meli.la/2jMWcKf",
+  "source": "https://www.mercadolibre.com.ar/p/MLA58353028",
+  "esperado": "Moto G06",
+  "category": "Celulares y Teléfonos"
+ },
+ {
+  "n": 2,
+  "link": "https://meli.la/1ttfxaX",
+  "source": "https://www.mercadolibre.com.ar/p/MLA68201987",
+  "esperado": "Galaxy A57",
+  "category": "Celulares y Teléfonos"
+ },
+ {
+  "n": 3,
+  "link": "https://meli.la/1BYwM7J",
+  "source": "https://www.mercadolibre.com.ar/p/MLA62764786",
+  "esperado": "ZTE Blade A56 Pro",
+  "category": "Celulares y Teléfonos"
+ },
+ {
+  "n": 4,
+  "link": "https://meli.la/1Dwx19p",
+  "source": "https://www.mercadolibre.com.ar/p/MLA63226247",
+  "esperado": "Aire Philco split inverter",
+  "category": "Electrodomésticos y Aires Ac."
+ },
+ {
+  "n": 5,
+  "link": "https://meli.la/1Cdj6gr",
+  "source": "https://www.mercadolibre.com.ar/p/MLA40006222",
+  "esperado": "Ventilador de techo Kanji",
+  "category": "Electrodomésticos y Aires Ac."
+ },
+ {
+  "n": 6,
+  "link": "https://meli.la/17PHVYo",
+  "source": "https://www.mercadolibre.com.ar/p/MLA78964883",
+  "esperado": "Aspiradora robot Gadnic",
+  "category": "Electrodomésticos y Aires Ac."
+ },
+ {
+  "n": 7,
+  "link": "https://meli.la/2mUGYLx",
+  "source": "https://www.mercadolibre.com.ar/p/MLA28447247",
+  "esperado": "Reloj Casio A158",
+  "category": "Joyas y Relojes"
+ },
+ {
+  "n": 8,
+  "link": "https://meli.la/2jqRsBw",
+  "source": "https://www.mercadolibre.com.ar/p/MLA61397801",
+  "esperado": "Xiaomi Smart Band 10",
+  "category": "Joyas y Relojes"
+ },
+ {
+  "n": 9,
+  "link": "https://meli.la/2Ti5FhH",
+  "source": "https://www.mercadolibre.com.ar/p/MLA28553543",
+  "esperado": "Kaiak Urbe Natura",
+  "category": "Belleza y Cuidado Personal"
+ },
+ {
+  "n": 10,
+  "link": "https://meli.la/1t1sgKt",
+  "source": "https://www.mercadolibre.com.ar/p/MLA42135256",
+  "esperado": "King of Seduction Absolute",
+  "category": "Belleza y Cuidado Personal"
+ },
+ {
+  "n": 11,
+  "link": "https://meli.la/1dVUHVX",
+  "source": "https://www.mercadolibre.com.ar/p/MLA19464946",
+  "esperado": "Cher Dieciocho",
+  "category": "Belleza y Cuidado Personal"
+ },
+ {
+  "n": 12,
+  "link": "https://meli.la/2wBteUs",
+  "source": "https://www.mercadolibre.com.ar/p/MLA19380755",
+  "esperado": "Nautica Voyage 200 ml",
+  "category": "Belleza y Cuidado Personal"
+ }
+]
