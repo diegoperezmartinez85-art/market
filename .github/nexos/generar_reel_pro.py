@@ -175,7 +175,7 @@ class Reel:
         if b > 0:
             y = 1660 + (1 - b) * 40
             d.rounded_rectangle((70, y, W - 70, y + 100), radius=50, fill=go.BLUE)
-            centrado(d, y + 26, "Comprá seguro en Mercado Libre", go.font("Bold", 42), (255, 255, 255))
+            centrado(d, y + 26, "Mirá todo en la web", go.font("Bold", 42), (255, 255, 255))
         return im
 
     def cierre(self, t):
