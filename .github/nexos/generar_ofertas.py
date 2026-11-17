@@ -543,6 +543,25 @@ def generar(raiz, products, con_imagenes=True):
                 tarjeta(p, f, historia=True).save(h, quality=88)
                 hist.append(h)
             nombre = tema.get("nombre", "reel-tema") + ".mp4"
+            if tema.get("estilo") == "pro" and items:
+                import generar_reel_pro
+                # grilla del cierre: fotos de otros productos llamativos de la tienda
+                extras = [p for p in sorted(vivos(products), key=lambda p: -(p.get("price") or 0)) if p not in items][:12]
+                grid = list(fotos_t)
+                for p in extras:
+                    if len(grid) >= 9:
+                        break
+                    f = fotos.get(p.get("code")) or bajar_imagen(p.get("image"))
+                    if f is not None:
+                        grid.append(f)
+                mdir = os.path.join(AQUI, "musica")
+                ok = generar_reel_pro.generar(os.path.join(kdir, nombre), items, fotos_t,
+                                              tema.get("l1", "Lo más vendido"), tema.get("l2", "de hoy en Mercado Libre"),
+                                              len(vivos(products)) - len(items), grid[:9],
+                                              os.path.join(mdir, tema.get("musica", "sunshine.m4a")))
+                if ok:
+                    reel_tema = {"archivo": nombre, "texto": tema.get("texto", ""), "titulo": tema.get("l1", "")}
+                hist = []
             if hist and generar_reel.generar(kdir, len(hist), hist, nombre,
                                              (tema.get("l1"), tema.get("l2"), tema.get("l3")), fotos_t[:3],
                                              tema.get("musica")):

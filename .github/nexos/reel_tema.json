@@ -1,18 +1,19 @@
 {
  "nombre": "reel-tema",
+ "estilo": "pro",
  "codes": [
+  "NX-0017",
   "NX-0165",
-  "NX-0170",
+  "NX-0175",
+  "NX-0115",
   "NX-0174",
-  "NX-0164",
-  "NX-0166",
-  "NX-0168",
-  "NX-0169",
-  "NX-0172"
+  "NX-0176",
+  "NX-0027",
+  "NX-0184",
+  "NX-0170"
  ],
  "l1": "Lo más vendido",
- "l2": "de la semana en Mercado Libre",
- "l3": "Celulares, perfumes y más",
- "texto": "🔥 Lo más vendido de la semana en Mercado Libre: Samsung Galaxy A57, Xiaomi Smart Band 10, Nautica Voyage, Moto G06, aire Philco inverter, aspiradora robot, Casio retro y King of Seduction.\n👉 Link en la bio para ver precio actualizado y comprar seguro en Mercado Libre.\n¿Cuál te llevás? Comentalo 👇 Seguinos para ver las ofertas de cada día. Contiene links de afiliado.\n\n🎵 Música: Sunshine · bluelike_u (Pixabay)\n\n#masvendidos #mercadolibre #ofertas #celulares #perfumes #regalosdenavidad #ofertasargentina #samsung",
- "musica": "sunshine.m4a"
+ "l2": "de hoy en Mercado Libre",
+ "musica": "sunshine.m4a",
+ "texto": "🔥 Lo más vendido de hoy en Mercado Libre: iPhone 17 Pro Max, Galaxy A57, zapatillas Puma y Under Armour, Smart TV Samsung 55\", Nautica Voyage, Redmi Buds con 40% menos, heladera Philco No Frost y Xiaomi Smart Band 10.\n👉 Hay +150 productos más en la web: link en la bio.\n¿Cuál te llevás? Comentalo 👇 Seguinos para ver las ofertas de cada día. Contiene links de afiliado.\n\n🎵 Música: Sunshine · bluelike_u (Pixabay)\n\n#masvendidos #mercadolibre #ofertas #iphone17 #zapatillas #regalosdenavidad #ofertasargentina #tecnologia"
 }
